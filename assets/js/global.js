@@ -13,13 +13,7 @@ function hideNavbar(navbar) {
 }
 
 function setNavbarStyle(navbar, isTop) {
-    if (isTop) {
-        navbar.classList.add("nav-transparent");
-        navbar.classList.remove("nav-white");
-    } else {
-        navbar.classList.add("nav-white");
-        navbar.classList.remove("nav-transparent");
-    }
+    isTop ? navbar.classList.remove("nav-white") : navbar.classList.add("nav-white");
 }
 
 window.addEventListener("scroll", function () {
@@ -32,7 +26,7 @@ window.addEventListener("scroll", function () {
         showNavbar(navbar);
     }
 
-    setNavbarStyle(navbar, currentScroll <= 50);
+    setNavbarStyle(navbar, currentScroll <= 300);
     lastScrollTop = Math.max(currentScroll, 0);
 });
 
@@ -69,54 +63,4 @@ window.addEventListener('load', () => {
         once: true,
         duration: 900,
     });
-});
-
-
-const destinations = [
-    { name: 'Palestine', code: 'ps' },
-    { name: 'United States', code: 'us' },
-    { name: 'Jordan', code: 'jo' },
-    { name: 'Germany', code: 'de' },
-    { name: 'France', code: 'fr' },
-    { name: 'Turkey', code: 'tr' },
-    { name: 'Egypt', code: 'eg' },
-    { name: 'Saudi Arabia', code: 'sa' },
-];
-
-function openDestinations() {
-    $('#destination-list').addClass('open');
-    renderDestinations(destinations);
-}
-
-function filterDestinations(value) {
-    const filtered = destinations.filter(d =>
-        d.name.toLowerCase().startsWith(value.toLowerCase())
-    );
-    renderDestinations(filtered);
-    $('#destination-list').addClass('open');
-}
-
-function renderDestinations(list) {
-    const ul = $('#destination-list');
-    ul.empty();
-    list.forEach(item => {
-        ul.append(`
-      <li onclick="selectDestination('${item.name}', '${item.code}')" 
-        class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 cursor-pointer">
-        <img src="https://flagcdn.com/24x18/${item.code}.png" alt="${item.code}" />
-        <span>${item.name}</span>
-      </li>
-    `);
-    });
-}
-
-function selectDestination(name, code) {
-    $('#destination-input').val(name);
-    $('#destination-list').removeClass('open');
-}
-
-$(document).on('click', function (e) {
-    if (!$(e.target).closest('.dropdown-wrapper').length) {
-        $('#destination-list').removeClass('open');
-    }
 });
