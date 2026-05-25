@@ -108,7 +108,7 @@
                     </div>
                     <div class="inset-y-0 left-0 flex items-center lg:hidden">
                         <button type="button" command="--toggle" commandfor="mobile-menu"
-                            class="text-white relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
+                            class="is-style-menu text-white relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
                             <span class="absolute -inset-0.5"></span>
                             <span class="sr-only">Open main menu</span>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
@@ -271,9 +271,10 @@
         <section>
             <div class="container sections-marign-top">
                 <div class="flex flex-col items-center gap-[30px] md:gap-[73px]">
-                    <div class="flex flex-col items-center gap-[20px] md:gap-[30px]" data-aos="fade-up">
-                        <h3 class="text-2xl md:text-[42px] font-normal"><span class="text-[var(--is-pink)]">Browse
-                                all</span> <span class="font-semibold">destinations</span></h3>
+                    <div class="flex flex-col items-center gap-[20px] md:gap-[25px]" data-aos="fade-up">
+                        <h3 class="text-2xl md:text-[42px] font-normal text-[var(--is-pink)]">Browse
+                            all <span class="font-semibold text-[var(--is-blue-3)]">destinations</span>
+                        </h3>
                         <ul class="flex flex-wrap gap-[16px]">
                             <li title="Country">
                                 <div onclick="showTab('country')" id="tab-country"
@@ -293,7 +294,8 @@
                             </li>
                         </ul>
                     </div>
-                    <ul id="list-country" class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[16px]">
+                    <ul id="list-country"
+                        class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[16px]">
                         <li data-aos="fade-up">
                             <a href="" title="France"
                                 class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] p-2 flex items-center justify-between">
@@ -504,6 +506,97 @@
             </div>
         </section>
         <!-- end Browse all destinations -->
+        <!-- start why choose tv4 -->
+        <section>
+            <div class="container sections-marign-top">
+                <div class="md:mx-15 flex flex-col items-center gap-[30px] md:gap-[73px]">
+                    <div class="flex flex-col items-center gap-[20px] md:gap-[25px]" data-aos="fade-up">
+                        <h3 class="text-2xl md:text-[42px] font-normal text-[var(--is-pink)]">Why
+                            Choose
+                            <span class="font-semibold text-[var(--is-blue-3)]">TravelRoam?</span>
+                        </h3>
+                        <div class="text-center md:w-[65%]">
+                            <p class="font-medium text-lg">Because every journey deserves a more comfortable, seamless,
+                                and stress-free experience
+                                from
+                                start to finish</p>
+                        </div>
+                    </div>
+                    <div class="grid min-[576px]:grid-cols-2 md:grid-cols-3 w-full gap-[20px] md:gap-[40px]">
+                        <div data-aos="fade-up">
+                            <a href="" title="Learn more"
+                                class="text-center style-hover-card h-full group transition-transform duration-500 shadow-[0_4px_5px_var(--is-black)] scale-100 hover:scale-103 hover:shadow-[4px_4px_15px_var(--is-black)] rounded-[25px] border border-2 border-[var(--is-pink)] hover:border-[var(--is-blue-3)] px-5 py-10 flex flex-col items-center justify-between gap-[24px] md:gap-[40px]">
+                                <div
+                                    class="group-hover:bg-[var(--is-pink)] border border-[var(--is-pink)] flex items-center justify-center w-[80px] h-[80px] rounded-full">
+                                    <Image src="../assets/icons/countrys.svg" alt="lounges" width="35" height="25"
+                                        class="rounded-[15px] object-cover filter group-hover:invert group-hover:brightness-0" />
+                                </div>
+                                <h3 class="text-2xl font-medium">200+ Countries</h3>
+                                <p class="text-sm font-semibold text-[var(--is-gray-2)]">No matter where you
+                                    travel, TravelRoam has got your back</p>
+                                <button
+                                    class="before:bg-[var(--is-pink)] bg-black text-white border-1 border-white rounded-[20px] px-5 py-4 btn">
+                                    <div class="flex gap-2 items-center text-base relative z-1 font-bold">
+                                        <span>Learn more</span>
+                                        <div class="mt-1">
+                                            <img src="../assets/icons/arraw-right.svg" alt="arraw right"
+                                                class="w-4 h-4" />
+                                        </div>
+                                    </div>
+                                </button>
+                            </a>
+                        </div>
+                        <div data-aos="fade-up">
+                            <a href="" title="Learn more"
+                                class="text-center style-hover-card h-full group transition-transform duration-500 shadow-[0_4px_5px_var(--is-black)] scale-100 hover:scale-103 hover:shadow-[4px_4px_15px_var(--is-black)] rounded-[25px] border border-2 border-[var(--is-pink)] hover:border-[var(--is-blue-3)] px-5 py-10 flex flex-col items-center justify-between gap-[24px] md:gap-[40px]">
+                                <div
+                                    class="group-hover:bg-[var(--is-pink)] border border-[var(--is-pink)] flex items-center justify-center w-[80px] h-[80px] rounded-full">
+                                    <Image src="../assets/icons/airport.png" alt="lounges" width="35" height="25"
+                                        class="rounded-[15px] object-cover filter group-hover:invert group-hover:brightness-0" />
+                                </div>
+                                <h3 class="text-2xl font-medium">245+ Networks</h3>
+                                <p class="text-sm font-semibold text-[var(--is-gray-2)]">Find access to networks
+                                    worldwide for best coverage</p>
+                                <button
+                                    class="before:bg-[var(--is-pink)] bg-black text-white border-1 border-white rounded-[20px] px-5 py-4 btn">
+                                    <div class="flex gap-2 items-center text-base relative z-1 font-bold">
+                                        <span>Learn more</span>
+                                        <div class="mt-1">
+                                            <img src="../assets/icons/arraw-right.svg" alt="arraw right"
+                                                class="w-4 h-4" />
+                                        </div>
+                                    </div>
+                                </button>
+                            </a>
+                        </div>
+                        <div data-aos="fade-up">
+                            <a href="" title="Learn more"
+                                class="text-center style-hover-card h-full group transition-transform duration-500 shadow-[0_4px_5px_var(--is-black)] scale-100 hover:scale-103 hover:shadow-[4px_4px_15px_var(--is-black)] rounded-[25px] border border-2 border-[var(--is-pink)] hover:border-[var(--is-blue-3)] px-5 py-10 flex flex-col items-center justify-between gap-[24px] md:gap-[40px]">
+                                <div
+                                    class="group-hover:bg-[var(--is-pink)] border border-[var(--is-pink)] flex items-center justify-center w-[80px] h-[80px] rounded-full">
+                                    <Image src="../assets/icons/calnder.svg" alt="lounges" width="35" height="25"
+                                        class="rounded-[15px] object-cover filter group-hover:invert group-hover:brightness-0" />
+                                </div>
+                                <h3 class="text-2xl font-medium">24/7 Support</h3>
+                                <p class="text-sm font-semibold text-[var(--is-gray-2)]">Full FAQS and support
+                                    whenever you need us</p>
+                                <button
+                                    class="before:bg-[var(--is-pink)] bg-black text-white border-1 border-white rounded-[20px] px-5 py-4 btn">
+                                    <div class="flex gap-2 items-center text-base relative z-1 font-bold">
+                                        <span>Learn more</span>
+                                        <div class="mt-1">
+                                            <img src="../assets/icons/arraw-right.svg" alt="arraw right"
+                                                class="w-4 h-4" />
+                                        </div>
+                                    </div>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end why choose tv4 -->
         <h2>test</h2>
         <h2>test</h2>
         <h2>test</h2>
