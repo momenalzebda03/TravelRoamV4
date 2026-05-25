@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/logo.svg" />
+    <link rel="stylesheet" href="../assets/css/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <title>Travel Roam Partners</title>
+</head>
+
+<body>
+    <div id="loadingOverlay" class="fixed inset-0 bg-white flex justify-center items-center z-[9999]">
+        <div class="w-16 h-16 border-6 border-gray-200 border-t-[var(--is-blue)] rounded-full animate-spin"></div>
+    </div>
+    <div id="app" style="display: none;">
+        <!-- start navbar -->
+        <nav class="text-white z-3 navbar transition duration-300 w-full py-[33px]">
+            <div class="container">
+                <div class="flex w-full">
+                    <!-- <div class="absolute right-3 flex items-center lg:hidden">
+                    <button id="menuBtn" class="p-2">
+                        <svg id="iconOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+
+                        <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hidden" fill="none"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div> -->
+                    <div class="w-full flex items-center justify-between">
+                        <a href="/" title="Coop Lounge">
+                            <img src="/assets/icons/logo.svg" alt="logo" width="170" height="41" class="object-cover" />
+                        </a>
+                        <div class="hidden lg:flex gap-[91px] items-center">
+                            <div class="mt-5 lg:mt-0 flex flex-col lg:flex-row items-center gap-[30px] relative">
+                                <button
+                                    class="px-5 py-2 border-1 border-white hover:text-black before:bg-white text-white transition-all duration-800 before:bottom-0 before:rounded-t-[50%] relative group rounded-[5px] cursor-pointer overflow-hidden before:content-[''] before:absolute before:left-0 before:w-full before:h-0 before:z-1 before:bottom-0 before:transition-all before:duration-800 hover:before:h-[180%]"
+                                    title="Installation Guide">
+                                    <div class="text-base relative z-1 font-bold">
+                                        <span>Installation Guide</span>
+                                    </div>
+                                </button>
+                                <button
+                                    class="px-5 py-2 border-1 border-white hover:text-black before:bg-white text-white transition-all duration-800 before:bottom-0 before:rounded-t-[50%] relative group rounded-[5px] cursor-pointer overflow-hidden before:content-[''] before:absolute before:left-0 before:w-full before:h-0 before:z-1 before:bottom-0 before:transition-all before:duration-800 hover:before:h-[180%]"
+                                    title="Login">
+                                    <div class="text-base relative z-1 font-bold">
+                                        <span>Login</span>
+                                    </div>
+                                </button>
+                                <div class="relative flex justify-center dropdown-wrapper">
+                                    <div class="flex items-center gap-2 cursor-pointer relative"
+                                        onclick="toggleDropdown(this)" title="menu">
+                                        <span class="font-medium text-lg selected-value">menu</span>
+                                        <div class="dropdown-arrow flex items-center gap-2 cursor-pointer relative">
+                                            <div title="menu" class="flex flex-col gap-[3.5px] mt-[1.5px] menu-icon">
+                                                <div class="menu-line top-line bg-white w-[15px] h-[3px]"></div>
+                                                <div class="menu-line mid-line bg-white w-[15px] h-[3px]"></div>
+                                                <div class="menu-line bot-line bg-white w-[15px] h-[3px]"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul
+                                        class="dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 px-22 w-full bg-[var(--is-blue-1)] backdrop-blur-md py-5">
+                                        <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                            onclick="selectItem(this, 'Marketplace')">Marketplace</li>
+                                        <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                            onclick="selectItem(this, 'About')">About</li>
+                                        <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                            onclick="selectItem(this, 'Compatibility')">Compatibility</li>
+                                        <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                            onclick="selectItem(this, 'FAQ')">FAQ</li>
+                                        <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                            onclick="selectItem(this, 'Blogs')">Blogs</li>
+                                        <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                            onclick="selectItem(this, 'Contact')">Contact</li>
+                                        <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                            onclick="selectItem(this, 'Login')">Login</li>
+                                    </ul>
+                                </div>
+
+                                <div class="relative flex justify-center dropdown-wrapper">
+                                    <div class="flex items-center gap-2 cursor-pointer relative"
+                                        onclick="toggleDropdown(this)">
+                                        <span class="font-medium text-lg selected-value">English</span>
+                                        <img src="../assets/icons/arraw.svg" alt="arraw"
+                                            class="dropdown-arrow w-[12px] h-[6px]" />
+                                    </div>
+                                    <ul
+                                        class="dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 px-22 w-full bg-[var(--is-blue-1)] backdrop-blur-md py-5">
+                                        <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                            onclick="selectItem(this, 'العربية')">العربية</li>
+                                        <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                            onclick="selectItem(this, 'English')">English</li>
+                                    </ul>
+                                </div>
+
+                                <div class="relative flex justify-center dropdown-wrapper">
+                                    <div class="flex items-center gap-2 cursor-pointer relative"
+                                        onclick="toggleDropdown(this)">
+                                        <span class="font-medium text-lg selected-value">USD $</span>
+                                        <img src="../assets/icons/arraw.svg" alt="arraw"
+                                            class="dropdown-arrow w-[12px] h-[6px]" />
+                                    </div>
+                                    <ul
+                                        class="dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 px-22 w-full bg-[var(--is-blue-1)] backdrop-blur-md py-5">
+                                        <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                            onclick="selectItem(this, 'USD $')">USD $</li>
+                                        <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                            onclick="selectItem(this, 'EUR €')">EUR €</li>
+                                        <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                            onclick="selectItem(this, 'GBP £')">GBP £</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inset-y-0 left-0 flex items-center lg:hidden">
+                        <button type="button" command="--toggle" commandfor="mobile-menu"
+                            class="text-white relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
+                            <span class="absolute -inset-0.5"></span>
+                            <span class="sr-only">Open main menu</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                data-slot="icon" aria-hidden="true" class="size-6 in-aria-expanded:hidden">
+                                <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                data-slot="icon" aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
+                                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <el-disclosure id="mobile-menu" hidden class="mt-4 rounded-lg bg-white block sm:hidden">
+                    <div class="flex flex-col gap-2 text-black space-y-1 px-2 py-3">
+                        <div class="relative flex dropdown-wrapper">
+                            <div class="flex items-center gap-2 cursor-pointer relative" onclick="toggleDropdown(this)"
+                                title="menu">
+                                <span class="font-medium text-lg selected-value">menu</span>
+                                <div class="dropdown-arrow flex items-center gap-2 cursor-pointer relative">
+                                    <div title="menu" class="flex flex-col gap-[3.5px] mt-[1.5px] menu-icon">
+                                        <div class="menu-line top-line bg-white w-[15px] h-[3px]"></div>
+                                        <div class="menu-line mid-line bg-white w-[15px] h-[3px]"></div>
+                                        <div class="menu-line bot-line bg-white w-[15px] h-[3px]"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul
+                                class="dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 px-22 w-[20%] bg-[var(--is-blue-1)] backdrop-blur-md py-5">
+                                <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                    onclick="selectItem(this, 'Marketplace')">Marketplace</li>
+                                <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                    onclick="selectItem(this, 'About')">About</li>
+                                <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                    onclick="selectItem(this, 'Compatibility')">Compatibility</li>
+                                <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                    onclick="selectItem(this, 'FAQ')">FAQ</li>
+                                <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                    onclick="selectItem(this, 'Blogs')">Blogs</li>
+                                <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                    onclick="selectItem(this, 'Contact')">Contact</li>
+                                <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                    onclick="selectItem(this, 'Login')">Login</li>
+                            </ul>
+                        </div>
+                        <div class="relative flex dropdown-wrapper">
+                            <div class="flex items-center gap-2 cursor-pointer relative" onclick="toggleDropdown(this)">
+                                <span class="font-medium text-lg selected-value">English</span>
+                                <img src="../assets/icons/arraw.svg" alt="arraw"
+                                    class="dropdown-arrow w-[12px] h-[6px]" />
+                            </div>
+                            <ul
+                                class="dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 px-22 w-[20%] bg-[var(--is-blue-1)] backdrop-blur-md py-5">
+                                <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                    onclick="selectItem(this, 'العربية')">العربية</li>
+                                <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                    onclick="selectItem(this, 'English')">English</li>
+                            </ul>
+                        </div>
+                        <div class="relative flex dropdown-wrapper">
+                            <div class="flex items-center gap-2 cursor-pointer relative" onclick="toggleDropdown(this)">
+                                <span class="font-medium text-lg selected-value">USD $</span>
+                                <img src="../assets/icons/arraw.svg" alt="arraw"
+                                    class="dropdown-arrow w-[12px] h-[6px]" />
+                            </div>
+                            <ul
+                                class="dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 px-22 w-[20%] bg-[var(--is-blue-1)] backdrop-blur-md py-5">
+                                <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                    onclick="selectItem(this, 'USD $')">USD $</li>
+                                <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                    onclick="selectItem(this, 'EUR €')">EUR €</li>
+                                <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                    onclick="selectItem(this, 'GBP £')">GBP £</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="font-medium text-lg">Team</a>
+                        <a href="#" class="font-medium text-lg">Projects</a>
+                        <a href="#" class="font-medium text-lg">Calendar</a>
+                    </div>
+                </el-disclosure>
+            </div>
+        </nav>
+        <!-- end navbar -->
+        <!-- start hero -->
+        <main class="bg-[url('../assets/images/hero.png')]
+    bg-cover
+    bg-center
+    bg-no-repeat md:h-screen">
+            <div
+                class="pt-22 pb-15 md:py-0 h-full bg-gradient-to-r from-[var(--is-blue)] from-30% via-[var(--is-blue)]/60 via-60% to-transparent flex items-center">
+                <div class="container">
+                    <div class="mt-10 md:mt-15 md:w-[47%] text-white flex flex-col gap-[30px] md:gap-[60px]"
+                        data-aos="fade-up">
+                        <div class="flex flex-col gap-[16px]">
+                            <h1 class="font-bold text-xl md:text-5xl">Where to, traveller?</h1>
+                            <p class="text-sm md:text-xl leading-7 md:leading-9 font-normal">Dive in for our best rates
+                                on internet abroad!
+                                Just choose
+                                your
+                                destination, let us know
+                                how
+                                long you’re going for and we’ll do the rest.</p>
+                        </div>
+                        <div class="md:me-18 flex flex-col gap-[25px]">
+                            <div class="relative dropdown-wrapper">
+                                <div
+                                    class="relative bg-[var(--bg-gray)] border border-white rounded-[20px] flex items-center justify-between">
+                                    <input type="text" id="destination-input"
+                                        class="w-full text-white placeholder:text-white py-4 px-5 outline-none focus:outline-none"
+                                        placeholder="Destination" oninput="filterDestinations(this.value)"
+                                        onfocus="openDestinations()" />
+                                    <div class="absolute right-0 px-5">
+                                        <img src="../assets/icons/search.svg" alt="search" />
+                                    </div>
+                                </div>
+
+                                <ul id="destination-list"
+                                    class="dropdown-list absolute w-full mt-2 rounded-[12px] bg-[var(--bg-gray)] text-black overflow-hidden z-50">
+                                    <li onclick="selectDestination('Palestine', 'ps')"
+                                        class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                                        <img src="https://flagcdn.com/24x18/ps.png" alt="ps" />
+                                        <span>Palestine</span>
+                                    </li>
+                                    <li onclick="selectDestination('United States', 'us')"
+                                        class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                                        <img src="https://flagcdn.com/24x18/us.png" alt="us" />
+                                        <span>United States</span>
+                                    </li>
+                                    <li onclick="selectDestination('Jordan', 'jo')"
+                                        class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                                        <img src="https://flagcdn.com/24x18/jo.png" alt="jo" />
+                                        <span>Jordan</span>
+                                    </li>
+                                    <li onclick="selectDestination('Germany', 'de')"
+                                        class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                                        <img src="https://flagcdn.com/24x18/de.png" alt="de" />
+                                        <span>Germany</span>
+                                    </li>
+                                    <li onclick="selectDestination('France', 'fr')"
+                                        class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                                        <img src="https://flagcdn.com/24x18/fr.png" alt="fr" />
+                                        <span>France</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button
+                                class="bg-[var(--is-pink)] px-5 py-4 hover:text-black before:bg-white text-white transition-all duration-800 before:bottom-0 before:rounded-t-[50%] relative group rounded-[20px] cursor-pointer overflow-hidden before:content-[''] before:absolute before:left-0 before:w-full before:h-0 before:z-1 before:bottom-0 before:transition-all before:duration-800 hover:before:h-[180%]"
+                                title="Find Deals">
+                                <div class="text-base relative z-1 font-bold">
+                                    <span>Find Deals</span>
+                                </div>
+                            </button>
+                        </div>
+                        <!-- <div class="flex flex-col gap-[25px]">
+                            <div
+                                class="relative bg-[var(--bg-gray)] border border-white rounded-[20px] flex items-center justify-between">
+                                <input type="text"
+                                    class="w-full text-white placeholder:text-white py-3 px-5 outline-none focus:outline-none"
+                                    placeholder="Destination" />
+                                <div class="absolute right-0 px-5">
+                                    <img src="../assets/icons/search.svg" alt="search" />
+                                </div>
+                            </div>
+                            <p>test</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- end hero -->
+        <h2>test</h2>
+        <h2>test</h2>
+        <h2>test</h2>
+        <h2>test</h2>
+        <h2>test</h2>
+        <h2>test</h2>
+        <h2>test</h2>
+        <h2>test</h2>
+        <h2>test</h2>
+        <h2>test</h2>
+    </div>
+</body>
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/global.js"></script>
+<script src="../assets/js/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+
+</html>

@@ -1,0 +1,127 @@
+:root {
+    --is-blue: #1b0d2d;
+    --is-blue-1: #F511681A;
+    --is-blue-2: rgba(90, 57, 134, 0.278);
+    --is-gold: #FFBB00;
+    --bg-gray: #FFFFFF80;
+    --is-pink: #F70075;
+}
+
+@font-face {
+    font-family: "SF-Pro";
+    src: url("/assets/fonts/SF-Pro-Text-Medium.otf") format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "SF-Pro";
+    src: url("/assets/fonts/SF-Pro-Text-Semibold.otf") format("truetype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "SF-Pro";
+    src: url("/assets/fonts/SF-Pro-Text-Regular.otf") format("truetype");
+    font-weight: 400;
+}
+
+body {
+    font-family: "SF-Pro", sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-hidden {
+    transform: translateY(-100%);
+}
+
+.nav-visible {
+    transform: translateY(0);
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0rem;
+    padding-right: 0rem;
+}
+
+.sections-marign-top {
+    margin-top: 120px;
+}
+
+.dropdown-list {
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 99;
+}
+
+.dropdown-list.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.dropdown-arrow {
+    transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.open {
+    transform: rotate(180deg);
+}
+
+.dropdown-list li.active {
+    color: var(--is-gold);
+    font-weight: bold;
+}
+
+.menu-line {
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.menu-icon.open .top-line {
+    transform: translateY(6.5px) rotate(45deg);
+}
+
+.menu-icon.open .mid-line {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.menu-icon.open .bot-line {
+    transform: translateY(-6.5px) rotate(-45deg);
+}
+
+#destination-list {
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    max-height: 250px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--is-pink) transparent;
+}
+
+#destination-list.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+@media (max-width: 390px) {
+    .container {
+        max-width: 350px;
+    }
+}
