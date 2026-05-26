@@ -908,7 +908,7 @@
                 <hr />
                 <div class="container flex justify-between flex-wrap gap-5 py-3 text-center text-start">
 
-                    <div>
+                    <div class="w-[40%] sm:w-[unset]">
                         <h5 class="font-bold mb-3 text-capitalize text-lg">Popular Countries</h5>
 
                         <ul class="flex flex-col gap-2">
@@ -955,7 +955,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div>
+                    <div class="w-[40%] sm:w-[unset]">
                         <h5 class="font-bold mb-3 text-capitalize text-lg">Popular Countries</h5>
 
                         <ul class="flex flex-col gap-2">
@@ -992,7 +992,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div>
+                    <div class="w-[40%] sm:w-[unset]">
                         <h5 class="font-bold mb-3 text-capitalize text-lg">Useful Information</h5>
 
                         <ul class="flex flex-col gap-2">
@@ -1028,65 +1028,63 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-3">
-                        <div class="border-0 p-0 bg-transparent text-dark">
-                            <h5 class="font-bold mb-3 text-capitalize text-lg">Social Media</h5>
-                            <ul class="flex gap-[12px]">
-                                <li>
-                                    <a href="" title="">
-                                        <img src="../assets/icons/meta.svg" alt="meta" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" title="">
-                                        <img src="../assets/icons/instgram.svg" alt="instgram" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" title="">
-                                        <img src="../assets/icons/tiktok.svg" alt="tiktok" />
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="flex flex-col gap-3 mt-10">
-                                <a title="Settings"
-                                    class="nav-link transition-all duration-300 hover:mx-2 hover:text-[var(--is-pink)]"
-                                    href="https://goldenesim.com/term-conditions">Settings</a>
-                                <div class="flex">
-                                    <div class="relative dropdown-wrapper">
-                                        <div class="flex items-center gap-2 cursor-pointer relative"
-                                            onclick="toggleDropdown(this)">
-                                            <span class="font-medium text-lg selected-value">English</span>
-                                            <img src="../assets/icons/arraw.svg" alt="arraw"
-                                                class="dropdown-arrow w-[12px] h-[6px]" />
-                                        </div>
-                                        <ul
-                                            class="px-22 dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 w-full bg-[var(--is-blue-1)] backdrop-blur-md py-5">
-                                            <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
-                                                onclick="selectItem(this, 'العربية')">العربية</li>
-                                            <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
-                                                onclick="selectItem(this, 'English')">English</li>
-                                        </ul>
+                    <div class="w-[40%] sm:w-[unset]">
+                        <h5 class="font-bold mb-3 text-capitalize text-lg">Social Media</h5>
+                        <ul class="flex gap-[12px]">
+                            <li>
+                                <a href="" title="">
+                                    <img src="../assets/icons/meta.svg" alt="meta" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" title="">
+                                    <img src="../assets/icons/instgram.svg" alt="instgram" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" title="">
+                                    <img src="../assets/icons/tiktok.svg" alt="tiktok" />
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="flex flex-col gap-3 mt-10">
+                            <a title="Settings"
+                                class="nav-link transition-all duration-300 hover:mx-2 hover:text-[var(--is-pink)]"
+                                href="https://goldenesim.com/term-conditions">Settings</a>
+                            <div class="flex">
+                                <div class="relative dropdown-wrapper">
+                                    <div class="flex items-center gap-2 cursor-pointer relative"
+                                        onclick="toggleDropdown(this)">
+                                        <span class="font-medium text-lg selected-value">English</span>
+                                        <img src="../assets/icons/arraw.svg" alt="arraw"
+                                            class="dropdown-arrow w-[12px] h-[6px]" />
                                     </div>
+                                    <ul
+                                        class="px-22 dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 w-full bg-[var(--is-blue-1)] backdrop-blur-md py-5">
+                                        <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                            onclick="selectItem(this, 'العربية')">العربية</li>
+                                        <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                            onclick="selectItem(this, 'English')">English</li>
+                                    </ul>
                                 </div>
-                                <div class="flex">
-                                    <div class="relative flex justify-center dropdown-wrapper">
-                                        <div class="flex items-center gap-2 cursor-pointer relative"
-                                            onclick="toggleDropdown(this)">
-                                            <span class="font-medium text-lg selected-value">USD $</span>
-                                            <img src="../assets/icons/arraw.svg" alt="arraw"
-                                                class="dropdown-arrow w-[12px] h-[6px]" />
-                                        </div>
-                                        <ul
-                                            class="dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 px-22 w-full bg-[var(--is-blue-1)] backdrop-blur-md py-5">
-                                            <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
-                                                onclick="selectItem(this, 'USD $')">USD $</li>
-                                            <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
-                                                onclick="selectItem(this, 'EUR €')">EUR €</li>
-                                            <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
-                                                onclick="selectItem(this, 'GBP £')">GBP £</li>
-                                        </ul>
+                            </div>
+                            <div class="flex">
+                                <div class="relative flex justify-center dropdown-wrapper">
+                                    <div class="flex items-center gap-2 cursor-pointer relative"
+                                        onclick="toggleDropdown(this)">
+                                        <span class="font-medium text-lg selected-value">USD $</span>
+                                        <img src="../assets/icons/arraw.svg" alt="arraw"
+                                            class="dropdown-arrow w-[12px] h-[6px]" />
                                     </div>
+                                    <ul
+                                        class="dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 px-22 w-full bg-[var(--is-blue-1)] backdrop-blur-md py-5">
+                                        <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                            onclick="selectItem(this, 'USD $')">USD $</li>
+                                        <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                            onclick="selectItem(this, 'EUR €')">EUR €</li>
+                                        <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                            onclick="selectItem(this, 'GBP £')">GBP £</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
