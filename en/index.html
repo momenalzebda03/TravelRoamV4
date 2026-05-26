@@ -17,8 +17,8 @@
     </div>
     <div id="app" style="display: none;">
         <!-- start navbar -->
-        <nav class="text-white z-3 navbar transition duration-300 w-full py-[33px]">
-            <div class="container">
+        <nav class="z-2 text-white navbar transition duration-300 w-full py-[33px]">
+            <div class="container z-1">
                 <div class="flex w-full">
                     <div class="w-full flex items-center justify-between">
                         <a href="index.html" title="Coop Lounge">
@@ -128,7 +128,7 @@
                         <div class="relative flex dropdown-wrapper">
                             <div class="flex items-center gap-2 cursor-pointer relative" onclick="toggleDropdown(this)"
                                 title="menu">
-                                <span class="font-medium text-lg selected-value">menu</span>
+                                <span class="font-medium text-lg selected-value">Menu</span>
                                 <div class="dropdown-arrow flex items-center gap-2 cursor-pointer relative">
                                     <div title="menu" class="flex flex-col gap-[3.5px] mt-[1.5px] menu-icon">
                                         <div class="menu-line top-line bg-white w-[15px] h-[3px]"></div>
@@ -199,7 +199,7 @@
     bg-center
     bg-no-repeat md:h-screen">
             <div
-                class="pt-22 pb-15 md:py-0 h-full bg-gradient-to-r from-[var(--is-blue)] from-30% via-[var(--is-blue)]/60 via-60% to-transparent flex items-center">
+                class="relative z-1 pt-22 pb-15 md:py-0 h-full bg-gradient-to-r from-[var(--is-blue)] from-30% via-[var(--is-blue)]/60 via-60% to-transparent flex items-center">
                 <div class="container">
                     <div class="mt-10 md:mt-15 md:w-[47%] text-white flex flex-col gap-[30px] md:gap-[60px]"
                         data-aos="fade-up">
@@ -227,8 +227,9 @@
                                     </div>
                                 </div>
 
+                                <!-- bg-[var(--test)]  -->
                                 <ul id="destination-list-1"
-                                    class="dropdown-list absolute w-full mt-2 rounded-[12px] bg-[var(--bg-gray)] text-black overflow-hidden z-50">
+                                    class="shadow-2xl dropdown-list absolute w-full mt-2 rounded-[12px] bg-white overflow-hidden z-50">
                                 </ul>
 
                             </div>
@@ -247,7 +248,7 @@
         <!-- start Browse all destinations -->
         <section>
             <div class="container sections-marign-top flex flex-col items-center gap-[30px] md:gap-[73px]">
-                <div class="flex flex-col items-center gap-[20px] md:gap-[25px]" data-aos="fade-up">
+                <div class="relative flex flex-col items-center gap-[20px] md:gap-[25px]" data-aos="fade-up">
                     <h3 class="text-2xl md:text-[42px] font-normal text-[var(--is-pink)]">Browse
                         all <span class="font-semibold text-[var(--is-blue-3)]">destinations</span>
                     </h3>
@@ -441,7 +442,8 @@
                         </a>
                     </li>
                 </ul>
-                <ul id="list-region" class="w-full grid grid-cols-4 gap-[16px] hidden">
+                <ul id="list-region"
+                    class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[16px] hidden">
                     <li data-aos="fade-up">
                         <a href="" title="France"
                             class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] p-2 flex items-center justify-between">
@@ -739,8 +741,8 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="hidden md:block relative flex justify-center" data-aos="fade-up">
-                            <div class="lg:absolute right-0 -bottom-50 w-[492px] h-[749px]">
+                        <div class="hidden lg:block relative flex items-center justify-center" data-aos="fade-up">
+                            <div class="lg:absolute right-0 -bottom-35 w-[492px] h-[659px]">
                                 <img src="../assets/images/iPhone.png" alt="iPhone"
                                     class="w-full h-full object-cover" />
                             </div>
@@ -764,7 +766,7 @@
                             <div class="swiper-slide">
                                 <div class="text-center flex flex-col items-center">
                                     <img src="../assets/images/item-journal-1.png" alt="item-journal-1"
-                                        class="rounded-[25px] w-full h-[147px] md:h-[247px] object-cover" />
+                                        class="rounded-[25px] w-full h-full object-cover" />
                                     <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
                                         next destination
                                     </h3>
@@ -773,7 +775,7 @@
                             <div class="swiper-slide">
                                 <div class="text-center flex flex-col items-center">
                                     <img src="../assets/images/item-journal-2.png" alt="item-journal-2"
-                                        class="rounded-[25px] w-full h-[147px] md:h-[247px] object-cover" />
+                                        class="rounded-[25px] w-full h-full object-cover" />
                                     <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
                                         next destination
                                     </h3>
@@ -782,7 +784,7 @@
                             <div class="swiper-slide">
                                 <div class="text-center flex flex-col items-center">
                                     <img src="../assets/images/item-journal-3.png" alt="item-journal-3"
-                                        class="rounded-[25px] w-full h-[147px] md:h-[247px] object-cover" />
+                                        class="rounded-[25px] w-full h-full" />
                                     <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
                                         next destination
                                     </h3>
@@ -791,7 +793,7 @@
                             <div class="swiper-slide">
                                 <div class="text-center flex flex-col items-center">
                                     <img src="../assets/images/item-journal-4.png" alt="item-journal-4"
-                                        class="rounded-[25px] w-full h-[147px] md:h-[247px] object-cover" />
+                                        class="rounded-[25px] w-full h-full" />
                                     <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
                                         next destination
                                     </h3>
@@ -800,7 +802,7 @@
                             <div class="swiper-slide">
                                 <div class="text-center flex flex-col items-center">
                                     <img src="../assets/images/item-journal-5.png" alt="item-journal-5"
-                                        class="rounded-[25px] w-full h-[147px] md:h-[247px] object-cover" />
+                                        class="rounded-[25px] w-full h-full" />
                                     <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
                                         next destination
                                     </h3>
@@ -809,7 +811,7 @@
                             <div class="swiper-slide">
                                 <div class="text-center flex flex-col items-center">
                                     <img src="../assets/images/item-journal-1.png" alt="item-journal-1"
-                                        class="rounded-[25px] w-full h-[147px] md:h-[247px] object-cover" />
+                                        class="rounded-[25px] w-full h-full" />
                                     <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
                                         next destination
                                     </h3>
@@ -818,7 +820,7 @@
                             <div class="swiper-slide">
                                 <div class="text-center flex flex-col items-center">
                                     <img src="../assets/images/item-journal-2.png" alt="item-journal-2"
-                                        class="rounded-[25px] w-full h-[147px] md:h-[247px] object-cover" />
+                                        class="rounded-[25px] w-full h-full" />
                                     <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
                                         next destination
                                     </h3>
@@ -827,7 +829,7 @@
                             <div class="swiper-slide">
                                 <div class="text-center flex flex-col items-center">
                                     <img src="../assets/images/item-journal-3.png" alt="item-journal-3"
-                                        class="rounded-[25px] w-full h-[147px] md:h-[247px] object-cover" />
+                                        class="rounded-[25px] w-full h-full" />
                                     <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
                                         next destination
                                     </h3>
@@ -836,7 +838,7 @@
                             <div class="swiper-slide">
                                 <div class="text-center flex flex-col items-center">
                                     <img src="../assets/images/item-journal-4.png" alt="item-journal-4"
-                                        class="rounded-[25px] w-full h-[147px] md:h-[247px] object-cover" />
+                                        class="rounded-[25px] w-full h-full" />
                                     <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
                                         next destination
                                     </h3>
@@ -845,7 +847,7 @@
                             <div class="swiper-slide">
                                 <div class="text-center flex flex-col items-center">
                                     <img src="../assets/images/item-journal-5.png" alt="item-journal-5"
-                                        class="rounded-[25px] w-full h-[147px] md:h-[247px] object-cover" />
+                                        class="rounded-[25px] w-full h-full" />
                                     <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
                                         next destination
                                     </h3>
@@ -854,9 +856,9 @@
                         </div>
                     </div>
                 </div>
-                <div data-aos="fade-up" class="flex justify-center mt-20">
+                <div class="flex justify-center mt-20">
                     <a href="" title="Read more posts"
-                        class="text-white before:bg-[var(--is-blue-3)] rounded-[20px] bg-[var(--is-pink)] px-25 py-4 btn">
+                        class="text-nowrap text-white before:bg-[var(--is-blue-3)] rounded-[20px] bg-[var(--is-pink)] px-5 md:px-25 py-4 btn">
                         <div class="text-xl relative z-1 font-bold">
                             <span>Read more posts</span>
                         </div>
@@ -895,11 +897,12 @@
                     </div>
                 </div>
                 <div class="container">
-                    <div class="flex items-center justify-between gap-10 md:gap-50">
+                    <div
+                        class="flex flex-col md:flex-row items-center justify-center md:justify-between gap-5 md:gap-50">
                         <a href="index.html">
                             <img alt="Golden Esim" src="../assets/icons/logo-pink.svg" />
                         </a>
-                        <p class="mt-3 text-start text-md font-medium">
+                        <p class="mt-3 text-center md:text-start text-md font-medium">
                             We provide affordable, easy to use eSIM bundles in over 200+ countries worldwide. Less fuss,
                             better deals on internet abroad.
                         </p>

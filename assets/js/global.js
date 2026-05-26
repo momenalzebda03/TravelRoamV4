@@ -77,7 +77,7 @@ function renderDestinations(list, listId, inputId) {
                 data-code="${item.code}"
                 data-input="${inputId}"
                 data-list="${listId}"
-                class="destination-item flex items-center gap-3 px-4 py-3 hover:bg-gray-100 hover:text-black cursor-pointer">
+                class="!text-black destination-item flex items-center gap-3 px-4 py-3 hover:bg-gray-100 hover:text-black cursor-pointer">
 
                 <img src="https://flagcdn.com/24x18/${item.code}.png" 
                      alt="${item.code}" 
@@ -115,41 +115,6 @@ window.addEventListener('load', () => {
     AOS.init({
         once: true,
         duration: 900,
-    });
-});
-
-const commonSwiperOptions = {
-    loop: true,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
-    speed: 800,
-};
-
-document.addEventListener('DOMContentLoaded', () => {
-    new Swiper(".mySwiperCards", {
-        ...commonSwiperOptions,
-        spaceBetween: 40,
-        navigation: {
-            nextEl: ".swiper-btn-next",
-            prevEl: ".swiper-btn-prev",
-        },
-        breakpoints: {
-            0: { slidesPerView: 2 },
-            990: { slidesPerView: 4 }
-        }
-    });
-
-    new Swiper(".mySwiperJournal", {
-        ...commonSwiperOptions,
-        spaceBetween: 40,
-        centeredSlides: true,
-        initialSlide: 2,
-        breakpoints: {
-            0: { slidesPerView: 2 },
-            990: { slidesPerView: 4.5 }
-        }
     });
 });
 
