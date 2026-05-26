@@ -30,29 +30,82 @@ window.addEventListener("scroll", function () {
     lastScrollTop = Math.max(currentScroll, 0);
 });
 
-function toggleDropdown(trigger) {
-    const $wrapper = $(trigger).closest('.dropdown-wrapper');
-    const $list = $wrapper.find('.dropdown-list');
+const destinations = [
+    { name: 'Australia', code: 'au' },
+    { name: 'Austria', code: 'at' },
+    { name: 'Bahrain', code: 'bh' },
+    { name: 'Bangladesh', code: 'bd' },
+    { name: 'Canada', code: 'ca' },
+    { name: 'China', code: 'cn' },
+];
 
-    $('.dropdown-list').not($list).removeClass('open');
-    $('.dropdown-wrapper').not($wrapper).find('.dropdown-arrow, .menu-icon').removeClass('open');
-
-    $list.toggleClass('open');
-    $wrapper.find('.dropdown-arrow, .menu-icon').toggleClass('open');
+function getListId(inputId) {
+    return inputId.replace('destination-input', 'destination-list');
 }
 
-function selectItem(li, value) {
-    const $wrapper = $(li).closest('.dropdown-wrapper');
-    $wrapper.find('.selected-value').text(value);
-    $wrapper.find('.dropdown-list, .dropdown-arrow, .menu-icon').removeClass('open');
-    $wrapper.find('li').removeClass('active');
-    $(li).addClass('active');
+function openDestinations(inputEl) {
+    const listId = getListId(inputEl.id);
+
+    $(`#${listId}`).addClass('open');
+
+    renderDestinations(destinations, listId, inputEl.id);
 }
+
+function filterDestinations(value, inputEl) {
+    const listId = getListId(inputEl.id);
+
+    const filtered = destinations.filter(d =>
+        d.name.toLowerCase().startsWith(value.toLowerCase())
+    );
+
+    renderDestinations(filtered, listId, inputEl.id);
+
+    $(`#${listId}`).addClass('open');
+}
+
+function renderDestinations(list, listId, inputId) {
+
+    const ul = $(`#${listId}`);
+
+    ul.empty();
+
+    list.forEach(item => {
+
+        ul.append(`
+            <li 
+                data-name="${item.name}"
+                data-code="${item.code}"
+                data-input="${inputId}"
+                data-list="${listId}"
+                class="destination-item flex items-center gap-3 px-4 py-3 hover:bg-gray-100 cursor-pointer">
+
+                <img src="https://flagcdn.com/24x18/${item.code}.png" 
+                     alt="${item.code}" 
+                     class="rounded-full w-7 h-7" />
+
+                <span>${item.name}</span>
+            </li>
+        `);
+
+    });
+}
+
+function nameEscape(text) {
+    return text.replace(/'/g, "\\'");
+}
+
+$(document).on('click', '.destination-item', function () {
+    const name = $(this).data('name');
+    const inputId = $(this).data('input');
+    const listId = $(this).data('list');
+
+    $(`#${inputId}`).val(name);
+
+    $(`#${listId}`).removeClass('open');
+});
 
 $(document).on('click', function (e) {
-    if (!$(e.target).closest('.dropdown-wrapper').length) {
-        $('.dropdown-list, .dropdown-arrow, .menu-icon').removeClass('open');
-    }
+    !$(e.target).closest('.dropdown-wrapper').length && $('.dropdown-list').removeClass('open');
 });
 
 window.addEventListener('load', () => {
@@ -98,4 +151,29 @@ document.addEventListener('DOMContentLoaded', () => {
             990: { slidesPerView: 4.5 }
         }
     });
+});
+
+function toggleDropdown(trigger) {
+    const $wrapper = $(trigger).closest('.dropdown-wrapper');
+    const $list = $wrapper.find('.dropdown-list');
+
+    $('.dropdown-list').not($list).removeClass('open');
+    $('.dropdown-wrapper').not($wrapper).find('.dropdown-arrow, .menu-icon').removeClass('open');
+
+    $list.toggleClass('open');
+    $wrapper.find('.dropdown-arrow, .menu-icon').toggleClass('open');
+}
+
+function selectItem(li, value) {
+    const $wrapper = $(li).closest('.dropdown-wrapper');
+    $wrapper.find('.selected-value').text(value);
+    $wrapper.find('.dropdown-list, .dropdown-arrow, .menu-icon').removeClass('open');
+    $wrapper.find('li').removeClass('active');
+    $(li).addClass('active');
+}
+
+$(document).on('click', function (e) {
+    if (!$(e.target).closest('.dropdown-wrapper').length) {
+        $('.dropdown-list, .dropdown-arrow, .menu-icon').removeClass('open');
+    }
 });

@@ -21,7 +21,7 @@
             <div class="container">
                 <div class="flex w-full">
                     <div class="w-full flex items-center justify-between">
-                        <a href="/" title="Coop Lounge">
+                        <a href="index.html" title="Coop Lounge">
                             <img src="/assets/icons/logo.svg" alt="logo" width="170" height="41" class="object-cover" />
                         </a>
                         <div class="hidden lg:flex gap-[91px] items-center">
@@ -123,7 +123,7 @@
                         </button>
                     </div>
                 </div>
-                <el-disclosure id="mobile-menu" hidden class="mt-4 rounded-lg bg-white block sm:hidden">
+                <el-disclosure id="mobile-menu" hidden class="mt-4 rounded-lg bg-white block lg:hidden">
                     <div class="flex flex-col gap-2 text-black space-y-1 px-2 py-3">
                         <div class="relative flex dropdown-wrapper">
                             <div class="flex items-center gap-2 cursor-pointer relative" onclick="toggleDropdown(this)"
@@ -213,47 +213,24 @@
                                 how
                                 long you’re going for and we’ll do the rest.</p>
                         </div>
-                        <div class="md:me-18 flex flex-col gap-[25px]">
+                        <div class="md:w-[88%] flex flex-col gap-[25px]">
                             <div class="relative dropdown-wrapper">
                                 <div
                                     class="relative bg-[var(--bg-gray)] border border-white rounded-[20px] flex items-center justify-between">
-                                    <input type="text" id="destination-input"
+                                    <input type="text"
                                         class="w-full text-white placeholder:text-white py-4 px-5 outline-none focus:outline-none"
-                                        placeholder="Destination" oninput="filterDestinations(this.value)"
-                                        onfocus="openDestinations()" />
+                                        placeholder="Destination" id="destination-input-1"
+                                        oninput="filterDestinations(this.value, this)"
+                                        onfocus="openDestinations(this)" />
                                     <div class="absolute right-0 px-5">
                                         <img src="../assets/icons/search.svg" alt="search" />
                                     </div>
                                 </div>
 
-                                <ul id="destination-list"
+                                <ul id="destination-list-1"
                                     class="dropdown-list absolute w-full mt-2 rounded-[12px] bg-[var(--bg-gray)] text-black overflow-hidden z-50">
-                                    <li onclick="selectDestination('Palestine', 'ps')"
-                                        class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 cursor-pointer">
-                                        <img src="https://flagcdn.com/24x18/ps.png" alt="ps" />
-                                        <span>Palestine</span>
-                                    </li>
-                                    <li onclick="selectDestination('United States', 'us')"
-                                        class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 cursor-pointer">
-                                        <img src="https://flagcdn.com/24x18/us.png" alt="us" />
-                                        <span>United States</span>
-                                    </li>
-                                    <li onclick="selectDestination('Jordan', 'jo')"
-                                        class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 cursor-pointer">
-                                        <img src="https://flagcdn.com/24x18/jo.png" alt="jo" />
-                                        <span>Jordan</span>
-                                    </li>
-                                    <li onclick="selectDestination('Germany', 'de')"
-                                        class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 cursor-pointer">
-                                        <img src="https://flagcdn.com/24x18/de.png" alt="de" />
-                                        <span>Germany</span>
-                                    </li>
-                                    <li onclick="selectDestination('France', 'fr')"
-                                        class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 cursor-pointer">
-                                        <img src="https://flagcdn.com/24x18/fr.png" alt="fr" />
-                                        <span>France</span>
-                                    </li>
                                 </ul>
+
                             </div>
                             <button title="Find Deals"
                                 class="before:bg-white rounded-[20px] hover:text-black bg-[var(--is-pink)] px-5 py-4 btn">
@@ -786,7 +763,7 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="text-center flex flex-col items-center">
-                                    <img src="../assets/images/item-journal-2.png" alt="item-journal-2"
+                                    <img src="../assets/images/item-journal-1.png" alt="item-journal-1"
                                         class="rounded-[25px] w-full h-[147px] md:h-[247px] object-cover" />
                                     <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
                                         next destination
@@ -804,7 +781,34 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="text-center flex flex-col items-center">
-                                    <img src="../assets/images/item-journal-2.png" alt="item-journal-2"
+                                    <img src="../assets/images/item-journal-3.png" alt="item-journal-3"
+                                        class="rounded-[25px] w-full h-[147px] md:h-[247px] object-cover" />
+                                    <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
+                                        next destination
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="text-center flex flex-col items-center">
+                                    <img src="../assets/images/item-journal-4.png" alt="item-journal-4"
+                                        class="rounded-[25px] w-full h-[147px] md:h-[247px] object-cover" />
+                                    <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
+                                        next destination
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="text-center flex flex-col items-center">
+                                    <img src="../assets/images/item-journal-5.png" alt="item-journal-5"
+                                        class="rounded-[25px] w-full h-[147px] md:h-[247px] object-cover" />
+                                    <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
+                                        next destination
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="text-center flex flex-col items-center">
+                                    <img src="../assets/images/item-journal-1.png" alt="item-journal-1"
                                         class="rounded-[25px] w-full h-[147px] md:h-[247px] object-cover" />
                                     <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
                                         next destination
@@ -822,7 +826,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="text-center flex flex-col items-center">
-                                    <img src="../assets/images/item-journal-2.png" alt="item-journal-2"
+                                    <img src="../assets/images/item-journal-3.png" alt="item-journal-3"
                                         class="rounded-[25px] w-full h-[147px] md:h-[247px] object-cover" />
                                     <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
                                         next destination
@@ -831,7 +835,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="text-center flex flex-col items-center">
-                                    <img src="../assets/images/item-journal-2.png" alt="item-journal-2"
+                                    <img src="../assets/images/item-journal-4.png" alt="item-journal-4"
                                         class="rounded-[25px] w-full h-[147px] md:h-[247px] object-cover" />
                                     <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
                                         next destination
@@ -840,34 +844,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="text-center flex flex-col items-center">
-                                    <img src="../assets/images/item-journal-2.png" alt="item-journal-2"
-                                        class="rounded-[25px] w-full h-[147px] md:h-[247px] object-cover" />
-                                    <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
-                                        next destination
-                                    </h3>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="text-center flex flex-col items-center">
-                                    <img src="../assets/images/item-journal-2.png" alt="item-journal-2"
-                                        class="rounded-[25px] w-full h-[147px] md:h-[247px] object-cover" />
-                                    <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
-                                        next destination
-                                    </h3>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="text-center flex flex-col items-center">
-                                    <img src="../assets/images/item-journal-2.png" alt="item-journal-2"
-                                        class="rounded-[25px] w-full h-[147px] md:h-[247px] object-cover" />
-                                    <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
-                                        next destination
-                                    </h3>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="text-center flex flex-col items-center">
-                                    <img src="../assets/images/item-journal-2.png" alt="item-journal-2"
+                                    <img src="../assets/images/item-journal-5.png" alt="item-journal-5"
                                         class="rounded-[25px] w-full h-[147px] md:h-[247px] object-cover" />
                                     <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
                                         next destination
@@ -889,7 +866,255 @@
         </section>
         <!-- end travel roam journal -->
         <!-- start footer -->
-        <p>test</p>
+        <footer class="bg-[var(--is-black-1)]">
+            <div class="overflow-hidden sections-marign-top text-white py-20 text-center flex flex-col gap-20">
+                <div class="container flex flex-col gap-10">
+                    <p class="text-4xl font-bold">
+                        Go where <span class="text-[var(--is-pink)]">TravelRoam</span> takes you.
+                    </p>
+                    <div class="flex justify-center">
+                        <div class="relative dropdown-wrapper w-[70%]">
+                            <div
+                                class="relative border border-white rounded-[5px] flex items-center justify-between gap-3 px-5">
+                                <img src="../assets/icons/region.svg" alt="region" />
+                                <input type="text"
+                                    class="w-full text-white placeholder:text-white py-4 outline-none focus:outline-none"
+                                    placeholder="Where are you going?" id="destination-input-2"
+                                    oninput="filterDestinations(this.value, this)" onfocus="openDestinations(this)" />
+                                <div class="absolute right-0 px-5">
+                                    <img src="../assets/icons/search.svg" alt="search" />
+                                </div>
+                            </div>
+
+                            <ul id="destination-list-2"
+                                class="dropdown-list absolute w-full mt-2 rounded-[12px] bg-[var(--bg-gray)] text-black overflow-hidden z-50">
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="flex items-center justify-between gap-50">
+                        <a href="index.html">
+                            <img alt="Golden Esim" src="../assets/icons/logo-pink.svg" />
+                        </a>
+                        <p class="mt-3 text-start text-md font-medium">
+                            We provide affordable, easy to use eSIM bundles in over 200+ countries worldwide. Less fuss,
+                            better deals on internet abroad.
+                        </p>
+                    </div>
+                </div>
+                <hr />
+                <div class="container flex justify-between flex-wrap gap-5 py-3 text-center text-start">
+
+                    <div>
+                        <h5 class="font-bold mb-3 text-capitalize text-lg">Popular Countries</h5>
+
+                        <ul class="flex flex-col gap-2">
+                            <li>
+                                <a title="Turkey"
+                                    class="nav-link transition-all duration-300 hover:mx-2 hover:text-[var(--is-pink)]"
+                                    href="https://goldenesim.com/chooseBundlesPlan/type/country/id/VFI=/param/">Turkey</a>
+                            </li>
+                            <li>
+                                <a title="USA"
+                                    class="nav-link transition-all duration-300 hover:mx-2 hover:text-[var(--is-pink)]"
+                                    href="https://goldenesim.com/chooseBundlesPlan/type/country/id/VVM=/param/">USA</a>
+                            </li>
+                            <li>
+                                <a title="UAE"
+                                    class="nav-link transition-all duration-300 hover:mx-2 hover:text-[var(--is-pink)]"
+                                    href="https://goldenesim.com/chooseBundlesPlan/type/country/id/QUU=/param/">UAE</a>
+                            </li>
+                            <li>
+                                <a title="Saudi Arabia"
+                                    class="nav-link transition-all duration-300 hover:mx-2 hover:text-[var(--is-pink)]"
+                                    href="https://goldenesim.com/chooseBundlesPlan/type/country/id/U0E=/param/">Saudi
+                                    Arabia</a>
+                            </li>
+                            <li>
+                                <a title="France"
+                                    class="nav-link transition-all duration-300 hover:mx-2 hover:text-[var(--is-pink)]"
+                                    href="https://goldenesim.com/chooseBundlesPlan/type/country/id/RlI=/param/">France</a>
+                            </li>
+                            <li>
+                                <a title="UK"
+                                    class="nav-link transition-all duration-300 hover:mx-2 hover:text-[var(--is-pink)]"
+                                    href="https://goldenesim.com/chooseBundlesPlan/type/country/id/R0I=/param/">UK</a>
+                            </li>
+                            <li>
+                                <a title="Spain"
+                                    class="nav-link transition-all duration-300 hover:mx-2 hover:text-[var(--is-pink)]"
+                                    href="https://goldenesim.com/chooseBundlesPlan/type/country/id/RVM=/param/">Spain</a>
+                            </li>
+                            <li>
+                                <a title="Italy"
+                                    class="nav-link transition-all duration-300 hover:mx-2 hover:text-[var(--is-pink)]"
+                                    href="https://goldenesim.com/chooseBundlesPlan/type/country/id/SVQ=/param/">Italy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-bold mb-3 text-capitalize text-lg">Popular Countries</h5>
+
+                        <ul class="flex flex-col gap-2">
+                            <li>
+                                <a title="About"
+                                    class="nav-link transition-all duration-300 hover:mx-2 hover:text-[var(--is-pink)]"
+                                    href="">About</a>
+                            </li>
+                            <li>
+                                <a title="Compatibility"
+                                    class="nav-link transition-all duration-300 hover:mx-2 hover:text-[var(--is-pink)]"
+                                    href="">Compatibility</a>
+                            </li>
+                            <li>
+                                <a title="FAQ"
+                                    class="nav-link transition-all duration-300 hover:mx-2 hover:text-[var(--is-pink)]"
+                                    href="">FAQ</a>
+                            </li>
+                            <li>
+                                <a title="Contact"
+                                    class="nav-link transition-all duration-300 hover:mx-2 hover:text-[var(--is-pink)]"
+                                    href="">Contact</a>
+                            </li>
+                            <li>
+                                <a title="Blog"
+                                    class="nav-link transition-all duration-300 hover:mx-2 hover:text-[var(--is-pink)]"
+                                    href="">Blog</a>
+                            </li>
+                            <li>
+                                <a title="Login / Acount"
+                                    class="nav-link transition-all duration-300 hover:mx-2 hover:text-[var(--is-pink)]"
+                                    href="">Login /
+                                    Acount</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-bold mb-3 text-capitalize text-lg">Useful Information</h5>
+
+                        <ul class="flex flex-col gap-2">
+                            <li>
+                                <a title="What is an eSIM"
+                                    class="nav-link transition-all duration-300 hover:mx-2 hover:text-[var(--is-pink)]"
+                                    href="https://goldenesim.com#eSIM_div_id">What is an eSIM</a>
+                            </li>
+                            <li>
+                                <a title="Installation Guide"
+                                    class="nav-link transition-all duration-300 hover:mx-2 hover:text-[var(--is-pink)]"
+                                    href="https://goldenesim.com/faqs">Installation Guide</a>
+                            </li>
+                            <li>
+                                <a title="Acceptable Use Policy"
+                                    class="nav-link transition-all duration-300 hover:mx-2 hover:text-[var(--is-pink)]"
+                                    href="https://goldenesim.com/acceptable-policy">Acceptable Use Policy</a>
+                            </li>
+                            <li>
+                                <a title="Complaints Policy"
+                                    class="nav-link transition-all duration-300 hover:mx-2 hover:text-[var(--is-pink)]"
+                                    href="https://goldenesim.com/complaints-policy">Complaints Policy</a>
+                            </li>
+                            <li>
+                                <a title="Privacy policy"
+                                    class="nav-link transition-all duration-300 hover:mx-2 hover:text-[var(--is-pink)]"
+                                    href="https://goldenesim.com/privacy-policies">Privacy policy</a>
+                            </li>
+                            <li>
+                                <a title="Terms of service"
+                                    class="nav-link transition-all duration-300 hover:mx-2 hover:text-[var(--is-pink)]"
+                                    href="https://goldenesim.com/term-conditions">Terms of servicet</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="border-0 p-0 bg-transparent text-dark">
+                            <h5 class="font-bold mb-3 text-capitalize text-lg">Social Media</h5>
+                            <ul class="flex gap-[12px]">
+                                <li>
+                                    <a href="" title="">
+                                        <img src="../assets/icons/meta.svg" alt="meta" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" title="">
+                                        <img src="../assets/icons/instgram.svg" alt="instgram" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" title="">
+                                        <img src="../assets/icons/tiktok.svg" alt="tiktok" />
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="flex flex-col gap-3 mt-10">
+                                <a title="Settings"
+                                    class="nav-link transition-all duration-300 hover:mx-2 hover:text-[var(--is-pink)]"
+                                    href="https://goldenesim.com/term-conditions">Settings</a>
+                                <div class="flex">
+                                    <div class="relative dropdown-wrapper">
+                                        <div class="flex items-center gap-2 cursor-pointer relative"
+                                            onclick="toggleDropdown(this)">
+                                            <span class="font-medium text-lg selected-value">English</span>
+                                            <img src="../assets/icons/arraw.svg" alt="arraw"
+                                                class="dropdown-arrow w-[12px] h-[6px]" />
+                                        </div>
+                                        <ul
+                                            class="px-22 dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 w-full bg-[var(--is-blue-1)] backdrop-blur-md py-5">
+                                            <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                                onclick="selectItem(this, 'العربية')">العربية</li>
+                                            <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                                onclick="selectItem(this, 'English')">English</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="relative flex justify-center dropdown-wrapper">
+                                        <div class="flex items-center gap-2 cursor-pointer relative"
+                                            onclick="toggleDropdown(this)">
+                                            <span class="font-medium text-lg selected-value">USD $</span>
+                                            <img src="../assets/icons/arraw.svg" alt="arraw"
+                                                class="dropdown-arrow w-[12px] h-[6px]" />
+                                        </div>
+                                        <ul
+                                            class="dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 px-22 w-full bg-[var(--is-blue-1)] backdrop-blur-md py-5">
+                                            <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                                onclick="selectItem(this, 'USD $')">USD $</li>
+                                            <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                                onclick="selectItem(this, 'EUR €')">EUR €</li>
+                                            <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
+                                                onclick="selectItem(this, 'GBP £')">GBP £</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-10">
+                    <hr />
+                    <div class="container flex justify-between">
+                        <p>Copyright 2026. TravelRoam Limited.  All
+                            Rights Reserved.
+                        </p>
+                        <ul class="flex gap-4 items-center">
+                            <li>
+                                <img src="../assets/icons/apple-pay.svg" alt="icons" width="49" height="27" />
+                            </li>
+                            <li>
+                                <img src="../assets/icons/google-pay.svg" alt="icons" width="49" height="27" />
+                            </li>
+                            <li>
+                                <img src="../assets/icons/visa.svg" alt="icons" width="49" height="27" />
+                            </li>
+                            <li>
+                                <img src="../assets/icons/mastercard.svg" alt="icons" width="49" height="27" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
         <!-- end footer -->
     </div>
 </body>
