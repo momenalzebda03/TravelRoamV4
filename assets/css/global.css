@@ -75,6 +75,10 @@ body {
     color: white !important;
 }
 
+.nav-white .menu-line {
+    background-color: black;
+}
+
 .container {
     width: 95%;
     max-width: 1200px;
@@ -94,6 +98,7 @@ body {
     pointer-events: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
     z-index: 99;
+    color: white;
 }
 
 .dropdown-list.open {
@@ -185,7 +190,7 @@ body {
 
 @media (max-width: 990px) {
     .sections-marign-top {
-        margin-top: 50px;
+        margin-top: 100px;
     }
 }
 

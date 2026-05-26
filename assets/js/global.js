@@ -64,3 +64,38 @@ window.addEventListener('load', () => {
         duration: 900,
     });
 });
+
+const commonSwiperOptions = {
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    speed: 800,
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    new Swiper(".mySwiperCards", {
+        ...commonSwiperOptions,
+        spaceBetween: 40,
+        navigation: {
+            nextEl: ".swiper-btn-next",
+            prevEl: ".swiper-btn-prev",
+        },
+        breakpoints: {
+            0: { slidesPerView: 2 },
+            990: { slidesPerView: 4 }
+        }
+    });
+
+    new Swiper(".mySwiperJournal", {
+        ...commonSwiperOptions,
+        spaceBetween: 40,
+        centeredSlides: true,
+        initialSlide: 2,
+        breakpoints: {
+            0: { slidesPerView: 2 },
+            990: { slidesPerView: 4.5 }
+        }
+    });
+});
