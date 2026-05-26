@@ -77,7 +77,7 @@ function renderDestinations(list, listId, inputId) {
                 data-code="${item.code}"
                 data-input="${inputId}"
                 data-list="${listId}"
-                class="destination-item flex items-center gap-3 px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                class="destination-item flex items-center gap-3 px-4 py-3 hover:bg-gray-100 hover:text-black cursor-pointer">
 
                 <img src="https://flagcdn.com/24x18/${item.code}.png" 
                      alt="${item.code}" 
