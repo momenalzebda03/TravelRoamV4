@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../assets/css/aos.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../assets/css/global.css" />
-    <title>Travel Roam Partners</title>
+    <title>Single Country</title>
 </head>
 
 <body>
@@ -81,11 +81,11 @@
                                         class="dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 px-22 w-full bg-[var(--is-blue-1)] backdrop-blur-md py-5">
                                         <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                             onclick="selectItem(this, 'العربية')">
-                                            <a href="../ar/index.html">العربية</a>
+                                            <a href="../ar/single-country.html">العربية</a>
                                         </li>
                                         <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                             onclick="selectItem(this, 'English')">
-                                            <a href="/index.html">English</a>
+                                            <a href="single-country.html">English</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -169,11 +169,11 @@
                                 class="dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 px-22 w-[20%] bg-[var(--is-blue-1)] backdrop-blur-md py-5">
                                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                     onclick="selectItem(this, 'العربية')">
-                                    <a href="../ar/index.html">العربية</a>
+                                    <a href="../ar/single-country.html">العربية</a>
                                 </li>
                                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                     onclick="selectItem(this, 'English')">
-                                    <a href="/index.html">English</a>
+                                    <a href="single-country.html">English</a>
                                 </li>
                             </ul>
                         </div>
@@ -202,280 +202,255 @@
         </nav>
         <!-- end navbar -->
         <!-- start hero -->
-        <main class="bg-[url('../assets/images/hero.png')]
+        <main class="bg-[url('../assets/images/bg-country.png')]
     bg-cover
     bg-center
-    bg-no-repeat md:h-screen">
+    bg-no-repeat md:h-[75vh]">
             <div
                 class="relative z-1 pt-22 pb-15 md:py-0 h-full bg-gradient-to-r from-[var(--is-blue)] from-30% via-[var(--is-blue)]/60 via-60% to-transparent flex items-center">
                 <div class="container">
                     <div class="mt-10 md:mt-15 md:w-[47%] text-white flex flex-col gap-[30px] md:gap-[60px]"
                         data-aos="fade-up">
-                        <div class="flex flex-col gap-[16px]">
-                            <h1 class="font-bold text-xl md:text-5xl">Where to, traveller?</h1>
-                            <p class="text-sm md:text-xl leading-7 md:leading-9 font-normal">Dive in for our best rates
-                                on internet abroad!
-                                Just choose
-                                your
-                                destination, let us know
-                                how
-                                long you’re going for and we’ll do the rest.</p>
-                        </div>
-                        <div class="md:w-[88%] flex flex-col gap-[25px]">
-                            <div class="relative dropdown-wrapper">
-                                <div
-                                    class="relative bg-[var(--bg-gray)] border border-white rounded-[20px] flex items-center justify-between">
-                                    <input type="text"
-                                        class="w-full text-white placeholder:text-white py-4 px-5 outline-none focus:outline-none"
-                                        placeholder="Destination" id="destination-input-1"
-                                        oninput="filterDestinations(this.value, this)"
-                                        onfocus="openDestinations(this)" />
-                                    <div class="absolute right-0 px-5">
-                                        <img src="../assets/icons/search.svg" alt="search" />
-                                    </div>
-                                </div>
-
-                                <!-- bg-[var(--test)]  -->
-                                <ul id="destination-list-1"
-                                    class="shadow-2xl dropdown-list absolute w-full mt-2 rounded-[12px] bg-white overflow-hidden z-50">
-                                </ul>
-
-                            </div>
-                            <button title="Find Deals"
-                                class="before:bg-white rounded-[20px] hover:text-black bg-[var(--is-pink)] px-5 py-4 btn">
-                                <div class="text-base relative z-1 font-bold">
-                                    <span>Find Deals</span>
-                                </div>
-                            </button>
+                        <div class="flex flex-col text-center md:text-start gap-[16px]">
+                            <h1 class="font-bold text-xl md:text-5xl md:leading-15">Finding Internet Plans for Germany?
+                            </h1>
+                            <p class="text-sm md:text-xl leading-7 md:leading-9 font-normal">Here’s our best plans....
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
         <!-- end hero -->
-        <!-- start Browse all destinations -->
+        <!-- start choose your plan -->
         <section>
-            <div class="container sections-marign-top flex flex-col items-center gap-[30px] md:gap-[73px]">
-                <div class="relative flex flex-col items-center gap-[20px] md:gap-[25px]" data-aos="fade-up">
-                    <h3 class="text-2xl md:text-[42px] font-normal text-[var(--is-pink)]">Browse
-                        all <span class="font-semibold text-[var(--is-blue-3)]">destinations</span>
+            <div class="sections-marign-top flex flex-col md:gap-10 relative" data-aos="fade-up">
+                <div class="text-center">
+                    <h3 class="text-2xl md:text-[42px] font-normal text-[var(--is-pink)]">Choose
+                        <span class="font-semibold text-[var(--is-blue-3)]">Your Plan</span>
                     </h3>
-                    <ul class="flex flex-wrap gap-[16px]">
-                        <li title="Country">
-                            <div onclick="showTab('country')" id="tab-country"
-                                class="active-destinations group before:bg-[var(--is-blue-3)] hover:!text-white text-[var(--is-gray-1)] gap-2 flex shadow-[0_5px_10px_var(--is-black)] rounded-[25px] px-4 py-2 md:py-3 btn items-center">
-                                <img src="../assets/icons/country.svg" alt="country"
-                                    class="w-5 h-5 transition-all duration-300 [filter:brightness(0)_saturate(100%)_invert(47%)_sepia(10%)_saturate(500%)_hue-rotate(240deg)_brightness(95%)] group-hover:[filter:brightness(1)]" />
-                                <h3 class="relative font-medium text-sm md:text-md">Country</h3>
+                </div>
+                <!-- py-10 md:py-15 -->
+                <div class="pt-5 md:pt-15 flex items-center justify-center">
+                    <div class="absolute flex w-full h-full items-center bg-[url('../assets/images/bg-card.png')]
+    bg-cover
+    bg-center
+    bg-no-repeat -z-1">
+                    </div>
+                    <div
+                        class="w-[90%] md:w-[30%] flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
+                        <div class="flex flex-col gap-[20px]">
+                            <div class="flex justify-between items-center w-full">
+                                <div class="flex items-center gap-[11px]">
+                                    <img src="../assets/icons/germany.svg" alt="germany"
+                                        class="w-8 h-8 rounded-full object-cover" />
+                                    <p class="font-semibold text-2xl">Germany</p>
+                                </div>
+                                <div>
+                                    <div
+                                        class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-[10px] rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
+                                        <img src="../assets/icons/star.svg" alt="germany"
+                                            class="w-5 h-5 rounded-full object-cover" />
+                                        Recommended
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between">
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="font-bold text-3xl">5 GB</h3>
+                                    <p class="font-medium text-xs">Valid for 30 days from activation
+                                    </p>
+                                </div>
+                                <p class="mx-4 font-bold text-2xl" [class.line-through]="plan.discounted">$17.00
+                                </p>
+                            </div>
+                        </div>
+                        <ul class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-2">
+                            <li class="flex items-center gap-2 mx-2">
+                                <img src="../assets/icons/wifi.svg" alt="wifi" class="w-8 h-8" />
+                                <p class="font-medium text-xs">9 hours music</p>
+                            </li>
+                            <li class="flex items-center gap-2 mx-2">
+                                <img src="../assets/icons/youtube.svg" alt="youtube" class="w-8 h-8" />
+                                <p class="font-medium text-xs">6 hours video</p>
+                            </li>
+                            <li class="flex items-center gap-2 mx-2">
+                                <img src="../assets/icons/mail.svg" alt="mail" class="w-8 h-8" />
+                                <p class="font-medium text-xs">18 hours browsing</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end choose your plan -->
+        <!-- start bundles -->
+        <section>
+            <div class="container sections-marign-top flex flex-col items-center gap-5 md:gap-10 relative">
+                <div class="flex justify-center gap-3 items-center" data-aos="fade-up">
+                    <img src="../assets/icons/bundles.svg" alt="bunldes" class="w-6 h-6" />
+                    <h3 class="font-medium text-md md:text-xl">Denotes bundle qualifies for cashback</h3>
+                </div>
+                <ul class="flex w-full md:w-[50%]" data-aos="fade-up">
+                    <li title="GB Bundles" onclick="showTab('bundle')" id="tab-bundle"
+                        class="cursor-pointer active-bundle last:rounded-e-full first:rounded-s-full last:border-s-0 first:border-e-0 w-full text-center py-[7px] bg-[var(--is-gray-3)] w-full text-[var(--is-blue-3)] text-xs border border-2 border-[var(--is-gray-4)] shadow-lg">
+                        GB Bundles
+                    </li>
+                    <li title=" Unlimited Bundles" onclick="showTab('unlimited-bundles')" id="tab-unlimited-bundles"
+                        class="cursor-pointer last:rounded-e-full first:rounded-s-full last:border-s-0 first:border-e-0 w-full text-center py-[7px] bg-[var(--is-gray-3)] w-full text-[var(--is-blue-3)] text-xs border border-2 border-[var(--is-gray-4)] shadow-lg">
+                        Unlimited Bundles
+                    </li>
+                </ul>
+                <div class="w-full md:w-[75%] flex flex-col items-center gap-5">
+                    <ul id="list-bundle" class="w-full flex flex-col gap-[10px]">
+                        <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
+                            data-aos="fade-up" title="30 Days Bundle"
+                            data-bundle='{"size":"5GB","name":"30 Days Bundle","price":"$17.00"}'>
+                            <div class="font-bold w-full py-2 px-3 md:px-7 flex justify-between items-center">
+                                <p class="text-sm md:text-2xl">5GB</p>
+                                <p class="text-sm md:text-lg">30 Days Bundle</p>
+                                <div class="flex items-center gap-[5px]">
+                                    <img src="../assets/icons/cashback.svg" alt="cashback"
+                                        class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                    <p class="text-sm md:text-lg">$17.00</p>
+                                </div>
+                                <div
+                                    class="group-hover:bg-[var(--is-pink)] group-hover:border-0 radio-circle w-5 h-5 border border-2 rounded-full">
+                                </div>
                             </div>
                         </li>
-                        <li title="Region">
-                            <div onclick="showTab('region')" id="tab-region"
-                                class="group before:bg-[var(--is-blue-3)] hover:!text-white text-[var(--is-gray-1)] gap-2 flex shadow-[0_5px_10px_var(--is-black)] rounded-[25px] px-4 py-2 md:py-3 btn items-center">
-                                <img src="../assets/icons/region.svg" alt="region"
-                                    class="w-5 h-5 transition-all duration-300 [filter:brightness(0)_saturate(100%)_invert(47%)_sepia(10%)_saturate(500%)_hue-rotate(240deg)_brightness(95%)] group-hover:[filter:brightness(1)]" />
-                                <h3 class="relative font-medium text-sm md:text-md">Region</h3>
+                        <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
+                            data-aos="fade-up" title="7 Days Bundle"
+                            data-bundle='{"size":"1GB","name":"7 Days Bundle","price":"$3.00"}'>
+                            <div class="font-bold w-full py-2 px-3 md:px-7 flex justify-between items-center">
+                                <p class="text-sm md:text-2xl">1GB</p>
+                                <p class="text-sm md:text-lg">7 Days Bundle</p>
+                                <div class="flex items-center gap-[5px]">
+                                    <img src="../assets/icons/cashback.svg" alt="cashback"
+                                        class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                    <p class="text-sm md:text-lg">$3.00</p>
+                                </div>
+                                <div
+                                    class="group-hover:bg-[var(--is-pink)] group-hover:border-0 radio-circle w-5 h-5 border border-2 rounded-full">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
+                            data-aos="fade-up" title="15 Days Bundle"
+                            data-bundle='{"size":"2GB","name":"15 Days Bundle","price":"$8.00"}'>
+                            <div class="font-bold w-full py-2 px-3 md:px-7 flex justify-between items-center">
+                                <p class="text-sm md:text-2xl">2GB</p>
+                                <p class="text-sm md:text-lg">15 Days Bundle</p>
+                                <div class="flex items-center gap-[5px]">
+                                    <img src="../assets/icons/cashback.svg" alt="cashback"
+                                        class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                    <p class="text-sm md:text-lg">$8.00</p>
+                                </div>
+                                <div
+                                    class="group-hover:bg-[var(--is-pink)] group-hover:border-0 radio-circle w-5 h-5 border border-2 rounded-full">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
+                            data-aos="fade-up" title="30 Days Bundle"
+                            data-bundle='{"size":"10GB","name":"30 Days Bundle","price":"$24.00"}'>
+                            <div class="font-bold w-full py-2 px-3 md:px-7 flex justify-between items-center">
+                                <p class="text-sm md:text-2xl">10GB</p>
+                                <p class="text-sm md:text-lg">30 Days Bundle</p>
+                                <div class="flex items-center gap-[5px]">
+                                    <img src="../assets/icons/cashback.svg" alt="cashback"
+                                        class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                    <p class="text-sm md:text-lg">$24.00</p>
+                                </div>
+                                <div
+                                    class="group-hover:bg-[var(--is-pink)] group-hover:border-0 radio-circle w-5 h-5 border border-2 rounded-full">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
+                            data-aos="fade-up" title="30 Days Bundle"
+                            data-bundle='{"size":"20GB","name":"30 Days Bundle","price":"$36.00"}'>
+                            <div class="font-bold w-full py-2 px-3 md:px-7 flex justify-between items-center">
+                                <p class="text-sm md:text-2xl">20GB</p>
+                                <p class="text-sm md:text-lg">30 Days Bundle</p>
+                                <div class="flex items-center gap-[5px]">
+                                    <img src="../assets/icons/cashback.svg" alt="cashback"
+                                        class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                    <p class="text-sm md:text-lg">$36.00</p>
+                                </div>
+                                <div
+                                    class="group-hover:bg-[var(--is-pink)] group-hover:border-0 radio-circle w-5 h-5 border border-2 rounded-full">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
+                            data-aos="fade-up" title="30 Days Bundle"
+                            data-bundle='{"size":"50GB","name":"30 Days Bundle","price":"$68.00"}'>
+                            <div class="font-bold w-full py-2 px-3 md:px-7 flex justify-between items-center">
+                                <p class="text-sm md:text-2xl">50GB</p>
+                                <p class="text-sm md:text-lg">30 Days Bundle</p>
+                                <div class="flex items-center gap-[5px]">
+                                    <img src="../assets/icons/cashback.svg" alt="cashback"
+                                        class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                    <p class="text-sm md:text-lg">$68.00</p>
+                                </div>
+                                <div
+                                    class="group-hover:bg-[var(--is-pink)] group-hover:border-0 radio-circle w-5 h-5 border border-2 rounded-full">
+                                </div>
                             </div>
                         </li>
                     </ul>
-                </div>
-                <ul id="list-country"
-                    class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[16px]">
-                    <li data-aos="fade-up">
-                        <a href="single-country.html" title="France"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] p-2 flex items-center justify-between">
-                            <div class="flex items-center gap-[16px]">
-                                <img src="https://flagcdn.com/24x18/fr.png" alt="fr" class="rounded-lg w-8 h-5" />
-                                <div class="text-[var(--is-blue-3)]">
-                                    <h3 class="font-semibold text-base">France</h3>
-                                    <p class="font-normal text-sm">from <span class="font-bold">$0.57</span> per day
-                                    </p>
+                    <ul id="list-unlimited-bundles" class="w-full flex flex-col gap-[10px] hidden">
+                        <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
+                            data-aos="fade-up" title="30 Days Bundle"
+                            data-bundle='{"size":"50GB","name":"30 Days Bundle","price":"$68.00"}'>
+                            <div class="font-bold w-full py-2 px-3 md:px-7 flex justify-between items-center">
+                                <p class="text-sm md:text-2xl">50GB</p>
+                                <p class="text-sm md:text-lg">30 Days Bundle</p>
+                                <div class="flex items-center gap-[5px]">
+                                    <img src="../assets/icons/cashback.svg" alt="cashback"
+                                        class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                    <p class="text-sm md:text-lg">$68.00</p>
+                                </div>
+                                <div
+                                    class="group-hover:bg-[var(--is-pink)] group-hover:border-0 radio-circle w-5 h-5 border border-2 rounded-full">
                                 </div>
                             </div>
-                            <img src="../assets/icons/arraw-circle.svg" alt="arraw circle" class="rounded-lg w-5 h-5" />
-                        </a>
-                    </li>
-                    <li data-aos="fade-up">
-                        <a href="single-country.html" title="India"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] p-2 flex items-center justify-between">
-                            <div class="flex items-center gap-[16px]">
-                                <img src="https://flagcdn.com/24x18/in.png" alt="in" class="rounded-lg w-8 h-5" />
-                                <div class="text-[var(--is-blue-3)]">
-                                    <h3 class="font-semibold text-base">India</h3>
-                                    <p class="font-normal text-sm">from <span class="font-bold">$1.71</span> per day
-                                    </p>
-                                </div>
+                        </li>
+                    </ul>
+
+                    <div data-aos="fade-up" class="flex w-full">
+                        <button title="Buy Now"
+                            class="transition-all duration-300 hover:shadow-xl hover:scale-102 cursor-pointer w-full before:bg-white rounded-[20px] text-white bg-[var(--is-pink)] px-5 py-4">
+                            <div class="text-base relative z-1 font-bold">
+                                <span>Buy Now</span>
                             </div>
-                            <img src="../assets/icons/arraw-circle.svg" alt="arraw circle" class="rounded-lg w-5 h-5" />
-                        </a>
-                    </li>
-                    <li data-aos="fade-up">
-                        <a href="single-country.html" title="Italy"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] p-2 flex items-center justify-between">
-                            <div class="flex items-center gap-[16px]">
-                                <img src="https://flagcdn.com/24x18/it.png" alt="it" class="rounded-lg w-8 h-5" />
-                                <div class="text-[var(--is-blue-3)]">
-                                    <h3 class="font-semibold text-base">Italy</h3>
-                                    <p class="font-normal text-sm">from <span class="font-bold">$0.57</span> per day
-                                    </p>
-                                </div>
-                            </div>
-                            <img src="../assets/icons/arraw-circle.svg" alt="arraw circle" class="rounded-lg w-5 h-5" />
-                        </a>
-                    </li>
-                    <li data-aos="fade-up">
-                        <a href="single-country.html" title="Mexico"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] p-2 flex items-center justify-between">
-                            <div class="flex items-center gap-[16px]">
-                                <img src="https://flagcdn.com/24x18/mx.png" alt="mx" class="rounded-lg w-8 h-5" />
-                                <div class="text-[var(--is-blue-3)]">
-                                    <h3 class="font-semibold text-base">Mexico</h3>
-                                    <p class="font-normal text-sm">from <span class="font-bold">$1.00</span> per day
-                                    </p>
-                                </div>
-                            </div>
-                            <img src="../assets/icons/arraw-circle.svg" alt="arraw circle" class="rounded-lg w-5 h-5" />
-                        </a>
-                    </li>
-                    <li data-aos="fade-up">
-                        <a href="single-country.html" title="Morocco"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] p-2 flex items-center justify-between">
-                            <div class="flex items-center gap-[16px]">
-                                <img src="https://flagcdn.com/24x18/ma.png" alt="ma" class="rounded-lg w-8 h-5" />
-                                <div class="text-[var(--is-blue-3)]">
-                                    <h3 class="font-semibold text-base">Morocco</h3>
-                                    <p class="font-normal text-sm">from <span class="font-bold">$1.00</span> per day
-                                    </p>
-                                </div>
-                            </div>
-                            <img src="../assets/icons/arraw-circle.svg" alt="arraw circle" class="rounded-lg w-5 h-5" />
-                        </a>
-                    </li>
-                    <li data-aos="fade-up">
-                        <a href="single-country.html" title="Saudi Arabia"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] p-2 flex items-center justify-between">
-                            <div class="flex items-center gap-[16px]">
-                                <img src="https://flagcdn.com/24x18/sa.png" alt="sa" class="rounded-lg w-8 h-5" />
-                                <div class="text-[var(--is-blue-3)]">
-                                    <h3 class="font-semibold text-base">Saudi Arabia</h3>
-                                    <p class="font-normal text-sm">from <span class="font-bold">$0.71</span> per day
-                                    </p>
-                                </div>
-                            </div>
-                            <img src="../assets/icons/arraw-circle.svg" alt="arraw circle" class="rounded-lg w-5 h-5" />
-                        </a>
-                    </li>
-                    <li data-aos="fade-up">
-                        <a href="single-country.html" title="Spain"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] p-2 flex items-center justify-between">
-                            <div class="flex items-center gap-[16px]">
-                                <img src="https://flagcdn.com/24x18/es.png" alt="es" class="rounded-lg w-8 h-5" />
-                                <div class="text-[var(--is-blue-3)]">
-                                    <h3 class="font-semibold text-base">Spain</h3>
-                                    <p class="font-normal text-sm">from <span class="font-bold">$0.57</span> per day
-                                    </p>
-                                </div>
-                            </div>
-                            <img src="../assets/icons/arraw-circle.svg" alt="arraw circle" class="rounded-lg w-5 h-5" />
-                        </a>
-                    </li>
-                    <li data-aos="fade-up">
-                        <a href="single-country.html" title="Sri Lanka"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] p-2 flex items-center justify-between">
-                            <div class="flex items-center gap-[16px]">
-                                <img src="https://flagcdn.com/24x18/lk.png" alt="lk" class="rounded-lg w-8 h-5" />
-                                <div class="text-[var(--is-blue-3)]">
-                                    <h3 class="font-semibold text-base">Sri Lanka</h3>
-                                    <p class="font-normal text-sm">from <span class="font-bold">$1.00</span> per day
-                                    </p>
-                                </div>
-                            </div>
-                            <img src="../assets/icons/arraw-circle.svg" alt="arraw circle" class="rounded-lg w-5 h-5" />
-                        </a>
-                    </li>
-                    <li data-aos="fade-up">
-                        <a href="single-country.html" title="Turkey"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] p-2 flex items-center justify-between">
-                            <div class="flex items-center gap-[16px]">
-                                <img src="https://flagcdn.com/24x18/tr.png" alt="tr" class="rounded-lg w-8 h-5" />
-                                <div class="text-[var(--is-blue-3)]">
-                                    <h3 class="font-semibold text-base">Turkey</h3>
-                                    <p class="font-normal text-sm">from <span class="font-bold">$0.57</span> per day
-                                    </p>
-                                </div>
-                            </div>
-                            <img src="../assets/icons/arraw-circle.svg" alt="arraw circle" class="rounded-lg w-5 h-5" />
-                        </a>
-                    </li>
-                    <li data-aos="fade-up">
-                        <a href="single-country.html" title="United Arab Emirates"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] p-2 flex items-center justify-between">
-                            <div class="flex items-center gap-[16px]">
-                                <img src="https://flagcdn.com/24x18/ae.png" alt="ae" class="rounded-lg w-8 h-5" />
-                                <div class="text-[var(--is-blue-3)]">
-                                    <h3 class="font-semibold text-base">United Arab Emirates</h3>
-                                    <p class="font-normal text-sm">from <span class="font-bold">$0.71</span> per day
-                                    </p>
-                                </div>
-                            </div>
-                            <img src="../assets/icons/arraw-circle.svg" alt="arraw circle" class="rounded-lg w-5 h-5" />
-                        </a>
-                    </li>
-                    <li data-aos="fade-up">
-                        <a href="single-country.html" title="United Kingdom"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] p-2 flex items-center justify-between">
-                            <div class="flex items-center gap-[16px]">
-                                <img src="https://flagcdn.com/24x18/gb.png" alt="gb" class="rounded-lg w-8 h-5" />
-                                <div class="text-[var(--is-blue-3)]">
-                                    <h3 class="font-semibold text-base">United Kingdom</h3>
-                                    <p class="font-normal text-sm">from <span class="font-bold">$0.57</span> per day
-                                    </p>
-                                </div>
-                            </div>
-                            <img src="../assets/icons/arraw-circle.svg" alt="arraw circle" class="rounded-lg w-5 h-5" />
-                        </a>
-                    </li>
-                    <li data-aos="fade-up">
-                        <a href="single-country.html" title="United States"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] p-2 flex items-center justify-between">
-                            <div class="flex items-center gap-[16px]">
-                                <img src="https://flagcdn.com/24x18/us.png" alt="us" class="rounded-lg w-8 h-5" />
-                                <div class="text-[var(--is-blue-3)]">
-                                    <h3 class="font-semibold text-base">United States</h3>
-                                    <p class="font-normal text-sm">from <span class="font-bold">$0.71</span> per day
-                                    </p>
-                                </div>
-                            </div>
-                            <img src="../assets/icons/arraw-circle.svg" alt="arraw circle" class="rounded-lg w-5 h-5" />
-                        </a>
-                    </li>
-                </ul>
-                <ul id="list-region"
-                    class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[16px] hidden">
-                    <li data-aos="fade-up">
-                        <a href="single-country.html" title="France"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] p-2 flex items-center justify-between">
-                            <div class="flex items-center gap-[16px]">
-                                <img src="https://flagcdn.com/24x18/fr.png" alt="fr" class="rounded-lg w-8 h-5" />
-                                <div class="text-[var(--is-blue-3)]">
-                                    <h3 class="font-semibold text-base">France</h3>
-                                    <p class="font-normal text-sm">from <span class="font-bold">$0.57</span> per day
-                                    </p>
-                                </div>
-                            </div>
-                            <img src="../assets/icons/arraw-circle.svg" alt="arraw circle" class="rounded-lg w-5 h-5" />
-                        </a>
-                    </li>
-                </ul>
-                <div data-aos="fade-up" title="Show all Destinations"
-                    class="text-white before:bg-[var(--is-blue-3)] rounded-[20px] bg-[var(--is-pink)] px-15 py-4 btn">
-                    <div class="text-xl relative z-1 font-bold">
-                        <span>Show all Destinations</span>
+                        </button>
                     </div>
-                    </a>
+                    <ul class="flex gap-4 items-center" data-aos="fade-up">
+                        <li>
+                            <img src="../assets/icons/apple-pay.svg" alt="icons" width="49" height="27"
+                                class="invert" />
+                        </li>
+                        <li>
+                            <img src="../assets/icons/google-pay.svg" alt="icons" width="49" height="27"
+                                class="invert" />
+                        </li>
+                        <li>
+                            <img src="../assets/icons/visa.svg" alt="icons" width="49" height="27" class="invert" />
+                        </li>
+                        <li>
+                            <img src="../assets/icons/mastercard.svg" alt="icons" width="49" height="27" />
+                        </li>
+                    </ul>
+                    <div class="flex justify-center gap-1 items-center" data-aos="fade-up">
+                        <img src="../assets/icons/secure-payment.svg" alt="secure payment" class="w-4 h-4" />
+                        <h3 class="font-normal text-md">Secure payment guaranteed</h3>
+                    </div>
                 </div>
+            </div>
         </section>
-        <!-- end Browse all destinations -->
+        <!-- end bundles -->
         <!-- start why choose tv4 -->
         <section>
             <div class="container sections-marign-top">
@@ -567,144 +542,6 @@
             </div>
         </section>
         <!-- end why choose tv4 -->
-        <!-- start easy to choose -->
-        <section>
-            <div class="sections-marign-top bg-[url('../assets/images/bg-choose-travle.png')]
-    bg-cover
-    bg-center
-    bg-no-repeat relative">
-                <div
-                    class="absolute w-full bg-gradient-to-b from-[var(--is-blue)] from-30% via-[var(--is-blue)]/60 via-60% to-transparent h-100">
-                </div>
-                <div class="container flex flex-col justify-center relative z-1 py-10 md:py-20">
-                    <div class="flex flex-col gap-5">
-                        <div class="flex flex-col gap-2 text-white" data-aos="fade-up">
-                            <h3 class="font-bold text-md md:text-[32px]">Easy to <span class="font-bold">Choose and
-                                    Install</span></h3>
-                            <p class="text-xs md:text-base">You’re just a few steps away from our best rates on internet
-                                abroad...</p>
-                        </div>
-                        <div class="relative w-full">
-                            <button
-                                class="hidden xl:block rotate-180 cursor-pointer swiper-btn-prev absolute -left-20 top-1/2 -translate-y-1/2 z-10">
-                                <img src="../assets/icons/arraw-swiper.svg" alt="arraw" title="left" />
-                            </button>
-
-                            <div class="swiper mySwiperCards w-full">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="text-center text-white flex flex-col items-center gap-[25px]">
-                                            <img src="../assets/images/item-app-1.png" alt="item-1"
-                                                class="rounded-xl w-full h-full md:h-[567px] md:object-contain xl:object-cover" />
-                                            <div class="w-50">
-                                                <h3 class="text-sm md:text-lg font-bold">Download our app or shop on
-                                                    the site
-                                                </h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="text-center text-white flex flex-col items-center gap-[25px]">
-                                            <img src="../assets/images/item-app-2.png" alt="item-2"
-                                                class="rounded-xl w-full h-full md:h-[567px] md:object-contain xl:object-cover" />
-                                            <div class="w-50">
-                                                <h3 class="text-sm md:text-lg font-bold">Seamlessly manage your
-                                                    usage
-                                                </h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="text-center text-white flex flex-col items-center gap-[25px]">
-                                            <img src="../assets/images/item-app-3.png" alt="item-3"
-                                                class="rounded-xl w-full h-full md:h-[567px] md:object-contain xl:object-cover" />
-                                            <div class="w-50">
-                                                <h3 class="text-sm md:text-lg font-bold">Choose your plan — pick
-                                                    from days or
-                                                    data
-                                                </h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="text-center text-white flex flex-col items-center gap-[25px]">
-                                            <img src="../assets/images/item-app-4.png" alt="item-4"
-                                                class="rounded-xl w-full h-full md:h-[567px] md:object-contain xl:object-cover" />
-                                            <div class="w-50">
-                                                <h3 class="text-sm md:text-lg font-bold">Install your new eSlM step
-                                                    by step
-                                                </h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="text-center text-white flex flex-col items-center gap-[25px]">
-                                            <img src="../assets/images/item-app-1.png" alt="item-1"
-                                                class="rounded-xl w-full h-full md:h-[567px] md:object-contain xl:object-cover" />
-                                            <div class="w-50">
-                                                <h3 class="text-sm md:text-lg font-bold">Download our app or shop on
-                                                    the site
-                                                </h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="text-center text-white flex flex-col items-center gap-[25px]">
-                                            <img src="../assets/images/item-app-2.png" alt="item-2"
-                                                class="rounded-xl w-full h-full md:h-[567px] md:object-contain xl:object-cover" />
-                                            <div class="w-50">
-                                                <h3 class="text-sm md:text-lg font-bold">Seamlessly manage your
-                                                    usage
-                                                </h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="text-center text-white flex flex-col items-center gap-[25px]">
-                                            <img src="../assets/images/item-app-3.png" alt="item-3"
-                                                class="rounded-xl w-full h-full md:h-[567px] md:object-contain xl:object-cover" />
-                                            <div class="w-50">
-                                                <h3 class="text-sm md:text-lg font-bold">Choose your plan — pick
-                                                    from days or
-                                                    data
-                                                </h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="text-center text-white flex flex-col items-center gap-[25px]">
-                                            <img src="../assets/images/item-app-4.png" alt="item-4"
-                                                class="rounded-xl w-full h-full md:h-[567px] md:object-contain xl:object-cover" />
-                                            <div class="w-50">
-                                                <h3 class="text-sm md:text-lg font-bold">Install your new eSlM step
-                                                    by step
-                                                </h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <button
-                                class="hidden xl:block cursor-pointer swiper-btn-next absolute -right-20 top-1/2 -translate-y-1/2 z-10">
-                                <img src="../assets/icons/arraw-swiper.svg" alt="arraw" title="right" />
-                            </button>
-                        </div>
-                        <div class="flex justify-center gap-3 xl:hidden">
-                            <button class="rotate-180 cursor-pointer swiper-btn-prev z-10">
-                                <img src="../assets/icons/arraw-swiper.svg" alt="arraw" title="left" />
-                            </button>
-                            <button class="cursor-pointer swiper-btn-next z-10">
-                                <img src="../assets/icons/arraw-swiper.svg" alt="arraw" title="left" />
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="absolute bottom-0 w-full bg-gradient-to-t from-[var(--is-blue)] from-30% via-[var(--is-blue)]/60 via-60% to-transparent h-100">
-                </div>
-            </div>
-        </section>
-        <!-- end easy to choose -->
         <!-- start what is esim -->
         <section>
             <div class="container sections-marign-top rounded-[25px]
@@ -921,7 +758,7 @@
 
                         <ul class="flex flex-col gap-2">
                             <li>
-                                <a title="Turkey" class="nav-link"
+                                <a title="Turkey" class=""
                                     href="https://goldenesim.com/chooseBundlesPlan/type/country/id/VFI=/param/">Turkey</a>
                             </li>
                             <li>
@@ -986,7 +823,8 @@
                         <ul class="flex flex-col gap-2">
                             <li>
                                 <a title="What is an eSIM" class="nav-link"
-                                    href="https://goldenesim.com#eSIM_div_id">What is an eSIM</a>
+                                    href="https://goldenesim.com#eSIM_div_id">What
+                                    is an eSIM</a>
                             </li>
                             <li>
                                 <a title="Installation Guide" class="nav-link"
@@ -1044,11 +882,11 @@
                                         class="px-22 dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 w-full bg-[var(--is-blue-1)] backdrop-blur-md py-5">
                                         <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                             onclick="selectItem(this, 'العربية')">
-                                            <a href="../ar/index.html">العربية</a>
+                                            <a href="../ar/single-country.html">العربية</a>
                                         </li>
                                         <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                             onclick="selectItem(this, 'English')">
-                                            <a href="/index.html">English</a>
+                                            <a href="single-country.html">English</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1106,7 +944,7 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="../assets/js/jquery.min.js"></script>
 <script src="../assets/js/global.js"></script>
-<script src="../assets/js/landing-page.js"></script>
+<script src="../assets/js/single-country.js"></script>
 <script src="../assets/js/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
