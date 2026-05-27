@@ -1,13 +1,13 @@
 :root {
     --is-blue: #1b0d2d;
-    --is-blue-1: #F511681A;
+    --is-blue-1: #F7007580;
     --is-blue-2: rgba(90, 57, 134, 0.278);
     --is-blue-3: #25123C;
     --is-blue-4: #36002D;
+    --is-blue-5: #634F7C99;
     --is-gold: #FFBB00;
     --is-gold-1: #D2AF261A;
     --bg-gray: #FFFFFF80;
-    --test: #949494c6;
     --is-gray-1: #25123C99;
     --is-gray-2: #333333;
     --is-gray-3: #CACACA33;
@@ -106,6 +106,23 @@ body {
     transition: opacity 0.3s ease, transform 0.3s ease;
     z-index: 99;
     color: white;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1px solid #6b7280;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    position: absolute;
+    top: 2.75rem;
+    padding-left: 5.5rem;
+    padding-right: 5.5rem;
+    width: 100%;
+    background: var(--is-blue-1);
+    backdrop-filter: blur(12px);
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
 }
 
 .dropdown-list.open {

@@ -30,3 +30,10 @@ document.querySelectorAll('.bundle-item').forEach(item => {
         console.log('الباقات المختارة:', selectedBundles);
     });
 });
+
+function openBundleModal() {
+    document.getElementById('bundleModal').classList.remove('hidden');
+}
+function closeBundleModal() {
+    document.getElementById('bundleModal').classList.add('hidden');
+}
