@@ -9,27 +9,27 @@
 
 class CoopFooter extends HTMLElement {
 
-    static get observedAttributes() {
-        return ['lang', 'currency'];
-    }
+  static get observedAttributes() {
+    return ['lang', 'currency'];
+  }
 
-    connectedCallback() {
-        this._render();
-    }
+  connectedCallback() {
+    this._render();
+  }
 
-    attributeChangedCallback() {
-        this._render();
-    }
+  attributeChangedCallback() {
+    this._render();
+  }
 
-    get lang() { return this.getAttribute('lang') || 'en'; }
-    get currency() { return this.getAttribute('currency') || 'USD $'; }
+  get lang() { return this.getAttribute('lang') || 'en'; }
+  get currency() { return this.getAttribute('currency') || 'USD $'; }
 
-    get isArabic() {
-        return this.lang === 'ar';
-    }
+  get isArabic() {
+    return this.lang === 'ar';
+  }
 
-    _render() {
-        this.innerHTML = `
+  _render() {
+    this.innerHTML = `
 <footer class="bg-[var(--is-black-1)]">
   <div class="overflow-hidden sections-marign-top text-white py-20 text-center flex flex-col gap-10 md:gap-20">
 
@@ -52,9 +52,9 @@ class CoopFooter extends HTMLElement {
               <img src="../assets/icons/search.svg" alt="search" />
             </div>
           </div>
-          <ul id="destination-list-2"
-            class="dropdown-list absolute w-full mt-2 rounded-[12px] bg-[var(--bg-gray)] text-black overflow-hidden z-50">
-          </ul>
+               <ul id="destination-list-2"
+                                    class="shadow-2xl dropdown-list !block !px-0 absolute w-full mt-2 rounded-[12px] !bg-white overflow-hidden z-50">
+                                </ul>
         </div>
       </div>
     </div>
@@ -179,7 +179,7 @@ class CoopFooter extends HTMLElement {
 
   </div>
 </footer>`;
-    }
+  }
 }
 
 customElements.define('coop-footer', CoopFooter);
