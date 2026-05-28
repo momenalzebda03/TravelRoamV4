@@ -59,7 +59,9 @@
                                             <a href="about.html">About</a>
                                         </li>
                                         <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
-                                            onclick="selectItem(this, 'Compatibility')">Compatibility</li>
+                                            onclick="selectItem(this, 'Compatibility')">
+                                            <a href="compatibility.html">Compatibility</a>
+                                        </li>
                                         <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                             onclick="selectItem(this, 'FAQ')">FAQ</li>
                                         <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
@@ -149,7 +151,9 @@
                                     <a href="about.html">About</a>
                                 </li>
                                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
-                                    onclick="selectItem(this, 'Compatibility')">Compatibility</li>
+                                    onclick="selectItem(this, 'Compatibility')">
+                                    <a href="compatibility.html">Compatibility</a>
+                                </li>
                                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                     onclick="selectItem(this, 'FAQ')">FAQ</li>
                                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
@@ -219,7 +223,7 @@
         <!-- start content -->
         <section>
             <div class="container sections-marign-top flex flex-col gap-15">
-                <div
+                <div data-aos="fade-up"
                     class="shadow-xl flex flex-col md:flex-row items-center justfiy-between gap-4 md:gap-0 bg-gradient-to-r from-[var(--is-pink)] to-[var(--is-pink)]/50 px-13 py-7 md:py-3 rounded-[25px]">
                     <div class="w-full">
                         <div class="text-center md:text-start md:w-[42%] flex flex-col gap-5">
@@ -232,15 +236,16 @@
                             </button>
                         </div>
                     </div>
-                    <img src="../assets/images/test.png" alt="earth" class="w-[203px] h-[185px] object-cover" />
+                    <img src="../assets/images/earth.png" alt="earth" class="w-[203px] h-[185px] object-cover" />
                 </div>
                 <div class="grid lg:grid-cols-2 gap-15">
                     <div class="flex flex-col gap-10">
-                        <div class="text-center">
+                        <div class="text-center" data-aos="fade-up">
                             <p class="font-bold text-[32px] text-[var(--is-blue)]">Troubleshooting</p>
                         </div>
                         <ul id="list-faq" class="flex flex-col gap-[21px]">
-                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5">
+                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5"
+                                data-aos="fade-up">
                                 <button class="faq-btn w-full flex items-center text-start justify-between py-4">
                                     <span class="text-sm md:text-lg font-medium">
                                         What is an eSIM?
@@ -257,7 +262,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5">
+                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5"
+                                data-aos="fade-up">
                                 <button class="faq-btn w-full flex items-center text-start justify-between py-4">
                                     <span class="text-sm md:text-lg font-medium">
                                         Will my phone support eSIM?
@@ -274,7 +280,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5">
+                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5"
+                                data-aos="fade-up">
                                 <button class="faq-btn w-full flex items-center text-start justify-between py-4">
                                     <span class="text-sm md:text-lg font-medium">
                                         How do I use my data?
@@ -310,7 +317,7 @@
                                 </div>
                             </li>
                         </ul>
-                        <button title="See all 10 articles" onclick="showAll('list-faq')"
+                        <button title="See all 10 articles" onclick="showAll('list-faq')" data-aos="fade-up"
                             class="lg:w-[40%] before:bg-[var(--is-blue)] rounded-[20px] hover:text-white text-white bg-[var(--is-pink)] px-5 py-4 btn">
                             <div class="text-base relative z-1 font-bold">
                                 <span id="toggle-btn-1">See all 10 articles</span>
@@ -318,11 +325,12 @@
                         </button>
                     </div>
                     <div class="flex flex-col gap-10">
-                        <div class="text-center">
+                        <div class="text-center" data-aos="fade-up">
                             <p class="font-bold text-[32px] text-[var(--is-blue)]">Managing eSIMs</p>
                         </div>
                         <ul id="list-faq-1" class="flex flex-col gap-[21px]">
-                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5">
+                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5"
+                                data-aos="fade-up">
                                 <button class="faq-btn w-full flex items-center text-start justify-between py-4">
                                     <span class="text-sm md:text-lg font-medium">
                                         How long can I use my data bundle for?
@@ -339,7 +347,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5">
+                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5"
+                                data-aos="fade-up">
                                 <button class="faq-btn w-full flex items-center text-start justify-between py-4">
                                     <span class="text-sm md:text-lg font-medium">
                                         Can I use the introduction bundle more than once?
@@ -356,7 +365,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5">
+                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5"
+                                data-aos="fade-up">
                                 <button class="faq-btn w-full flex items-center text-start justify-between py-4">
                                     <span class="text-sm md:text-lg font-medium">
                                         How fast will my connection be?
@@ -392,7 +402,7 @@
                                 </div>
                             </li>
                         </ul>
-                        <button title="See all 10 articles" onclick="showAll('list-faq-1')"
+                        <button title="See all 10 articles" onclick="showAll('list-faq-1')" data-aos="fade-up"
                             class="lg:w-[40%] before:bg-[var(--is-blue)] rounded-[20px] hover:text-white text-white bg-[var(--is-pink)] px-5 py-4 btn">
                             <div class="text-base relative z-1 font-bold">
                                 <span>See all 10 articles</span>
@@ -400,11 +410,12 @@
                         </button>
                     </div>
                     <div class="flex flex-col gap-10">
-                        <div class="text-center">
+                        <div class="text-center" data-aos="fade-up">
                             <p class="font-bold text-[32px] text-[var(--is-blue)]">Frequently Asked Questions</p>
                         </div>
                         <ul id="list-faq-2" class="flex flex-col gap-[21px]">
-                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5">
+                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5"
+                                data-aos="fade-up">
                                 <button class="faq-btn w-full flex items-center text-start justify-between py-4">
                                     <span class="text-sm md:text-lg font-medium">
                                         What is an eSIM?
@@ -421,7 +432,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5">
+                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5"
+                                data-aos="fade-up">
                                 <button class="faq-btn w-full flex items-center text-start justify-between py-4">
                                     <span class="text-sm md:text-lg font-medium">
                                         Will my phone support eSIM?
@@ -438,7 +450,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5">
+                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5"
+                                data-aos="fade-up">
                                 <button class="faq-btn w-full flex items-center text-start justify-between py-4">
                                     <span class="text-sm md:text-lg font-medium">
                                         How do I use my data?
@@ -474,7 +487,7 @@
                                 </div>
                             </li>
                         </ul>
-                        <button title="See all 10 articles" onclick="showAll('list-faq-2')"
+                        <button title="See all 10 articles" onclick="showAll('list-faq-2')" data-aos="fade-up"
                             class="lg:w-[40%] before:bg-[var(--is-blue)] rounded-[20px] hover:text-white text-white bg-[var(--is-pink)] px-5 py-4 btn">
                             <div class="text-base relative z-1 font-bold">
                                 <span>See all 10 articles</span>
@@ -577,7 +590,7 @@
                                 <a title="About" class="nav-link" href="about.html">About</a>
                             </li>
                             <li>
-                                <a title="Compatibility" class="nav-link" href="">Compatibility</a>
+                                <a title="Compatibility" class="nav-link" href="compatibility.html">Compatibility</a>
                             </li>
                             <li>
                                 <a title="FAQ" class="nav-link" href="">FAQ</a>
@@ -720,7 +733,6 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="../assets/js/jquery.min.js"></script>
 <script src="../assets/js/global.js"></script>
-<script src="../assets/js/single-country.js"></script>
 <script src="../assets/js/faq.js"></script>
 <script src="../assets/js/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
