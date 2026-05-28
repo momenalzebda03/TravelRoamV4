@@ -98,7 +98,7 @@ class CoopFooter extends HTMLElement {
           <li><a title="${this.isArabic ? "حول" : 'About'}" class="nav-link" href="about.html">${this.isArabic ? "حول" : 'About'}</a></li>
           <li><a title="${this.isArabic ? "التوافق" : 'Compatibility'}" class="nav-link" href="compatibility.html">${this.isArabic ? "التوافق" : 'Compatibility'}</a></li>
           <li><a title="${this.isArabic ? "الأسئلة الشائعة" : 'FAQ'}" class="nav-link" href="faq.html">${this.isArabic ? "الأسئلة الشائعة" : 'FAQ'}</a></li>
-          <li><a title="${this.isArabic ? "اتصال" : 'Contact'}" class="nav-link" href="">${this.isArabic ? "اتصال" : 'Contact'}</a></li>
+          <li><a title="${this.isArabic ? "اتصال" : 'Contact'}" class="nav-link" href="contact.html">${this.isArabic ? "اتصال" : 'Contact'}</a></li>
           <li><a title="${this.isArabic ? "مدونة" : 'Blog'}" class="nav-link" href="blog.html">${this.isArabic ? "مدونة" : 'Blog'}</a></li>
           <li><a title="${this.isArabic ? "تسجيل الدخول / الحساب" : 'Login / Account'}" class="nav-link" href="">${this.isArabic ? "تسجيل الدخول / الحساب" : 'Login / Account'}</a></li>
         </ul>
@@ -108,12 +108,12 @@ class CoopFooter extends HTMLElement {
       <div class="w-[40%] sm:w-[unset]">
         <h5 class="font-bold mb-3 text-capitalize text-lg">Useful Information</h5>
         <ul class="flex flex-col gap-2">
-          <li><a title="${this.isArabic ? "ما هي بطاقة eSIM" : 'What is an eSIM'}" class="nav-link" href="https://goldenesim.com#eSIM_div_id">${this.isArabic ? "ما هي بطاقة eSIM" : 'What is an eSIM'}</a></li>
-          <li><a title="${this.isArabic ? "دليل التثبيت" : 'Installation Guide'}" class="nav-link" href="https://goldenesim.com/faqs">${this.isArabic ? "دليل التثبيت" : 'Installation Guide'}</a></li>
-          <li><a title="${this.isArabic ? "سياسة الاستخدام المقبول" : 'Acceptable Use Policy'}" class="nav-link" href="https://goldenesim.com/acceptable-policy">${this.isArabic ? "سياسة الاستخدام المقبول" : 'Acceptable Use Policy'}</a></li>
-          <li><a title="${this.isArabic ? "سياسة الشكاوى" : 'Complaints Policy'}" class="nav-link" href="https://goldenesim.com/complaints-policy">${this.isArabic ? "سياسة الشكاوى" : 'Complaints Policy'}</a></li>
-          <li><a title="${this.isArabic ? "سياسة الخصوصية" : 'Privacy policy'}" class="nav-link" href="https://goldenesim.com/privacy-policies">${this.isArabic ? "سياسة الخصوصية" : 'Privacy policy'}</a></li>
-          <li><a title="${this.isArabic ? "شروط الخدمة" : 'Terms of service'}" class="nav-link" href="https://goldenesim.com/term-conditions">${this.isArabic ? "شروط الخدمة" : 'Terms of service'}</a></li>
+          <li><a title="${this.isArabic ? "ما هي بطاقة eSIM" : 'What is an eSIM'}" class="nav-link" href="about.html">${this.isArabic ? "ما هي بطاقة eSIM" : 'What is an eSIM'}</a></li>
+          <li><a title="${this.isArabic ? "دليل التثبيت" : 'Installation Guide'}" class="nav-link" href="">${this.isArabic ? "دليل التثبيت" : 'Installation Guide'}</a></li>
+          <li><a title="${this.isArabic ? "سياسة الاستخدام المقبول" : 'Acceptable Use Policy'}" class="nav-link" href="acceptable-use-policy.html">${this.isArabic ? "سياسة الاستخدام المقبول" : 'Acceptable Use Policy'}</a></li>
+          <li><a title="${this.isArabic ? "سياسة الشكاوى" : 'Complaints Policy'}" class="nav-link" href="complaints-policy.html">${this.isArabic ? "سياسة الشكاوى" : 'Complaints Policy'}</a></li>
+          <li><a title="${this.isArabic ? "سياسة الخصوصية" : 'Privacy policy'}" class="nav-link" href="privacy-policy.html">${this.isArabic ? "سياسة الخصوصية" : 'Privacy policy'}</a></li>
+          <li><a title="${this.isArabic ? "شروط الخدمة" : 'Terms of service'}" class="nav-link" href="terms-of-service.html">${this.isArabic ? "شروط الخدمة" : 'Terms of service'}</a></li>
         </ul>
       </div>
 

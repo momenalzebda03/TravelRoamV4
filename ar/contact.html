@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/logo.svg" />
+    <link rel="stylesheet" href="../assets/css/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <title>شركاء السفر والتجوال</title>
+</head>
+
+<body>
+    <div id="loadingOverlay" class="fixed inset-0 bg-white flex justify-center items-center z-[9999]">
+        <div class="w-16 h-16 border-6 border-gray-200 border-t-[var(--is-blue)] rounded-full animate-spin"></div>
+    </div>
+    <div id="app" style="display: none;">
+        <!-- start navbar -->
+        <coop-navbar lang="ar"></coop-navbar>
+        <!-- end navbar -->
+        <!-- start hero -->
+        <main class="bg-[url('../assets/images/bg-about.png')]
+    bg-cover
+    bg-center
+    bg-no-repeat h-[25vh] md:h-[60vh]">
+            <div
+                class="relative z-1 pt-22 pb-15 md:py-0 h-full bg-gradient-to-r from-[var(--is-blue)] from-30% via-[var(--is-blue)]/60 via-60% to-transparent flex items-center">
+                <div class="container">
+                    <h1 data-aos="fade-up" class="text-white font-bold text-xl md:text-5xl md:leading-15">اتصال
+                    </h1>
+                </div>
+            </div>
+        </main>
+        <!-- end hero -->
+        <!-- start content -->
+        <section>
+            <div class="container sections-marign-top flex flex-col gap-[30px] md:gap-[60px]">
+                <h3 class="text-center text-2xl md:text-[42px] font-normal text-[var(--is-pink)]">اتصال
+                    <span class="font-semibold text-[var(--is-blue-3)]">TravelRoam?</span>
+                </h3>
+                <form action="" method="">
+                    <div class="grid grid-cols-2 gap-[20px]">
+                        <input type="text"
+                            class="bg-[var(--is-gray-6)] py-3 px-4 rounded-[10px] border border-1 border-[var(--is-gray-7)]"
+                            placeholder="الاسم" />
+                        <div class="relative">
+                            <select
+                                onchange="this.nextElementSibling.querySelector('img').classList.toggle('rotate-180', this.matches(':focus'))"
+                                onfocus="this.nextElementSibling.querySelector('img').classList.add('rotate-180')"
+                                onblur="this.nextElementSibling.querySelector('img').classList.remove('rotate-180')"
+                                class="appearance-none w-full text-gray-500 bg-[var(--is-gray-6)] py-3 px-4 pr-10 rounded-[10px] border border-1 border-[var(--is-gray-7)] cursor-pointer">
+                                <option disabled selected value="Query Type">نوع الاستعلام</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 left-3 flex items-center">
+                                <img src="../assets/icons/arraw-pink.svg" alt="arrow"
+                                    class="w-4 h-4 transition-transform duration-300" />
+                            </div>
+                        </div>
+                        <input type="email"
+                            class="bg-[var(--is-gray-6)] py-3 px-4 rounded-[10px] border border-1 border-[var(--is-gray-7)]"
+                            placeholder="عنوان البريد الإلكتروني" />
+                        <div class="relative">
+                            <select
+                                onchange="this.nextElementSibling.querySelector('img').classList.toggle('rotate-180', this.matches(':focus'))"
+                                onfocus="this.nextElementSibling.querySelector('img').classList.add('rotate-180')"
+                                onblur="this.nextElementSibling.querySelector('img').classList.remove('rotate-180')"
+                                class="appearance-none w-full text-gray-500 bg-[var(--is-gray-6)] py-3 px-4 pr-10 rounded-[10px] border border-1 border-[var(--is-gray-7)] cursor-pointer">
+                                <option disabled selected value="Platform">منصة</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 left-3 flex items-center">
+                                <img src="../assets/icons/arraw-pink.svg" alt="arrow"
+                                    class="w-4 h-4 transition-transform duration-300" />
+                            </div>
+                        </div>
+                        <input type="number"
+                            class="bg-[var(--is-gray-6)] py-3 px-4 rounded-[10px] border border-1 border-[var(--is-gray-7)]"
+                            placeholder="رقم الجوال" />
+                        <div class="relative">
+                            <select
+                                onchange="this.nextElementSibling.querySelector('img').classList.toggle('rotate-180', this.matches(':focus'))"
+                                onfocus="this.nextElementSibling.querySelector('img').classList.add('rotate-180')"
+                                onblur="this.nextElementSibling.querySelector('img').classList.remove('rotate-180')"
+                                class="appearance-none w-full text-gray-500 bg-[var(--is-gray-6)] py-3 px-4 pr-10 rounded-[10px] border border-1 border-[var(--is-gray-7)] cursor-pointer">
+                                <option disabled selected value="Country">الدولة</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 left-3 flex items-center">
+                                <img src="../assets/icons/arraw-pink.svg" alt="arrow"
+                                    class="w-4 h-4 transition-transform duration-300" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-[20px] flex flex-col gap-[20px]">
+                        <textarea name="" id="" placeholder="رسالتك"
+                            class="h-[100px] md:h-[300px] w-full bg-[var(--is-gray-6)] py-3 px-4 rounded-[10px] border border-1 border-[var(--is-gray-7)] resize-none"></textarea>
+                        <div class="flex items-center gap-3">
+                            <input type="checkbox" class="custom-checkbox" id="checkbox" />
+                            <label for="checkbox">أوافق على الشروط والأحكام ومعالجة استخدام البيانات.</label>
+                        </div>
+                        <div class="flex">
+                            <input type="submit" value="إرسال رسالة" title="إرسال رسالة"
+                                class="text-center before:bg-[var(--is-blue)] rounded-[20px] hover:text-white text-white bg-[var(--is-pink)] px-15 py-4 btn" />
+                        </div>
+                    </div>
+                </form>
+                <div data-aos="fade-up"
+                    class="shadow-xl flex flex-col md:flex-row items-center justfiy-between gap-4 md:gap-0 bg-gradient-to-r to-[var(--is-pink)] from-[var(--is-pink)]/50 px-13 py-7 md:py-3 rounded-[25px]">
+                    <div class="w-full">
+                        <div class="text-center md:text-start md:w-[42%] flex flex-col gap-5">
+                            <h3 class="text-white font-bold text-xl md:text-3xl">سؤال سريع؟ تحقق من الأسئلة الشائعة
+                                لدينا</h3>
+                            <a href="faq.html" title="اقرأ أسئلتنا الشائعة"
+                                class="text-center cursor-pointer w-full before:bg-[var(--is-blue)] rounded-[20px] hover:text-white text-[var(--is-pink)] bg-white px-5 py-5 btn">
+                                <div class="text-xl relative z-1 font-bold">
+                                    <span>اقرأ أسئلتنا الشائعة</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <img src="../assets/images/questions.png" alt="questions"
+                        class="w-[203px] h-[185px] object-cover" />
+                </div>
+            </div>
+        </section>
+        <!-- end content -->
+        <!-- start footer -->
+        <coop-footer lang="ar"></coop-footer>
+        <!-- end footer -->
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/navbar-layout.js"></script>
+<script src="../assets/js/footer-layout.js"></script>
+<script src="../assets/js/global.js"></script>
+<script src="../assets/js/faq.js"></script>
+<script src="../assets/js/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+
+</html>
