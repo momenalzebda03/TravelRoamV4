@@ -61,7 +61,9 @@
                                         <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                             onclick="selectItem(this, 'Compatibility')">التوافق</li>
                                         <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
-                                            onclick="selectItem(this, 'FAQ')">الأسئلة الشائعة</li>
+                                            onclick="selectItem(this, 'FAQ')">
+                                            <a href="faq.html">الأسئلة الشائعة</a>
+                                        </li>
                                         <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                             onclick="selectItem(this, 'Blogs')">مدونات</li>
                                         <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
@@ -151,7 +153,9 @@
                                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                     onclick="selectItem(this, 'Compatibility')">التوافق</li>
                                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
-                                    onclick="selectItem(this, 'FAQ')">الأسئلة الشائعة</li>
+                                    onclick="selectItem(this, 'FAQ')">
+                                    <a href="faq.html">الأسئلة الشائعة</a>
+                                </li>
                                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                     onclick="selectItem(this, 'Blogs')">مدونات</li>
                                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
@@ -232,11 +236,12 @@
                                 </div>
 
                                 <ul id="destination-list-1"
-                                    class="shadow-2xl dropdown-list absolute w-full mt-2 rounded-[12px] bg-white overflow-hidden z-50">
+                                    class="shadow-2xl dropdown-list !block !px-0 absolute w-full mt-2 rounded-[12px] !bg-white overflow-hidden z-50">
                                 </ul>
 
                             </div>
                             <button title="ابحث عن صفقات"
+                                onclick="document.getElementById('destination-input-1').focus()"
                                 class="before:bg-white rounded-[20px] hover:text-black bg-[var(--is-pink)] px-5 py-4 btn">
                                 <div class="text-base relative z-1 font-bold">
                                     <span>ابحث عن صفقات</span>
@@ -275,7 +280,7 @@
                     </ul>
                 </div>
                 <ul id="list-country"
-                    class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[16px]">
+                    class="faq-list w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[16px]">
                     <li data-aos="fade-up">
                         <a href="single-country.html" title="فرنسا"
                             class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] p-2 flex items-center justify-between">
@@ -456,6 +461,36 @@
                                 class="rotate-180 rounded-lg w-5 h-5" />
                         </a>
                     </li>
+                    <li data-aos="fade-up" class="extra-country hidden">
+                        <a href="single-country.html" title="المملكة المتحدة"
+                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] p-2 flex items-center justify-between">
+                            <div class="flex items-center gap-[16px]">
+                                <img src="https://flagcdn.com/24x18/gb.png" alt="gb" class="rounded-lg w-8 h-5" />
+                                <div class="text-[var(--is-blue-3)]">
+                                    <h3 class="font-semibold text-base">المملكة المتحدة</h3>
+                                    <p class="font-normal text-sm">من <span class="font-bold">$0.57</span> في اليوم
+                                    </p>
+                                </div>
+                            </div>
+                            <img src="../assets/icons/arraw-circle.svg" alt="arraw circle"
+                                class="rotate-180 rounded-lg w-5 h-5" />
+                        </a>
+                    </li>
+                    <li data-aos="fade-up" class="extra-country hidden">
+                        <a href="single-country.html" title="الولايات المتحدة"
+                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] p-2 flex items-center justify-between">
+                            <div class="flex items-center gap-[16px]">
+                                <img src="https://flagcdn.com/24x18/us.png" alt="us" class="rounded-lg w-8 h-5" />
+                                <div class="text-[var(--is-blue-3)]">
+                                    <h3 class="font-semibold text-base">الولايات المتحدة</h3>
+                                    <p class="font-normal text-sm">من <span class="font-bold">$0.71</span> في اليوم
+                                    </p>
+                                </div>
+                            </div>
+                            <img src="../assets/icons/arraw-circle.svg" alt="arraw circle"
+                                class="rotate-180 rounded-lg w-5 h-5" />
+                        </a>
+                    </li>
                 </ul>
                 <ul id="list-region"
                     class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[16px] hidden">
@@ -475,13 +510,19 @@
                         </a>
                     </li>
                 </ul>
-                <div data-aos="fade-up" title="عرض جميع الواجهات"
+                <div data-aos="fade-up" title="عرض جميع الواجهات" onclick="showAll('list-country')"
                     class="text-white before:bg-[var(--is-blue-3)] rounded-[20px] bg-[var(--is-pink)] px-15 py-4 btn">
                     <div class="text-xl relative z-1 font-bold">
-                        <span>عرض جميع الواجهات</span>
+                        <span id="toggle-btn">عرض جميع الواجهات</span>
+                    </div>
+                </div>
+                <!-- <div data-aos="fade-up" title="عرض جميع الواجهات" onclick="showAll(this, 'list-country')"
+                    class=" text-white before:bg-[var(--is-blue-3)] rounded-[20px] bg-[var(--is-pink)] px-15 py-4 btn">
+                    <div class="text-xl relative z-1 font-bold">
+                        <span id="toggle-btn">عرض جميع الواجهات</span>
                     </div>
                     </a>
-                </div>
+                </div> -->
             </div>
         </section>
         <!-- end Browse all destinations -->

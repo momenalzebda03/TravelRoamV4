@@ -61,9 +61,7 @@
                                         <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                             onclick="selectItem(this, 'Compatibility')">التوافق</li>
                                         <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
-                                            onclick="selectItem(this, 'FAQ')">
-                                            <a href="faq.html">الأسئلة الشائعة</a>
-                                        </li>
+                                            onclick="selectItem(this, 'FAQ')">الأسئلة الشائعة</li>
                                         <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                             onclick="selectItem(this, 'Blogs')">مدونات</li>
                                         <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
@@ -83,11 +81,11 @@
                                     <ul class="dropdown-list">
                                         <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                             onclick="selectItem(this, 'العربية')">
-                                            <a href="index.html">العربية</a>
+                                            <a href="faq.html">العربية</a>
                                         </li>
                                         <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                             onclick="selectItem(this, 'English')">
-                                            <a href="../en/about.html">English</a>
+                                            <a href="../en/faq.html">English</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -153,9 +151,7 @@
                                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                     onclick="selectItem(this, 'Compatibility')">التوافق</li>
                                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
-                                    onclick="selectItem(this, 'FAQ')">
-                                    <a href="faq.html">الأسئلة الشائعة</a>
-                                </li>
+                                    onclick="selectItem(this, 'FAQ')">الأسئلة الشائعة</li>
                                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                     onclick="selectItem(this, 'Blogs')">مدونات</li>
                                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
@@ -174,11 +170,11 @@
                                 class="dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 px-22 w-[20%] bg-[var(--is-blue-1)] backdrop-blur-md py-5">
                                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                     onclick="selectItem(this, 'العربية')">
-                                    <a href="index.html">العربية</a>
+                                    <a href="faq.html">العربية</a>
                                 </li>
                                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                     onclick="selectItem(this, 'English')">
-                                    <a href="../en/about.html">English</a>
+                                    <a href="../en/faq.html">English</a>
                                 </li>
                             </ul>
                         </div>
@@ -207,71 +203,277 @@
         </nav>
         <!-- end navbar -->
         <!-- start hero -->
-        <main class="bg-[url('../assets/images/bg-about.png')]
+        <main class="bg-[url('../assets/images/bg-faq.png')]
     bg-cover
     bg-center
     bg-no-repeat md:h-[60vh]">
             <div
                 class="relative z-1 pt-22 pb-15 md:py-0 h-full bg-gradient-to-r from-[var(--is-blue)] from-30% via-[var(--is-blue)]/60 via-60% to-transparent flex items-center">
                 <div class="container">
-                    <h1 data-aos="fade-up" class="text-white font-bold text-xl md:text-5xl md:leading-15">عنا
+                    <h1 data-aos="fade-up" class="text-white font-bold text-xl md:text-5xl md:leading-15">الأسئلة
+                        الشائعة
                     </h1>
                 </div>
             </div>
         </main>
         <!-- end hero -->
-        <!-- start about -->
+        <!-- start content -->
         <section>
-            <div class="container sections-marign-top flex flex-col gap-[60px]">
-                <h3 class="text-center text-2xl md:text-[42px] font-normal text-[var(--is-pink)]">عن
-                    <span class="font-semibold text-[var(--is-blue-3)]">TravelRoam?</span>
-                </h3>
-                <ul class="font-normal text-md flex flex-col gap-4">
-                    <li data-aos="fade-up">
-                        سواء كنت تسافر لأغراض العمل أو المتعة أو كلاهما، يمكنك أن تتنفس الصعداء بفضل TravelRoam.
-                    </li>
-                    <li data-aos="fade-up">
-                        تتيح لك TravelRoam التجوال حسب رغبتك في <span class="font-bold">200+
-                            دولة</span> على مستوى العالم
-                        دون تكبد
-                        تكاليف بيانات باهظة.
-                    </li>
-                    <li data-aos="fade-up">
-                        متاح على جميع الهواتف الذكية المتوافقة مع eSIM، يوفر لك TravelRoam الوقت والمال والمتاعب - لا
-                        حاجة لشراء شريحة محلية عند وصولك، مما يعني أنك لست بحاجة للقلق بشأن فقدان شريحتك الرئيسية.
-                    </li>
-                </ul>
-                <div class="flex items-end w-full h-[310px] md:h-[510px] group overflow-hidden" data-aos="fade-up">
-                    <img src="../assets/images/about-content.png" alt="about content"
-                        class="w-full h-full object-cover rounded-[25px] absolute transition-all duration-500 hover:scale-120 hover:rotate-5" />
-                    <div
-                        class="text-white py-3 w-full bg-[var(--is-blue-5)] backdrop-blur-xl transition-all duration-700 group-hover:rounded-[unset] rounded-b-[25px] z-1">
-                        <div class="container">
-                            <p class="font-bold text-2xl">تواصل عالميًا مع TravelRoam</p>
+            <div class="container sections-marign-top flex flex-col gap-15">
+                <div
+                    class="shadow-xl flex flex-col md:flex-row items-center justfiy-between gap-4 md:gap-0 bg-gradient-to-r to-[var(--is-pink)] from-[var(--is-pink)]/50 px-13 py-7 md:py-3 rounded-[25px]">
+                    <div class="w-full">
+                        <div class="text-center md:text-start md:w-[42%] flex flex-col gap-5">
+                            <h3 class="text-white font-bold text-xl md:text-3xl">كيفية تثبيت شريحة eSIM الخاصة بك</h3>
+                            <button title="دليل التثبيت"
+                                class="cursor-pointer w-full before:bg-[var(--is-blue)] rounded-[20px] hover:text-white text-[var(--is-pink)] bg-white px-5 py-5 btn">
+                                <div class="text-xl relative z-1 font-bold">
+                                    <span>دليل التثبيت</span>
+                                </div>
+                            </button>
                         </div>
                     </div>
+                    <img src="../assets/images/test.png" alt="earth" class="w-[203px] h-[185px] object-cover" />
                 </div>
-                <ul class="font-normal text-md flex flex-col gap-4">
-                    <li data-aos="fade-up">
-                        اختر وجهتك ببساطة – سواء حسب البلد أو حسب المنطقة.
-                    </li>
-                    <li data-aos="fade-up">
-                        اختر باقة البيانات الخاصة بك.
-                    </li>
-                    <li data-aos="fade-up">
-                        وأنت جاهز للانطلاق.
-                    </li>
-                    <li data-aos="fade-up">
-                        وأينما سافرت، ستجد TravelRoam دائمًا أسرع اتصال بيانات متاح، حتى تتمكن من الاطمئنان إلى أن
-                        بياناتك ستظل دائمًا آمنة ومحمية.
-                    </li>
-                    <li data-aos="fade-up">
-                        لذا، قبل أن تبدأ رحلتك التالية، تواصل مع TravelRoam.
-                    </li>
-                </ul>
+                <div class="grid lg:grid-cols-2 gap-15">
+                    <div class="flex flex-col gap-10">
+                        <div class="text-center">
+                            <p class="font-bold text-[32px] text-[var(--is-blue)]">استكشاف الأخطاء وإصلاحها</p>
+                        </div>
+                        <ul id="list-faq" class="flex flex-col gap-[21px]">
+                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5">
+                                <button class="faq-btn w-full flex items-center text-start justify-between py-4">
+                                    <span class="text-sm md:text-lg font-medium">
+                                        ما هي شريحة eSIM؟
+                                    </span>
+
+                                    <img src="/assets/icons/plus.svg"
+                                        class="faq-icon transition-transform duration-300 w-[16px] h-[16px]" />
+                                </button>
+                                <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="pb-4 text-base leading-relaxed">
+                                        استمتع باستراحة فاخرة وبأسعار معقولة بعيدًا عن صخب وزحام المطار المزدحم في واحدة
+                                        من صالات كبار الشخصيات لدينا.
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5">
+                                <button class="faq-btn w-full flex items-center text-start justify-between py-4">
+                                    <span class="text-sm md:text-lg font-medium">
+                                        هل سيدعم هاتفي شريحة eSIM؟
+                                    </span>
+
+                                    <img src="/assets/icons/plus.svg"
+                                        class="faq-icon transition-transform duration-300 w-[16px] h-[16px]" />
+                                </button>
+                                <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="pb-4 text-base leading-relaxed">
+                                        استمتع باستراحة فاخرة وبأسعار معقولة بعيدًا عن صخب وزحام المطار المزدحم في واحدة
+                                        من صالات كبار الشخصيات لدينا.
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5">
+                                <button class="faq-btn w-full flex items-center text-start justify-between py-4">
+                                    <span class="text-sm md:text-lg font-medium">
+                                        كيف أستخدم بياناتي؟
+                                    </span>
+
+                                    <img src="/assets/icons/plus.svg"
+                                        class="faq-icon transition-transform duration-300 w-[16px] h-[16px]" />
+                                </button>
+                                <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="pb-4 text-base leading-relaxed">
+                                        استمتع باستراحة فاخرة وبأسعار معقولة بعيدًا عن صخب وزحام المطار المزدحم في واحدة
+                                        من صالات كبار الشخصيات لدينا.
+                                    </div>
+                                </div>
+                            </li>
+                            <li
+                                class="extra-country hidden faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5">
+                                <button class="faq-btn w-full flex items-center text-start justify-between py-4">
+                                    <span class="text-sm md:text-lg font-medium">
+                                        كيف أستخدم بياناتي؟
+                                    </span>
+
+                                    <img src="/assets/icons/plus.svg"
+                                        class="faq-icon transition-transform duration-300 w-[16px] h-[16px]" />
+                                </button>
+                                <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="pb-4 text-base leading-relaxed">
+                                        استمتع باستراحة فاخرة وبأسعار معقولة بعيدًا عن صخب وزحام المطار المزدحم في واحدة
+                                        من صالات كبار الشخصيات لدينا.
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <button title="عرض جميع المقالات العشرة" onclick="showAll('list-faq')"
+                            class="lg:w-[40%] before:bg-[var(--is-blue)] rounded-[20px] hover:text-white text-white bg-[var(--is-pink)] px-5 py-4 btn">
+                            <div class="text-base relative z-1 font-bold">
+                                <span id="toggle-btn-1">عرض جميع المقالات العشرة</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="flex flex-col gap-10">
+                        <div class="text-center">
+                            <p class="font-bold text-[32px] text-[var(--is-blue)]">إدارة شرائح eSIM</p>
+                        </div>
+                        <ul id="list-faq-1" class="flex flex-col gap-[21px]">
+                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5">
+                                <button class="faq-btn w-full flex items-center text-start justify-between py-4">
+                                    <span class="text-sm md:text-lg font-medium">
+                                        إلى متى يمكنني استخدام باقة البيانات الخاصة بي؟
+                                    </span>
+
+                                    <img src="/assets/icons/plus.svg"
+                                        class="faq-icon transition-transform duration-300 w-[16px] h-[16px]" />
+                                </button>
+                                <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="pb-4 text-base leading-relaxed">
+                                        استمتع باستراحة فاخرة وبأسعار معقولة بعيدًا عن صخب وزحام المطار المزدحم في واحدة
+                                        من صالات كبار الشخصيات لدينا.
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5">
+                                <button class="faq-btn w-full flex items-center text-start justify-between py-4">
+                                    <span class="text-sm md:text-lg font-medium">
+                                        هل يمكنني استخدام حزمة المقدمة أكثر من مرة؟
+                                    </span>
+
+                                    <img src="/assets/icons/plus.svg"
+                                        class="faq-icon transition-transform duration-300 w-[16px] h-[16px]" />
+                                </button>
+                                <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="pb-4 text-base leading-relaxed">
+                                        استمتع باستراحة فاخرة وبأسعار معقولة بعيدًا عن صخب وزحام المطار المزدحم في واحدة
+                                        من صالات كبار الشخصيات لدينا.
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5">
+                                <button class="faq-btn w-full flex items-center text-start justify-between py-4">
+                                    <span class="text-sm md:text-lg font-medium">
+                                        ما مدى سرعة اتصالي؟
+                                    </span>
+
+                                    <img src="/assets/icons/plus.svg"
+                                        class="faq-icon transition-transform duration-300 w-[16px] h-[16px]" />
+                                </button>
+                                <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="pb-4 text-base leading-relaxed">
+                                        استمتع باستراحة فاخرة وبأسعار معقولة بعيدًا عن صخب وزحام المطار المزدحم في واحدة
+                                        من صالات كبار الشخصيات لدينا.
+                                    </div>
+                                </div>
+                            </li>
+                            <li
+                                class="extra-country hidden faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5">
+                                <button class="faq-btn w-full flex items-center text-start justify-between py-4">
+                                    <span class="text-sm md:text-lg font-medium">
+                                        مرحبًا، كيف أستخدم بياناتي؟
+                                    </span>
+
+                                    <img src="/assets/icons/plus.svg"
+                                        class="faq-icon transition-transform duration-300 w-[16px] h-[16px]" />
+                                </button>
+                                <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="pb-4 text-base leading-relaxed">
+                                        استمتع باستراحة فاخرة وبأسعار معقولة بعيدًا عن صخب وزحام المطار المزدحم في واحدة
+                                        من صالات كبار الشخصيات لدينا.
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <button title="عرض جميع المقالات العشر" onclick="showAll('list-faq-1')"
+                            class="lg:w-[40%] before:bg-[var(--is-blue)] rounded-[20px] hover:text-white text-white bg-[var(--is-pink)] px-5 py-4 btn">
+                            <div class="text-base relative z-1 font-bold">
+                                <span>عرض جميع المقالات العشر</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="flex flex-col gap-10">
+                        <div class="text-center">
+                            <p class="font-bold text-[32px] text-[var(--is-blue)]">الأسئلة الشائعة</p>
+                        </div>
+                        <ul id="list-faq-2" class="flex flex-col gap-[21px]">
+                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5">
+                                <button class="faq-btn w-full flex items-center text-start justify-between py-4">
+                                    <span class="text-sm md:text-lg font-medium">
+                                        ما هي شريحة eSIM؟
+                                    </span>
+
+                                    <img src="/assets/icons/plus.svg"
+                                        class="faq-icon transition-transform duration-300 w-[16px] h-[16px]" />
+                                </button>
+                                <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="pb-4 text-base leading-relaxed">
+                                        استمتع باستراحة فاخرة وبأسعار معقولة بعيدًا عن صخب وزحام المطار المزدحم في واحدة
+                                        من صالات كبار الشخصيات لدينا.
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5">
+                                <button class="faq-btn w-full flex items-center text-start justify-between py-4">
+                                    <span class="text-sm md:text-lg font-medium">
+                                        هل سيدعم هاتفي شريحة eSIM؟
+                                    </span>
+
+                                    <img src="/assets/icons/plus.svg"
+                                        class="faq-icon transition-transform duration-300 w-[16px] h-[16px]" />
+                                </button>
+                                <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="pb-4 text-base leading-relaxed">
+                                        استمتع باستراحة فاخرة وبأسعار معقولة بعيدًا عن صخب وزحام المطار المزدحم في واحدة
+                                        من صالات كبار الشخصيات لدينا.
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5">
+                                <button class="faq-btn w-full flex items-center text-start justify-between py-4">
+                                    <span class="text-sm md:text-lg font-medium">
+                                        ويل، كيف أستخدم بياناتي؟
+                                    </span>
+
+                                    <img src="/assets/icons/plus.svg"
+                                        class="faq-icon transition-transform duration-300 w-[16px] h-[16px]" />
+                                </button>
+                                <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="pb-4 text-base leading-relaxed">
+                                        استمتع باستراحة فاخرة وبأسعار معقولة بعيدًا عن صخب وزحام المطار المزدحم في واحدة
+                                        من صالات كبار الشخصيات لدينا.
+                                    </div>
+                                </div>
+                            </li>
+                            <li
+                                class="extra-country hidden faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5">
+                                <button class="faq-btn w-full flex items-center text-start justify-between py-4">
+                                    <span class="text-sm md:text-lg font-medium">
+                                        كيف أستخدم بياناتي؟
+                                    </span>
+
+                                    <img src="/assets/icons/plus.svg"
+                                        class="faq-icon transition-transform duration-300 w-[16px] h-[16px]" />
+                                </button>
+                                <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="pb-4 text-base leading-relaxed">
+                                        استمتع باستراحة فاخرة وبأسعار معقولة بعيدًا عن صخب وزحام المطار المزدحم في واحدة
+                                        من صالات كبار الشخصيات لدينا.
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <button title="عرض جميع المقالات العشر" onclick="showAll('list-faq-2')"
+                            class="lg:w-[40%] before:bg-[var(--is-blue)] rounded-[20px] hover:text-white text-white bg-[var(--is-pink)] px-5 py-4 btn">
+                            <div class="text-base relative z-1 font-bold">
+                                <span>عرض جميع المقالات العشر</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
-        <!-- end about -->
+        <!-- end content -->
         <!-- start footer -->
         <footer class="bg-[var(--is-black-1)]">
             <div
@@ -445,11 +647,11 @@
                                         class="px-22 dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 w-full bg-[var(--is-blue-1)] backdrop-blur-md py-5">
                                         <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                             onclick="selectItem(this, 'العربية')">
-                                            <a href="index.html">العربية</a>
+                                            <a href="faq.html">العربية</a>
                                         </li>
                                         <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                             onclick="selectItem(this, 'English')">
-                                            <a href="../en/about.html">English</a>
+                                            <a href="../en/faq.html">English</a>
                                         </li>
                                     </ul>
                                 </div>

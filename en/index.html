@@ -61,7 +61,9 @@
                                         <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                             onclick="selectItem(this, 'Compatibility')">Compatibility</li>
                                         <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
-                                            onclick="selectItem(this, 'FAQ')">FAQ</li>
+                                            onclick="selectItem(this, 'FAQ')">
+                                            <a href="faq.html">FAQ</a>
+                                        </li>
                                         <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                             onclick="selectItem(this, 'Blogs')">Blogs</li>
                                         <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
@@ -151,7 +153,9 @@
                                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                     onclick="selectItem(this, 'Compatibility')">Compatibility</li>
                                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
-                                    onclick="selectItem(this, 'FAQ')">FAQ</li>
+                                    onclick="selectItem(this, 'FAQ')">
+                                    <a href="faq.html">FAQ</a>
+                                </li>
                                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
                                     onclick="selectItem(this, 'Blogs')">Blogs</li>
                                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"
@@ -237,11 +241,11 @@
                                 </div>
 
                                 <ul id="destination-list-1"
-                                    class="shadow-2xl dropdown-list absolute w-full mt-2 rounded-[12px] bg-white overflow-hidden z-50">
+                                    class="shadow-2xl dropdown-list !block !px-0 absolute w-full mt-2 rounded-[12px] !bg-white overflow-hidden z-50">
                                 </ul>
 
                             </div>
-                            <button title="Find Deals"
+                            <button title="Find Deals" onclick="document.getElementById('destination-input-1').focus()"
                                 class="before:bg-white rounded-[20px] hover:text-black bg-[var(--is-pink)] px-5 py-4 btn">
                                 <div class="text-base relative z-1 font-bold">
                                     <span>Find Deals</span>
@@ -449,6 +453,34 @@
                             <img src="../assets/icons/arraw-circle.svg" alt="arraw circle" class="rounded-lg w-5 h-5" />
                         </a>
                     </li>
+                    <li data-aos="fade-up" class="extra-country hidden">
+                        <a href="single-country.html" title="United States"
+                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] p-2 flex items-center justify-between">
+                            <div class="flex items-center gap-[16px]">
+                                <img src="https://flagcdn.com/24x18/us.png" alt="us" class="rounded-lg w-8 h-5" />
+                                <div class="text-[var(--is-blue-3)]">
+                                    <h3 class="font-semibold text-base">United States</h3>
+                                    <p class="font-normal text-sm">from <span class="font-bold">$0.71</span> per day
+                                    </p>
+                                </div>
+                            </div>
+                            <img src="../assets/icons/arraw-circle.svg" alt="arraw circle" class="rounded-lg w-5 h-5" />
+                        </a>
+                    </li>
+                    <li data-aos="fade-up" class="extra-country hidden">
+                        <a href="single-country.html" title="United States"
+                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] p-2 flex items-center justify-between">
+                            <div class="flex items-center gap-[16px]">
+                                <img src="https://flagcdn.com/24x18/us.png" alt="us" class="rounded-lg w-8 h-5" />
+                                <div class="text-[var(--is-blue-3)]">
+                                    <h3 class="font-semibold text-base">United States</h3>
+                                    <p class="font-normal text-sm">from <span class="font-bold">$0.71</span> per day
+                                    </p>
+                                </div>
+                            </div>
+                            <img src="../assets/icons/arraw-circle.svg" alt="arraw circle" class="rounded-lg w-5 h-5" />
+                        </a>
+                    </li>
                 </ul>
                 <ul id="list-region"
                     class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[16px] hidden">
@@ -467,10 +499,10 @@
                         </a>
                     </li>
                 </ul>
-                <div data-aos="fade-up" title="Show all Destinations"
+                <div data-aos="fade-up" title="Show all Destinations" onclick="showAll('list-country')"
                     class="text-white before:bg-[var(--is-blue-3)] rounded-[20px] bg-[var(--is-pink)] px-15 py-4 btn">
                     <div class="text-xl relative z-1 font-bold">
-                        <span>Show all Destinations</span>
+                        <span id="toggle-btn">Show all Destinations</span>
                     </div>
                     </a>
                 </div>
@@ -732,12 +764,12 @@
                                 <p class="text-xs md:text-base">Keep your local number to receive calls and SMS.</p>
                             </div>
                             <div class="flex flex-wrap gap-3" data-aos="fade-up">
-                                <button title="Read All FAQs"
+                                <a href="faq.html" title="Read All FAQs"
                                     class="w-full md:w-[unset] before:bg-white rounded-[20px] hover:text-black bg-[var(--is-pink)] px-5 py-3 btn">
                                     <div class="text-base relative z-1 font-bold">
                                         <span>Read All FAQs</span>
                                     </div>
-                                </button>
+                                </a>
                                 <button title="Get in Touch"
                                     class="w-full md:w-[unset] before:bg-[var(--is-pink)] rounded-[20px] hover:text-white text-[var(--is-pink)] bg-white px-5 py-3 btn">
                                     <div class="text-base relative z-1 font-bold">
@@ -966,7 +998,7 @@
                                 <a title="Compatibility" class="nav-link" href="">Compatibility</a>
                             </li>
                             <li>
-                                <a title="FAQ" class="nav-link" href="">FAQ</a>
+                                <a title="FAQ" class="nav-link" href="faq.html">FAQ</a>
                             </li>
                             <li>
                                 <a title="Contact" class="nav-link" href="">Contact</a>

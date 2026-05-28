@@ -5,7 +5,7 @@ function showTab(tab) {
     document.getElementById('tab-country').classList.toggle('active-destinations', tab === 'country')
     document.getElementById('tab-region').classList.toggle('active-destinations', tab === 'region')
 }
-    
+
 function selectDestination(name, code) {
     $('#destination-input').val(name);
     $('#destination-list').removeClass('open');
