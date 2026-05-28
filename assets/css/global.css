@@ -238,6 +238,10 @@ body {
     .sections-marign-top {
         margin-top: 60px;
     }
+
+    .container-footer-mobile {
+        max-width: 330px !important;
+    }
 }
 
 @media (max-width: 390px) {

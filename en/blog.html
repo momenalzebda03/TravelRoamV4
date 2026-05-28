@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/logo.svg" />
+    <link rel="stylesheet" href="../assets/css/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <title>Travel Roam Partners</title>
+</head>
+
+<body>
+    <div id="loadingOverlay" class="fixed inset-0 bg-white flex justify-center items-center z-[9999]">
+        <div class="w-16 h-16 border-6 border-gray-200 border-t-[var(--is-blue)] rounded-full animate-spin"></div>
+    </div>
+    <div id="app" style="display: none;">
+        <!-- start navbar -->
+        <coop-navbar></coop-navbar>
+        <!-- end navbar -->
+        <!-- start hero -->
+        <main class="bg-[url('../assets/images/bg-blog.png')]
+    bg-cover
+    bg-center
+    bg-no-repeat h-[25vh] md:h-[60vh]">
+            <div
+                class="relative z-1 pt-22 pb-15 md:py-0 h-full bg-gradient-to-r from-[var(--is-blue)] from-30% via-[var(--is-blue)]/60 via-60% to-transparent flex items-center">
+                <div class="container">
+                    <h1 data-aos="fade-up" class="text-white font-bold text-xl md:text-5xl md:leading-15">Blog
+                    </h1>
+                </div>
+            </div>
+        </main>
+        <!-- end hero -->
+        <!-- start content -->
+        <section>
+            <div class="container sections-marign-top flex flex-col gap-[60px]">
+                <h3 class="text-center text-2xl md:text-[42px] font-normal text-[var(--is-pink)]">The
+                    <span class="font-semibold text-[var(--is-blue-3)]">TravelRoam?</span> Journal
+                </h3>
+                <div class="flex flex-col gap-[60px]">
+                    <div
+                        class="flex flex-col md:flex-row items-center gap-[10px] md:gap-[119px] even:md:flex-row-reverse">
+                        <div class="w-full overflow-hidden" data-aos="fade-up">
+                            <img src="../assets/images/blog-1.png" alt="about content"
+                                class="w-full h-full object-cover rounded-[25px] transition-all duration-500 hover:scale-103" />
+                        </div>
+                        <div class="flex flex-col gap-5 md:gap-10 w-[85%] md:w-[70%]" data-aos="fade-up">
+                            <h2 class="leading-10 font-normal text-xl md:text-3xl"><span class="font-bold">TravelRoam
+                                    Guide for
+                                    Istanbul:</span>
+                                Best
+                                eSIM for city break</h2>
+                            <p>You can call and message all your contacts on WhatsApp, like you’re in the same country.
+                                don't lose touch with family and friends.</p>
+                            <button title="Read more" data-aos="fade-up"
+                                class="lg:w-[40%] before:bg-[var(--is-blue)] rounded-[20px] hover:text-white text-white bg-[var(--is-pink)] px-5 py-4 btn">
+                                <div class="text-base relative z-1 font-bold">
+                                    <span>Read more</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-col md:flex-row items-center gap-[10px] md:gap-[119px] even:md:flex-row-reverse">
+                        <div class="w-full overflow-hidden" data-aos="fade-up">
+                            <img src="../assets/images/blog-2.png" alt="about content"
+                                class="w-full h-full object-cover rounded-[25px] transition-all duration-500 hover:scale-103" />
+                        </div>
+                        <div class="flex flex-col gap-5 md:gap-10 w-[85%] md:w-[70%]" data-aos="fade-up">
+                            <h2 class="leading-10 font-normal text-xl md:text-3xl"><span class="font-bold">TravelRoam
+                                    Guide for
+                                    London:</span>
+                                Best eSIM for city break</h2>
+                            <p>You can call and message all your contacts on WhatsApp, like you’re in the same country.
+                                don't lose touch with family and friends.</p>
+                            <button title="Read more" data-aos="fade-up"
+                                class="lg:w-[40%] before:bg-[var(--is-blue)] rounded-[20px] hover:text-white text-white bg-[var(--is-pink)] px-5 py-4 btn">
+                                <div class="text-base relative z-1 font-bold">
+                                    <span>Read more</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-col md:flex-row items-center gap-[10px] md:gap-[119px] even:md:flex-row-reverse">
+                        <div class="w-full overflow-hidden" data-aos="fade-up">
+                            <img src="../assets/images/blog-3.png" alt="about content"
+                                class="w-full h-full object-cover rounded-[25px] transition-all duration-500 hover:scale-103" />
+                        </div>
+                        <div class="flex flex-col gap-5 md:gap-10 w-[85%] md:w-[70%]" data-aos="fade-up">
+                            <h2 class="leading-10 font-normal text-xl md:text-3xl"><span class="font-bold">TravelRoam
+                                    connects
+                                    you:</span>
+                                Best eSIM
+                                for travelling in UAE</h2>
+                            <p>Are you tired of the usual tourist spots? Looking for a destination that’s off the beaten
+                                path, rich in culture, and filled with breathtaking landscapes?.</p>
+                            <button title="Read more" data-aos="fade-up"
+                                class="lg:w-[40%] before:bg-[var(--is-blue)] rounded-[20px] hover:text-white text-white bg-[var(--is-pink)] px-5 py-4 btn">
+                                <div class="text-base relative z-1 font-bold">
+                                    <span>Read more</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end content -->
+        <!-- start footer -->
+        <coop-footer></coop-footer>
+        <!-- end footer -->
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/navbar-layout.js"></script>
+<script src="../assets/js/footer-layout.js"></script>
+<script src="../assets/js/global.js"></script>
+<script src="../assets/js/single-country.js"></script>
+<script src="../assets/js/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+
+</html>

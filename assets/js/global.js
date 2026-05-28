@@ -196,21 +196,3 @@ function showAll(listId) {
         toggleBtn.textContent = isHidden ? 'Show Less' : 'Show all Destinations';
     }
 }
-
-// function showAll(btn, listId = null) {
-//     const hiddenItems = listId
-//         ? document.getElementById(listId).querySelectorAll('.extra-country')
-//         : btn.closest('div').querySelector('.faq-list').querySelectorAll('.extra-country');
-
-//     const toggleBtn = btn.querySelector('span');
-//     const isHidden = hiddenItems[0].classList.contains('hidden');
-
-//     hiddenItems.forEach(item => item.classList.toggle('hidden'));
-
-//     const isArabic = document.documentElement.lang === 'ar';
-//     if (isArabic) {
-//         toggleBtn.textContent = isHidden ? 'عرض أقل' : (listId ? 'عرض جميع الوجهات' : 'عرض جميع المقالات');
-//     } else {
-//         toggleBtn.textContent = isHidden ? 'Show Less' : (listId ? 'Show all Destinations' : 'See all 10 articles');
-//     }
-// }
