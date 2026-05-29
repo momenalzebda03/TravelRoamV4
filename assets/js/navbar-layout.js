@@ -84,7 +84,7 @@ class CoopNavbar extends HTMLElement {
                 </div>
               </div>
               <ul class="dropdown-list">
-                <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Marketplace')">${this.isArabic ? "سوق" : 'Marketplace'}</li>
+                <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Marketplace')"><a href='marketplace.html'>${this.isArabic ? "سوق" : 'Marketplace'}</a></li>
                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer ${this._active('about')}" onclick="selectItem(this,'About')"><a href="about.html">${this.isArabic ? "حول" : 'About'}</a></li>
                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer ${this._active('compatibility')}" onclick="selectItem(this,'Compatibility')"><a href="compatibility.html">${this.isArabic ? "التوافق" : 'Compatibility'}</a></li>
                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer ${this._active('faq')}" onclick="selectItem(this,'FAQ')"><a href="faq.html">${this.isArabic ? "الأسئلة الشائعة" : 'FAQ'}</a></li>

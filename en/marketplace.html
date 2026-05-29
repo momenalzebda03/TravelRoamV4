@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/logo.svg" />
+    <link rel="stylesheet" href="../assets/css/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <title>Travel Roam Partners</title>
+</head>
+
+<body>
+    <div id="loadingOverlay" class="fixed inset-0 bg-white flex justify-center items-center z-[9999]">
+        <div class="w-16 h-16 border-6 border-gray-200 border-t-[var(--is-blue)] rounded-full animate-spin"></div>
+    </div>
+    <div id="app" style="display: none;">
+        <!-- start navbar -->
+        <coop-navbar></coop-navbar>
+        <!-- end navbar -->
+        <!-- start hero -->
+        <main class="bg-[url('../assets/images/bg-travel-marketplace.png')]
+    bg-cover
+    bg-center
+    bg-no-repeat h-[25vh] md:h-[60vh]">
+            <div
+                class="relative z-1 pt-22 pb-15 md:py-0 h-full bg-gradient-to-r from-[var(--is-blue)] from-30% via-[var(--is-blue)]/60 via-60% to-transparent flex items-center">
+                <div class="container">
+                    <h1 data-aos="fade-up" class="text-white font-bold text-xl md:text-5xl md:leading-15">Travel
+                        Marketplace
+                    </h1>
+                </div>
+            </div>
+        </main>
+        <!-- end hero -->
+        <!-- start best partners -->
+        <section>
+            <div class="container sections-marign-top flex flex-col gap-[30px] md:gap-[60px]">
+                <h3 class="text-2xl md:text-[42px] font-normal text-[var(--is-pink)]">The best deals from
+                    <span class="font-semibold text-[var(--is-blue-3)]">the best partners</span>
+                </h3>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-[21px]">
+                    <div data-aos="fade-up">
+                        <a title="Travel Data" href="index.html"
+                            class="w-full h-full min-h-[277px]
+                        bg-cover
+    bg-center
+    bg-no-repeat rounded-[20px] bg-[url('../assets/images/travel-marketplace-1.png')] overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-105 flex items-end">
+                            <div
+                                class="bg-gradient-to-b from-[#F7007500] via-[#8D115280] to-[var(--is-blue-3)] text-white flex items-center justify-between rounded-b-[20px] w-full py-5 px-3">
+                                <div class="flex flex-col justify-center">
+                                    <span class="text-2xl font-medium">Travel Data</span>
+                                    <p class="font-light text-md text-[var(--is-white-1)]">
+                                        200+ <span class="text-[var(--is-gray-8)]">Countries</span>
+                                    </p>
+                                </div>
+                                <img src="../assets/icons/telegram.svg" alt="telegram" class="w-7 h-7" />
+                            </div>
+                        </a>
+                    </div>
+                    <div data-aos="fade-up">
+                        <a title="Lounge Pass" href=""
+                            class="w-full h-full min-h-[277px]
+                        bg-cover
+    bg-center
+    bg-no-repeat rounded-[20px] bg-[url('../assets/images/travel-marketplace-2.png')] flex items-end overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
+                            <div
+                                class="bg-gradient-to-b from-[#F7007500] via-[#8D115280] to-[var(--is-blue-3)] text-white flex items-center justify-between rounded-b-[20px] w-full py-5 px-3">
+                                <div class="flex flex-col justify-center">
+                                    <span class="text-2xl font-medium">Lounge Pass</span>
+                                    <p class="font-light text-md text-[var(--is-white-1)]">
+                                        600+ <span class="text-[var(--is-gray-8)]">Lounges</span>
+                                    </p>
+                                </div>
+                                <img src="../assets/icons/airport.svg" alt="airport" class="w-7 h-7" />
+                            </div>
+                        </a>
+                    </div>
+                    <div data-aos="fade-up">
+                        <div
+                            class="w-full h-full min-h-[277px]
+                        bg-cover
+    bg-center
+    bg-no-repeat rounded-[20px] bg-[url('../assets/images/travel-marketplace-3.png')] flex items-end overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
+                            <div
+                                class="bg-gradient-to-b from-[#F7007500] via-[#8D115280] to-[var(--is-blue-3)] text-white flex items-center justify-between rounded-b-[20px] w-full py-5 px-3">
+                                <div class="flex flex-col justify-center">
+                                    <span class="text-2xl font-medium">Insurance</span>
+                                    <p class="font-light text-md text-[var(--is-white-1)]">
+                                        <span class="text-[var(--is-gray-8)]">Coming Soon...</span>
+                                    </p>
+                                </div>
+                                <img src="../assets/icons/insurance.svg" alt="insurance" class="w-7 h-7" />
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up">
+                        <div
+                            class="w-full h-full min-h-[277px]
+                        bg-cover
+    bg-center
+    bg-no-repeat rounded-[20px] bg-[url('../assets/images/travel-marketplace-3.png')] flex items-end overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
+                            <div
+                                class="bg-gradient-to-b from-[#F7007500] via-[#8D115280] to-[var(--is-blue-3)] text-white flex items-center justify-between rounded-b-[20px] w-full py-5 px-3">
+                                <div class="flex flex-col justify-center">
+                                    <span class="text-2xl font-medium">Medical</span>
+                                    <p class="font-light text-md text-[var(--is-white-1)]">
+                                        <span class="text-[var(--is-gray-8)]">Coming Soon...</span>
+                                    </p>
+                                </div>
+                                <img src="../assets/icons/medical.svg" alt="medical" class="w-7 h-7" />
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up">
+                        <div class="w-full h-full min-h-[277px]
+     rounded-[20px] flex items-end bg-[var(--is-gray-9)]">
+                            <div class="text-white flex items-center justify-between rounded-b-[20px] w-full py-5 px-3">
+                                <div class="flex flex-col justify-center">
+                                    <span class="text-[var(--is-gray-8)] text-2xl font-medium">Product</span>
+                                    <p class="font-light text-md text-[var(--is-white-1)]">
+                                        <span class="text-[var(--is-gray-8)]">Coming Soon...</span>
+                                    </p>
+                                </div>
+                                <img src="../assets/icons/soon.svg" alt="soon" class="w-7 h-7" />
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up">
+                        <div class="w-full h-full min-h-[277px]
+     rounded-[20px] flex items-end bg-[var(--is-gray-9)]">
+                            <div class="text-white flex items-center justify-between rounded-b-[20px] w-full py-5 px-3">
+                                <div class="flex flex-col justify-center">
+                                    <span class="text-[var(--is-gray-8)] text-2xl font-medium">Product</span>
+                                    <p class="font-light text-md text-[var(--is-white-1)]">
+                                        <span class="text-[var(--is-gray-8)]">Coming Soon...</span>
+                                    </p>
+                                </div>
+                                <img src="../assets/icons/soon.svg" alt="soon" class="w-7 h-7" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end best partners -->
+        <!-- start what is esim -->
+        <section>
+            <div class="container sections-marign-top rounded-[25px]
+                    bg-[url('../assets/images/whay.png')] bg-cover bg-center bg-no-repeat relative">
+                <div class="my-18 md:my-60">
+                    <div
+                        class="flex flex-col lg:flex-row justify-between text-white rounded-[25px] bg-gradient-to-r from-[var(--is-blue)] from-30% via-[var(--is-blue)]/60 via-60% to-transparent px-10 py-9">
+                        <div class="lg:w-[35%] flex flex-col gap-5">
+                            <div class="flex flex-col gap-3" data-aos="fade-up">
+                                <h3 class="font-bold text-lg md:text-2xl">What is an eSIM?</h3>
+                                <p class="text-xs md:text-base">It works like your physical SIM card, but it’s virtual!
+                                    Less
+                                    fuss, better deals on
+                                    internet abroad.</p>
+                            </div>
+                            <div class="flex flex-col gap-3" data-aos="fade-up">
+                                <h3 class="font-bold text-lg md:text-2xl">What about my current SIM?</h3>
+                                <p class="text-xs md:text-base">You can install an eSIM as well as your SIM on your
+                                    phone,
+                                    or use both a local eSIM and a
+                                    travel one.</p>
+                            </div>
+                            <div class="flex flex-col gap-3" data-aos="fade-up">
+                                <h3 class="font-bold text-lg md:text-2xl">How do calls and texts work?</h3>
+                                <p class="text-xs md:text-base">Keep your local number to receive calls and SMS.</p>
+                            </div>
+                            <div class="flex flex-wrap gap-3" data-aos="fade-up">
+                                <a href="faq.html" title="Read All FAQs"
+                                    class="w-full md:w-[unset] before:bg-white rounded-[20px] hover:text-black bg-[var(--is-pink)] px-5 py-3 btn">
+                                    <div class="text-base relative z-1 font-bold">
+                                        <span>Read All FAQs</span>
+                                    </div>
+                                </a>
+                                <button title="Get in Touch"
+                                    class="w-full md:w-[unset] before:bg-[var(--is-pink)] rounded-[20px] hover:text-white text-[var(--is-pink)] bg-white px-5 py-3 btn">
+                                    <div class="text-base relative z-1 font-bold">
+                                        <span>Get in Touch</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="hidden lg:block relative flex items-center justify-center" data-aos="fade-up">
+                            <div class="lg:absolute right-0 -bottom-35 w-[492px] h-[659px]">
+                                <img src="../assets/images/iPhone.png" alt="iPhone"
+                                    class="w-full h-full object-cover" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end what is esim -->
+        <!-- start why choose tv4 -->
+        <section>
+            <div class="container sections-marign-top">
+                <div class="md:mx-15 flex flex-col items-center gap-[30px] md:gap-[73px]">
+                    <div class="flex flex-col items-center gap-[20px] md:gap-[25px]" data-aos="fade-up">
+                        <h3 class="text-2xl md:text-[42px] font-normal text-[var(--is-pink)]">Why
+                            Choose
+                            <span class="font-semibold text-[var(--is-blue-3)]">TravelRoam?</span>
+                        </h3>
+                        <div class="text-center md:w-[65%]">
+                            <p class="font-medium text-lg">Because every journey deserves a more comfortable, seamless,
+                                and stress-free experience
+                                from
+                                start to finish</p>
+                        </div>
+                    </div>
+                    <div class="grid min-[576px]:grid-cols-2 md:grid-cols-3 w-full gap-[20px] md:gap-[40px]">
+                        <div data-aos="fade-up">
+                            <a href="" title="Learn more"
+                                class="text-center style-hover-card h-full group transition-transform duration-500 shadow-[0_4px_5px_var(--is-black)] scale-100 hover:scale-103 hover:shadow-[4px_4px_15px_var(--is-black)] rounded-[25px] border border-2 border-[var(--is-pink)] hover:border-[var(--is-blue-3)] px-5 py-10 flex flex-col items-center justify-between gap-[24px] md:gap-[40px]">
+                                <div
+                                    class="group-hover:bg-[var(--is-pink)] border border-[var(--is-pink)] flex items-center justify-center w-[80px] h-[80px] rounded-full">
+                                    <Image src="../assets/icons/countrys.svg" alt="lounges" width="35" height="25"
+                                        class="rounded-[15px] object-cover filter group-hover:invert group-hover:brightness-0" />
+                                </div>
+                                <h3 class="text-2xl font-medium">200+ Countries</h3>
+                                <p class="text-sm font-semibold text-[var(--is-gray-2)]">No matter where you
+                                    travel, TravelRoam has got your back</p>
+                                <button
+                                    class="before:bg-[var(--is-pink)] bg-black text-white border-1 border-white rounded-[20px] px-5 py-4 btn">
+                                    <div class="flex gap-2 items-center text-base relative z-1 font-bold">
+                                        <span>Learn more</span>
+                                        <div class="mt-1">
+                                            <img src="../assets/icons/arraw-right.svg" alt="arraw right"
+                                                class="w-4 h-4" />
+                                        </div>
+                                    </div>
+                                </button>
+                            </a>
+                        </div>
+                        <div data-aos="fade-up">
+                            <a href="" title="Learn more"
+                                class="text-center style-hover-card h-full group transition-transform duration-500 shadow-[0_4px_5px_var(--is-black)] scale-100 hover:scale-103 hover:shadow-[4px_4px_15px_var(--is-black)] rounded-[25px] border border-2 border-[var(--is-pink)] hover:border-[var(--is-blue-3)] px-5 py-10 flex flex-col items-center justify-between gap-[24px] md:gap-[40px]">
+                                <div
+                                    class="group-hover:bg-[var(--is-pink)] border border-[var(--is-pink)] flex items-center justify-center w-[80px] h-[80px] rounded-full">
+                                    <Image src="../assets/icons/airport.png" alt="lounges" width="35" height="25"
+                                        class="rounded-[15px] object-cover filter group-hover:invert group-hover:brightness-0" />
+                                </div>
+                                <h3 class="text-2xl font-medium">245+ Networks</h3>
+                                <p class="text-sm font-semibold text-[var(--is-gray-2)]">Find access to networks
+                                    worldwide for best coverage</p>
+                                <button
+                                    class="before:bg-[var(--is-pink)] bg-black text-white border-1 border-white rounded-[20px] px-5 py-4 btn">
+                                    <div class="flex gap-2 items-center text-base relative z-1 font-bold">
+                                        <span>Learn more</span>
+                                        <div class="mt-1">
+                                            <img src="../assets/icons/arraw-right.svg" alt="arraw right"
+                                                class="w-4 h-4" />
+                                        </div>
+                                    </div>
+                                </button>
+                            </a>
+                        </div>
+                        <div data-aos="fade-up">
+                            <a href="" title="Learn more"
+                                class="text-center style-hover-card h-full group transition-transform duration-500 shadow-[0_4px_5px_var(--is-black)] scale-100 hover:scale-103 hover:shadow-[4px_4px_15px_var(--is-black)] rounded-[25px] border border-2 border-[var(--is-pink)] hover:border-[var(--is-blue-3)] px-5 py-10 flex flex-col items-center justify-between gap-[24px] md:gap-[40px]">
+                                <div
+                                    class="group-hover:bg-[var(--is-pink)] border border-[var(--is-pink)] flex items-center justify-center w-[80px] h-[80px] rounded-full">
+                                    <Image src="../assets/icons/calnder.svg" alt="lounges" width="35" height="25"
+                                        class="rounded-[15px] object-cover filter group-hover:invert group-hover:brightness-0" />
+                                </div>
+                                <h3 class="text-2xl font-medium">24/7 Support</h3>
+                                <p class="text-sm font-semibold text-[var(--is-gray-2)]">Full FAQS and support
+                                    whenever you need us</p>
+                                <button
+                                    class="before:bg-[var(--is-pink)] bg-black text-white border-1 border-white rounded-[20px] px-5 py-4 btn">
+                                    <div class="flex gap-2 items-center text-base relative z-1 font-bold">
+                                        <span>Learn more</span>
+                                        <div class="mt-1">
+                                            <img src="../assets/icons/arraw-right.svg" alt="arraw right"
+                                                class="w-4 h-4" />
+                                        </div>
+                                    </div>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end why choose tv4 -->
+        <!-- start footer -->
+        <coop-footer></coop-footer>
+        <!-- end footer -->
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/navbar-layout.js"></script>
+<script src="../assets/js/footer-layout.js"></script>
+<script src="../assets/js/contact.js"></script>
+<script src="../assets/js/global.js"></script>
+<script src="../assets/js/faq.js"></script>
+<script src="../assets/js/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+
+</html>
