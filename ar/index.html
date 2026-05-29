@@ -25,25 +25,25 @@
     bg-center
     bg-no-repeat md:h-screen">
             <div
-                class="relative z-1 pt-22 pb-15 md:py-0 h-full bg-gradient-to-r from-[var(--is-blue)] from-30% via-[var(--is-blue)]/60 via-60% to-transparent flex items-center">
+                class="relative z-1 pt-22 pb-15 md:py-0 h-full bg-gradient-to-b md:bg-gradient-to-r from-[var(--is-blue)] from-30% via-[var(--is-blue)]/60 via-60% to-transparent flex items-center">
                 <div class="container">
                     <div class="mt-10 md:mt-15 md:w-[47%] text-white flex flex-col gap-[30px] md:gap-[60px]"
                         data-aos="fade-up">
-                        <div class="flex flex-col gap-[16px]">
-                            <h1 class="font-bold text-xl md:text-5xl">إلى أين، أيها المسافر؟</h1>
-                            <p class="text-sm md:text-xl leading-7 md:leading-9 font-normal">اغمر نفسك للحصول على أفضل
+                        <div class="flex text-center md:text-start flex-col gap-[10px] md:gap-[16px]">
+                            <h1 class="font-bold text-3xl md:text-5xl">إلى أين، أيها المسافر؟</h1>
+                            <p class="text-md md:text-xl md:leading-9 font-normal">اغمر نفسك للحصول على أفضل
                                 أسعارنا على الإنترنت في الخارج! فقط اختر وجهتك، وأخبرنا كم ستبقى وسنتولى الباقي.</p>
                         </div>
                         <div class="md:w-[88%] flex flex-col gap-[25px]">
                             <div class="relative dropdown-wrapper">
                                 <div
-                                    class="relative bg-[var(--bg-gray)] border border-white rounded-[20px] flex items-center justify-between">
+                                    class="relative border opacity-50 md:opacity-100 bg-[var(--bg-gray)] border-white rounded-[20px] flex items-center justify-between">
                                     <input type="text"
-                                        class="w-full text-white placeholder:text-white py-4 px-5 outline-none focus:outline-none"
+                                        class="w-full text-white placeholder:text-white py-4 px-14 md:px-5 outline-none focus:outline-none"
                                         placeholder="وجهة" id="destination-input-1"
                                         oninput="filterDestinations(this.value, this)"
                                         onfocus="openDestinations(this)" />
-                                    <div class="absolute left-0 px-5">
+                                    <div class="absolute md:left-0 px-5">
                                         <img src="../assets/icons/search.svg" alt="search" />
                                     </div>
                                 </div>
@@ -96,7 +96,7 @@
                     class="faq-list w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[16px]">
                     <li data-aos="fade-up">
                         <a href="single-country.html" title="فرنسا"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-gray-10)] md:border-[var(--is-blue-3)] rounded-[20px] px-4 md:px-2 py-6 md:py-4 flex items-center justify-between">
                             <div class="flex items-center gap-[16px]">
                                 <img src="https://flagcdn.com/24x18/fr.png" alt="fr" class="rounded-lg w-8 h-5" />
                                 <div class="text-[var(--is-blue-3)]">
@@ -109,7 +109,7 @@
                     </li>
                     <li data-aos="fade-up">
                         <a href="single-country.html" title="الهند"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-gray-10)] md:border-[var(--is-blue-3)] rounded-[20px] px-4 md:px-2 py-6 md:py-4 flex items-center justify-between">
                             <div class="flex items-center gap-[16px]">
                                 <img src="https://flagcdn.com/24x18/in.png" alt="in" class="rounded-lg w-8 h-5" />
                                 <div class="text-[var(--is-blue-3)]">
@@ -122,7 +122,7 @@
                     </li>
                     <li data-aos="fade-up">
                         <a href="single-country.html" title="إيطاليا"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-gray-10)] md:border-[var(--is-blue-3)] rounded-[20px] px-4 md:px-2 py-6 md:py-4 flex items-center justify-between">
                             <div class="flex items-center gap-[16px]">
                                 <img src="https://flagcdn.com/24x18/it.png" alt="it" class="rounded-lg w-8 h-5" />
                                 <div class="text-[var(--is-blue-3)]">
@@ -135,7 +135,7 @@
                     </li>
                     <li data-aos="fade-up">
                         <a href="single-country.html" title="المكسيك"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-gray-10)] md:border-[var(--is-blue-3)] rounded-[20px] px-4 md:px-2 py-6 md:py-4 flex items-center justify-between">
                             <div class="flex items-center gap-[16px]">
                                 <img src="https://flagcdn.com/24x18/mx.png" alt="mx" class="rounded-lg w-8 h-5" />
                                 <div class="text-[var(--is-blue-3)]">
@@ -148,7 +148,7 @@
                     </li>
                     <li data-aos="fade-up">
                         <a href="single-country.html" title="المغرب"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-gray-10)] md:border-[var(--is-blue-3)] rounded-[20px] px-4 md:px-2 py-6 md:py-4 flex items-center justify-between">
                             <div class="flex items-center gap-[16px]">
                                 <img src="https://flagcdn.com/24x18/ma.png" alt="ma" class="rounded-lg w-8 h-5" />
                                 <div class="text-[var(--is-blue-3)]">
@@ -161,7 +161,7 @@
                     </li>
                     <li data-aos="fade-up">
                         <a href="single-country.html" title="المملكة العربية السعودية"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-gray-10)] md:border-[var(--is-blue-3)] rounded-[20px] px-4 md:px-2 py-6 md:py-4 flex items-center justify-between">
                             <div class="flex items-center gap-[16px]">
                                 <img src="https://flagcdn.com/24x18/sa.png" alt="sa" class="rounded-lg w-8 h-5" />
                                 <div class="text-[var(--is-blue-3)]">
@@ -174,7 +174,7 @@
                     </li>
                     <li data-aos="fade-up">
                         <a href="single-country.html" title="إسبانيا"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-gray-10)] md:border-[var(--is-blue-3)] rounded-[20px] px-4 md:px-2 py-6 md:py-4 flex items-center justify-between">
                             <div class="flex items-center gap-[16px]">
                                 <img src="https://flagcdn.com/24x18/es.png" alt="es" class="rounded-lg w-8 h-5" />
                                 <div class="text-[var(--is-blue-3)]">
@@ -187,7 +187,7 @@
                     </li>
                     <li data-aos="fade-up">
                         <a href="single-country.html" title="سريلانكا"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-gray-10)] md:border-[var(--is-blue-3)] rounded-[20px] px-4 md:px-2 py-6 md:py-4 flex items-center justify-between">
                             <div class="flex items-center gap-[16px]">
                                 <img src="https://flagcdn.com/24x18/lk.png" alt="lk" class="rounded-lg w-8 h-5" />
                                 <div class="text-[var(--is-blue-3)]">
@@ -200,7 +200,7 @@
                     </li>
                     <li data-aos="fade-up">
                         <a href="single-country.html" title="تركيا"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-gray-10)] md:border-[var(--is-blue-3)] rounded-[20px] px-4 md:px-2 py-6 md:py-4 flex items-center justify-between">
                             <div class="flex items-center gap-[16px]">
                                 <img src="https://flagcdn.com/24x18/tr.png" alt="tr" class="rounded-lg w-8 h-5" />
                                 <div class="text-[var(--is-blue-3)]">
@@ -213,7 +213,7 @@
                     </li>
                     <li data-aos="fade-up">
                         <a href="single-country.html" title="الإمارات العربية المتحدة"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-gray-10)] md:border-[var(--is-blue-3)] rounded-[20px] px-4 md:px-2 py-6 md:py-4 flex items-center justify-between">
                             <div class="flex items-center gap-[16px]">
                                 <img src="https://flagcdn.com/24x18/ae.png" alt="ae" class="rounded-lg w-8 h-5" />
                                 <div class="text-[var(--is-blue-3)]">
@@ -226,7 +226,7 @@
                     </li>
                     <li data-aos="fade-up">
                         <a href="single-country.html" title="المملكة المتحدة"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-gray-10)] md:border-[var(--is-blue-3)] rounded-[20px] px-4 md:px-2 py-6 md:py-4 flex items-center justify-between">
                             <div class="flex items-center gap-[16px]">
                                 <img src="https://flagcdn.com/24x18/gb.png" alt="gb" class="rounded-lg w-8 h-5" />
                                 <div class="text-[var(--is-blue-3)]">
@@ -239,7 +239,7 @@
                     </li>
                     <li data-aos="fade-up">
                         <a href="single-country.html" title="الولايات المتحدة"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-gray-10)] md:border-[var(--is-blue-3)] rounded-[20px] px-4 md:px-2 py-6 md:py-4 flex items-center justify-between">
                             <div class="flex items-center gap-[16px]">
                                 <img src="https://flagcdn.com/24x18/us.png" alt="us" class="rounded-lg w-8 h-5" />
                                 <div class="text-[var(--is-blue-3)]">
@@ -252,7 +252,7 @@
                     </li>
                     <li data-aos="fade-up" class="extra-country hidden">
                         <a href="single-country.html" title="المملكة المتحدة"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-gray-10)] md:border-[var(--is-blue-3)] rounded-[20px] px-4 md:px-2 py-6 md:py-4 flex items-center justify-between">
                             <div class="flex items-center gap-[16px]">
                                 <img src="https://flagcdn.com/24x18/gb.png" alt="gb" class="rounded-lg w-8 h-5" />
                                 <div class="text-[var(--is-blue-3)]">
@@ -265,7 +265,7 @@
                     </li>
                     <li data-aos="fade-up" class="extra-country hidden">
                         <a href="single-country.html" title="الولايات المتحدة"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-gray-10)] md:border-[var(--is-blue-3)] rounded-[20px] px-4 md:px-2 py-6 md:py-4 flex items-center justify-between">
                             <div class="flex items-center gap-[16px]">
                                 <img src="https://flagcdn.com/24x18/us.png" alt="us" class="rounded-lg w-8 h-5" />
                                 <div class="text-[var(--is-blue-3)]">
@@ -281,7 +281,7 @@
                     class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[16px] hidden">
                     <li data-aos="fade-up">
                         <a href="single-country.html" title="فرنسا"
-                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                            class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-gray-10)] md:border-[var(--is-blue-3)] rounded-[20px] px-4 md:px-2 py-6 md:py-4 flex items-center justify-between">
                             <div class="flex items-center gap-[16px]">
                                 <img src="https://flagcdn.com/24x18/fr.png" alt="fr" class="rounded-lg w-8 h-5" />
                                 <div class="text-[var(--is-blue-3)]">
@@ -408,7 +408,7 @@
                 </div>
                 <div class="container flex flex-col justify-center relative z-1 py-10 md:py-20">
                     <div class="flex flex-col gap-5">
-                        <div class="flex flex-col gap-2 text-white" data-aos="fade-up">
+                        <div class="w-[80%] md:w-[unset] flex flex-col gap-2 text-white" data-aos="fade-up">
                             <h3 class="font-bold text-md md:text-[32px]">سهل على <span class="font-bold">اختر
                                     وثبّت</span></h3>
                             <p class="text-xs md:text-base">أنت على بُعد خطوات قليلة فقط من أفضل أسعارنا للإنترنت في
@@ -420,14 +420,14 @@
                                 <img src="../assets/icons/arraw-swiper.svg" alt="arraw" title="left" />
                             </button>
 
-                            <div class="swiper mySwiperCards w-full">
+                            <div class="!hidden md:!block swiper mySwiperCards w-full">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="text-center text-white flex flex-col items-center gap-[25px]">
                                             <img src="../assets/images/item-app-1.png" alt="item-1"
-                                                class="rounded-xl w-full h-full md:h-[567px] md:object-contain xl:object-cover" />
+                                                class="rounded-xl w-full h-[567px] object-contain xl:object-cover" />
                                             <div class="w-50">
-                                                <h3 class="text-sm md:text-lg font-bold">قم بتحميل تطبيقنا أو التسوق على
+                                                <h3 class="text-lg font-bold">قم بتحميل تطبيقنا أو التسوق على
                                                     الموقع
                                                 </h3>
                                             </div>
@@ -436,9 +436,9 @@
                                     <div class="swiper-slide">
                                         <div class="text-center text-white flex flex-col items-center gap-[25px]">
                                             <img src="../assets/images/item-app-2.png" alt="item-2"
-                                                class="rounded-xl w-full h-full md:h-[567px] md:object-contain xl:object-cover" />
+                                                class="rounded-xl w-full h-[567px] object-contain xl:object-cover" />
                                             <div class="w-50">
-                                                <h3 class="text-sm md:text-lg font-bold">قم بإدارة استخدامك بسلاسة
+                                                <h3 class="text-lg font-bold">قم بإدارة استخدامك بسلاسة
                                                 </h3>
                                             </div>
                                         </div>
@@ -446,9 +446,9 @@
                                     <div class="swiper-slide">
                                         <div class="text-center text-white flex flex-col items-center gap-[25px]">
                                             <img src="../assets/images/item-app-3.png" alt="item-3"
-                                                class="rounded-xl w-full h-full md:h-[567px] md:object-contain xl:object-cover" />
+                                                class="rounded-xl w-full h-[567px] object-contain xl:object-cover" />
                                             <div class="w-50">
-                                                <h3 class="text-sm md:text-lg font-bold">اختر خطتك — اختر من الأيام أو
+                                                <h3 class="text-lg font-bold">اختر خطتك — اختر من الأيام أو
                                                     البيانات
                                                 </h3>
                                             </div>
@@ -457,9 +457,9 @@
                                     <div class="swiper-slide">
                                         <div class="text-center text-white flex flex-col items-center gap-[25px]">
                                             <img src="../assets/images/item-app-4.png" alt="item-4"
-                                                class="rounded-xl w-full h-full md:h-[567px] md:object-contain xl:object-cover" />
+                                                class="rounded-xl w-full h-[567px] object-contain xl:object-cover" />
                                             <div class="w-50">
-                                                <h3 class="text-sm md:text-lg font-bold">قم بتثبيت eSlM الجديد الخاص بك
+                                                <h3 class="text-lg font-bold">قم بتثبيت eSlM الجديد الخاص بك
                                                     خطوة بخطوة
                                                 </h3>
                                             </div>
@@ -468,9 +468,9 @@
                                     <div class="swiper-slide">
                                         <div class="text-center text-white flex flex-col items-center gap-[25px]">
                                             <img src="../assets/images/item-app-1.png" alt="item-1"
-                                                class="rounded-xl w-full h-full md:h-[567px] md:object-contain xl:object-cover" />
+                                                class="rounded-xl w-full h-[567px] object-contain xl:object-cover" />
                                             <div class="w-50">
-                                                <h3 class="text-sm md:text-lg font-bold">قم بتحميل تطبيقنا أو التسوق على
+                                                <h3 class="text-lg font-bold">قم بتحميل تطبيقنا أو التسوق على
                                                     الموقع
                                                 </h3>
                                             </div>
@@ -479,9 +479,9 @@
                                     <div class="swiper-slide">
                                         <div class="text-center text-white flex flex-col items-center gap-[25px]">
                                             <img src="../assets/images/item-app-2.png" alt="item-2"
-                                                class="rounded-xl w-full h-full md:h-[567px] md:object-contain xl:object-cover" />
+                                                class="rounded-xl w-full h-[567px] object-contain xl:object-cover" />
                                             <div class="w-50">
-                                                <h3 class="text-sm md:text-lg font-bold">قم بإدارة استخدامك بسلاسة
+                                                <h3 class="text-lg font-bold">قم بإدارة استخدامك بسلاسة
                                                 </h3>
                                             </div>
                                         </div>
@@ -489,9 +489,9 @@
                                     <div class="swiper-slide">
                                         <div class="text-center text-white flex flex-col items-center gap-[25px]">
                                             <img src="../assets/images/item-app-3.png" alt="item-3"
-                                                class="rounded-xl w-full h-full md:h-[567px] md:object-contain xl:object-cover" />
+                                                class="rounded-xl w-full h-[567px] object-contain xl:object-cover" />
                                             <div class="w-50">
-                                                <h3 class="text-sm md:text-lg font-bold">اختر خطتك — اختر من بين الأيام
+                                                <h3 class="text-lg font-bold">اختر خطتك — اختر من بين الأيام
                                                     أو البيانات
                                                 </h3>
                                             </div>
@@ -500,9 +500,9 @@
                                     <div class="swiper-slide">
                                         <div class="text-center text-white flex flex-col items-center gap-[25px]">
                                             <img src="../assets/images/item-app-4.png" alt="item-4"
-                                                class="rounded-xl w-full h-full md:h-[567px] md:object-contain xl:object-cover" />
+                                                class="rounded-xl w-full h-[567px] object-contain xl:object-cover" />
                                             <div class="w-50">
-                                                <h3 class="text-sm md:text-lg font-bold">قم بتثبيت eSlM الجديد الخاص بك
+                                                <h3 class="text-lg font-bold">قم بتثبيت eSlM الجديد الخاص بك
                                                     خطوة بخطوة
                                                 </h3>
                                             </div>
@@ -510,17 +510,44 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="mt-5 md:hidden grid grid-cols-2 gap-5">
+                                <div class="text-center text-white flex flex-col items-center gap-[25px]">
+                                    <img src="../assets/images/item-app-1.png" alt="item-1"
+                                        class="rounded-xl w-full h-[167px] object-contain" />
+                                    <div class="w-50">
+                                        <h3 class="text-sm md:text-lg font-bold">قم بتحميل تطبيقنا أو التسوق على الموقع
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="text-center text-white flex flex-col items-center gap-[25px]">
+                                    <img src="../assets/images/item-app-2.png" alt="item-2"
+                                        class="rounded-xl w-full h-[167px] object-contain" />
+                                    <div class="w-50">
+                                        <h3 class="text-sm md:text-lg font-bold">قم بإدارة استخدامك بسلاسة
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="text-center text-white flex flex-col items-center gap-[25px]">
+                                    <img src="../assets/images/item-app-3.png" alt="item-3"
+                                        class="rounded-xl w-full h-[167px] object-contain" />
+                                    <div class="w-50">
+                                        <h3 class="text-sm md:text-lg font-bold">اختر خطتك — اختر من الأيام أو البيانات
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="text-center text-white flex flex-col items-center gap-[25px]">
+                                    <img src="../assets/images/item-app-4.png" alt="item-4"
+                                        class="rounded-xl w-full h-[167px] object-contain" />
+                                    <div class="w-50">
+                                        <h3 class="text-sm md:text-lg font-bold">قم بتثبيت شريحة eSIM الجديدة الخاصة بك
+                                            خطوة بخطوة
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
                             <button
                                 class="hidden xl:block cursor-pointer swiper-btn-next absolute -right-20 top-1/2 -translate-y-1/2 z-10">
                                 <img src="../assets/icons/arraw-swiper.svg" alt="arraw" title="right" />
-                            </button>
-                        </div>
-                        <div class="flex justify-center gap-3 xl:hidden">
-                            <button class="rotate-180 cursor-pointer swiper-btn-prev z-10">
-                                <img src="../assets/icons/arraw-swiper.svg" alt="arraw" title="left" />
-                            </button>
-                            <button class="cursor-pointer swiper-btn-next z-10">
-                                <img src="../assets/icons/arraw-swiper.svg" alt="arraw" title="left" />
                             </button>
                         </div>
                     </div>
@@ -553,7 +580,7 @@
                                 <h3 class="font-bold text-lg md:text-2xl">كيف تعمل المكالمات والرسائل النصية؟</h3>
                                 <p class="text-xs md:text-base">احتفظ برقمك المحلي لتلقي المكالمات والرسائل القصيرة.</p>
                             </div>
-                            <div class="flex flex-wrap gap-3" data-aos="fade-up">
+                            <div class="flex gap-3" data-aos="fade-up">
                                 <button title="اقرأ جميع الأسئلة الشائعة"
                                     class="w-full md:w-[unset] before:bg-white rounded-[20px] hover:text-black bg-[var(--is-pink)] px-5 py-3 btn">
                                     <div class="text-base relative z-1 font-bold">
@@ -588,13 +615,13 @@
                     </h3>
                 </div>
                 <div class="relative w-full">
-                    <div class="swiper mySwiperJournal w-full">
+                    <div class="!hidden md:!block swiper mySwiperJournal w-full">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="text-center flex flex-col items-center">
                                     <img src="../assets/images/item-journal-1.png" alt="item-journal-1"
                                         class="rounded-[25px] w-full h-full object-cover" />
-                                    <h3 class="text-sm md:text-lg font-bold">اكتشف جوهرة مخفية: كازاخستان، وجهتك القادمة
+                                    <h3 class="text-lg font-bold">اكتشف جوهرة مخفية: كازاخستان، وجهتك القادمة
                                     </h3>
                                 </div>
                             </div>
@@ -602,7 +629,7 @@
                                 <div class="text-center flex flex-col items-center">
                                     <img src="../assets/images/item-journal-2.png" alt="item-journal-2"
                                         class="rounded-[25px] w-full h-full object-cover" />
-                                    <h3 class="text-sm md:text-lg font-bold">اكتشف جوهرة مخفية: كازاخستان، وجهتك القادمة
+                                    <h3 class="text-lg font-bold">اكتشف جوهرة مخفية: كازاخستان، وجهتك القادمة
                                     </h3>
                                 </div>
                             </div>
@@ -610,7 +637,7 @@
                                 <div class="text-center flex flex-col items-center">
                                     <img src="../assets/images/item-journal-3.png" alt="item-journal-3"
                                         class="rounded-[25px] w-full h-full" />
-                                    <h3 class="text-sm md:text-lg font-bold">اكتشف جوهرة مخفية: كازاخستان، وجهتك القادمة
+                                    <h3 class="text-lg font-bold">اكتشف جوهرة مخفية: كازاخستان، وجهتك القادمة
                                     </h3>
                                 </div>
                             </div>
@@ -618,7 +645,7 @@
                                 <div class="text-center flex flex-col items-center">
                                     <img src="../assets/images/item-journal-4.png" alt="item-journal-4"
                                         class="rounded-[25px] w-full h-full" />
-                                    <h3 class="text-sm md:text-lg font-bold">اكتشف جوهرة مخفية: كازاخستان، وجهتك القادمة
+                                    <h3 class="text-lg font-bold">اكتشف جوهرة مخفية: كازاخستان، وجهتك القادمة
                                     </h3>
                                 </div>
                             </div>
@@ -626,7 +653,7 @@
                                 <div class="text-center flex flex-col items-center">
                                     <img src="../assets/images/item-journal-5.png" alt="item-journal-5"
                                         class="rounded-[25px] w-full h-full" />
-                                    <h3 class="text-sm md:text-lg font-bold">اكتشف جوهرة مخفية: كازاخستان، وجهتك القادمة
+                                    <h3 class="text-lg font-bold">اكتشف جوهرة مخفية: كازاخستان، وجهتك القادمة
                                     </h3>
                                 </div>
                             </div>
@@ -634,7 +661,7 @@
                                 <div class="text-center flex flex-col items-center">
                                     <img src="../assets/images/item-journal-1.png" alt="item-journal-1"
                                         class="rounded-[25px] w-full h-full" />
-                                    <h3 class="text-sm md:text-lg font-bold">اكتشف جوهرة مخفية: كازاخستان، وجهتك القادمة
+                                    <h3 class="text-lg font-bold">اكتشف جوهرة مخفية: كازاخستان، وجهتك القادمة
                                     </h3>
                                 </div>
                             </div>
@@ -642,7 +669,7 @@
                                 <div class="text-center flex flex-col items-center">
                                     <img src="../assets/images/item-journal-2.png" alt="item-journal-2"
                                         class="rounded-[25px] w-full h-full" />
-                                    <h3 class="text-sm md:text-lg font-bold">اكتشف جوهرة مخفية: كازاخستان، وجهتك القادمة
+                                    <h3 class="text-lg font-bold">اكتشف جوهرة مخفية: كازاخستان، وجهتك القادمة
                                     </h3>
                                 </div>
                             </div>
@@ -650,7 +677,7 @@
                                 <div class="text-center flex flex-col items-center">
                                     <img src="../assets/images/item-journal-3.png" alt="item-journal-3"
                                         class="rounded-[25px] w-full h-full" />
-                                    <h3 class="text-sm md:text-lg font-bold">اكتشف جوهرة مخفية: كازاخستان، وجهتك القادمة
+                                    <h3 class="text-lg font-bold">اكتشف جوهرة مخفية: كازاخستان، وجهتك القادمة
                                     </h3>
                                 </div>
                             </div>
@@ -658,7 +685,7 @@
                                 <div class="text-center flex flex-col items-center">
                                     <img src="../assets/images/item-journal-4.png" alt="item-journal-4"
                                         class="rounded-[25px] w-full h-full" />
-                                    <h3 class="text-sm md:text-lg font-bold">اكتشف جوهرة مخفية: كازاخستان، وجهتك القادمة
+                                    <h3 class="text-lg font-bold">اكتشف جوهرة مخفية: كازاخستان، وجهتك القادمة
                                     </h3>
                                 </div>
                             </div>
@@ -666,16 +693,49 @@
                                 <div class="text-center flex flex-col items-center">
                                     <img src="../assets/images/item-journal-5.png" alt="item-journal-5"
                                         class="rounded-[25px] w-full h-full" />
-                                    <h3 class="text-sm md:text-lg font-bold">اكتشف جوهرة مخفية: كازاخستان، وجهتك القادمة
+                                    <h3 class="text-lg font-bold">اكتشف جوهرة مخفية: كازاخستان، وجهتك القادمة
                                     </h3>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="container md:hidden grid gap-5">
+                        <div class="text-center flex flex-col items-center">
+                            <img src="../assets/images/item-journal-2.png" alt="item-journal-2"
+                                class="rounded-[25px] w-full h-full" />
+                            <h3 class="mx-5 text-md font-bold">دليل TravelRoam للمغرب — اختر أفضل شريحة eSIM
+                            </h3>
+                        </div>
+                        <div class="text-center flex flex-col items-center">
+                            <img src="../assets/images/item-journal-1.png" alt="item-journal-1"
+                                class="rounded-[25px] w-full h-full" />
+                            <h3 class="mx-5 text-md font-bold">اكتشف جوهرة مخفية: كازاخستان، وجهتك القادمة
+                            </h3>
+                        </div>
+                        <div class="text-center flex flex-col items-center">
+                            <img src="../assets/images/item-journal-3.png" alt="item-journal-3"
+                                class="rounded-[25px] w-full h-full" />
+                            <h3 class="mx-5 text-md font-bold">دليل TravelRoam لإسطنبول: أفضل شريحة eSIM لفترة استراحة
+                                المدينة
+                            </h3>
+                        </div>
+                        <div class="text-center flex flex-col items-center">
+                            <img src="../assets/images/item-journal-4.png" alt="item-journal-4"
+                                class="rounded-[25px] w-full h-full" />
+                            <h3 class="mx-5 text-md font-bold">تربطك TravelRoam: أفضل شريحة eSIM للسفر في الإمارات
+                            </h3>
+                        </div>
+                        <div class="text-center flex flex-col items-center">
+                            <img src="../assets/images/item-journal-5.png" alt="item-journal-5"
+                                class="rounded-[25px] w-full h-full" />
+                            <h3 class="mx-5 text-md font-bold">اكتشف جوهرة مخفية: كازاخستان، وجهتك القادمة
+                            </h3>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex justify-center mt-20">
+                <div class="container flex justify-center md:mt-20">
                     <a href="blog.html" title="اقرأ المزيد من المنشورات"
-                        class="text-nowrap text-white before:bg-[var(--is-blue-3)] rounded-[20px] bg-[var(--is-pink)] px-5 md:px-25 py-4 btn">
+                        class="w-full md:w-[unset] text-center text-nowrap text-white before:bg-[var(--is-blue-3)] rounded-[20px] bg-[var(--is-pink)] px-5 md:px-25 py-4 btn">
                         <div class="text-xl relative z-1 font-bold">
                             <span>اقرأ المزيد من المنشورات</span>
                         </div>

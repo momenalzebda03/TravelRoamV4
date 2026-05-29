@@ -5,6 +5,7 @@
     --is-blue-3: #25123C;
     --is-blue-4: #36002D;
     --is-blue-5: #634F7C99;
+    --is-blue-6: #120A2A;
     --is-gold: #FFBB00;
     --is-gold-1: #D2AF261A;
     --bg-gray: #FFFFFF80;
@@ -17,9 +18,10 @@
     --is-gray-7: #979797;
     --is-gray-8: #BABCD4;
     --is-gray-9: #D9D9D9;
+    --is-gray-10: #C0C0C0;
     --is-pink: #F70075;
     --is-black: #00000040;
-    --is-black-1: #100E23;
+    --is-black-1: #100E23;    
 }
 
 @font-face {

@@ -31,16 +31,16 @@ class CoopFooter extends HTMLElement {
   _render() {
     this.innerHTML = `
 <footer class="bg-[var(--is-black-1)]">
-  <div class="overflow-hidden sections-marign-top text-white py-20 text-center flex flex-col gap-10 md:gap-20">
+  <div class="overflow-hidden sections-marign-top text-white py-10 md:py-20 text-center flex flex-col gap-8 md:gap-20">
 
     <!-- Top CTA -->
-    <div class="container flex flex-col gap-10">
-      <p class="text-2xl md:text-4xl font-bold">
+    <div class="container flex flex-col gap-8">
+      <p class="text-xl md:text-4xl font-bold">
       ${this.isArabic ? ' اذهب إلى أين' : 'Go where'} <span class="text-[var(--is-pink)]">TravelRoam</span> ${this.isArabic ? ' يأخذك.' : 'takes you.'}
       </p>
       <div class="flex justify-center">
         <div class="relative dropdown-wrapper w-full md:w-[70%]">
-          <div class="relative border border-white rounded-[5px] flex items-center justify-between gap-3 px-5">
+          <div class="relative border border-white rounded-[12px] md:rounded-[5px] flex items-center justify-between gap-3 px-5">
             <img src="../assets/icons/region.svg" alt="region" />
             <input type="text"
               class="w-full text-white placeholder:text-white py-4 outline-none focus:outline-none"
@@ -61,23 +61,23 @@ class CoopFooter extends HTMLElement {
 
     <!-- Logo + Description -->
     <div class="container">
-      <div class="flex flex-col md:flex-row items-center justify-center md:justify-between gap-5 md:gap-50">
+      <div class="flex flex-col md:flex-row items-center justify-center md:justify-between gap-3 md:gap-50">
         <a href="index.html">
           <img alt="Golden Esim" src="../assets/icons/logo-pink.svg" class="h-10 md:h-[unset]" />
         </a>
-        <p class="mt-3 text-center md:text-start text-md font-medium">
+        <p class="text-gray-500 md:text-white mt-3 text-center md:text-start text-md font-medium">
         ${this.isArabic ? 'نحن نقدم باقات eSIM ميسورة التكلفة وسهلة الاستخدام في أكثر من 200 دولة حول العالم. أقل تعقيدًا، صفقات أفضل على الإنترنت في الخارج.' : 'We provide affordable, easy to use eSIM bundles in over 200+ countries worldwide. Less fuss, better deals on internet abroad.'}          
         </p>
       </div>
     </div>
 
-    <hr />
+    <hr class="hidden md:block" />
 
     <!-- Links Grid -->
-    <div class="container-footer-mobile container flex justify-between flex-wrap gap-5 py-3 text-center text-start">
+    <div class="text-gray-500 md:text-white container-footer-mobile container flex justify-between flex-col md:flex-row gap-10 md:gap-5 py-3 text-center md:text-start">
 
       <!-- Popular Countries -->
-      <div class="w-[40%] sm:w-[unset]">
+      <div>
         <h5 class="font-bold mb-3 text-capitalize text-lg">Popular Countries</h5>
         <ul class="flex flex-col gap-2">
           <li><a title="${this.isArabic ? "تركيا" : 'Turkey'}"       class="nav-link" href="https://goldenesim.com/chooseBundlesPlan/type/country/id/VFI=/param/">${this.isArabic ? "تركيا" : 'Turkey'}</a></li>
@@ -92,7 +92,7 @@ class CoopFooter extends HTMLElement {
       </div>
 
       <!-- Menu -->
-      <div class="w-[40%] sm:w-[unset]">
+      <div>
         <h5 class="font-bold mb-3 text-capitalize text-lg">${this.isArabic ? "القائمة" : 'Menu'}</h5>
         <ul class="flex flex-col gap-2">
           <li><a title="${this.isArabic ? "حول" : 'About'}" class="nav-link" href="about.html">${this.isArabic ? "حول" : 'About'}</a></li>
@@ -105,7 +105,7 @@ class CoopFooter extends HTMLElement {
       </div>
 
       <!-- Useful Information -->
-      <div class="w-[40%] sm:w-[unset]">
+      <div>
         <h5 class="font-bold mb-3 text-capitalize text-lg">Useful Information</h5>
         <ul class="flex flex-col gap-2">
           <li><a title="${this.isArabic ? "ما هي بطاقة eSIM" : 'What is an eSIM'}" class="nav-link" href="about.html">${this.isArabic ? "ما هي بطاقة eSIM" : 'What is an eSIM'}</a></li>
@@ -118,9 +118,9 @@ class CoopFooter extends HTMLElement {
       </div>
 
       <!-- Social Media + Dropdowns -->
-      <div class="w-[40%] sm:w-[unset]">
+      <div>
         <h5 class="font-bold mb-3 text-capitalize text-lg">Social Media</h5>
-        <ul class="flex gap-[12px]">
+        <ul class="flex justify-center md:justify-start gap-[12px]">
           <li><a href="" title=""><img src="../assets/icons/meta.svg" alt="meta" /></a></li>
           <li><a href="" title=""><img src="../assets/icons/instgram.svg" alt="instagram" /></a></li>
           <li><a href="" title=""><img src="../assets/icons/tiktok.svg" alt="tiktok" /></a></li>
@@ -130,6 +130,7 @@ class CoopFooter extends HTMLElement {
           <a title="${this.isArabic ? "الإعدادات" : 'Settings'}" class="nav-link" href="https://goldenesim.com/term-conditions">${this.isArabic ? "الإعدادات" : 'Settings'}</a>
 
           <!-- Language dropdown -->
+          <div class="flex justify-center gap-3">
           <div class="flex">
             <div class="relative dropdown-wrapper">
               <div class="flex items-center gap-2 cursor-pointer relative" onclick="toggleDropdown(this)">
@@ -157,6 +158,7 @@ class CoopFooter extends HTMLElement {
               </ul>
             </div>
           </div>
+          </div>
 
         </div>
       </div>
@@ -167,7 +169,7 @@ class CoopFooter extends HTMLElement {
     <div class="flex flex-col gap-10">
       <hr />
       <div class="container flex gap-6 flex-col md:flex-row items-center justify-between">
-        <p>Copyright 2026. TravelRoam Limited. All Rights Reserved.</p>
+        <p class="text-gray-500 md:text-white">Copyright 2026. TravelRoam Limited. All Rights Reserved.</p>
         <ul class="flex gap-4 items-center">
           <li><img src="../assets/icons/apple-pay.svg"  alt="Apple Pay"  width="49" height="27" /></li>
           <li><img src="../assets/icons/google-pay.svg" alt="Google Pay" width="49" height="27" /></li>

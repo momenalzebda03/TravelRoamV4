@@ -59,6 +59,26 @@ class CoopNavbar extends HTMLElement {
           <img src="/assets/icons/logo.svg" alt="logo" width="170" height="41" class="object-cover" />
         </a>
 
+          <div class="flex gap-5 lg:hidden">
+               <button title=${this.isArabic ? "تسجيل الدخول" : 'Login'} class="md:hidden before:bg-white border-1 border-white rounded-[5px] hover:text-black px-5 py-2 btn">
+              <div class="text-base relative z-1 font-bold"><span>${this.isArabic ? "تسجيل الدخول" : 'Login'}</span></div>
+            </button>
+      <!-- Mobile Hamburger -->
+      <div class="inset-y-0 left-0 flex items-center">
+        <button type="button" class="coop-hamburger is-style-menu text-white relative inline-flex items-center justify-center rounded-md p-2 hover:bg-white/5 focus:outline-none">
+          <span class="sr-only">Open main menu</span>
+          <svg class="coop-icon-open size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <svg class="coop-icon-close size-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+
+ 
+        </div>
+
         <!-- Desktop Menu -->
         <div class="hidden lg:flex gap-[91px] items-center">
           <div class="mt-5 lg:mt-0 flex flex-col lg:flex-row items-center gap-[30px] relative">
@@ -121,19 +141,6 @@ class CoopNavbar extends HTMLElement {
 
           </div>
         </div>
-      </div>
-
-      <!-- Mobile Hamburger -->
-      <div class="inset-y-0 left-0 flex items-center lg:hidden">
-        <button type="button" class="coop-hamburger is-style-menu text-white relative inline-flex items-center justify-center rounded-md p-2 hover:bg-white/5 focus:outline-none">
-          <span class="sr-only">Open main menu</span>
-          <svg class="coop-icon-open size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <svg class="coop-icon-close size-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-            <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
       </div>
     </div>
 
