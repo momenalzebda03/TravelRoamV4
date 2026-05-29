@@ -75,8 +75,6 @@ class CoopNavbar extends HTMLElement {
           </svg>
         </button>
       </div>
-
- 
         </div>
 
         <!-- Desktop Menu -->
@@ -178,8 +176,8 @@ class CoopNavbar extends HTMLElement {
             <img src="/assets/icons/arraw.svg" alt="arrow" class="dropdown-arrow w-[12px] h-[6px]" />
           </div>
           <ul class="dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 px-22 w-[20%] bg-[var(--is-blue-1)] backdrop-blur-md py-5">
-            <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'العربية')"><a href="/ar/index.html">العربية</a></li>
-            <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'English')"><a href="/en/index.html">English</a></li>
+            <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'العربية')"><a href="/ar${this.currentPage}">العربية</a></li>
+            <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'English')"><a href="/ar${this.currentPage}">English</a></li>
           </ul>
         </div>
 

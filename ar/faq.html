@@ -25,9 +25,9 @@
     bg-center
     bg-no-repeat h-[25vh] md:h-[60vh]">
             <div
-                class="relative z-1 pt-22 pb-15 md:py-0 h-full bg-gradient-to-r from-[var(--is-blue)] from-30% via-[var(--is-blue)]/60 via-60% to-transparent flex items-center">
-                <div class="container">
-                    <h1 data-aos="fade-up" class="text-white font-bold text-xl md:text-5xl md:leading-15">الأسئلة
+                class="relative z-1 pt-22 pb-15 md:py-0 h-full bg-gradient-to-b md:bg-gradient-to-r from-[var(--is-blue)] from-30% via-[var(--is-blue)]/0 via-60% to-[var(--is-blue)] md:to-transparent flex items-center">
+                <div class="container text-center md:text-start">
+                    <h1 data-aos="fade-up" class="text-white font-bold text-2xl md:text-5xl md:leading-15">الأسئلة
                         الشائعة
                     </h1>
                 </div>
@@ -36,26 +36,30 @@
         <!-- end hero -->
         <!-- start content -->
         <section>
-            <div class="container sections-marign-top flex flex-col gap-15">
+            <div class="container sections-marign-top flex flex-col gap-8 md:gap-15">
                 <div data-aos="fade-up"
-                    class="shadow-xl flex flex-col md:flex-row items-center justfiy-between gap-4 md:gap-0 bg-gradient-to-r to-[var(--is-pink)] from-[var(--is-pink)]/50 px-13 py-7 md:py-3 rounded-[25px]">
+                    class="shadow-xl flex items-center justfiy-between gap-4 md:gap-0 bg-gradient-to-r to-[var(--is-pink)] from-[var(--is-pink)]/50 px-5 md:px-13 py-5 md:py-3 rounded-[25px]">
                     <div class="w-full">
-                        <div class="text-center md:text-start md:w-[42%] flex flex-col gap-5">
-                            <h3 class="text-white font-bold text-xl md:text-3xl">كيفية تثبيت شريحة eSIM الخاصة بك</h3>
-                            <button title="دليل التثبيت"
-                                class="cursor-pointer w-full before:bg-[var(--is-blue)] rounded-[20px] hover:text-white text-[var(--is-pink)] bg-white px-5 py-5 btn">
-                                <div class="text-xl relative z-1 font-bold">
-                                    <span>دليل التثبيت</span>
-                                </div>
-                            </button>
+                        <div class="md:w-[42%] flex flex-col gap-5">
+                            <h3 class="text-white font-bold text-lg md:text-3xl">كيفية تثبيت شريحة eSIM الخاصة بك</h3>
+                            <div>
+                                <button title="دليل التثبيت"
+                                    class="cursor-pointer before:bg-[var(--is-blue)] rounded-[20px] hover:text-white text-[var(--is-pink)] bg-white p-3 md:p-5 btn">
+                                    <div class="text-md md:text-xl relative z-1 font-bold">
+                                        <span>دليل التثبيت</span>
+                                    </div>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <img src="../assets/images/earth.png" alt="earth" class="w-[203px] h-[185px] object-cover" />
+                    <img src="../assets/images/earth.png" alt="earth"
+                        class="w-[77px] h-[79px] md:w-[203px] md:h-[185px] object-contain md:object-cover" />
                 </div>
                 <div class="grid lg:grid-cols-2 gap-15">
-                    <div class="flex flex-col gap-10">
+                    <div class="flex flex-col gap-5 md:gap-10">
                         <div class="text-center" data-aos="fade-up">
-                            <p class="font-bold text-[32px] text-[var(--is-blue)]">استكشاف الأخطاء وإصلاحها</p>
+                            <p class="font-bold text-lg md:text-[32px] text-[var(--is-blue)]">استكشاف الأخطاء وإصلاحها
+                            </p>
                         </div>
                         <ul id="list-faq" class="flex flex-col gap-[21px]">
                             <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5"
@@ -134,9 +138,9 @@
                             </div>
                         </button>
                     </div>
-                    <div class="flex flex-col gap-10">
+                    <div class="flex flex-col gap-5 md:gap-10">
                         <div class="text-center" data-aos="fade-up">
-                            <p class="font-bold text-[32px] text-[var(--is-blue)]">إدارة شرائح eSIM</p>
+                            <p class="font-bold text-lg md:text-[32px] text-[var(--is-blue)]">إدارة شرائح eSIM</p>
                         </div>
                         <ul id="list-faq-1" class="flex flex-col gap-[21px]">
                             <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5"
@@ -215,9 +219,9 @@
                             </div>
                         </button>
                     </div>
-                    <div class="flex flex-col gap-10">
+                    <div class="flex flex-col gap-5 md:gap-10">
                         <div class="text-center" data-aos="fade-up">
-                            <p class="font-bold text-[32px] text-[var(--is-blue)]">الأسئلة الشائعة</p>
+                            <p class="font-bold text-lg md:text-[32px] text-[var(--is-blue)]">الأسئلة الشائعة</p>
                         </div>
                         <ul id="list-faq-2" class="flex flex-col gap-[21px]">
                             <li class="faq-item border-2 border-[var(--is-gray-4)] rounded-[10px] px-5"
