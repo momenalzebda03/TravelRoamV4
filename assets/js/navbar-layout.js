@@ -223,10 +223,19 @@ class CoopNavbar extends HTMLElement {
       const iconOpen = this.querySelector('.coop-icon-open');
       const iconClose = this.querySelector('.coop-icon-close');
 
-      const isHidden = menu.classList.contains('hidden');
-      menu.classList.toggle('hidden', !isHidden);
-      iconOpen.classList.toggle('hidden', !isHidden);
-      iconClose.classList.toggle('hidden', isHidden);
+      const isOpen = !menu.classList.contains('hidden'); // المنيو مفتوح هلق؟
+
+      if (isOpen) {
+        // اقفل
+        menu.classList.add('hidden');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+      } else {
+        // افتح
+        menu.classList.remove('hidden');
+        iconOpen.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+      }
     });
   }
 }
