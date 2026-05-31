@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/logo.svg" />
+    <link rel="stylesheet" href="../assets/css/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <title>Travel Roam Partners</title>
+</head>
+
+<body>
+    <div id="loadingOverlay" class="fixed inset-0 bg-white flex justify-center items-center z-[9999]">
+        <div class="w-16 h-16 border-6 border-gray-200 border-t-[var(--is-blue)] rounded-full animate-spin"></div>
+    </div>
+    <div id="app" style="display: none;">
+        <!-- start navbar -->
+        <coop-navbar></coop-navbar>
+        <!-- end navbar -->
+        <!-- start main -->
+        <main>
+            <div class="container">
+                <div
+                    class="mt-5 md:mt-0 w-full py-8 md:py-0 md:h-[87vh] relative bg-[url('/assets/icons/hero.png')] bg-cover bg-center bg-no-repeat rounded-[30px]">
+                    <div
+                        class="rounded-[30px] bottom-0 absolute w-full h-[70%] bg-gradient-to-b to-[var(--is-black)] from-[var(--is-black-1)]">
+                    </div>
+                    <div class="relative flex items-end h-full main-container md:pb-[30px]">
+                        <div class="flex flex-col items-center w-full gap-[30px]">
+                            <div class="md:w-[80%] text-white flex flex-col items-center gap-[22px] text-center font-normal"
+                                data-aos="fade-up">
+                                <h1 class="md:leading-15 text-2xl lg:text-5xl">Discover premium airport lounges designed
+                                    for comfort, calm, and convenience</h1>
+                                <div class="md:w-[75%]">
+                                    <p class="text-md md:text-xl">Enter your journey details and explore premium airport
+                                        lounges selected to match your travel experience seamlessly</p>
+                                </div>
+                            </div>
+                            <div class="bg-white w-full rounded-[40px] py-[33px] px-[30px] md:px-[60px]">
+                                <div
+                                    class="items-end grid min-[576px]:grid-cols-2 xl:grid-cols-[3.5fr_3.5fr_3.5fr_2fr] gap-[10px] xl:gap-[30px]">
+                                    <div class="flex flex-col gap-[10px] md:gap-[20px]">
+                                        <span class="text-xl font-bold">Destination</span>
+                                        <div
+                                            class="relative flex items-center border border-4 border-[var(--is-gray)] shadow-[0_5px_15px_var(--is-black-2)] relative">
+                                            <img src="/assets/icons/map.svg"
+                                                class="absolute left-3 top-1/2 -translate-y-1/2" />
+
+                                            <input id="DestinationInput" type="text" class="w-full ps-[45px] py-[12px]"
+                                                placeholder="Search airport..." />
+
+                                            <div id="resultsBox" class="shadow-xl absolute top-12 w-full bg-white mt-1 z-50 max-h-60 overflow-y-auto
+            opacity-0 -translate-y-2 pointer-events-none
+            transition-all duration-300">
+                                            </div>
+                                            <img src="/assets/icons/arraw-top.svg" alt="arraw" width="13" height="7"
+                                                class="absolute right-5 top-1/2 -translate-y-1/2 transition-transform
+                                            duration-500 filter brightness-0" />
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col gap-[10px] md:gap-[20px]">
+                                        <span class="text-xl font-bold">Airport</span>
+                                        <div
+                                            class="relative flex items-center border border-4 border-[var(--is-gray)] shadow-[0_5px_15px_var(--is-black-2)] relative">
+                                            <img src="/assets/icons/airport.svg" alt="airport" width="20" height="26"
+                                                class="absolute left-3" />
+                                            <select name="" id=""
+                                                class="w-full ps-[45px] py-[12px] z-1 appearance-none">
+                                                <option value="London Heathrow">London Heathrow</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                            <img src="/assets/icons/arraw-top.svg" alt="arraw" width="13" height="7"
+                                                class="absolute right-5 top-1/2 -translate-y-1/2 transition-transform
+                                            duration-500 filter brightness-0" />
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col gap-[10px] md:gap-[20px]">
+                                        <span class="text-xl font-bold">Terminal</span>
+                                        <div
+                                            class="relative flex items-center border border-4 border-[var(--is-gray)] shadow-[0_5px_15px_var(--is-black-2)] relative">
+                                            <img src="/assets/icons/terminal.svg" alt="terminal" width="20" height="26"
+                                                class="absolute left-3" />
+                                            <select name="" id=""
+                                                class="w-full ps-[45px] py-[12px] z-1 appearance-none">
+                                                <option value="Terminal A">Terminal A</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                            <img src="/assets/icons/arraw-top.svg" alt="arraw" width="13" height="7"
+                                                class="absolute right-5 top-1/2 -translate-y-1/2 transition-transform
+                                            duration-500 filter brightness-0" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div id="btn-find" class="!rounded-[15px] text-nowrap flex justify-center text-white hover:text-[var(--is-blue)] before:bg-white bg-[var(--is-blue-3)] transition-all duration-800 border-3 px-9 py-3
+                                        before:bottom-0 before:rounded-t-[50%] relative group rounded-full
+                                        cursor-pointer overflow-hidden before:content-[''] before:absolute before:left-0
+                                        before:w-full before:h-0 before:z-1 before:bottom-0 before:transition-all
+                                        before:duration-800 hover:before:h-[180%]" title="Find Lounges">
+                                            <div
+                                                class="gap-[8px] relative z-1 flex items-center text-base font-semibold">
+                                                <span>Find Lounges</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- end main -->
+        <!-- start footer -->
+        <coop-footer></coop-footer>
+        <!-- end footer -->
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/navbar-layout.js"></script>
+<script src="../assets/js/footer-layout.js"></script>
+<script src="../assets/js/global.js"></script>
+<script src="../assets/js/faq.js"></script>
+<script src="../assets/js/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+
+</html>

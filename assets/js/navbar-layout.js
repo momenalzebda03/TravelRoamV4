@@ -47,9 +47,20 @@ class CoopNavbar extends HTMLElement {
     return path;
   }
 
+  _navBg() {
+    const path = window.location.pathname;
+
+    const backgrounds = {
+      'lounge-pass': 'var(--is-blue)',
+    };
+
+    const matched = Object.keys(backgrounds).find(key => path.includes(key));
+    return matched ? `background-color: ${backgrounds[matched]};` : '';
+  }
+
   _render() {
     this.innerHTML = `
-<nav class="z-2 text-white navbar transition duration-300 w-full py-[33px]">
+<nav class="z-2 text-white navbar transition duration-300 w-full py-[33px]" style="${this._navBg()}">
   <div class="container z-1">
     <div class="flex w-full">
       <div class="w-full flex items-center justify-between">

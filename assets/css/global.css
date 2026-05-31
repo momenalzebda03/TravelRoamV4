@@ -21,7 +21,7 @@
     --is-gray-10: #C0C0C0;
     --is-pink: #F70075;
     --is-black: #00000040;
-    --is-black-1: #100E23;    
+    --is-black-1: #100E23;
 }
 
 @font-face {
@@ -298,4 +298,28 @@ body {
     .container {
         max-width: 350px;
     }
+}
+
+.bg-hero {
+    background-image: url('../images/hero.png');
+}
+
+.bg-choose-travle {
+    background-image: url('../images/bg-choose-travle.png');
+}
+
+.bg-whay {
+    background-image: url('../images/whay.png');
+}
+
+.bg-card {
+    background-image: url('../images/bg-card.png');
+}
+
+.bg-country {
+    background-image: url('../images/bg-country.png');
+}
+
+.bg-marketplace {
+    background-image: url('../images/bg-travel-marketplace.png');
 }
