@@ -40,10 +40,10 @@ class CoopFooter extends HTMLElement {
       </p>
       <div class="flex justify-center">
         <div class="relative dropdown-wrapper w-full md:w-[70%]">
-          <div class="relative border border-white rounded-[12px] md:rounded-[5px] flex items-center justify-between gap-3 px-5">
-            <img src="../assets/icons/region.svg" alt="region" />
+          <div class="relative border border-white rounded-[12px] md:rounded-[5px] flex items-center justify-between gap-3">
+            <img src="../assets/icons/eSIM.svg" alt="eSIM" class="px-5 absolute" />
             <input type="text"
-              class="w-full text-white placeholder:text-white py-4 outline-none focus:outline-none"
+              class="px-12 z-1 w-full text-white placeholder:text-white py-4 outline-none focus:outline-none"
               placeholder="${this.isArabic ? "إلى أين أنت ذاهب؟" : 'Where are you going?'}"
               id="destination-input-2"
               oninput="filterDestinations(this.value, this)"
@@ -78,7 +78,7 @@ class CoopFooter extends HTMLElement {
 
       <!-- Popular Countries -->
       <div>
-        <h5 class="font-bold mb-3 text-capitalize text-lg">Popular Countries</h5>
+        <h5 class="font-bold mb-3 text-capitalize text-lg">${this.isArabic ? "الدول الشهيرة" : 'Popular Countries'}</h5>
         <ul class="flex flex-col gap-2">
           <li><a title="${this.isArabic ? "تركيا" : 'Turkey'}"       class="nav-link" href="https://goldenesim.com/chooseBundlesPlan/type/country/id/VFI=/param/">${this.isArabic ? "تركيا" : 'Turkey'}</a></li>
           <li><a title="${this.isArabic ? "الولايات المتحدة الأمريكية" : 'USA'}"          class="nav-link" href="https://goldenesim.com/chooseBundlesPlan/type/country/id/VVM=/param/">${this.isArabic ? "الولايات المتحدة الأمريكية" : 'USA'}</a></li>
@@ -106,7 +106,7 @@ class CoopFooter extends HTMLElement {
 
       <!-- Useful Information -->
       <div>
-        <h5 class="font-bold mb-3 text-capitalize text-lg">Useful Information</h5>
+        <h5 class="font-bold mb-3 text-capitalize text-lg">${this.isArabic ? "المعلومات المفيدة" : 'Useful Information'}</h5>
         <ul class="flex flex-col gap-2">
           <li><a title="${this.isArabic ? "ما هي بطاقة eSIM" : 'What is an eSIM'}" class="nav-link" href="about.html">${this.isArabic ? "ما هي بطاقة eSIM" : 'What is an eSIM'}</a></li>
           <li><a title="${this.isArabic ? "دليل التثبيت" : 'Installation Guide'}" class="nav-link" href="">${this.isArabic ? "دليل التثبيت" : 'Installation Guide'}</a></li>
@@ -119,7 +119,7 @@ class CoopFooter extends HTMLElement {
 
       <!-- Social Media + Dropdowns -->
       <div>
-        <h5 class="font-bold mb-3 text-capitalize text-lg">Social Media</h5>
+        <h5 class="font-bold mb-3 text-capitalize text-lg">${this.isArabic ? "وسائل التواصل الاجتماعي" : 'Social Media'}</h5>
         <ul class="flex justify-center md:justify-start gap-[12px]">
           <li><a href="" title=""><img src="../assets/icons/meta.svg" alt="meta" /></a></li>
           <li><a href="" title=""><img src="../assets/icons/instgram.svg" alt="instagram" /></a></li>
@@ -130,7 +130,7 @@ class CoopFooter extends HTMLElement {
           <a title="${this.isArabic ? "الإعدادات" : 'Settings'}" class="nav-link" href="https://goldenesim.com/term-conditions">${this.isArabic ? "الإعدادات" : 'Settings'}</a>
 
           <!-- Language dropdown -->
-          <div class="flex justify-center gap-3">
+          <div class="flex justify-center md:justify-start gap-3">
           <div class="flex">
             <div class="relative dropdown-wrapper">
               <div class="flex items-center gap-2 cursor-pointer relative" onclick="toggleDropdown(this)">

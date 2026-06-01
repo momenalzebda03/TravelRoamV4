@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../assets/css/aos.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/output.css">
     <title>Travel Roam Partners</title>
 </head>
 
@@ -20,7 +21,7 @@
         <coop-navbar></coop-navbar>
         <!-- end navbar -->
         <!-- start hero -->
-        <main class="bg-[url('../assets/images/bg-compatibility.png')]
+        <main style="background-image: url('../assets/images/bg-compatibility.png');" class="
     bg-cover
     bg-center
     bg-no-repeat h-[25vh] md:h-[60vh]">
@@ -37,19 +38,22 @@
         <section>
             <div class="container sections-marign-top flex flex-col gap-15">
                 <div data-aos="fade-up"
-                    class="shadow-xl flex flex-col md:flex-row items-center justfiy-between gap-4 md:gap-0 bg-gradient-to-r from-[var(--is-pink)] to-[var(--is-pink)]/50 px-13 py-7 md:py-3 rounded-[25px]">
+                    class="shadow-xl flex items-center justfiy-between gap-4 md:gap-0 bg-gradient-to-r from-[var(--is-pink)] to-[var(--is-pink)]/50 px-5 md:px-13 py-5 md:py-3 rounded-[25px]">
                     <div class="w-full">
-                        <div class="text-center md:text-start md:w-[42%] flex flex-col gap-5">
-                            <h3 class="text-white font-bold text-xl md:text-3xl">How to install your eSIM</h3>
-                            <button title="Installation guide"
-                                class="cursor-pointer w-full before:bg-[var(--is-blue)] rounded-[20px] hover:text-white text-[var(--is-pink)] bg-white px-5 py-5 btn">
-                                <div class="text-xl relative z-1 font-bold">
-                                    <span>Installation guide</span>
-                                </div>
-                            </button>
+                        <div class="md:w-[42%] flex flex-col gap-5">
+                            <h3 class="text-white font-bold text-lg md:text-3xl">How to install your eSIM</h3>
+                            <div>
+                                <button title="Installation guide"
+                                    class="cursor-pointer before:bg-[var(--is-blue)] rounded-[20px] hover:text-white text-[var(--is-pink)] bg-white p-3 md:p-5 btn">
+                                    <div class="text-md md:text-xl relative z-1 font-bold">
+                                        <span>Installation guide</span>
+                                    </div>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <img src="../assets/images/earth.png" alt="earth" class="w-[203px] h-[185px] object-cover" />
+                    <img src="../assets/images/earth.png" alt="earth"
+                        class="w-[77px] h-[79px] md:w-[203px] md:h-[185px] object-contain md:object-cover" />
                 </div>
                 <div class="flex flex-col gap-[42px]">
                     <div class="text-center" data-aos="fade-up">
@@ -335,7 +339,5 @@
 <script src="../assets/js/global.js"></script>
 <script src="../assets/js/faq.js"></script>
 <script src="../assets/js/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
 
 </html>

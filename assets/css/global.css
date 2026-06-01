@@ -19,9 +19,16 @@
     --is-gray-8: #BABCD4;
     --is-gray-9: #D9D9D9;
     --is-gray-10: #C0C0C0;
+    --is-gray-11: #F9FAFC;
+    --is-gray-12: #D9D9D980;
     --is-pink: #F70075;
     --is-black: #00000040;
     --is-black-1: #100E23;
+    --is-black-2: #25123C4D;
+    --is-black-3: #66666600;
+    --is-black-4: #0000007b;
+    --is-white-1: #ECECEC;
+    --is-white-2: #C9C9C9;
 }
 
 @font-face {
@@ -292,34 +299,18 @@ body {
     .custom-checkbox {
         width: 22px;
     }
+
+    .menu-line {
+        background-color: black;
+    }
+
+    .dropdown-arrow {
+        filter: brightness(0);
+    }
 }
 
 @media (max-width: 390px) {
     .container {
         max-width: 350px;
     }
-}
-
-.bg-hero {
-    background-image: url('../images/hero.png');
-}
-
-.bg-choose-travle {
-    background-image: url('../images/bg-choose-travle.png');
-}
-
-.bg-whay {
-    background-image: url('../images/whay.png');
-}
-
-.bg-card {
-    background-image: url('../images/bg-card.png');
-}
-
-.bg-country {
-    background-image: url('../images/bg-country.png');
-}
-
-.bg-marketplace {
-    background-image: url('../images/bg-travel-marketplace.png');
 }

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../assets/css/aos.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="../assets/css/output.css">
     <title>Travel Roam Partners</title>
 </head>
 
@@ -20,89 +22,554 @@
         <coop-navbar></coop-navbar>
         <!-- end navbar -->
         <!-- start main -->
-        <main>
-            <div class="container">
-                <div
-                    class="mt-5 md:mt-0 w-full py-8 md:py-0 md:h-[87vh] relative bg-[url('/assets/icons/hero.png')] bg-cover bg-center bg-no-repeat rounded-[30px]">
-                    <div
-                        class="rounded-[30px] bottom-0 absolute w-full h-[70%] bg-gradient-to-b to-[var(--is-black)] from-[var(--is-black-1)]">
+        <main class="mt-35 mx-2 md:mx-10 rounded-[30px] md:h-[100vh] bg-cover bg-center bg-no-repeat"
+            style="background-image: url('../assets/images/bg-lounge.png')">
+            <div
+                class="rounded-[30px] z-1 w-full h-full bg-[var(--is-black-2)] pt-10 md:pt-0 pb-10 flex flex-col items-center justify-end gap-[30px]">
+                <div class="md:w-[80%] text-white flex flex-col items-center gap-[22px] text-center font-normal"
+                    data-aos="fade-up">
+                    <h1 class="md:leading-15 text-2xl lg:text-5xl">Discover premium airport lounges designed
+                        for comfort, calm, and convenience</h1>
+                    <div class="md:w-[75%]">
+                        <p class="text-md md:text-xl">Enter your journey details and explore premium airport
+                            lounges selected to match your travel experience seamlessly</p>
                     </div>
-                    <div class="relative flex items-end h-full main-container md:pb-[30px]">
-                        <div class="flex flex-col items-center w-full gap-[30px]">
-                            <div class="md:w-[80%] text-white flex flex-col items-center gap-[22px] text-center font-normal"
-                                data-aos="fade-up">
-                                <h1 class="md:leading-15 text-2xl lg:text-5xl">Discover premium airport lounges designed
-                                    for comfort, calm, and convenience</h1>
-                                <div class="md:w-[75%]">
-                                    <p class="text-md md:text-xl">Enter your journey details and explore premium airport
-                                        lounges selected to match your travel experience seamlessly</p>
+                </div>
+                <div class="bg-white w-[90%] rounded-[40px] py-[33px] px-[30px] md:px-[60px]">
+                    <div
+                        class="items-end grid min-[576px]:grid-cols-2 xl:grid-cols-[3.5fr_3.5fr_3.5fr_2fr] gap-[10px] xl:gap-[30px]">
+                        <div class="relative dropdown-wrapper flex flex-col gap-[10px] md:gap-[20px]">
+                            <span class="text-xl font-bold">Destination</span>
+                            <div
+                                class="rounded-xl flex items-center border border-2 border-[var(--is-gray-12)] shadow-[0_5px_10px_var(--is-black-2)] relative">
+                                <img src="/assets/icons/map.svg"
+                                    class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2" />
+                                <input type="text"
+                                    class="destination-wrapper w-full ps-[45px] py-[12px] outline-none focus:outline-none"
+                                    placeholder="Destination" id="destination-input-1"
+                                    oninput="filterDestinations(this.value, this)" onfocus="openDestinations(this)" />
+                                <div class="absolute md:right-0 px-5">
+                                    <img src="../assets/icons/arraw.svg" alt="search" class="filter brightness-0" />
                                 </div>
                             </div>
-                            <div class="bg-white w-full rounded-[40px] py-[33px] px-[30px] md:px-[60px]">
-                                <div
-                                    class="items-end grid min-[576px]:grid-cols-2 xl:grid-cols-[3.5fr_3.5fr_3.5fr_2fr] gap-[10px] xl:gap-[30px]">
-                                    <div class="flex flex-col gap-[10px] md:gap-[20px]">
-                                        <span class="text-xl font-bold">Destination</span>
-                                        <div
-                                            class="relative flex items-center border border-4 border-[var(--is-gray)] shadow-[0_5px_15px_var(--is-black-2)] relative">
-                                            <img src="/assets/icons/map.svg"
-                                                class="absolute left-3 top-1/2 -translate-y-1/2" />
 
-                                            <input id="DestinationInput" type="text" class="w-full ps-[45px] py-[12px]"
-                                                placeholder="Search airport..." />
+                            <ul id="destination-list-1"
+                                class="shadow-2xl dropdown-list !block !px-0 absolute w-full mt-15 rounded-[12px] !bg-white overflow-hidden z-50">
+                            </ul>
 
-                                            <div id="resultsBox" class="shadow-xl absolute top-12 w-full bg-white mt-1 z-50 max-h-60 overflow-y-auto
-            opacity-0 -translate-y-2 pointer-events-none
-            transition-all duration-300">
+                        </div>
+
+                        <div class="flex flex-col gap-[10px] md:gap-[20px]">
+                            <span class="text-xl font-bold">Airport</span>
+                            <div
+                                class="rounded-xl flex items-center border border-2 border-[var(--is-gray-12)] shadow-[0_5px_10px_var(--is-black-2)] relative">
+                                <img src="/assets/icons/airport.svg" alt="airport" class="absolute left-3 w-5 h-5"
+                                    style="filter: brightness(0) saturate(100%) invert(23%) sepia(92%) saturate(7493%) hue-rotate(320deg) brightness(100%) contrast(101%);" />
+                                <select name="" id="" class="w-full ps-[45px] py-[12px] z-1 appearance-none">
+                                    <option value="London Heathrow" disabled selected>London Heathrow</option>
+                                    <option value="London Heathrow Airport (LHR)">London Heathrow Airport (LHR)</option>
+                                    <option value="Istanbul Airport (IST)">Istanbul Airport (IST)</option>
+                                    <option value="Paris Charles de Gaulle Airport (CDG)">Paris Charles de Gaulle
+                                        Airport (CDG)</option>
+                                    <option value="Amsterdam Airport Schiphol (AMS)">Amsterdam Airport Schiphol (AMS)
+                                    </option>
+                                    <option value="Frankfurt Airport (FRA)">Frankfurt Airport (FRA)</option>
+                                    <option value="Adolfo Suárez Madrid–Barajas Airport (MAD) ">Adolfo Suárez
+                                        Madrid–Barajas Airport (MAD) </option>
+                                    <option value="Leonardo da Vinci–Fiumicino Airport (FCO)">Leonardo da
+                                        Vinci–Fiumicino Airport (FCO)</option>
+                                    <option value="Munich Airport (MUC)">Munich Airport (MUC)</option>
+                                    <option value="Barcelona–El Prat Airport (BCN)">Barcelona–El Prat Airport (BCN)
+                                    </option>
+                                    <option value="Zurich Airport (ZRH)">Zurich Airport (ZRH)
+                                    </option>
+                                </select>
+                                <img src="/assets/icons/arraw.svg" alt="arraw" width="13" height="7" class="absolute right-5 top-1/2 -translate-y-1/2 transition-transform
+                                            duration-500 filter brightness-0" />
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-[10px] md:gap-[20px]">
+                            <span class="text-xl font-bold">Terminal</span>
+                            <div
+                                class="rounded-xl flex items-center border border-2 border-[var(--is-gray-12)] shadow-[0_5px_10px_var(--is-black-2)] relative">
+                                <img src="/assets/icons/terminal.svg" alt="terminal" class="absolute left-3 w-5 h-5" />
+                                <select name="" id="" class="w-full ps-[45px] py-[12px] z-1 appearance-none">
+                                    <option value="Terminal 1">Terminal 1</option>
+                                    <option value="Terminal 2">Terminal 2</option>
+                                    <option value="Terminal 3">Terminal 3</option>
+                                    <option value="Terminal 4">Terminal 4</option>
+                                    <option value="Terminal 5">Terminal 5</option>
+                                </select>
+                                <img src="/assets/icons/arraw.svg" alt="arraw" width="13" height="7" class="absolute right-5 top-1/2 -translate-y-1/2 transition-transform
+                                            duration-500 filter brightness-0" />
+                            </div>
+                        </div>
+                        <button title="Find Lounges" id="btn-find"
+                            class="text-nowrap before:bg-white rounded-[10px] hover:shadow-xl hover:text-black bg-[var(--is-pink)] text-white px-9 py-3 btn">
+                            <div class="text-base relative z-1 font-bold">
+                                <span>Find Lounges</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- end main -->
+        <!-- start why choose tv4 -->
+        <section id="section-choose" class="hidden">
+            <div class="container sections-marign-top flex flex-col gap-[30px]">
+                <h2 class="text-center text-4xl font-normal">Choose your <span
+                        class="text-[var(--is-blue)]">lounge</span></h2>
+                <div data-aos="fade-up"
+                    class="grid min-[576px]:grid-cols-2 lg:grid-cols-4 gap-[18px] transition-all duration-500 transform">
+                    <div data-id="1" data-name="IGA Lounge" title="IGA Lounge"
+                        class="item cursor-pointer style-hover-card group hover:scale-103 transition-all duration-500 flex
+                            flex-col hover:bg-[var(--is-blue)]
+                            shadow-[0_4px_10px_var(--is-black-2)] rounded-[15px] hover:text-white text-[var(--is-blue)]">
+                        <img src="/assets/images/lounge-1.png" alt="lounges"
+                            class="rounded-[15px] object-cover w-full h-[230px]" />
+                        <div class="pt-[20px] pb-[37px] flex flex-col gap-[16px] px-[23px]">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold">
+                                    IGA Lounge
+                                </h3>
+                                <img src="/assets/icons/mark.svg" alt="mark"
+                                    class="w-[18px] h-[20px] group-hover:invert group-hover:brightness-0" />
+                            </div>
+                            <span class="text-md font-normal">Istanbul
+                                International
+                                Terminal</span>
+                            <span class="text-md font-normal">A
+                                sanctuary past security
+                                control, Passengers will fly fully restored from the
+                                stresses of ...</span>
+                            <ul
+                                class="flex gap-[36px] text-sm font-medium group-hover:text-white text-[var(--is-blue)]">
+                                <li class="text-center flex flex-col gap-[8px]">
+                                    <span>Adult</span>
+                                    <span>£66</span>
+                                </li>
+                                <li class="text-center flex flex-col gap-[8px]">
+                                    <span>Child</span>
+                                    <span>£66</span>
+                                </li>
+                                <li class="text-center flex flex-col gap-[8px]">
+                                    <span>Infant</span>
+                                    <span>£60</span>
+                                </li>
+                            </ul>
+                            <div class="flex">
+                                <button
+                                    class="group-hover:before:bg-white bg-[var(--is-pink)] group-hover:text-[var(--is-blue)] text-white rounded-[15px] px-9 py-[15px] md:py-[12px] btn">
+                                    <div class="relative z-1 text-xs md:text-base font-semibold">
+                                        <span>Book Now</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-id="2" data-name="Pop UP Lounge" title="Pop UP Lounge"
+                        class="item cursor-pointer style-hover-card group hover:scale-103 transition-all duration-500 flex
+                            flex-col hover:bg-[var(--is-blue)]
+                            shadow-[0_4px_10px_var(--is-black-2)] rounded-[15px] hover:text-white text-[var(--is-blue)]">
+                        <img src="/assets/images/lounge-2.png" alt="lounges"
+                            class="rounded-[15px] object-cover w-full h-[230px]" />
+                        <div class="pt-[20px] pb-[37px] flex flex-col gap-[16px] px-[23px]">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold">
+                                    Pop UP Lounge
+                                </h3>
+                                <img src="/assets/icons/mark.svg" alt="mark"
+                                    class="w-[18px] h-[20px] group-hover:invert group-hover:brightness-0" />
+                            </div>
+                            <span class="text-md font-normal">Istanbul
+                                International
+                                Terminal</span>
+                            <span class="text-md font-normal">A
+                                sanctuary past security
+                                control, Passengers will fly fully restored from the
+                                stresses of ...</span>
+                            <ul class="flex gap-[36px]">
+                                <li class="text-center flex flex-col gap-[8px]">
+                                    <span class="text-sm font-medium text-[var(--is-blue)]">Adult</span>
+                                    <span>£66</span>
+                                </li>
+                                <li class="text-center flex flex-col gap-[8px]">
+                                    <span class="text-sm font-medium text-[var(--is-blue)]">Child</span>
+                                    <span>£66</span>
+                                </li>
+                                <li class="text-center flex flex-col gap-[8px]">
+                                    <span class="text-sm font-medium text-[var(--is-blue)]">Infant</span>
+                                    <span>£60</span>
+                                </li>
+                            </ul>
+                            <div class="flex">
+                                <button
+                                    class="group-hover:before:bg-white bg-[var(--is-pink)] group-hover:text-[var(--is-blue)] text-white rounded-[15px] px-9 py-[15px] md:py-[12px] btn">
+                                    <div class="relative z-1 text-xs md:text-base font-semibold">
+                                        <span>Book Now</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-id="3" data-name="IGA Lounge" title="IGA Lounge"
+                        class="item cursor-pointer style-hover-card group hover:scale-103 transition-all duration-500 flex
+                            flex-col hover:bg-[var(--is-blue)]
+                            shadow-[0_4px_10px_var(--is-black-2)] rounded-[15px] hover:text-white text-[var(--is-blue)]">
+                        <img src="/assets/images/lounge-1.png" alt="lounges"
+                            class="rounded-[15px] object-cover w-full h-[230px]" />
+                        <div class="pt-[20px] pb-[37px] flex flex-col gap-[16px] px-[23px]">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold">
+                                    IGA Lounge
+                                </h3>
+                                <img src="/assets/icons/mark.svg" alt="mark"
+                                    class="w-[18px] h-[20px] group-hover:invert group-hover:brightness-0" />
+                            </div>
+                            <span class="text-md font-normal">Istanbul
+                                International
+                                Terminal</span>
+                            <span class="text-md font-normal">A
+                                sanctuary past security
+                                control, Passengers will fly fully restored from the
+                                stresses of ...</span>
+                            <ul
+                                class="flex gap-[36px] text-sm font-medium group-hover:text-white text-[var(--is-blue)]">
+                                <li class="text-center flex flex-col gap-[8px]">
+                                    <span>Adult</span>
+                                    <span>£66</span>
+                                </li>
+                                <li class="text-center flex flex-col gap-[8px]">
+                                    <span>Child</span>
+                                    <span>£66</span>
+                                </li>
+                                <li class="text-center flex flex-col gap-[8px]">
+                                    <span>Infant</span>
+                                    <span>£60</span>
+                                </li>
+                            </ul>
+                            <div class="flex">
+                                <button
+                                    class="group-hover:before:bg-white bg-[var(--is-pink)] group-hover:text-[var(--is-blue)] text-white rounded-[15px] px-9 py-[15px] md:py-[12px] btn">
+                                    <div class="relative z-1 text-xs md:text-base font-semibold">
+                                        <span>Book Now</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-id="2" data-name="Pop UP Lounge" title="Pop UP Lounge"
+                        class="item cursor-pointer style-hover-card group hover:scale-103 transition-all duration-500 flex
+                            flex-col hover:bg-[var(--is-blue)]
+                            shadow-[0_4px_10px_var(--is-black-2)] rounded-[15px] hover:text-white text-[var(--is-blue)]">
+                        <img src="/assets/images/lounge-2.png" alt="lounges"
+                            class="rounded-[15px] object-cover w-full h-[230px] relative" />
+                        <div class="pt-[20px] pb-[37px] flex flex-col gap-[16px] px-[23px]">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold">
+                                    Pop UP Lounge
+                                </h3>
+                                <img src="/assets/icons/mark.svg" alt="mark"
+                                    class="w-[18px] h-[20px] group-hover:invert group-hover:brightness-0" />
+                            </div>
+                            <span class="text-md font-normal">Istanbul
+                                International
+                                Terminal</span>
+                            <span class="text-md font-normal">A
+                                sanctuary past security
+                                control, Passengers will fly fully restored from the
+                                stresses of ...</span>
+                            <ul class="flex gap-[36px]">
+                                <li class="text-center flex flex-col gap-[8px]">
+                                    <span class="text-sm font-medium text-[var(--is-blue)]">Adult</span>
+                                    <span>£66</span>
+                                </li>
+                                <li class="text-center flex flex-col gap-[8px]">
+                                    <span class="text-sm font-medium text-[var(--is-blue)]">Child</span>
+                                    <span>£66</span>
+                                </li>
+                                <li class="text-center flex flex-col gap-[8px]">
+                                    <span class="text-sm font-medium text-[var(--is-blue)]">Infant</span>
+                                    <span>£60</span>
+                                </li>
+                            </ul>
+                            <div class="flex">
+                                <button
+                                    class="group-hover:before:bg-white bg-[var(--is-pink)] group-hover:text-[var(--is-blue)] text-white rounded-[15px] px-9 py-[15px] md:py-[12px] btn">
+                                    <div class="relative z-1 text-xs md:text-base font-semibold">
+                                        <span>Book Now</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="details-box" class="hidden">
+            <div class="container sections-marign-top flex flex-col gap-[30px]">
+                <h2 class="text-center text-4xl font-normal">Choose your <span class="text-[var(--is-blue)]"
+                        id="loungeName"></span></h2>
+                <div class="px-5 md:px-[107px] py-[64px] bg-[var(--is-gray-6)] rounded-[15px]">
+                    <div class="flex flex-col gap-[28px]">
+                        <div>
+                            <div class="flex items-center gap-3">
+                                <img src="/assets/icons/back.svg" alt="back" width="20" height="17"
+                                    class="close-btn cursor-pointer" title="back" />
+                                <h2 class="text-3xl font-bold">IGA Lounge
+                                </h2>
+                            </div>
+                            <span class="text-2xl text-[var(--is-blue-3)] font-medium">Belfast George Best
+                                City</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row gap-[22px] justify-between">
+                            <div class="md:w-[552px] flex flex-col gap-[10px]">
+                                <div class="w-full h-[368px] relative cursor-pointer">
+                                    <img src="/assets/images/lounge-1.png" alt="image card" data-fancybox="gallery"
+                                        data-src="/assets/images/lounge-1.png"
+                                        class="object-cover rounded-[18px] w-full h-full" />
+                                </div>
+                                <ul class="flex justify-between gap-2">
+                                    <li class="w-full h-[101px] relative cursor-pointer">
+                                        <img src="/assets/images/lounge-1.png" alt="image card"
+                                            class="w-full h-full object-cover rounded-[18px]" data-fancybox="gallery"
+                                            data-src="/assets/images/lounge-1.png" />
+                                    </li>
+                                    <li class="w-full h-[101px] relative cursor-pointer">
+                                        <img src="/assets/images/lounge-1.png" alt="image card"
+                                            class="w-full h-full object-cover rounded-[18px]" data-fancybox="gallery"
+                                            data-src="/assets/images/lounge-1.png" />
+                                    </li>
+                                    <li class="w-full h-[101px] relative cursor-pointer">
+                                        <img src="/assets/images/lounge-1.png" alt="image card"
+                                            class="w-full h-full object-cover rounded-[18px]" data-fancybox="gallery"
+                                            data-src="/assets/images/lounge-1.png" />
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="md:w-[388px] flex flex-col gap-[28px]">
+                                <div class="relative">
+                                    <div id="indicator"
+                                        class="z-1 absolute top-0 left-0 h-full w-1/3 transition-all duration-300 rounded-full bg-gradient-to-br to-[var(--is-white-1)] from-[var(--is-white-2)]">
+                                    </div>
+                                    <ul class="flex bg-[var(--is-blue-3)] rounded-full overflow-hidden">
+                                        <li id="details" class="z-2 flex-1 text-center py-2 cursor-pointer text-white">
+                                            Details
+                                        </li>
+                                        <li id="timings" class="z-2 flex-1 text-center py-2 cursor-pointer text-white">
+                                            Timings
+                                        </li>
+                                        <li id="conditions"
+                                            class="z-2 flex-1 text-center py-2 cursor-pointer text-white">
+                                            Conditions
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="showDetails" class="md:w-[388px] flex flex-col gap-[28px] relative">
+                                    <ul class="flex gap-1 flex-wrap">
+                                        <li
+                                            class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[9px] px-[6px] text-white">
+                                            <img src="/assets/icons/air-conditioning.svg" alt="image" />
+                                            <span class="font-semibold text-[10px]">Air Conditioning</span>
+                                        </li>
+                                        <li
+                                            class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[9px] px-[6px] text-white">
+                                            <img src="/assets/icons/wifi-1.svg" alt=" image" />
+                                            <span class="font-semibold text-[10px]">Complimentary Wi-Fi</span>
+                                        </li>
+                                        <li
+                                            class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[9px] px-[6px] text-white">
+                                            <img src="/assets/icons/phone.svg" alt=" image" />
+                                            <span class="font-semibold text-[10px]">Telephone</span>
+                                        </li>
+                                        <li
+                                            class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[9px] px-[6px] text-white">
+                                            <img src="/assets/icons/tv.svg" alt=" image" />
+                                            <span class="font-semibold text-[10px]">TV</span>
+                                        </li>
+                                        <li
+                                            class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[9px] px-[6px] text-white">
+                                            <img src="/assets/icons/drinks.svg" alt=" image" />
+                                            <span class="font-semibold text-[10px]">Drinks</span>
+                                        </li>
+                                        <li
+                                            class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[9px] px-[6px] text-white">
+                                            <img src="/assets/icons/alochol.svg" alt=" image" />
+                                            <span class="font-semibold text-[10px]">Alcohol (18+)</span>
+                                        </li>
+                                        <li
+                                            class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[9px] px-[6px] text-white">
+                                            <img src="/assets/icons/disabled.svg" alt=" image" />
+                                            <span class="font-semibold text-[10px]">Disabled Access</span>
+                                        </li>
+                                        <li
+                                            class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[9px] px-[6px] text-white">
+                                            <img src="/assets/icons/newspapers.svg" alt=" image" />
+                                            <span class="font-semibold text-[10px]">Newspapers & Magazines</span>
+                                        </li>
+                                        <li
+                                            class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[9px] px-[6px] text-white">
+                                            <img src="/assets/icons/flight.svg" alt=" image" />
+                                            <span class="font-semibold text-[10px]">Flight Information
+                                                Monitor</span>
+                                        </li>
+                                    </ul>
+                                    <div class="flex flex-col gap-[15px]">
+                                        <p class="text-sm font-light text-[var(--is-blue-3)]">Brightened by a
+                                            wall of <span class="font-bold">natural light</span>, this sleek, warm
+                                            airport lounge offers a cosy environment for passengers to refresh
+                                            before
+                                            their flight. Passengers can stave off hunger with <span
+                                                class="font-bold">light bites</span> at seats and tables, <span
+                                                class="font-bold">partitioned for privacy:</span> a far cry away
+                                            from the crowded departure lounge.<span class="font-bold">Wi-Fi is also
+                                                available.</span></p>
+                                        <div class="flex items-center justify-between">
+                                            <ul class="text-[var(--is-blue-3)]">
+                                                <li class="flex gap-1">
+                                                    <img src="/assets/icons/time.svg" alt="image" width="16"
+                                                        height="16" />
+                                                    <p class="font-normal"><span class="font-bold">Open
+                                                            Daily:</span>
+                                                        21:00 – 02:00</p>
+                                                </li>
+                                                <li class="flex gap-1">
+                                                    <img src="/assets/icons/time.svg" alt="image" width="16"
+                                                        height="16" />
+                                                    <p class="font-normal"><span class="font-bold">3 Hours</span>
+                                                        per visit</p>
+                                                </li>
+                                                <li class="flex gap-1">
+                                                    <img src="/assets/icons/interface.svg" alt="image" width="16"
+                                                        height="16" />
+                                                    <p class="font-normal"><span class="font-bold">Infants:</span>
+                                                        Free</p>
+                                                </li>
+                                                <li class="flex gap-1">
+                                                    <img src="/assets/icons/children.svg" alt="image" width="16"
+                                                        height="16" />
+                                                    <p class="font-normal"><span class="font-bold">Children
+                                                            Allowed:</span>
+                                                        Yes</p>
+                                                </li>
+                                                <li class="flex gap-1">
+                                                    <img src="/assets/icons/users.svg" alt="image" width="16"
+                                                        height="16" />
+                                                    <p class="font-normal"><span class="font-bold">Adults:</span>
+                                                        £25 GBP</p>
+                                                </li>
+                                            </ul>
+                                            <div class="flex flex-col gap-1">
+                                                <button
+                                                    class="close-btn text-center hover:before:bg-[var(--is-pink)] bg-[var(--is-blue)] text-white rounded-[15px] px-5 py-3 btn">
+                                                    <div class="relative z-1 text-xs font-semibold">
+                                                        <span>Back to Previous</span>
+                                                    </div>
+                                                </button>
+                                                <a href=""
+                                                    class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-5 py-3 btn">
+                                                    <div class="relative z-1 text-xs font-semibold">
+                                                        <span>Continue</span>
+                                                    </div>
+                                                </a>
                                             </div>
-                                            <img src="/assets/icons/arraw-top.svg" alt="arraw" width="13" height="7"
-                                                class="absolute right-5 top-1/2 -translate-y-1/2 transition-transform
-                                            duration-500 filter brightness-0" />
                                         </div>
                                     </div>
-                                    <div class="flex flex-col gap-[10px] md:gap-[20px]">
-                                        <span class="text-xl font-bold">Airport</span>
-                                        <div
-                                            class="relative flex items-center border border-4 border-[var(--is-gray)] shadow-[0_5px_15px_var(--is-black-2)] relative">
-                                            <img src="/assets/icons/airport.svg" alt="airport" width="20" height="26"
-                                                class="absolute left-3" />
-                                            <select name="" id=""
-                                                class="w-full ps-[45px] py-[12px] z-1 appearance-none">
-                                                <option value="London Heathrow">London Heathrow</option>
-                                                <option value="2">2</option>
-                                            </select>
-                                            <img src="/assets/icons/arraw-top.svg" alt="arraw" width="13" height="7"
-                                                class="absolute right-5 top-1/2 -translate-y-1/2 transition-transform
-                                            duration-500 filter brightness-0" />
+                                </div>
+                                <div id="showTimings" class="hidden flex flex-col gap-[15px]">
+                                    <span class="text-sm font-light text-[var(--is-blue-3)]">Brightened by a
+                                        wall of <span class="font-bold">natural light</span>, this sleek, warm
+                                        airport lounge offers a cosy environment for passengers to refresh before
+                                        their flight. Passengers can stave off hunger with <span class="font-bold">light
+                                            bites</span> at seats and tables, <span class="font-bold">partitioned
+                                            for
+                                            privacy:</span> a far cry away
+                                        from the crowded departure lounge.<span class="font-bold">Wi-Fi is also
+                                            available.</span></span>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex flex-col gap-5">
+                                            <h2>Open :</h2>
+                                            <ul class="text-[var(--is-blue-3)]">
+                                                <li class="flex gap-1">
+                                                    <p class="font-normal">05:00 - 21:00 Sunday</p>
+                                                </li>
+                                                <li class="flex gap-1">
+                                                    <p class="font-normal">05:00 - 21:00 Monday</p>
+                                                </li>
+                                                <li class="flex gap-1">
+                                                    <p class="font-normal">05:00 - 21:00 Tuesday</p>
+                                                </li>
+                                                <li class="flex gap-1">
+                                                    <p class="font-normal">05:00 - 21:00 Wednesday</p>
+                                                </li>
+                                                <li class="flex gap-1">
+                                                    <p class="font-normal">05:00 - 21:00 Thursday</p>
+                                                </li>
+                                                <li class="flex gap-1">
+                                                    <p class="font-normal">05:00 - 21:00 Friday</p>
+                                                </li>
+                                                <li class="flex gap-1">
+                                                    <p class="font-normal">05:00 - 21:00 Saturday</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="flex flex-col gap-1">
+                                            <button
+                                                class="close-btn text-center hover:before:bg-[var(--is-pink)] bg-[var(--is-blue)] text-white rounded-[15px] px-5 py-3 btn">
+                                                <div class="relative z-1 text-xs font-semibold">
+                                                    <span>Back to Previous</span>
+                                                </div>
+                                            </button>
+                                            <a href=""
+                                                class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-5 py-3 btn">
+                                                <div class="relative z-1 text-xs font-semibold">
+                                                    <span>Continue</span>
+                                                </div>
+                                            </a>
                                         </div>
                                     </div>
-                                    <div class="flex flex-col gap-[10px] md:gap-[20px]">
-                                        <span class="text-xl font-bold">Terminal</span>
-                                        <div
-                                            class="relative flex items-center border border-4 border-[var(--is-gray)] shadow-[0_5px_15px_var(--is-black-2)] relative">
-                                            <img src="/assets/icons/terminal.svg" alt="terminal" width="20" height="26"
-                                                class="absolute left-3" />
-                                            <select name="" id=""
-                                                class="w-full ps-[45px] py-[12px] z-1 appearance-none">
-                                                <option value="Terminal A">Terminal A</option>
-                                                <option value="2">2</option>
-                                            </select>
-                                            <img src="/assets/icons/arraw-top.svg" alt="arraw" width="13" height="7"
-                                                class="absolute right-5 top-1/2 -translate-y-1/2 transition-transform
-                                            duration-500 filter brightness-0" />
-                                        </div>
+                                </div>
+                                <div id="showConditions" class="hidden flex flex-col gap-[15px]">
+                                    <span class="text-sm font-light text-[var(--is-blue-3)]">Brightened by a
+                                        wall of <span class="font-bold">natural light</span>, this sleek, warm
+                                        airport lounge offers a cosy environment for passengers to refresh before
+                                        their flight. Passengers can stave off hunger with <span class="font-bold">light
+                                            bites</span> at seats and tables, <span class="font-bold">partitioned
+                                            for
+                                            privacy:</span> a far cry away
+                                        from the crowded departure lounge.<span class="font-bold">Wi-Fi is also
+                                            available.</span></span>
+                                    <div class="flex flex-col gap-[10px]">
+                                        <h2 class="text-sm font-light text-[var(--is-blue-3)]">Conditions of entry:
+                                        </h2>
+                                        <span class="text-xs font-light text-[var(--is-blue-3)]">Maximum 3 hour stay
+                                            • Ticketed passengers only • Any lead passenger and/or guests who do not
+                                            adhere to No1 Lounges Terms of Entry can be refused access, this
+                                            includes
+                                            the dress code, adhering to the Fit2Fly policy and respecting other
+                                            guests
+                                            and the lounge team • Access is permitted 3 hours prior to scheduled
+                                            flight
+                                            departure • Children under 12 years may be restricted to use family
+                                            areas
+                                            and be supervised by an adult • Cinema available • Self-service buffet
+                                            available • Smart casual dress at all times</span>
                                     </div>
-                                    <div>
-                                        <div id="btn-find" class="!rounded-[15px] text-nowrap flex justify-center text-white hover:text-[var(--is-blue)] before:bg-white bg-[var(--is-blue-3)] transition-all duration-800 border-3 px-9 py-3
-                                        before:bottom-0 before:rounded-t-[50%] relative group rounded-full
-                                        cursor-pointer overflow-hidden before:content-[''] before:absolute before:left-0
-                                        before:w-full before:h-0 before:z-1 before:bottom-0 before:transition-all
-                                        before:duration-800 hover:before:h-[180%]" title="Find Lounges">
-                                            <div
-                                                class="gap-[8px] relative z-1 flex items-center text-base font-semibold">
-                                                <span>Find Lounges</span>
+                                    <div class="flex flex-col gap-1">
+                                        <button
+                                            class="close-btn text-center hover:before:bg-[var(--is-pink)] bg-[var(--is-blue)] text-white rounded-[15px] px-5 py-3 btn">
+                                            <div class="relative z-1 text-xs font-semibold">
+                                                <span>Back to Previous</span>
                                             </div>
-                                        </div>
+                                        </button>
+                                        <a href=""
+                                            class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-5 py-3 btn">
+                                            <div class="relative z-1 text-xs font-semibold">
+                                                <span>Continue</span>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -110,8 +577,337 @@
                     </div>
                 </div>
             </div>
-        </main>
-        <!-- end main -->
+        </section>
+
+
+        <section>
+            <div class="container sections-marign-top">
+                <div class="md:mx-15 flex flex-col items-center gap-[30px] md:gap-[73px]">
+                    <div class="flex flex-col items-center gap-[20px] md:gap-[25px]" data-aos="fade-up">
+                        <h3 class="text-2xl md:text-[42px] font-normal text-[var(--is-pink)]">Why Travellers Choose
+                            <span class="font-semibold text-[var(--is-blue-3)]">Lounge Access</span>
+                        </h3>
+                        <div class="text-center md:w-[65%]">
+                            <p class="font-medium text-lg">Because every journey deserves a more comfortable, seamless,
+                                and stress-free experience
+                                from
+                                start to finish</p>
+                        </div>
+                    </div>
+                    <div class="grid min-[576px]:grid-cols-2 md:grid-cols-3 w-full gap-[20px] md:gap-[40px]">
+                        <div data-aos="fade-up">
+                            <a href="" title="Learn more"
+                                class="text-center style-hover-card h-full group transition-transform duration-500 shadow-[0_4px_5px_var(--is-black)] scale-100 hover:scale-103 hover:shadow-[4px_4px_15px_var(--is-black)] rounded-[25px] border border-2 border-[var(--is-pink)] hover:border-[var(--is-blue-3)] px-5 py-10 flex flex-col items-center justify-between gap-[24px] md:gap-[40px]">
+                                <div
+                                    class="group-hover:bg-[var(--is-pink)] border border-[var(--is-pink)] flex items-center justify-center w-[80px] h-[80px] rounded-full">
+                                    <Image src="../assets/icons/countrys.svg" alt="lounges" width="35" height="25"
+                                        class="rounded-[15px] object-cover filter group-hover:invert group-hover:brightness-0" />
+                                </div>
+                                <h3 class="text-2xl font-medium">200+ Countries</h3>
+                                <p class="text-sm font-semibold text-[var(--is-gray-2)]">No matter where you
+                                    travel, TravelRoam has got your back</p>
+                                <button
+                                    class="before:bg-[var(--is-pink)] bg-black text-white border-1 border-white rounded-[20px] px-5 py-4 btn">
+                                    <div class="flex gap-2 items-center text-base relative z-1 font-bold">
+                                        <span>Learn more</span>
+                                        <div class="mt-1">
+                                            <img src="../assets/icons/arraw-right.svg" alt="arraw right"
+                                                class="w-4 h-4" />
+                                        </div>
+                                    </div>
+                                </button>
+                            </a>
+                        </div>
+                        <div data-aos="fade-up">
+                            <a href="" title="Learn more"
+                                class="text-center style-hover-card h-full group transition-transform duration-500 shadow-[0_4px_5px_var(--is-black)] scale-100 hover:scale-103 hover:shadow-[4px_4px_15px_var(--is-black)] rounded-[25px] border border-2 border-[var(--is-pink)] hover:border-[var(--is-blue-3)] px-5 py-10 flex flex-col items-center justify-between gap-[24px] md:gap-[40px]">
+                                <div
+                                    class="group-hover:bg-[var(--is-pink)] border border-[var(--is-pink)] flex items-center justify-center w-[80px] h-[80px] rounded-full">
+                                    <Image src="../assets/icons/airport.png" alt="lounges" width="35" height="25"
+                                        class="rounded-[15px] object-cover filter group-hover:invert group-hover:brightness-0" />
+                                </div>
+                                <h3 class="text-2xl font-medium">245+ Networks</h3>
+                                <p class="text-sm font-semibold text-[var(--is-gray-2)]">Find access to networks
+                                    worldwide for best coverage</p>
+                                <button
+                                    class="before:bg-[var(--is-pink)] bg-black text-white border-1 border-white rounded-[20px] px-5 py-4 btn">
+                                    <div class="flex gap-2 items-center text-base relative z-1 font-bold">
+                                        <span>Learn more</span>
+                                        <div class="mt-1">
+                                            <img src="../assets/icons/arraw-right.svg" alt="arraw right"
+                                                class="w-4 h-4" />
+                                        </div>
+                                    </div>
+                                </button>
+                            </a>
+                        </div>
+                        <div data-aos="fade-up">
+                            <a href="" title="Learn more"
+                                class="text-center style-hover-card h-full group transition-transform duration-500 shadow-[0_4px_5px_var(--is-black)] scale-100 hover:scale-103 hover:shadow-[4px_4px_15px_var(--is-black)] rounded-[25px] border border-2 border-[var(--is-pink)] hover:border-[var(--is-blue-3)] px-5 py-10 flex flex-col items-center justify-between gap-[24px] md:gap-[40px]">
+                                <div
+                                    class="group-hover:bg-[var(--is-pink)] border border-[var(--is-pink)] flex items-center justify-center w-[80px] h-[80px] rounded-full">
+                                    <Image src="../assets/icons/calnder.svg" alt="lounges" width="35" height="25"
+                                        class="rounded-[15px] object-cover filter group-hover:invert group-hover:brightness-0" />
+                                </div>
+                                <h3 class="text-2xl font-medium">24/7 Support</h3>
+                                <p class="text-sm font-semibold text-[var(--is-gray-2)]">Full FAQS and support
+                                    whenever you need us</p>
+                                <button
+                                    class="before:bg-[var(--is-pink)] bg-black text-white border-1 border-white rounded-[20px] px-5 py-4 btn">
+                                    <div class="flex gap-2 items-center text-base relative z-1 font-bold">
+                                        <span>Learn more</span>
+                                        <div class="mt-1">
+                                            <img src="../assets/icons/arraw-right.svg" alt="arraw right"
+                                                class="w-4 h-4" />
+                                        </div>
+                                    </div>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end why choose tv4 -->
+        <!-- start ask -->
+        <section>
+            <div class="md:min-h-[750px] overflow-hidden rounded-[50px] sections-marign-top mx-2 md:mx-10 bg-cover bg-center bg-no-repeat"
+                style="background-image: url('../assets/images/bg-ask.png')">
+                <div
+                    class="py-13 px-8 md:px-[100px] rounded-[50px] md:py-[118px] z-1 w-full h-full md:min-h-[750px] bg-[var(--is-black-4)] flex flex-col xl:flex-row justify-between gap-5 xl:gap-[160px] text-white">
+                    <div class="w-full flex flex-col gap-[10px]">
+                        <h2 class="font-bold text-2xl md:text-[42px]">
+                            Frequently Ask Questions
+                        </h2>
+                        <span class="md:w-[500px] text-sm md:text-lg font-medium">
+                            Find quick answers to common questions about lounge access, bookings, and your
+                            travel
+                            experience.
+                        </span>
+                    </div>
+                    <div class="w-full flex flex-col gap-[21px]">
+                        <div class="faq-item border-b-2 border-[var(--is-gray-4)]" data-rotate="180">
+                            <button class="faq-btn w-full flex items-center justify-between py-3">
+                                <span class="text-lg md:text-2xl font-medium">
+                                    What is lounge access?
+                                </span>
+
+                                <img src="/assets/icons/arraw.svg"
+                                    class="faq-icon transition-transform duration-300 w-[10px] h-[13px]" />
+                            </button>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                                <div class="pb-4 text-base leading-relaxed">
+                                    Enjoy an affordable, indulgent break from the hustle and bustle of the busy
+                                    airport in one of our VIP lounges.
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="flex flex-col gap-[21px] text-white">
+                            <li class="faq-item border-b-2 border-[var(--is-gray-4)]" data-rotate="180">
+                                <button class="faq-btn w-full flex items-center justify-between py-3">
+                                    <span class="text-lg md:text-2xl font-medium">
+                                        How does it work?
+                                    </span>
+
+                                    <img src="/assets/icons/arraw.svg"
+                                        class="faq-icon transition-transform duration-300 w-[10px] h-[13px]" />
+                                </button>
+                                <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="pb-4 text-base leading-relaxed">
+                                        Enjoy an affordable, indulgent break from the hustle and bustle of the
+                                        busy
+                                        airport in one of our VIP lounges.
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="faq-item border-b-2 border-[var(--is-gray-4)]" data-rotate="180">
+                                <button class="faq-btn w-full flex items-center justify-between py-3">
+                                    <span class="text-lg md:text-2xl font-medium">
+                                        How much does it cost?
+                                    </span>
+
+                                    <img src="/assets/icons/arraw.svg"
+                                        class="faq-icon transition-transform duration-300 w-[10px] h-[13px]" />
+                                </button>
+                                <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="pb-4 text-base leading-relaxed">
+                                        Enjoy an affordable, indulgent break from the hustle and bustle of the
+                                        busy
+                                        airport in one of our VIP lounges.
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="faq-item border-b-2 border-[var(--is-gray-4)]" data-rotate="180">
+                                <button class="faq-btn w-full flex items-center justify-between py-3">
+                                    <span class="text-lg md:text-2xl font-medium">
+                                        How long before can I check-in?
+                                    </span>
+
+                                    <img src="/assets/icons/arraw.svg"
+                                        class="faq-icon transition-transform duration-300 w-[10px] h-[13px]" />
+                                </button>
+                                <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="pb-4 text-base leading-relaxed">
+                                        Enjoy an affordable, indulgent break from the hustle and bustle of the
+                                        busy
+                                        airport in one of our VIP lounges.
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="faq-item border-b-2 border-[var(--is-gray-4)]" data-rotate="180">
+                                <button class="faq-btn w-full flex items-center justify-between py-3">
+                                    <span class="text-lg md:text-2xl font-medium">
+                                        How do I cancel my booking?
+                                    </span>
+
+                                    <img src="/assets/icons/arraw.svg"
+                                        class="faq-icon transition-transform duration-300 w-[10px] h-[13px]" />
+                                </button>
+                                <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="pb-4 text-base leading-relaxed">
+                                        Enjoy an affordable, indulgent break from the hustle and bustle of the
+                                        busy
+                                        airport in one of our VIP lounges.
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="flex gap-[11px]" data-aos="fade-up">
+                            <a href="https://goldenesim.com/faqs"
+                                class="flex justify-center px-13 py-[15px] md:!py-[10px] text-nowrap border-[var(--is-blue-3)] text-[var(--is-blue-3)] hover:text-white bg-white before:bg-[var(--is-blue-3)] transition-all duration-800 border-3 px-9 py-3 before:bottom-0 before:rounded-t-[50%] relative group rounded-full cursor-pointer overflow-hidden before:content-[''] before:absolute before:left-0 before:w-full before:h-0 before:z-1 before:bottom-0 before:transition-all before:duration-800 hover:before:h-[180%]"
+                                title="Read all FAQs">
+                                <div class="gap-[8px] relative z-1 text-xs md:text-base font-semibold">
+                                    <span>Read all FAQs</span>
+                                </div>
+                            </a>
+                            <a href="https://goldenesim.com/contact"
+                                class="flex justify-center px-13 py-[15px] md:!py-[10px] text-nowrap border-[var(--is-blue-3)] text-[var(--is-blue-3)] hover:text-white bg-white before:bg-[var(--is-blue-3)] transition-all duration-800 border-3 px-9 py-3 before:bottom-0 before:rounded-t-[50%] relative group rounded-full cursor-pointer overflow-hidden before:content-[''] before:absolute before:left-0 before:w-full before:h-0 before:z-1 before:bottom-0 before:transition-all before:duration-800 hover:before:h-[180%]"
+                                title="Get in touch">
+                                <div class="gap-[8px] relative z-1 text-xs md:text-base font-semibold">
+                                    <span>Get in touch</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end ask -->
+        <!-- start travel roam journal -->
+        <section>
+            <div class="sections-marign-top flex flex-col gap-13">
+                <div class="text-center" data-aos="fade-up">
+                    <h3 class="text-2xl md:text-[42px] font-normal text-[var(--is-pink)]">The
+                        <span class="font-semibold text-[var(--is-blue-3)]">TravelRoam</span> Journal
+                    </h3>
+                </div>
+                <div class="relative w-full">
+                    <div class="swiper mySwiperJournal w-full">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="text-center flex flex-col items-center gap-4">
+                                    <img src="../assets/images/item-journal-1.png" alt="item-journal-1"
+                                        class="rounded-[25px] w-full h-full object-cover" />
+                                    <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
+                                        next destination
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="text-center flex flex-col items-center gap-4">
+                                    <img src="../assets/images/item-journal-2.png" alt="item-journal-2"
+                                        class="rounded-[25px] w-full h-full object-cover" />
+                                    <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
+                                        next destination
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="text-center flex flex-col items-center gap-4">
+                                    <img src="../assets/images/item-journal-3.png" alt="item-journal-3"
+                                        class="rounded-[25px] w-full h-full" />
+                                    <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
+                                        next destination
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="text-center flex flex-col items-center gap-4">
+                                    <img src="../assets/images/item-journal-4.png" alt="item-journal-4"
+                                        class="rounded-[25px] w-full h-full" />
+                                    <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
+                                        next destination
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="text-center flex flex-col items-center gap-4">
+                                    <img src="../assets/images/item-journal-5.png" alt="item-journal-5"
+                                        class="rounded-[25px] w-full h-full" />
+                                    <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
+                                        next destination
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="text-center flex flex-col items-center gap-4">
+                                    <img src="../assets/images/item-journal-1.png" alt="item-journal-1"
+                                        class="rounded-[25px] w-full h-full" />
+                                    <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
+                                        next destination
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="text-center flex flex-col items-center gap-4">
+                                    <img src="../assets/images/item-journal-2.png" alt="item-journal-2"
+                                        class="rounded-[25px] w-full h-full" />
+                                    <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
+                                        next destination
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="text-center flex flex-col items-center gap-4">
+                                    <img src="../assets/images/item-journal-3.png" alt="item-journal-3"
+                                        class="rounded-[25px] w-full h-full" />
+                                    <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
+                                        next destination
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="text-center flex flex-col items-center gap-4">
+                                    <img src="../assets/images/item-journal-4.png" alt="item-journal-4"
+                                        class="rounded-[25px] w-full h-full" />
+                                    <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
+                                        next destination
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="text-center flex flex-col items-center gap-4">
+                                    <img src="../assets/images/item-journal-5.png" alt="item-journal-5"
+                                        class="rounded-[25px] w-full h-full" />
+                                    <h3 class="text-sm md:text-lg font-bold">Discover a Hidden Gem: Kazakhstan, your
+                                        next destination
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container flex justify-center md:mt-10">
+                    <a href="blog.html" title="Read more posts"
+                        class="w-full md:w-[unset] text-center text-nowrap text-white before:bg-[var(--is-blue-3)] rounded-[20px] bg-[var(--is-pink)] px-5 md:px-25 py-4 btn">
+                        <div class="text-xl relative z-1 font-bold">
+                            <span>Read more posts</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- end travel roam journal -->
         <!-- start footer -->
         <coop-footer></coop-footer>
         <!-- end footer -->
@@ -124,8 +920,12 @@
 <script src="../assets/js/footer-layout.js"></script>
 <script src="../assets/js/global.js"></script>
 <script src="../assets/js/faq.js"></script>
+<script src="../assets/js/lounge-pass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.umd.js"></script>
 <script src="../assets/js/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+
+<script>
+    Fancybox.bind("[data-fancybox='gallery']", {});
+</script>
 
 </html>

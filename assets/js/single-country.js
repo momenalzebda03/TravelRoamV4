@@ -11,23 +11,23 @@ const selectedBundles = [];
 document.querySelectorAll('.bundle-item').forEach(item => {
     item.addEventListener('click', () => {
         const bundle = JSON.parse(item.dataset.bundle);
-        const radio = item.querySelector('.radio-circle');
         const isSelected = item.classList.contains('selected');
 
-        if (isSelected) {
-            // deselect
-            item.classList.remove('selected', 'bg-[var(--is-blue)]', 'text-white');
-            radio.classList.remove('bg-[var(--is-pink)]', 'border-0');
-            const index = selectedBundles.findIndex(b => b.name === bundle.name && b.size === bundle.size);
-            if (index !== -1) selectedBundles.splice(index, 1);
-        } else {
-            // select
+        // أولاً شيل الـ selection من كل العناصر
+        document.querySelectorAll('.bundle-item').forEach(el => {
+            el.classList.remove('selected', 'bg-[var(--is-blue)]', 'text-white');
+            el.querySelector('.radio-circle')?.classList.remove('bg-[var(--is-pink)]', 'border-0');
+        });
+        selectedBundles.length = 0;
+
+        // لو مش selected حدده
+        if (!isSelected) {
             item.classList.add('selected', 'bg-[var(--is-blue)]', 'text-white');
-            radio.classList.add('bg-[var(--is-pink)]', 'border-0');
+            item.querySelector('.radio-circle')?.classList.add('bg-[var(--is-pink)]', 'border-0');
             selectedBundles.push(bundle);
         }
 
-        console.log('الباقات المختارة:', selectedBundles);
+        console.log('الباقة المختارة:', selectedBundles);
     });
 });
 
