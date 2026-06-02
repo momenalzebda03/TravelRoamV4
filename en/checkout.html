@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/logo.svg" />
+    <link rel="stylesheet" href="../assets/css/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/output.css">
+    <title>Travel Roam Partners</title>
+</head>
+
+<body>
+    <div id="loadingOverlay" class="fixed inset-0 bg-white flex justify-center items-center z-[9999]">
+        <div class="w-16 h-16 border-6 border-gray-200 border-t-[var(--is-blue)] rounded-full animate-spin"></div>
+    </div>
+    <div id="app" style="display: none;">
+        <!-- start navbar -->
+        <coop-navbar></coop-navbar>
+        <!-- end navbar -->
+        <!-- start content -->
+        <section>
+            <div class="flex justify-center">
+                <div class="w-[90%] xl:w-[70%] sections-marign-top pt-20">
+                    <div class="grid md:grid-cols-2 gap-[50px] md:gap-[127px]" data-aos="fade-up">
+                        <div class="flex flex-col gap-[28px]">
+                            <h2 class="text-3xl font-medium text-[var(--is-pink)]">Express
+                                <span class="font-bold text-[var(--is-blue)]">Checkout</span>
+                            </h2>
+                            <div class="flex flex-col gap-[30px]">
+                                <div class="flex flex-col gap-[20px]">
+                                    <h2 class="text-[var(--is-blue-3)] text-md md:text-xl font-bold">Select Payment
+                                        Option:</h2>
+                                    <div class="flex flex-col lg:flex-row gap-3">
+                                        <button
+                                            class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-20 py-[3%] btn">
+                                            <div class="relative z-1 text-xs font-semibold">
+                                                <span>Stripe</span>
+                                            </div>
+                                        </button>
+                                        <button id="Wallet"
+                                            class="shadow-[0_2px_5px_var(--is-black)] text-center hover:before:bg-[var(--is-pink)] hover:text-white text-[var(--is-gray-14)] rounded-[15px] px-20 py-[3%] btn">
+                                            <div class="relative z-1 text-xs font-semibold">
+                                                <span>Wallet</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-[30px]">
+                                    <span class="text-[var(--is-blue-3)] text-md md:text-xl font-bold">Do you have a
+                                        coupon
+                                        code?</span>
+                                    <!-- <div
+                                    class="font-bold rounded-[10px] px-4 py-2 text-[var(--is-red-1)] border border-[var(--is-red-1)] bg-[var(--is-gray-6)]">
+                                    Your Code wasn’t recognised
+                                </div> -->
+                                    <input type="text"
+                                        class="border border-1 border-[var(--is-gray-7)] px-[15px] py-3 w-full placeholder:font-bold placeholder:text-[var(--is-gray-14)] relative bg-[var(--is-gray-6)] rounded-[10px]"
+                                        placeholder="Add a Coupon Code" />
+                                </div>
+                                <div id="stripe" class="flex flex-col gap-[20px]">
+                                    <span class="text-[var(--is-blue-3)] text-md md:text-xl font-bold">Order
+                                        Summary:</span>
+                                    <div
+                                        class="rounded-[20px] bg-[var(--is-gray-11)] shadow-[0_2px_5px_var(--is-black-2)] py-[23px] px-[18px] flex flex-col justify-between gap-3">
+                                        <div class="w-80">
+                                            <p class="font-medium text-xl text-[var(--is-gray-14)]">1x Unlimited 7 Days
+                                                Pass
+                                                Germany
+                                            </p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="text-xl font-bold">Total: $40</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="purchase-details.html"
+                                    class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-20 py-[3%] btn">
+                                    <div class="relative z-1 text-lg font-semibold">
+                                        <span>Proceed to Pay</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <div
+                                class="rounded-[20px] text-white flex justify-center gap-2 items-center py-4 bg-[var(--is-blue-3)]">
+                                <img src="../assets/icons/cup.png" alt="cup" class="w-4 h-4" />
+                                <p class="font-bold text-sm">Your Chosen plan</p>
+                            </div>
+                            <div class="flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
+                                <div class="flex flex-col gap-[20px]">
+                                    <div class="flex flex-wrap gap-3 justify-between items-center w-full">
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="../assets/icons/germany.svg" alt="germany"
+                                                class="w-8 h-8 rounded-full object-cover" />
+                                            <p class="font-semibold text-2xl">Germany</p>
+                                        </div>
+                                        <div>
+                                            <div
+                                                class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-[10px] rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
+                                                <img src="../assets/icons/star.svg" alt="germany"
+                                                    class="w-5 h-5 rounded-full object-cover" />
+                                                Recommended
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 justify-between">
+                                        <div class="flex flex-col gap-2">
+                                            <h3 class="font-bold text-3xl">5 GB</h3>
+                                            <p class="text-nowrap font-medium text-xs">Valid for 30 days from activation
+                                            </p>
+                                        </div>
+                                        <p class="md:mx-4 font-bold text-2xl" [class.line-through]="plan.discounted">
+                                            $17.00
+                                        </p>
+                                    </div>
+                                </div>
+                                <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                    <li class="flex items-center gap-2 mx-2 text-center">
+                                        <img src="../assets/icons/wifi.svg" alt="wifi" class="w-8 h-8" />
+                                        <p class="font-medium text-xs">9 hours music</p>
+                                    </li>
+                                    <li class="flex items-center gap-2 mx-2 text-center">
+                                        <img src="../assets/icons/youtube.svg" alt="youtube" class="w-8 h-8" />
+                                        <p class="font-medium text-xs">6 hours video</p>
+                                    </li>
+                                    <li class="flex items-center gap-2 mx-2 text-center">
+                                        <img src="../assets/icons/mail.svg" alt="mail" class="w-8 h-8" />
+                                        <p class="font-medium text-xs">18 hours browsing</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="md:mt-10 font-normal text-center flex flex-col gap-5 text-sm">
+                                <p>*Our Unlimited Daily Pass internet plans include unlimited daily internet access.
+                                    However, a
+                                    high-speed allowance applies. Your first 1 GB of data will be at full speed, subject
+                                    to
+                                    your
+                                    local network and signal. Users exceeding the daily 1 GB high-speed allowance will
+                                    be
+                                    limited to 512 Kbps for the remainder of that day.</p>
+                                <p>Even at this speed you will still be able to browse the internet, use social media,
+                                    and
+                                    make video calls. You may find streaming video and music is impacted..</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end content -->
+        <!-- start footer -->
+        <coop-footer></coop-footer>
+        <!-- end footer -->
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/navbar-layout.js"></script>
+<script src="../assets/js/footer-layout.js"></script>
+<script src="../assets/js/global.js"></script>
+<script src="../assets/js/single-country.js"></script>
+<script src="../assets/js/aos.js"></script>
+
+</html>

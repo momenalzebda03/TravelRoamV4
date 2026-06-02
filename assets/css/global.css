@@ -35,10 +35,13 @@
     --is-black-3: #66666600;
     --is-black-4: #0000007b;
     --is-black-5: #25123C0D;
+    --is-black-6: #0B0B0B80;
     --is-white-1: #ECECEC;
     --is-white-2: #C9C9C9;
     --is-white-3: #D8DBE3;
+    --is-white-4: #F8F8F8;
     --is-red: #F7252C;
+    --is-red-1: #FF0000;
 }
 
 @font-face {
@@ -57,6 +60,12 @@
     font-family: "SF-Pro";
     src: url("/assets/fonts/SF-Pro-Text-Regular.otf") format("truetype");
     font-weight: 400;
+}
+
+@font-face {
+    font-family: "SF-Pro";
+    src: url("/assets/fonts/SF-Pro-Text-Bold.otf") format("truetype");
+    font-weight: 700;
 }
 
 body {
@@ -249,13 +258,13 @@ body {
     color: var(--is-pink);
 }
 
-/* .selected img {
+.is-selected img {
     filter: invert(1);
 }
 
-.selected .radio-circle {
+.is-selected .radio-circle {
     border: unset;
-} */
+}
 
 .custom-checkbox {
     appearance: none;

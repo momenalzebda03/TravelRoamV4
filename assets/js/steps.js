@@ -4,6 +4,14 @@ let paymentMethod = null;
 let walletBalance = 20;
 let discount = 0;
 
+const lang = window.location.pathname.startsWith("/ar") ? "ar" : "en";
+
+const isArabic = lang === "ar";
+
+function t(en, ar) {
+    return isArabic ? ar : en;
+}
+
 const nextBtn = document.getElementById("nextBtn");
 
 function handleStripe() {
@@ -11,7 +19,7 @@ function handleStripe() {
     const value = input?.value.trim();
 
     if (!value) {
-        alert("Please enter billing address");
+        alert(t("Please enter billing address", "يرجى إدخال عنوان الفوترة"));
         input?.focus();
         return;
     }
@@ -32,9 +40,9 @@ function handleCoupon() {
         const value = document.getElementById("inputCode");
         if (value.value === "1234") {
             discount = 10;
-            alert("coupon done");
+            alert(t("coupon done", "تم تطبيق الكوبون"));
         } else {
-            alert("Invalid coupon");
+            alert(t("Invalid coupon", "كود غير صالح"));
             return;
         }
     }
@@ -331,15 +339,14 @@ function renderCurrentStep() {
 function renderOrderSummary() {
     return `
         <div id="stripe" class="flex flex-col gap-[20px]">
-                                    <span class="text-[var(--is-blue-4)] font-bold text-xl">Order
-                                        Summary:</span>
+                                    <span class="text-[var(--is-blue-4)] font-bold text-xl">${t("Order Summary:", "ملخص الطلب")}</span>
                                     <div
                                         class="rounded-[20px] bg-[var(--is-gray-11)] shadow-[0_2px_5px_var(--is-black-2)] py-[33px] px-[18px] flex justify-between items-end">
                                         <ul class="flex flex-col gap-2">
-                                            <li class="text-xl text-[var(--is-blue-5)]">Standard Lounge
+                                            <li class="text-xl text-[var(--is-blue-5)]">${t("Standard Lounge", "صالة قياسية")}
                                             </li>
-                                            <li class="text-xl text-[var(--is-blue-5)]">Adult : ${adults}</li>
-                                            <li class="text-xl text-[var(--is-blue-5)]">Child : ${child}</li>
+                                            <li class="text-xl text-[var(--is-blue-5)]">${t("Adult", "بالغ")} : ${adults}</li>
+                                            <li class="text-xl text-[var(--is-blue-5)]">${t("Child", "طفل")} : ${child}</li>
                                         </ul>
                                         <span class="text-xl font-bold">${totalEl.textContent}</span>
                                     </div>
@@ -350,7 +357,7 @@ function renderOrderSummary() {
 function Title() {
     return `
     <div class="flex flex-col gap-[10px] md:gap-[20px] w-full">
-                    <span class="text-[var(--is-blue)] text-md md:text-xl font-medium">Title</span>
+                    <span class="text-[var(--is-blue)] text-md md:text-xl font-medium">${t("Title", "اللقب")}</span>
                     <div class="customSelect relative w-full">
 
                         <div
@@ -480,13 +487,13 @@ function payment() {
                                                      <div class="relative z-1 text-xs font-semibold">
                                                          <span>Cancel</span>
                                                      </div>
-                                                 </button>  
-                                                 <button 
+                                                 </button>
+                                                 <button
                                                      class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-12 py-3 btn">
                                                      <div class="relative z-1 text-xs font-semibold">
                                                          <span>Pay Now</span>
                                                      </div>
-                                                 </button>                                               
+                                                 </button>
                                             </div>
                                         </div>
                                     </div>
@@ -498,28 +505,27 @@ function createPassengerForm(type, index) {
     return `
     <form id="step-1" class="passenger-form flex flex-col gap-[30px] md:gap-[32px]">
                                 <span class="mt-[32px] text-[var(--is-blue-3)] text-xl font-medium">${type} ${index}
-                                    Details</span>
+                                    ${t("Details", "التفااصيل")}</span>
                                 <div class="flex gap-[30px] md:gap-[32px]">
                                 ${Title()}
                                     <div class="flex flex-col gap-[10px] md:gap-[20px] w-full">
-                                        <span class="text-[var(--is-blue-3)] text-md md:text-xl font-medium">First
-                                            Name</span>
+                                        <span class="text-[var(--is-blue-3)] text-md md:text-xl font-medium">${t("First Name", "الاسم الأول")}</span>
                                         <div
                                             class="text-[var(--is-blue-3)] relative flex items-center shadow-[0_1px_5px_var(--is-black-2)] bg-[var(--is-white-3)] rounded-[10px]">
                                             <input type="text" name="firstName"
                                                 class="px-[15px] py-[7px] md:py-[12px] w-full text-[var(--is-blue-3)] relative bg-[var(--is-white-3)] rounded-[10px]"
-                                                placeholder="Diaz" />
+                                                placeholder="${t("First Name", "الاسم الأول")}" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="flex flex-col gap-[10px] md:gap-[20px] w-[50%]">
-                                    <span class="text-[var(--is-blue)] text-md md:text-xl font-medium">Last
-                                        Name</span>
+                                    <span class="text-[var(--is-blue)] text-md md:text-xl font-medium">${t("Last Name", "الاسم الأخير")}
+                                    </span>
                                     <div
                                         class="text-[var(--is-gray-7)] relative flex items-center shadow-[0_1px_5px_var(--is-black-2)] bg-[var(--is-white-3)] rounded-[10px]">
                                         <input type="text"
                                             class="px-[15px] py-[7px] md:py-[12px] w-full text-[var(--is-gray-7)] relative bg-[var(--is-white-3)] rounded-[10px]"
-                                            placeholder="UK-1998" />
+                                            placeholder="${t("Last Name", "الاسم الأخير")}" />
                                     </div>
                                 </div>
                             </form>
@@ -538,32 +544,32 @@ function goToPaymentStep() {
                             <div class="flex flex-col gap-1 px-[15px] pb-[32px] pt-[12px]">
                             <div class="flex items-center gap-1">
                                 <Image src="/assets/icons/map-black.svg" alt="map" class="w-[16px] h-[16px]" />
-                                <span class="text-md text-[var(--is-blue)]">Billing Address</span>
+                                <span class="text-md text-[var(--is-blue)]">${t("Billing Address", "عنوان الفواتير")}</span>
                             </div>
-                            <input id="billingAddress" type="number" placeholder="Street 13 Asda Road"
+                            <input id="billingAddress" type="number" placeholder="${t("Street 13 Asda Road", "شارع 13 طريق أسدا")}"
                                 class="text-md text-[var(--is-blue-5)]" />
                                 </div>
-                                <div class="shadow-[0_12px_15px_var(--is-black)] right-0 top-0 absolute bg-[var(--is-blue-7)] w-7 h-full rounded-full">
+                                <div class="shadow-[0_12px_15px_var(--is-black)] ${t("right-0", "left-0")} top-0 absolute bg-[var(--is-blue-7)] w-7 h-full rounded-full">
                                 </div>
                         </div>
                         </div>
                 <div class="flex flex-col gap-[50px] w-full">
                     <div class="flex flex-col gap-[10px] md:gap-[20px] w-full">
-                 <span class="text-[var(--is-blue-3)] text-md md:text-xl font-medium">Select Payment Option:</span>
+                 <span class="text-[var(--is-blue-3)] text-md md:text-xl font-medium">${t("Select Payment Option:", "اختر خيار الدفع:")}</span>
                         <div class="flex flex-col md:flex-row gap-[20px]">
                                                         <div class="flex gap-3">
                                            <button id="clickStripe"
                                                      class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-12 py-[3%] md:py-[5%] btn">
                                                      <div class="relative z-1 text-xs font-semibold">
-                                                         <span>Stripe</span>
+                                                         <span>${t("Stripe", "ستريب")}</span>
                                                      </div>
                                                  </button>
-                                                 <button id="wallet" 
+                                                 <button id="wallet"
                                                      class="text-center hover:before:bg-[var(--is-pink)] border border-1 hover:text-white text-[var(--is-gray-14)] rounded-[15px] px-12 py-[3%] md:py-[5%] btn">
                                                      <div class="relative z-1 text-xs font-semibold">
-                                                         <span>Wallet</span>
+                                                         <span>${t("Wallet", "المحفظة")}</span>
                                                      </div>
-                                                 </button>                                            
+                                                 </button>
                                              </div>
                         </div>
                     </div>
@@ -653,11 +659,11 @@ function updateButtonTexts() {
 
     // Payment step
     if (isInPaymentStep) {
-        text.textContent = "Proceed to Pay";
+        text.textContent = t("Proceed to Pay", "إتمام الدفع");
         return;
     }
 
     const isLast = currentStepIndex >= stepsData.length - 1;
 
-    text.textContent = isLast ? "Continue" : "Next";
+    textContent = isLast ? t("Continue", "متابعة") : t("Next", "التالي");
 }

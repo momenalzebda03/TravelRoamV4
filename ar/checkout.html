@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/logo.svg" />
+    <link rel="stylesheet" href="../assets/css/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/output.css">
+    <title>شركاء السفر والتجوال</title>
+</head>
+
+<body>
+    <div id="loadingOverlay" class="fixed inset-0 bg-white flex justify-center items-center z-[9999]">
+        <div class="w-16 h-16 border-6 border-gray-200 border-t-[var(--is-blue)] rounded-full animate-spin"></div>
+    </div>
+    <div id="app" style="display: none;">
+        <!-- start navbar -->
+        <coop-navbar></coop-navbar>
+        <!-- end navbar -->
+        <!-- start content -->
+        <section>
+            <div class="flex justify-center">
+                <div class="w-[90%] xl:w-[70%] sections-marign-top pt-20">
+                    <div class="grid md:grid-cols-2 gap-[50px] md:gap-[127px]" data-aos="fade-up">
+                        <div class="flex flex-col gap-[28px]">
+                            <h2 class="text-3xl font-medium text-[var(--is-pink)]">عبور
+                                <span class="font-bold text-[var(--is-blue)]">الدفع</span>
+                            </h2>
+                            <div class="flex flex-col gap-[30px]">
+                                <div class="flex flex-col gap-[20px]">
+                                    <h2 class="text-[var(--is-blue-3)] text-md md:text-xl font-bold">اختر خيار الدفع:
+                                    </h2>
+                                    <div class="flex flex-col lg:flex-row gap-3">
+                                        <button
+                                            class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-20 py-[3%] btn">
+                                            <div class="relative z-1 text-xs font-semibold">
+                                                <span>سترايب</span>
+                                            </div>
+                                        </button>
+                                        <button
+                                            class="shadow-[0_2px_5px_var(--is-black)] text-center hover:before:bg-[var(--is-pink)] hover:text-white text-[var(--is-gray-14)] rounded-[15px] px-20 py-[3%] btn">
+                                            <div class="relative z-1 text-xs font-semibold">
+                                                <span>محفظة</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-[30px]">
+                                    <span class="text-[var(--is-blue-3)] text-md md:text-xl font-bold">هل لديك رمز
+                                        قسيمة؟</span>
+                                    <input type="text"
+                                        class="border border-1 border-[var(--is-gray-7)] px-[15px] py-3 w-full placeholder:font-bold placeholder:text-[var(--is-gray-14)] relative bg-[var(--is-gray-6)] rounded-[10px]"
+                                        placeholder="أضف رمز القسيمة" />
+                                </div>
+                                <div id="stripe" class="flex flex-col gap-[20px]">
+                                    <span class="text-[var(--is-blue-3)] text-md md:text-xl font-bold">ملخص
+                                        الطلب:</span>
+                                    <div
+                                        class="rounded-[20px] bg-[var(--is-gray-11)] shadow-[0_2px_5px_var(--is-black-2)] py-[23px] px-[18px] flex flex-col justify-between gap-3">
+                                        <div class="w-80">
+                                            <p class="font-medium text-xl text-[var(--is-gray-14)]">١× تصريح غير محدود
+                                                لمدة
+                                                ٧ أيام
+                                                ألمانيا
+                                            </p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="text-xl font-bold">المجموع: 40$</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button
+                                    class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-20 py-[3%] btn">
+                                    <div class="relative z-1 text-lg font-semibold">
+                                        <span>المتابعة للدفع</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <div
+                                class="rounded-[20px] text-white flex justify-center gap-2 items-center py-4 bg-[var(--is-blue-3)]">
+                                <img src="../assets/icons/cup.png" alt="cup" class="w-4 h-4" />
+                                <p class="font-bold text-sm">الخطة التي اخترتها</p>
+                            </div>
+                            <div class="flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
+                                <div class="flex flex-col gap-[20px]">
+                                    <div class="flex flex-wrap gap-3 justify-between items-center w-full">
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="../assets/icons/germany.svg" alt="germany"
+                                                class="w-8 h-8 rounded-full object-cover" />
+                                            <p class="font-semibold text-2xl">المانيا</p>
+                                        </div>
+                                        <div>
+                                            <div
+                                                class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-[10px] rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
+                                                <img src="../assets/icons/star.svg" alt="germany"
+                                                    class="w-5 h-5 rounded-full object-cover" />
+                                                موصى به
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 justify-between">
+                                        <div class="flex flex-col gap-2">
+                                            <h3 class="font-bold text-3xl">5 GB</h3>
+                                            <p class="text-nowrap font-medium text-xs">صالح لمدة 30 يومًا من التفعيل
+                                            </p>
+                                        </div>
+                                        <p class="md:mx-4 font-bold text-2xl" [class.line-through]="plan.discounted">
+                                            $17.00
+                                        </p>
+                                    </div>
+                                </div>
+                                <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                    <li class="flex items-center gap-2 mx-2 text-center">
+                                        <img src="../assets/icons/wifi.svg" alt="wifi" class="w-8 h-8" />
+                                        <p class="font-medium text-xs">9 ساعات من الموسيقى</p>
+                                    </li>
+                                    <li class="flex items-center gap-2 mx-2 text-center">
+                                        <img src="../assets/icons/youtube.svg" alt="youtube" class="w-8 h-8" />
+                                        <p class="font-medium text-xs">6 ساعات فيديو</p>
+                                    </li>
+                                    <li class="flex items-center gap-2 mx-2 text-center">
+                                        <img src="../assets/icons/mail.svg" alt="mail" class="w-8 h-8" />
+                                        <p class="font-medium text-xs">18 ساعات التصفح</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="md:mt-10 font-normal text-center flex flex-col gap-5 text-sm">
+                                <p>*تشمل خطط الإنترنت اليومية غير المحدودة لدينا وصولاً يوميًا غير محدود للإنترنت. ومع
+                                    ذلك،
+                                    ينطبق حد السرعة العالية. سيكون أول 1 جيجابايت من البيانات بالسرعة الكاملة، وذلك حسب
+                                    شبكتك المحلية والإشارة. سيتم تحديد سرعة المستخدمين الذين يتجاوزون حد 1 جيجابايت
+                                    اليومي
+                                    للسرعة العالية إلى 512 كيلوبت في الثانية لبقية ذلك اليوم.</p>
+                                <p>حتى بهذه السرعة ستظل قادرًا على تصفح الإنترنت، واستخدام وسائل التواصل الاجتماعي،
+                                    وإجراء
+                                    المكالمات الفيديوية. قد تجد أن بث الفيديو والموسيقى يتأثر.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end content -->
+        <!-- start footer -->
+        <coop-footer lang="ar"></coop-footer>
+        <!-- end footer -->
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/navbar-layout.js"></script>
+<script src="../assets/js/footer-layout.js"></script>
+<script src="../assets/js/global.js"></script>
+<script src="../assets/js/faq.js"></script>
+<script src="../assets/js/aos.js"></script>
+
+</html>

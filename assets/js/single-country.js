@@ -11,18 +11,18 @@ const selectedBundles = [];
 document.querySelectorAll('.bundle-item').forEach(item => {
     item.addEventListener('click', () => {
         const bundle = JSON.parse(item.dataset.bundle);
-        const isSelected = item.classList.contains('selected');
+        const isSelected = item.classList.contains('is-selected');
 
         // أولاً شيل الـ selection من كل العناصر
         document.querySelectorAll('.bundle-item').forEach(el => {
-            el.classList.remove('selected', 'bg-[var(--is-blue)]', 'text-white');
+            el.classList.remove('is-selected', 'bg-[var(--is-blue)]', 'text-white');
             el.querySelector('.radio-circle')?.classList.remove('bg-[var(--is-pink)]', 'border-0');
         });
         selectedBundles.length = 0;
 
         // لو مش selected حدده
         if (!isSelected) {
-            item.classList.add('selected', 'bg-[var(--is-blue)]', 'text-white');
+            item.classList.add('is-selected', 'bg-[var(--is-blue)]', 'text-white');
             item.querySelector('.radio-circle')?.classList.add('bg-[var(--is-pink)]', 'border-0');
             selectedBundles.push(bundle);
         }
