@@ -115,7 +115,7 @@
                                         <span>Your Account</span>
                                     </div>
                                 </button>
-                                <button
+                                <button id="open-modal"
                                     class="hover:border hover:!border-[var(--is-pink)] border border-2 border-black text-center hover:before:bg-[var(--is-pink)] hover:text-white text-black text-[var(--is-gray-14)] rounded-[15px] w-full lg:w-35 py-[3%] btn">
                                     <div class="relative z-1 text-sm font-semibold">
                                         <span>Share eSIM</span>
@@ -149,6 +149,64 @@
                     </div>
                 </div>
             </div>
+            <div id="model"
+                class="hidden fixed inset-0 flex justify-center items-center z-[999999] bg-[var(--is-blue-8)]">
+                <div class="flex flex-col gap-[30px] md:w-[850px] bg-white py-[35px] rounded-[18px] px-[26px]">
+                    <div class="flex justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="../assets/icons/share-qr.svg" alt="share qr" class="w-[30px] h-[30px]" />
+                            <h2 class="font-bold text-xl">Share your eSim data QR code</h2>
+                        </div>
+                        <span id="cancel-btn" class="cursor-pointer" title="close">✕</span>
+                    </div>
+                    <div class="w-[85%]">
+                        <p class="text-2xl font-medium text-[var(--is-blue-3)]">Please enter your name and the recipient
+                            email who
+                            you wish to send the eSIM QR code.</p>
+                    </div>
+                    <div class="flex flex-col gap-[20px]">
+                        <label class="text-[var(--is-blue-3)] text-sm font-bold">
+                            Sender Name</label>
+                        <div
+                            class="border border-1 border-[var(--is-black-7)] px-[15px] py-3 w-full placeholder:font-bold placeholder:text-[var(--is-gray-14)] relative bg-[var(--is-gray-6)] rounded-[10px]">
+                            <p>Benny</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-[20px]">
+                        <label class="text-[var(--is-blue-3)] text-sm font-bold">
+                            Recipient email (receiver)</label>
+                        <div
+                            class="border border-1 border-[var(--is-black-7)] px-[15px] py-3 w-full placeholder:font-bold placeholder:text-[var(--is-gray-14)] relative bg-[var(--is-gray-6)] rounded-[10px]">
+                            <p>traveller@examplemail.com</p>
+                        </div>
+                    </div>
+                    <ul class="flex justify-center gap-[40px]">
+                        <li>
+                            <a href="" title="meta">
+                                <img src="../assets/icons/meta-1.svg" alt="meta" class="w-10 h-10" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" title="gmail">
+                                <img src="../assets/icons/gmail.svg" alt="gmail" class="w-10 h-10" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" title="whatsapp">
+                                <img src="../assets/icons/whatsapp.svg" alt="whatsapp" class="w-10 h-10" />
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="flex justify-center">
+                        <button
+                            class="hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-23 py-[1.5%] btn">
+                            <div class="relative z-1 text-md font-bold">
+                                <span>Share QR Code</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- end content -->
         <!-- start footer -->
@@ -163,6 +221,7 @@
 <script src="../assets/js/navbar-layout.js"></script>
 <script src="../assets/js/footer-layout.js"></script>
 <script src="../assets/js/global.js"></script>
+<script src="../assets/js/checkout.js"></script>
 <script src="../assets/js/aos.js"></script>
 
 </html>

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="../assets/icons/logo.svg" />
     <link rel="stylesheet" href="../assets/css/aos.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../assets/css/global.css" />
     <link rel="stylesheet" href="../assets/css/output.css">
     <title>شركاء السفر والتجوال</title>
@@ -40,7 +39,7 @@
                                                 <span>سترايب</span>
                                             </div>
                                         </button>
-                                        <button
+                                        <button id="open-modal"
                                             class="shadow-[0_2px_5px_var(--is-black)] text-center hover:before:bg-[var(--is-pink)] hover:text-white text-[var(--is-gray-14)] rounded-[15px] px-20 py-[3%] btn">
                                             <div class="relative z-1 text-xs font-semibold">
                                                 <span>محفظة</span>
@@ -72,12 +71,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button
+                                <a href="purchase-details.html"
                                     class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-20 py-[3%] btn">
                                     <div class="relative z-1 text-lg font-semibold">
                                         <span>المتابعة للدفع</span>
                                     </div>
-                                </button>
+                                </a>
                             </div>
                         </div>
                         <div class="flex flex-col gap-4">
@@ -144,6 +143,110 @@
                     </div>
                 </div>
             </div>
+            <!-- <div id="model"
+                class="hidden fixed inset-0 flex justify-center items-center z-[999999] bg-[var(--is-blue-8)]">
+                <div class="bg-white rounded-[20px] md:w-[950px] flex flex-col items-center gap-10 py-8 px-10">
+                    <img src="../assets/icons/wallet.svg" alt="wallet" class="animate-bounce-scale" />
+                    <h2 class="font-bold text-2xl">أوه! محفظتك لا تحتوي على أموال كافية لإجراء هذا الشراء.
+                    </h2>
+                    <div class="flex gap-3">
+                        <button title="لا، لا تلغِ" id="cancel-btn"
+                            class="before:bg-[var(--is-pink)] rounded-[20px] text-white bg-black w-45 py-4 btn">
+                            <div class="text-base relative z-1 font-bold">
+                                <span>لا، لا تلغِ</span>
+                            </div>
+                        </button>
+                        <button title="نعم" id="cancel-btn"
+                            class="before:bg-[var(--is-blue)] rounded-[20px] text-white bg-[var(--is-pink)] w-45 py-4 btn">
+                            <div class="text-base relative z-1 font-bold">
+                                <span>نعم</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div id="model"
+                class="hidden fixed inset-0 flex justify-center items-center z-[999999] bg-[var(--is-blue-8)]">
+                <div class="bg-white rounded-[20px] md:w-[950px] flex flex-col items-center gap-10 py-8 px-10">
+                    <div id="cancel-btn" class="w-full text-end">
+                        <button class="text-xl font-bold">✕</button>
+                    </div>
+                    <img src="../assets/icons/wallet.svg" alt="wallet" class="animate-bounce-scale" />
+                    <h2 class="font-bold text-2xl">نأسف، لكن لا يمكننا معالجة المدفوعات لأقل من 0.50 دولار. يرجى إضافة
+                        عنصر آخر إلى عربة التسوق الخاصة بك أو زيادة المبلغ للمتابعة.</h2>
+                </div>
+            </div> -->
+            <!-- <div id="model"
+                class="hidden fixed inset-0 flex justify-center items-center z-[999999] bg-[var(--is-blue-8)]">
+                <div class="bg-white rounded-[20px] md:w-[950px] flex flex-col items-center gap-10 py-8 px-5">
+                    <div class="flex flex-col gap-10 items-center text-center">
+                        <img src="../assets/icons/error.svg" alt="error" class="animate-bounce-scale" />
+                        <h2 class="font-bold text-2xl">آه أوه! حدث خطأ ما. الرجاء المحاولة مرة أخرى.</h2>
+                    </div>
+                    <div class="flex gap-3">
+                        <button title="لا، لا تلغي" id="cancel-btn"
+                            class="before:bg-[var(--is-pink)] rounded-[20px] text-white bg-black w-45 py-4 btn">
+                            <div class="text-base relative z-1 font-bold">
+                                <span>لا، لا تلغي</span>
+                            </div>
+                        </button>
+                        <button title="نعم" id="cancel-btn"
+                            class="before:bg-[var(--is-blue)] rounded-[20px] text-white bg-[var(--is-pink)] w-45 py-4 btn">
+                            <div class="text-base relative z-1 font-bold">
+                                <span>نعم</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div> -->
+            <div id="model"
+                class="hidden fixed inset-0 flex justify-center items-center z-[999999] bg-[var(--is-blue-8)]">
+                <div class="bg-white py-[15px] rounded-[18px] flex flex-col gap-2 md:w-[850px]">
+                    <div class="flex justify-between px-[26px]">
+                        <h2 class="font-bold text-xl">الدفع المقسّم</h2>
+                        <span id="cancel-btn" class="cursor-pointer" title="close">✕</span>
+                    </div>
+                    <hr class="my-2" />
+                    <ul class="flex flex-col px-[26px]">
+                        <li class="flex justify-between text-xl">
+                            <p class="font-medium">المبلغ الإجمالي</p>
+                            <p class="font-bold">$19.00</p>
+                        </li>
+                        <li class="flex justify-between text-xl">
+                            <p class="font-medium">رصيد المحفظة</p>
+                            <p class="font-bold">-$3.29</p>
+                        </li>
+                    </ul>
+                    <hr class="my-2" />
+                    <ul class="flex flex-col px-[26px]">
+                        <li class="flex justify-between text-xl">
+                            <p class="font-medium">الرصيد المتبقي للدفع
+                            </p>
+                            <p class="font-bold text-[var(--is-pink)]">
+                                $15.71</p>
+                        </li>
+                        <li class="flex justify-between text-xl">
+                            <p class="font-medium text-[var(--is-pink)]">
+                                سيتم دفع الرصيد المتبقي باستخدام سترايب</p>
+                        </li>
+                    </ul>
+                    <hr class="my-2" />
+                    <div class="flex justify-end gap-[12px] px-[26px]">
+                        <button id="cancel-btn"
+                            class="text-center hover:before:bg-[var(--is-pink)] border border-1 border-[var(--is-pink)] hover:text-white text-[var(--is-pink)] rounded-[15px] px-12 py-3 btn">
+                            <div class="relative z-1 text-xs font-semibold">
+                                <span>إلغاء</span>
+                            </div>
+                        </button>
+                        <button id="cancel-btn"
+                            class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-12 py-3 btn">
+                            <div class="relative z-1 text-xs font-semibold">
+                                <span>ادفع الآن</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- end content -->
         <!-- start footer -->
@@ -152,12 +255,11 @@
     </div>
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="../assets/js/jquery.min.js"></script>
 <script src="../assets/js/navbar-layout.js"></script>
 <script src="../assets/js/footer-layout.js"></script>
 <script src="../assets/js/global.js"></script>
-<script src="../assets/js/faq.js"></script>
+<script src="../assets/js/checkout.js"></script>
 <script src="../assets/js/aos.js"></script>
 
 </html>

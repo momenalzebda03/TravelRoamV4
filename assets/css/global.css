@@ -28,6 +28,7 @@
     --is-gray-13: #25123C1A;
     --is-gray-14: #7A89AC;
     --is-gray-15: #FFFFFF40;
+    --is-gray-16: #FFFFFF33;
     --is-pink: #F70075;
     --is-black: #00000040;
     --is-black-1: #100E23;
@@ -36,10 +37,11 @@
     --is-black-4: #0000007b;
     --is-black-5: #25123C0D;
     --is-black-6: #0B0B0B80;
+    --is-black-7: #25123C33;    
     --is-white-1: #ECECEC;
     --is-white-2: #C9C9C9;
     --is-white-3: #D8DBE3;
-    --is-white-4: #F8F8F8;
+    --is-white-4: #F8F8F8;    
     --is-red: #F7252C;
     --is-red-1: #FF0000;
 }

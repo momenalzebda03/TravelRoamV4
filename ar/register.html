@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/logo.svg" />
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/output.css">
+    <title>شركاء السفر والتجوال</title>
+</head>
+
+<body>
+    <div id="loadingOverlay" class="fixed inset-0 bg-white flex justify-center items-center z-[9999]">
+        <div class="w-16 h-16 border-6 border-gray-200 border-t-[var(--is-blue)] rounded-full animate-spin"></div>
+    </div>
+    <div id="app" style="display: none;">
+        <!-- start register -->
+        <section class="bg-cover
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/bg-login.png')] w-full py-10">
+            <div class="w-full h-full flex justify-center items-center">
+                <div
+                    class="flex flex-col gap-[23px] text-white rounded-[15px] bg-[var(--is-blue-8)] px-10 md:px-20 py-5 w-[90%] lg:w-[45%]">
+                    <div class="flex justify-center">
+                        <img src="../assets/icons/logo.svg" alt="logo" class="w-60 h-20" />
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <h2 class="font-semibold text-xl md:text-3xl">خطوة أخيرة</h2>
+                        <p class="font-normal text-base">سجّل مع شريكنا في البيانات <span
+                                class="font-bold">TravelRoam</span>, حتى نعرف أين نرسل لك حزمة الإنترنت المجانية الخاصة
+                            بك في الخارج.</p>
+                    </div>
+                    <div class="relative flex items-center flex-col gap-5">
+                        <div class="w-[65%] flex gap-4">
+                            <div class="w-full border border-white rounded-full flex justify-center items-center py-3">
+                                <img src="../assets/icons/mail.svg" alt="mail" class="w-[24px] h-[24px]" />
+                            </div>
+                            <div class="w-full border border-white rounded-full flex justify-center items-center py-3">
+                                <img src="../assets/icons/apple.svg" alt="apple" class="w-[24px] h-[24px] invert" />
+                            </div>
+                        </div>
+                        <div
+                            class="text-center after:right-23 after:bottom-[12%] after:content-[''] after:absolute after:w-[29%] after:h-[1%] after:bg-white before:left-23 before:bottom-[12%] before:content-[''] before:absolute before:w-[29%] before:h-[1%] before:bg-white">
+                            <p>او</p>
+                        </div>
+                    </div>
+                    <form action="" method="" class="flex flex-col gap-4">
+                        <div class="flex gap-3">
+                            <input type="text"
+                                class="border border-1 border-[var(--is-gray-7)] px-[15px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
+                                placeholder="الاسم الأول" />
+                            <input type="text"
+                                class="border border-1 border-[var(--is-gray-7)] px-[15px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
+                                placeholder="الاسم الثاني" />
+                        </div>
+                        <input type="email"
+                            class="border border-1 border-[var(--is-gray-7)] px-[15px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
+                            placeholder="عنوان البريد الإلكتروني" />
+
+                        <div class="relative dropdown-wrapper">
+                            <div class="rounded-xl flex items-center relative">
+                                <img src="/assets/icons/untitled-design.svg"
+                                    class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2" />
+                                <div
+                                    class="flex items-center w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]">
+                                    <p class="phone-code ps-[40px] pe-4 cursor-pointer"
+                                        onclick="openDestinationsByList('destination-list-1')">+675</p>
+                                    <input class="w-full py-2 placeholder:text-white" type="number"
+                                        placeholder="رقم الهاتف المحمول" />
+                                </div>
+                            </div>
+                            <ul id="destination-list-1"
+                                class="shadow-2xl dropdown-list !block !px-0 absolute w-full mt-3 rounded-[12px] !bg-white overflow-hidden z-50">
+                            </ul>
+                        </div>
+
+                        <div class="relative dropdown-wrapper">
+                            <div class="rounded-xl flex items-center relative">
+                                <img src="/assets/icons/untitled-design.svg"
+                                    class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2" />
+                                <input type="text"
+                                    class="border border-1 border-[var(--is-gray-7)] px-[40px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
+                                    placeholder="Referral Code" id="destination-input-2"
+                                    oninput="filterDestinations(this.value, this)" onfocus="openDestinations(this)" />
+                            </div>
+
+                            <ul id="destination-list-2"
+                                class="shadow-2xl dropdown-list !block !px-0 absolute w-full mt-3 rounded-[12px] !bg-white overflow-hidden z-50">
+                            </ul>
+
+                        </div>
+
+                        <input type="password"
+                            class="border border-1 border-[var(--is-gray-7)] px-[15px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
+                            placeholder="Password" />
+                        <input type="password"
+                            class="border border-1 border-[var(--is-gray-7)] px-[15px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
+                            placeholder="تأكيد كلمة المرور" />
+
+                        <p>يجب أن تكون كلمة المرور مكونة من 6 أحرف على الأقل وتحتوي على حرف خاص واحد على الأقل وحرف كبير
+                            واحد.</p>
+
+                        <label for="remeber" class="my-5">
+                            <input type="checkbox" id="remeber" />
+                            أود أن أتلقى رسائل بريد إلكتروني ترويجية.
+                        </label>
+                        <div class="flex justify-center">
+                            <button type="submit"
+                                class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-18 py-[3.5%] btn">
+                                <div class="relative z-1 text-xs font-semibold">
+                                    <span>سجّل</span>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="flex justify-center">
+                            <p class="md:text-nowrap">بالتسجيل، أنت توافق على
+                                <a title="Terms & Conditions" href="terms-of-service.html" class="underline">الأحكام
+                                    والشروط</a> و
+                                <a title="privacy policy" href="privacy-policy.html" class="underline">سياسة
+                                    الخصوصية.</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- end register -->
+    </div>
+</body>
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/navbar-layout.js"></script>
+<script src="../assets/js/footer-layout.js"></script>
+<script src="../assets/js/global.js"></script>
+
+</html>

@@ -31,12 +31,12 @@ window.addEventListener("scroll", function () {
 });
 
 const destinations = [
-    { name: 'Australia', code: 'au' },
-    { name: 'Austria', code: 'at' },
-    { name: 'Bahrain', code: 'bh' },
-    { name: 'Bangladesh', code: 'bd' },
-    { name: 'Canada', code: 'ca' },
-    { name: 'China', code: 'cn' },
+    { name: 'Australia', code: 'au', phone: '+61' },
+    { name: 'Austria', code: 'at', phone: '+43' },
+    { name: 'Bahrain', code: 'bh', phone: '+973' },
+    { name: 'Bangladesh', code: 'bd', phone: '+880' },
+    { name: 'Canada', code: 'ca', phone: '+1' },
+    { name: 'China', code: 'cn', phone: '+86' },
 ];
 
 function getListId(inputId) {
@@ -49,6 +49,11 @@ function openDestinations(inputEl) {
     $(`#${listId}`).addClass('open');
 
     renderDestinations(destinations, listId, inputEl.id);
+}
+
+function openDestinationsByList(listId) {
+    $(`#${listId}`).addClass('open');
+    renderDestinations(destinations, listId, null);
 }
 
 function filterDestinations(value, inputEl) {
@@ -64,29 +69,22 @@ function filterDestinations(value, inputEl) {
 }
 
 function renderDestinations(list, listId, inputId) {
-
     const ul = $(`#${listId}`);
-
     ul.empty();
-
     list.forEach(item => {
-
         ul.append(`
             <li 
                 data-name="${item.name}"
                 data-code="${item.code}"
-                data-input="${inputId}"
+                data-phone="${item.phone}"
+                ${inputId ? `data-input="${inputId}"` : ''}
                 data-list="${listId}"
                 class="!text-black destination-item flex items-center gap-3 px-4 py-3 hover:bg-gray-100 hover:text-black cursor-pointer">
-
-                <img src="https://flagcdn.com/24x18/${item.code}.png" 
-                     alt="${item.code}" 
-                     class="rounded-full w-7 h-7" />
-
+                <img src="https://flagcdn.com/24x18/${item.code}.png" alt="${item.code}" class="rounded-full w-7 h-7" />
                 <span>${item.name}</span>
+                ${!inputId ? `<span class="ms-auto text-gray-400 text-sm">${item.phone}</span>` : ''}
             </li>
         `);
-
     });
 }
 
@@ -96,10 +94,20 @@ function nameEscape(text) {
 
 $(document).on('click', '.destination-item', function () {
     const name = $(this).data('name');
+    const phone = $(this).data('phone');
+    const code = $(this).data('code');
     const inputId = $(this).data('input');
     const listId = $(this).data('list');
 
-    $(`#${inputId}`).val(name);
+    if (inputId) {
+        $(`#${inputId}`).val(name);
+
+        $(`#${inputId}`).closest('.dropdown-wrapper').find('img').attr('src', `https://flagcdn.com/24x18/${code}.png`);
+    } else {
+        const $wrapper = $(`#${listId}`).closest('.dropdown-wrapper');
+        $wrapper.find('.phone-code').text(phone);
+        $wrapper.find('img').attr('src', `https://flagcdn.com/24x18/${code}.png`);
+    }
 
     $(`#${listId}`).removeClass('open');
 });
