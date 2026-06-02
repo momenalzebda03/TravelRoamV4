@@ -54,6 +54,8 @@ class CoopNavbar extends HTMLElement {
 
     const backgrounds = {
       'lounge-pass': 'bg-[var(--is-blue)]',
+      'steps': 'bg-[var(--is-blue)]',
+      'qr': 'bg-[var(--is-blue)]',
     };
 
     const matched = Object.keys(backgrounds).find(key =>
@@ -65,7 +67,7 @@ class CoopNavbar extends HTMLElement {
 
   _render() {
     this.innerHTML = `
-<nav class="z-2 text-white navbar transition duration-300 w-full py-[33px] ${this._navBgClass()}">
+<nav class="z-9 text-white navbar transition duration-300 w-full py-[33px] ${this._navBgClass()}">
   <div class="container z-1">
     <div class="flex w-full">
       <div class="w-full flex items-center justify-between">

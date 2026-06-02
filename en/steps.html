@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/logo.svg" />
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/output.css">
+    <title>Travel Roam Partners</title>
+</head>
+
+<body>
+    <div id="loadingOverlay" class="fixed inset-0 bg-white flex justify-center items-center z-[9999]">
+        <div class="w-16 h-16 border-6 border-gray-200 border-t-[var(--is-blue)] rounded-full animate-spin"></div>
+    </div>
+    <div id="app" style="display: none;">
+        <!-- start navbar -->
+        <coop-navbar></coop-navbar>
+        <section id="form">
+            <div class="container mt-35">
+                <div class="shadow-[0_2px_2px_var(--is-black-2)] bg-[var(--is-black-5)] rounded-[25px] py-[22px] md:py-[42px]
+                px-[15px] md:px-[30px] flex flex-col gap-[50px]">
+                    <div class="bg-white shadow-[0_5px_5px_var(--is-black-2)] flex flex-col gap-[30px] md:gap-[50px]
+                        p-[20px] md:p-[35px] rounded-[25px]">
+                        <div class="flex flex-col gap-2">
+                            <div class="flex items-center gap-3">
+                                <a href="lounge-pass.html">
+                                    <img src="/assets/icons/back.svg" alt="back" width="20" height="17"
+                                        class="close-btn cursor-pointer" title="back" />
+                                </a>
+                                <h2 class="font-bold text-2xl">Book Your Lounge</h2>
+                            </div>
+                            <span class="text-[var(--is-gray-5)]">Effortless access with premium confort</span>
+                        </div>
+                        <div class="flex flex-col gap-[30px] md:gap-[50px]">
+                            <div class="grid md:grid-cols-3 gap-[30px] md:gap-[32px]">
+                                <div class="flex flex-col gap-[10px] md:gap-[20px]">
+                                    <span class="text-xl font-bold">LOUNGE</span>
+                                    <div
+                                        class="w-full relative flex items-center shadow-[0_1px_5px_var(--is-black-2)] bg-[var(--is-gray-13)] rounded-[10px]">
+                                        <select name="" id="select"
+                                            class="w-full ps-[15px] py-[12px] z-1 appearance-none">
+                                            <option value="London, England" disabled selected>Select</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                        <img src="/assets/icons/arraw.svg" alt="arraw" width="13" height="7" class="absolute
+                            right-5 top-1/2 -translate-y-1/2 transition-transform duration-500 opacity-28 filter
+                            brightness-0" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-[10px] md:gap-[20px]">
+                                    <span class="text-xl font-bold">DATE</span>
+                                    <input type="date" id="date" class="custom-class" value={date} />
+                                </div>
+                                <div class="flex flex-col gap-[10px] md:gap-[20px]">
+                                    <span class="text-xl font-bold">TIME</span>
+                                    <input type="time" id="time" class="custom-class" value={time} />
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-[10px] md:gap-[20px]">
+                                <span class="text-xl font-bold">FLIGHT NUMBER <span
+                                        class="text-[var(--is-red)]">*</span></span>
+                                <div
+                                    class="flex items-center w-full text-[var(--is-gray-7)] relative shadow-[0_1px_5px_var(--is-black-2)] bg-[var(--is-gray-13)] rounded-[10px]">
+                                    <input required type="text" placeholder="e.g. BA 289 - EK 002" id="flightNumber"
+                                        class="flex items-center ps-[15px] py-[12px] w-full text-[var(--is-gray-7)] relative rounded-[10px]">
+                                    <div class="absolute right-[15px]">
+                                        <Image src="/assets/icons/plane.svg" alt="plane" width={15} height={15} />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-[10px]">
+                                    <span class="text-xl font-bold">PASSENGERS</span>
+                                    <div class="flex flex-col gap-[32px]">
+                                        <div class="flex flex-col md:flex-row gap-[32px]">
+                                            <div class="flex flex-col gap-[10px] md:gap-[20px] w-full">
+                                                <div class="flex justify-between items-center custom-class">
+                                                    <div class="flex flex-col gap-[4px] relative">
+                                                        <span class="text-md font-medium text-[var(--is-gray-7)]">Adults
+                                                            (12+)</span>
+                                                        <span class="text-sm font-medium text-[var(--is-blue-3)]"
+                                                            id="adults42"></span>
+                                                    </div>
+                                                    <div
+                                                        class="flex justify-between py-[6px] px-[7px] w-[100px] rounded-full bg-white shadow-[0_1px_5px_var(--is-black-2)]">
+                                                        <button type="button" class="cursor-pointer" id="minusAdults"
+                                                            title="Incomplete">-</button>
+                                                        <span id="adults"></span>
+                                                        <button type="button" class="cursor-pointer" id="plusAdults"
+                                                            title="Plus">+</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-col gap-[10px] md:gap-[20px] w-full">
+                                                <div class="flex justify-between items-center custom-class">
+                                                    <div class="flex flex-col gap-[4px]">
+                                                        <span class="text-md font-medium text-[var(--is-gray-7)]">Child
+                                                            (5-12)</span>
+                                                        <span class="text-sm font-medium text-[var(--is-blue-3)]"
+                                                            id="child22"></span>
+                                                    </div>
+                                                    <div
+                                                        class="flex justify-between py-[6px] px-[7px] w-[100px] rounded-full bg-white shadow-[0_1px_5px_var(--is-black-2)]">
+                                                        <button type="button" class="cursor-pointer" id="minusChild"
+                                                            title="Incomplete">-</button>
+                                                        <span id="child"></span>
+                                                        <button type="button" class="cursor-pointer" id="plusChild"
+                                                            title="Plus">+</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col md:flex-row gap-[32px]">
+                                            <div class="flex flex-col gap-[10px] md:gap-[20px] w-full">
+                                                <div class="flex justify-between items-center custom-class">
+                                                    <div class="flex flex-col gap-[4px] relative">
+                                                        <span
+                                                            class="text-md font-medium text-[var(--is-gray-7)]">Infants
+                                                            (under 5)</span>
+                                                        <span
+                                                            class="text-sm font-medium text-[var(--is-blue-3)]">${adults
+                                                            * 42}</span>
+                                                    </div>
+                                                    <div
+                                                        class="flex justify-between py-[6px] px-[7px] w-[100px] rounded-full bg-white shadow-[0_1px_5px_var(--is-black-2)]">
+                                                        <button type="button" class="cursor-pointer"
+                                                            title="Incomplete">-</button>
+                                                        <span>{adults}</span>
+                                                        <button type="button" class="cursor-pointer"
+                                                            title="Plus">+</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-col gap-[10px] md:gap-[20px] w-full">
+                                                <div class="flex justify-between items-center custom-class">
+                                                    <div class="flex flex-col gap-[4px]">
+                                                        <span
+                                                            class="text-md font-medium text-[var(--is-gray-7)]">Secinor
+                                                            citizens
+                                                            (12)</span>
+                                                        <span
+                                                            class="text-sm font-medium text-[var(--is-blue-3)]">${child
+                                                            *
+                                                            22}</span>
+                                                    </div>
+                                                    <div
+                                                        class="flex justify-between py-[6px] px-[7px] w-[100px] rounded-full bg-white shadow-[0_1px_5px_var(--is-black-2)]">
+                                                        <button type="button" class="cursor-pointer"
+                                                            title="Incomplete">-</button>
+                                                        <span>{adults}</span>
+                                                        <button type="button" class="cursor-pointer"
+                                                            title="Plus">+</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center custom-class">
+                                <div class="flex flex-col">
+                                    <span class="text-[var(--is-gray-7)] text-md font-medium">Passengers:
+                                        <span class="text-[var(--is-blue-3)]" id="passengers"></span></span>
+                                    <span class="text-[var(--is-gray-7)] text-md font-medium">Subtotal:
+                                        <span class="text-[var(--is-blue-3)]" id="subtotal"></span></span>
+                                </div>
+                                <span class="text-[var(--is-blue-3)] text-md font-medium" id="total"></span>
+                            </div>
+                            <div class="flex justify-center">
+                                <div id="continueToPayment"
+                                    class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] !px-30 py-[12px] btn">
+                                    <div class="relative z-1 text-md font-semibold">
+                                        <span>Next</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hidden" id="startSteps">
+            <div class="container mt-[105px]">
+                <div class="bg-white shadow-[0_5px_5px_var(--is-black-2)] flex flex-col gap-[30px] md:gap-[50px]
+                        p-[20px] md:p-[35px] rounded-[25px]">
+                    <div class="flex flex-col gap-2">
+                        <div class="flex items-center gap-3">
+                            <img id="prevBtn" src="/assets/icons/back.svg" alt="back" width="20" height="17"
+                                class="close-btn cursor-pointer" title="back" />
+                            <h2 class="font-bold text-2xl">Passenger
+                                Information</h2>
+                        </div>
+                        <span class="text-[var(--is-gray-5)]">Please enter
+                            details
+                            for each Passenger</span>
+                    </div>
+                    <div class="relative flex flex-col gap-[22px]">
+                        <div id="line" class="before:content-[''] before:absolute before:w-[50%] before:bg-[var(--is-blue-3)] before:h-full -top-[3px] absolute w-full h-[4px]
+                                        bg-[var(--is-white-3)]"></div>
+                        <ul id="steps" class="flex w-full">
+                            <li class="step-item items-start text-left relative flex-1 flex flex-col items-center gap-3"
+                                data-index="0">
+                                <div class="bg-[var(--is-white-3)] z-2 flex items-center justify-center w-[22px]
+                                        h-[22px] rounded-full absolute -bottom-2">
+                                </div>
+                            </li>
+                            <li class="step-item text-right text-center relative flex-1 flex flex-col items-center gap-3"
+                                data-index="1">
+                                <div class="!bg-[var(--is-blue-3)] bg-[var(--is-white-3)] z-2 flex items-center justify-center w-[22px]
+                                        h-[22px] rounded-full absolute -bottom-2">
+                                </div>
+                            </li>
+                            <li class="step-item last items-end text-left relative flex-1 flex flex-col items-center gap-3"
+                                data-index="2">
+                                <div class="bg-[var(--is-white-3)] z-2 flex items-center justify-center w-[22px]
+                                        h-[22px] rounded-full absolute -bottom-2">
+                                </div>
+                            </li>
+                        </ul>
+                        <div id="passengerForms"></div>
+                        <div class="flex justify-center">
+                            <div class="flex flex-col md:flex-row items-center justify-center gap-3 w-full">
+                                <div id="prevBtn"
+                                    class="text-center hover:text-white hover:before:bg-[var(--is-blue)] text-[var(--is-pink)] border border-[var(--is-pink)] rounded-[15px] w-full md:w-[300px] py-[12px] btn">
+                                    <div class="relative z-1 text-md font-semibold">
+                                        <span>Back</span>
+                                    </div>
+                                </div>
+                                <div id="nextBtn"
+                                    class="text-nowrap text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] w-full md:w-[300px] py-[12px] btn">
+                                    <div class="relative z-1 text-md font-semibold">
+                                        <span>Next</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- start footer -->
+        <coop-footer></coop-footer>
+        <!-- end footer -->
+    </div>
+</body>
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/navbar-layout.js"></script>
+<script src="../assets/js/footer-layout.js"></script>
+<script src="../assets/js/global.js"></script>
+<script src="../assets/js/steps.js"></script>
+
+</html>

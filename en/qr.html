@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/logo.svg" />
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/output.css">
+    <title>Travel Roam Partners</title>
+</head>
+
+<body>
+    <div id="loadingOverlay" class="fixed inset-0 bg-white flex justify-center items-center z-[9999]">
+        <div class="w-16 h-16 border-6 border-gray-200 border-t-[var(--is-blue)] rounded-full animate-spin"></div>
+    </div>
+    <div id="app" style="display: none;">
+        <!-- start navbar -->
+        <coop-navbar></coop-navbar>
+        <!-- end navbar -->
+        <section>
+            <div class="container mt-[145px]">
+                <div
+                    class="shadow-[0_2px_2px_var(--is-black-2)] bg-[var(--is-gray-6)] rounded-[25px] py-[22px] md:py-[42px] px-[15px] md:px-[30px] flex flex-col gap-[50px]">
+                    <div class="shadow-[0_5px_5px_var(--is-black-2)] flex flex-col gap-[30px] md:gap-[50px]
+                        bg-white p-[20px] md:p-[35px] rounded-[25px]">
+                        <div class="relative grid md:grid-cols-[9fr_3fr]">
+                            <div class="flex flex-col bg-[var(--is-blue-3)] rounded-[18px]" data-aos="fade-up">
+                                <div class="gap-[15px] flex text-white py-[19px] px-[27px]">
+                                    <img src="/assets/icons/airport.svg" alt="airport" width="37" height="31" />
+                                    <h2 class="text-xl font-semibold">Your Booking is Confirmed!</h2>
+                                </div>
+                                <div class="relative mx-5 mb-[44px]">
+                                    <hr class="text-[var(--is-gray-9)]" />
+                                    <div class="mt-[35px] flex flex-col md:flex-row gap-3 md:gap-[111px]">
+                                        <div class="flex flex-col">
+                                            <span class="text-[var(--is-gray-10)] text-lg">Booking Reference:</span>
+                                            <span class="text-white text-2xl font-bold">LP-2026-000031</span>
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <span class="text-[var(--is-gray-10)] text-lg">Pass Reference:</span>
+                                            <span class="text-white text-2xl font-bold">12572904</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-[11px] me-20 flex items-end justify-between">
+                                        <div class="flex flex-col gap-[38px]">
+                                            <div class="flex flex-col gap-[7px]">
+                                                <span class="text-lg text-[var(--is-gray-10)]">Status:</span>
+                                                <div class="flex">
+                                                    <div
+                                                        class="text-nowrap text-center hover:before:bg-white bg-[var(--is-pink)] hover:text-[var(--is-blue)] text-white rounded-[15px] px-10 py-[12px] btn">
+                                                        <div class="relative z-1 text-md font-semibold">
+                                                            <span>Confirmed</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <span class="text-2xl text-white">LP Code Ercoded Value</span>
+                                                <span class="text-lg text-[var(--is-gray-10)]">Pras seddill
+                                                    ingyy: It: 2026-000031)</span>
+                                            </div>
+                                        </div>
+                                        <img src="/assets/icons/coop.svg" alt="coop" width="300" height="197"
+                                            class="hidden md:block" />
+                                    </div>
+                                    <ul
+                                        class="flex gap-1 flex-col absolute top-[25%] text-[var(--is-gray-15)] right-3 text-2 font-normal">
+                                        <li class="rotate-90">
+                                            1
+                                        </li>
+                                        <li class="rotate-90">
+                                            2
+                                        </li>
+                                        <li class="rotate-90">
+                                            5
+                                        </li>
+                                        <li class="rotate-90">
+                                            7
+                                        </li>
+                                        <li class="rotate-90">
+                                            2
+                                        </li>
+                                        <li class="rotate-90">
+                                            9
+                                        </li>
+                                        <li class="rotate-90">
+                                            0
+                                        </li>
+                                        <li class="rotate-90">
+                                            4
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="items-center bg-[var(--is-white-5)] py-[16px] md:px-[13px] rounded-[18px] flex flex-col gap-[23px]"
+                                data-aos="fade-up">
+                                <div id="qrcode"
+                                    class="border border-2 w-[300px] h-[300px] p-5 bg-white rounded-[20px]"></div>
+                                <div class="flex gap-[5px] items-center" onClick={handleCopy}>
+                                    <Image src="/assets/icons/copy.svg" alt="copy" class="w-5 h-5" />
+                                    <ul class="flex gap-3 text-[var(--is-black-7)] text-xl font-bold">
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>5</li>
+                                        <li>5</li>
+                                        <li>7</li>
+                                        <li>2</li>
+                                        <li>9</li>
+                                        <li>0</li>
+                                        <li>4</li>
+                                    </ul>
+                                </div>
+                                <div class="flex flex-col md:flex-row items-center justify-center gap-3">
+                                    <div
+                                        class="text-center hover:text-white hover:before:bg-[var(--is-blue)] text-[var(--is-pink)] border border-[var(--is-pink)] rounded-[15px] px-5 py-[12px] btn">
+                                        <div class="text-nowrap relative z-1 text-xs font-semibold">
+                                            <span>Download Pass</span>
+                                        </div>
+                                    </div>
+                                    <div id="cancelBooking"
+                                        class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-red)] text-white rounded-[15px] px-5 py-[12px] btn">
+                                        <div class="text-nowrap relative z-1 text-xs font-semibold">
+                                            <span>Cancel Booking</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="modelQr"
+                                class="hidden flex justify-center items-center z-1 w-full h-full bg-[var(--is-blue-8)] rounded-[20px] absolute top-0 left-0">
+                                <div class="bg-white py-[15px] px-[26px] rounded-[18px]">
+                                    <div class="flex flex-col gap-[12px]">
+                                        <span>Are you sure you want to cancel your booking?</span>
+                                        <div class="flex flex-col md:flex-row items-center justify-center gap-3">
+                                            <div id="noModel"
+                                                class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-red)] text-white rounded-[15px] px-5 py-[12px] btn">
+                                                <div class="text-nowrap relative z-1 text-xs font-semibold">
+                                                    <span>No, don’t cancel</span>
+                                                </div>
+                                            </div>
+                                            <a href="index.html"
+                                                class="text-center hover:text-white hover:before:bg-[var(--is-blue)] text-[var(--is-pink)] border border-[var(--is-pink)] rounded-[15px] px-5 py-[12px] btn">
+                                                <div class="text-nowrap relative z-1 text-xs font-semibold">
+                                                    <span>Yes</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-[7.5fr_4.5fr] mt-[20px] gap-6 md:gap-0">
+                            <div data-aos="fade-up"
+                                class="shadow-[0_2px_5px_var(--is-black-2)] rounded-[18px] bg-white py-[20px] px-[26px] border border-[var(--is-gray-11)] ">
+                                <h2 class="text-xl">Payment Summary</h2>
+                                <ul class="md:mt-[27px] grid md:grid-cols-2 gap-y-2 gap-x-15">
+                                    <li class="flex items-center justify-between w-full">
+                                        <span class="font-normal text-lg">Currency:</span>
+                                        <span class="font-bold">GBP</span>
+                                    </li>
+                                    <li class="flex items-center justify-between w-full">
+                                        <span class="font-normal text-lg">Total Paid:</span>
+                                        <span class="font-bold">£25</span>
+                                    </li>
+                                    <li class="flex items-center justify-between w-full">
+                                        <span class="font-normal text-lg">Total Paid:</span>
+                                        <span class="font-bold">£25</span>
+                                    </li>
+                                    <li class="flex items-center justify-between w-full">
+                                        <span class="font-normal text-lg">Discount:</span>
+                                        <span class="font-bold">£0</span>
+                                    </li>
+                                    <li class="flex items-center justify-between w-full">
+                                        <span class="font-normal text-lg">Payment Status:</span>
+                                        <div
+                                            class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-7 py-[12px] btn">
+                                            <div class="relative z-1 text-xs font-semibold">
+                                                <span>Paid</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div data-aos="fade-up"
+                                class="shadow-[0_2px_5px_var(--is-black-2)] rounded-[18px] bg-white py-[25px] px-[26px] border border-[var(--is-gray-11)] md:ms-[29px]">
+                                <div class="text-center flex flex-col items-center gap-[23px]">
+                                    <h2 class="text-xl font-semibold text-[var(--is-blue-3)]">Terms & Conditions
+                                    </h2>
+                                    <span class="text-lg font-semibold text-[var(--is-blue-3)]">Everything you need
+                                        to know about using our service.</span>
+                                    <div class="!py-2 text-nowrap flex justify-center
+                                                                    !border-1 border-[var(--is-blue)] bg-[var(--is-blue-3)]
+                                                                    before:bg-[var(--is-blue)] transition-all
+                                                                    duration-800 border-3 px-7 py-3 before:bottom-0
+                                                                    before:rounded-t-[50%] relative group rounded-full
+                                                                    cursor-pointer overflow-hidden before:content-['']
+                                                                    before:absolute before:left-0 before:w-full
+                                                                    before:h-0 before:z-1 before:bottom-0
+                                                                    before:transition-all before:duration-800
+                                                                    hover:before:h-[180%]" title="Read Full Terms">
+                                        <div class="gap-[8px] relative z-1 text-xs
+                                                                        flex items-center group-hover:!text-white
+                                                                        text-white font-semibold">
+                                            <span>Read Full Terms</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-[7.5fr_4.5fr]">
+                            <div
+                                class="relative w-full text-xl font-medium shadow-[0_2px_5px_var(--is-black-2)] rounded-[10px]">
+                                <div class="flex flex-col gap-1 px-[15px] pb-[32px] pt-[12px]">
+                                    <div class="flex items-center gap-1">
+                                        <Image src="/assets/icons/map-black.svg" alt="map" class="w-[16px] h-[16px]" />
+                                        <span class="text-md text-[var(--is-blue)]">Billing Address</span>
+                                    </div>
+                                    <input id="billingAddress" type="number" placeholder="Street 13 Asda Road"
+                                        class="text-md text-[var(--is-blue-5)]" readonly />
+                                </div>
+                                <div
+                                    class="shadow-[0_12px_15px_var(--is-black)] right-0 top-0 absolute bg-[var(--is-blue-7)] w-7 h-full rounded-full">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- start footer -->
+        <coop-footer></coop-footer>
+        <!-- end footer -->
+    </div>
+</body>
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="../assets/js/qr.js"></script>
+<script src="../assets/js/navbar-layout.js"></script>
+<script src="../assets/js/footer-layout.js"></script>
+<script src="../assets/js/global.js"></script>
+
+</html>
