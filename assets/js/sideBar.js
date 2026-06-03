@@ -38,7 +38,7 @@ class CoopSideBar extends HTMLElement {
         this.innerHTML = `           
                 <ul class="h-full bg-[var(--is-pink)] rounded-[23px] py-[42px] px-[40px] flex flex-col gap-[40px]">
                     <li class="flex">
-                        <a title="${this.isArabic ? "لوحىة التحكم" : 'Dashboard'}" href="admin.html" class="active flex items-center gap-[17px]
+                        <a title="${this.isArabic ? "لوحىة التحكم" : 'Dashboard'}" href="home.html" class="active flex items-center gap-[17px]
                                     text-white hover:opacity-[1] opacity-[0.6]">
                             <img src="/assets/icons/dashboard.svg" alt="dashboard" width="22" height="22" />
                             <span class="text-nowrap">${this.isArabic ? "لوحة التحكم" : 'Dashboard'}</span>
@@ -52,21 +52,21 @@ class CoopSideBar extends HTMLElement {
                         </a>
                     </li>
                     <li class="flex">
-                        <a title="${this.isArabic ? "بطاقات eSIM الخاصة بي" : 'My eSIMs'}" href="sim.html" class="flex items-center gap-[17px]
+                        <a title="${this.isArabic ? "بطاقات eSIM الخاصة بي" : 'My eSIMs'}" href="esim.html" class="flex items-center gap-[17px]
                                     text-white hover:opacity-[1] opacity-[0.6]">
                             <img src="/assets/icons/sim.svg" alt="sim" width="22" height="22" />
                             <span class="text-nowrap">${this.isArabic ? "بطاقات eSIM الخاصة بي" : 'My eSIMs'}</span>
                         </a>
                     </li>
                     <li class="flex">
-                        <a title="${this.isArabic ? "متجر eSIM" : 'eSIM Store'}" href="sim" class="flex items-center gap-[17px]
+                        <a title="${this.isArabic ? "متجر eSIM" : 'eSIM Store'}" href="esim.html" class="flex items-center gap-[17px]
                                     text-white hover:opacity-[1] opacity-[0.6]">
                             <img src="/assets/icons/sim.svg" alt="sim" width="22" height="22" />
                             <span class="text-nowrap">${this.isArabic ? "متجر eSIM" : 'eSIM Store'}</span>
                         </a>
                     </li>
                     <li class="flex">
-                        <a title="${this.isArabic ? "سوق" : 'Marketplace'}" href="marketplace" class="flex items-center gap-[17px]
+                        <a title="${this.isArabic ? "سوق" : 'Marketplace'}" href="marketplace.html" class="flex items-center gap-[17px]
                                     text-white hover:opacity-[1] opacity-[0.6]">
                             <img src="/assets/icons/marketplace.svg" alt="marketplace" width="22" height="22" />
                             <span class="text-nowrap">${this.isArabic ? "سوق" : 'Marketplace'}</span>
@@ -80,14 +80,14 @@ class CoopSideBar extends HTMLElement {
                         </a>
                     </li>
                     <li class="flex">
-                        <a title="${this.isArabic ? "الدفع" : 'Payment'}" href="payment" class="flex items-center gap-[17px]
+                        <a title="${this.isArabic ? "الدفع" : 'Payment'}" href="payment.html" class="flex items-center gap-[17px]
                                     text-white hover:opacity-[1] opacity-[0.6]">
                             <img src="/assets/icons/payment.svg" alt="payment" width="22" height="22" />
                             <span class="text-nowrap">${this.isArabic ? "الدفع" : 'Payment'}</span>
                         </a>
                     </li>
                     <li class="flex">
-                        <a title="${this.isArabic ? "الدعم الفني" : 'Support'}" href="support" class="flex items-center gap-[17px]
+                        <a title="${this.isArabic ? "الدعم الفني" : 'Support'}" href="support.html" class="flex items-center gap-[17px]
                                     text-white hover:opacity-[1] opacity-[0.6]">
                             <img src="/assets/icons/support.svg" alt="support" width="22" height="22" />
                             <span class="text-nowrap">${this.isArabic ? "الدعم الفني" : 'Support'}</span>
