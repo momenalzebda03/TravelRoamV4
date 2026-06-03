@@ -456,7 +456,7 @@ function payment() {
                                                 <h2 class="font-bold text-xl">Split Payment</h2>
                                                 <span id="closeModel" class="cursor-pointer" title="close">✕</span>
                                             </div>
-                                            <hr class="my-2" />
+                                           <hr class="text-[var(--is-gray-17)] my-2" />
                                             <ul class="flex flex-col px-[26px]">
                                                 <li class="flex justify-between text-xl">
                                                     <p class="font-medium">Total Amount</p>
@@ -467,7 +467,7 @@ function payment() {
                                                     <p class="font-bold">${walletBalance}</p>
                                                 </li>
                                             </ul>
-                                            <hr class="my-2" />
+                                           <hr class="text-[var(--is-gray-17)] my-2" />
                                             <ul class="flex flex-col px-[26px]">
                                                 <li class="flex justify-between text-xl">
                                                     <p class="font-medium">Remaining balance to Pay
@@ -480,7 +480,7 @@ function payment() {
                                                         Remaining balance will be paid using stripee</p>
                                                 </li>
                                             </ul>
-                                            <hr class="my-2" />
+<hr class="text-[var(--is-gray-17)] my-2" />
                                             <div class="flex justify-end gap-[12px] px-[26px]">
                                               <button
                                                      class="text-center hover:before:bg-[var(--is-pink)] border border-1 border-[var(--is-pink)] hover:text-white text-[var(--is-gray-14)] rounded-[15px] px-12 py-3 btn">
@@ -547,7 +547,7 @@ function goToPaymentStep() {
                                 <span class="text-md text-[var(--is-blue)]">${t("Billing Address", "عنوان الفواتير")}</span>
                             </div>
                             <input id="billingAddress" type="number" placeholder="${t("Street 13 Asda Road", "شارع 13 طريق أسدا")}"
-                                class="text-md text-[var(--is-blue-5)]" />
+                                 class="text-md text-[var(--is-blue-5)] focus:outline-none focus:ring-0 focus:border-transparent" />
                                 </div>
                                 <div class="shadow-[0_12px_15px_var(--is-black)] ${t("right-0", "left-0")} top-0 absolute bg-[var(--is-blue-7)] w-7 h-full rounded-full">
                                 </div>

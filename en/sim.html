@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/logo.svg" />
+    <link rel="stylesheet" href="../assets/css/aos.css" />
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/output.css">
+    <title>Travel Roam Partners</title>
+</head>
+
+<body>
+    <div id="loadingOverlay" class="fixed inset-0 bg-white flex justify-center items-center z-[9999]">
+        <div class="w-16 h-16 border-6 border-gray-200 border-t-[var(--is-blue)] rounded-full animate-spin"></div>
+    </div>
+    <div id="app" style="display: none;">
+        <!-- start navbar -->
+        <coop-navbar></coop-navbar>
+        <!-- end navbar -->
+        <div class="shadow-2xl container mt-[140px] bg-[var(--is-white-4)] rounded-[25px] p-[30px]">
+            <div class="container grid min-[576px]:grid-cols-[2fr_10fr] gap-[16px] lg:gap-[46px]">
+                <coop-sidebar></coop-sidebar>
+                <div class="me-10 flex flex-col gap-6 mt-[30px]">
+                    <div class="flex flex-col gap-2">
+                        <h2 class="text-xl md:text-3xl font-normal">Welcome Back, <span
+                                class="font-semibold">Benny!</span></h2>
+                        <p class="font-bold text-[42px] text-[var(--is-pink)]">My eSIMs</p>
+                    </div>
+                    <div>
+                        <ul class="flex w-full" data-aos="fade-up">
+                            <li title="Active Plans" onclick="showTab('bundle')" id="tab-bundle"
+                                class="cursor-pointer active-bundle last:rounded-e-full first:rounded-s-full last:border-s-0 first:border-e-0 w-full text-center py-[7px] bg-[var(--is-gray-3)] w-full text-[var(--is-blue-3)] text-sm md:text-md border border-2 border-[var(--is-gray-4)] shadow-lg">
+                                Active Plans
+                            </li>
+                            <li title="Inactive Plans" onclick="showTab('unlimited-bundles')" id="tab-unlimited-bundles"
+                                class="cursor-pointer last:rounded-e-full first:rounded-s-full last:border-s-0 first:border-e-0 w-full text-center py-[7px] bg-[var(--is-gray-3)] w-full text-[var(--is-blue-3)] text-sm md:text-md border border-2 border-[var(--is-gray-4)] shadow-lg">
+                                Inactive Plans
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="list-bundle">
+                        <div class="grid lg:grid-cols-2 mt-[25px]">
+                            <div data-aos="fade-up">
+                                <div
+                                    class="group hover:scale-103 flex flex-col gap-3 bg-white w-full px-[31px] py-[23px] rounded-[23px] transition-all duration-400 group-hover:shadow-2xl shadow-lg">
+                                    <div>
+                                        <p class="text-[var(--is-pink)] font-semibold text-xl">
+                                            8943108161006290203</p>
+                                        <p class="text-base font-normal text-[var(--is-blue-3)]">Active
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="rounded-[25px] bg-[var(--is-blue)] py-[16px] px-[20px] text-white mx-1 w-full">
+                                        <div class="flex justify-between">
+                                            <div class="flex items-center gap-[11px]">
+                                                <img src="/assets/icons/usa.svg" alt="country"
+                                                    class="w-10 h-10 rounded-full object-cover" />
+                                                <p class="font-semibold text-xl">United States</p>
+                                            </div>
+                                            <div>
+                                                <div
+                                                    class="text-xs rounded-full bg-[var(--is-white-5)] text-green-500 px-4 py-2">
+                                                    <span>Active</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="mt-[10px] text-md">
+                                            <li class="font-bold">Unlimited 7 Day Pass</li>
+                                            <li>2 days left</li>
+                                            <li>Valid till: 28 feb</li>
+                                        </ul>
+                                        <div class="mt-5 flex">
+                                            <a href="esim-details.html"
+                                                class="hover:text-white w-full text-nowrap text-center hover:before:bg-[var(--is-blue)] bg-white text-black rounded-[15px] py-[4%] btn">
+                                                <div class="relative z-1 text-md font-bold">
+                                                    <span>eSIM details</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid lg:grid-cols-2 mt-[83px]">
+                            <div data-aos="fade-up" class="flex flex-col gap-[29px]">
+                                <p class="font-bold text-xl text-[var(--is-pink)]">Top up again</p>
+                                <div
+                                    class="border border-[var(--is-gray-21)] hover:scale-103 group flex flex-col gap-3 bg-white w-full px-[31px] py-[23px] rounded-[23px] transition-all duration-400 group-hover:shadow-2xl shadow-lg">
+                                    <div>
+                                        <p class="text-[var(--is-gray-21)] font-semibold text-xl">
+                                            8943108161006290203</p>
+                                        <p class="text-base font-normal text-[var(--is-gray-21)]">Inactive
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="rounded-[25px] bg-[var(--is-gray-22)] py-[16px] px-[20px] text-white mx-1 w-full">
+                                        <div class="flex justify-between">
+                                            <div class="flex items-center gap-[11px]">
+                                                <img src="/assets/icons/usa.svg" alt="country"
+                                                    class="w-10 h-10 rounded-full object-cover" />
+                                                <p class="text-[var(--is-blue-3)] font-semibold text-xl">United States
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <div
+                                                    class="border border-[var(--is-red-3)] text-xs rounded-full bg-[var(--is-red-2)] text-[var(--is-red-3)] p-2">
+                                                    <span>Out of Data</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="text-[var(--is-blue-3)] mt-[10px] text-md">
+                                            <li class="font-bold">Unlimited 7 Day Pass</li>
+                                            <li>2 days left</li>
+                                            <li>Valid till: 28 feb</li>
+                                        </ul>
+                                        <div class="mt-5 flex">
+                                            <a href="esim-details.html"
+                                                class="hover:text-white w-full text-nowrap text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] py-[4%] btn">
+                                                <div class="relative z-1 text-md font-bold">
+                                                    <span>eSIM details</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="list-unlimited-bundles" class="hidden">
+                        <!-- <div class="flex flex-col items-center gap-5" data-aos="fade-up">
+                            <div class="flex items-center flex-col mt-10 gap-[7px] text-[var(--is-gray-21)]">
+                                <h2 class="font-semibold text-lg">There’s nothing here</h2>
+                                <p class="font-normal text-base">Buy eSIMs and more below.</p>
+                            </div>
+                            <div class="flex flex-wrap gap-3">
+                                <button
+                                    class="text-nowrap text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[20px] w-full lg:w-55 py-[2%] btn">
+                                    <div class="relative z-1 text-sm font-semibold">
+                                        <span>Pick a plan</span>
+                                    </div>
+                                </button>
+                                <a href="marketplace.html"
+                                    class="text-nowrap shadow-[0_2px_5px_var(--is-black)] text-center hover:before:bg-[var(--is-pink)] text-white bg-black rounded-[20px] w-full lg:w-55 py-[2%] btn">
+                                    <div class="relative z-1 text-sm font-semibold">
+                                        <span>Marketplace</span>
+                                    </div>
+                                </a>
+                                <a href="faq.html"
+                                    class="hover:border hover:!border-[var(--is-pink)] border border-2 border-black text-center hover:before:bg-[var(--is-pink)] hover:text-white text-black text-[var(--is-gray-14)] rounded-[20px] w-full lg:w-55 py-[2%] btn">
+                                    <div class="relative z-1 text-sm font-semibold">
+                                        <span>FAQs</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="text-center rounded-[16px] p-5 py-7 bg-[var(--is-black-8)] mt-10">
+                                <p class="text-[var(--is-blue-3)]">Please ensure data roaming is enabled for your eSIM
+                                    and that Mobile data is
+                                    configured in your phone setting to use the eSIM you have purchased.</p>
+                            </div>
+                        </div> -->
+                        <div class="grid lg:grid-cols-2 mt-[25px] gap-5">
+                            <div data-aos="fade-up">
+                                <div
+                                    class="group hover:scale-103 flex flex-col gap-3 bg-white w-full px-[31px] py-[23px] rounded-[23px] transition-all duration-400 group-hover:shadow-2xl shadow-lg">
+                                    <div>
+                                        <p class="text-[var(--is-pink)] font-semibold text-xl">
+                                            8943108161006290203</p>
+                                        <p class="text-base font-normal text-[var(--is-blue-3)]">Inactive
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="rounded-[25px] bg-[var(--is-blue)] py-[16px] px-[20px] text-white mx-1 w-full">
+                                        <div class="flex justify-between">
+                                            <div class="flex items-center gap-[11px]">
+                                                <img src="/assets/icons/usa.svg" alt="country"
+                                                    class="w-10 h-10 rounded-full object-cover" />
+                                                <p class="font-semibold text-xl">United States</p>
+                                            </div>
+                                            <div>
+                                                <div
+                                                    class="text-xs rounded-full bg-[var(--is-white-6)] text-[var(--is-gray-23)] px-4 py-2">
+                                                    <span>Inactive</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="mt-[10px] text-md">
+                                            <li class="font-bold">Unlimited 7 Day Pass</li>
+                                            <li>Plan expires 7 days from activation</li>
+                                        </ul>
+                                        <div class="mt-5 flex">
+                                            <a href="esim-details.html"
+                                                class="hover:text-white w-full text-nowrap text-center hover:before:bg-[var(--is-blue)] bg-white text-black rounded-[15px] py-[4%] btn">
+                                                <div class="relative z-1 text-md font-bold">
+                                                    <span>eSIM details</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid lg:grid-cols-2 mt-[83px] gap-5">
+                            <div data-aos="fade-up" class="flex flex-col gap-[29px]">
+                                <p class="font-bold text-xl text-[var(--is-pink)]">Expired</p>
+                                <div
+                                    class="hover:scale-103 group flex flex-col gap-3 bg-white w-full px-[31px] py-[23px] rounded-[23px] transition-all duration-400 group-hover:shadow-2xl shadow-lg">
+                                    <div>
+                                        <p class="text-[var(--is-gray-21)] font-semibold text-xl">
+                                            8943108161006290203</p>
+                                        <p class="text-base font-normal text-[var(--is-gray-21)]">Inactive
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="rounded-[25px] bg-[var(--is-gray-22)] py-[16px] px-[20px] text-white mx-1 w-full">
+                                        <div class="flex justify-between">
+                                            <div class="flex items-center gap-[11px]">
+                                                <img src="/assets/icons/usa.svg" alt="country"
+                                                    class="w-10 h-10 rounded-full object-cover" />
+                                                <p class="text-[var(--is-blue-3)] font-semibold text-xl">United States
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <div
+                                                    class="border border-[var(--is-red-3)] text-xs rounded-full bg-[var(--is-red-2)] text-[var(--is-red-3)] p-2">
+                                                    <span>Expired</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="text-[var(--is-blue-3)] mt-[10px] text-md">
+                                            <li class="font-bold">Unlimited 7 Day Pass</li>
+                                            <li>0 days left</li>
+                                        </ul>
+                                        <div class="mt-5 flex">
+                                            <a href="esim-details.html"
+                                                class="hover:text-white w-full text-nowrap text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] py-[4%] btn">
+                                                <div class="relative z-1 text-md font-bold">
+                                                    <span>eSIM details</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-aos="fade-up" class="flex flex-col gap-[29px]">
+                                <p class="opacity-1 font-bold text-xl text-[var(--is-pink)]">s</p>
+                                <div
+                                    class="hover:scale-103 group flex flex-col gap-3 bg-white w-full px-[31px] py-[23px] rounded-[23px] transition-all duration-400 group-hover:shadow-2xl shadow-lg">
+                                    <div>
+                                        <p class="text-[var(--is-gray-21)] font-semibold text-xl">
+                                            8943108161006290203</p>
+                                        <p class="text-base font-normal text-[var(--is-gray-21)]">Inactive
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="rounded-[25px] bg-[var(--is-gray-22)] py-[16px] px-[20px] text-white mx-1 w-full">
+                                        <div class="flex justify-between">
+                                            <div class="flex items-center gap-[11px]">
+                                                <img src="/assets/icons/usa.svg" alt="country"
+                                                    class="w-10 h-10 rounded-full object-cover" />
+                                                <p class="text-[var(--is-blue-3)] font-semibold text-xl">United States
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <div
+                                                    class="border border-[var(--is-red-3)] text-xs rounded-full bg-[var(--is-red-2)] text-[var(--is-red-3)] p-2">
+                                                    <span>Expired</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="text-[var(--is-blue-3)] mt-[10px] text-md">
+                                            <li class="font-bold">Unlimited 7 Day Pass</li>
+                                            <li>0 days left</li>
+                                        </ul>
+                                        <div class="mt-5 flex">
+                                            <a href="esim-details.html"
+                                                class="hover:text-white w-full text-nowrap text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] py-[4%] btn">
+                                                <div class="relative z-1 text-md font-bold">
+                                                    <span>eSIM details</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- start footer -->
+            <coop-footer></coop-footer>
+            <!-- end footer -->
+        </div>
+</body>
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/navbar-layout.js"></script>
+<script src="../assets/js/footer-layout.js"></script>
+<script src="../assets/js/global.js"></script>
+<script src="../assets/js/sideBar.js"></script>
+<script src="../assets/js/single-country.js"></script>
+<script src="../assets/js/aos.js"></script>
+
+</html>

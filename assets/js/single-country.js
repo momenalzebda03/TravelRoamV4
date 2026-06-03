@@ -1,9 +1,11 @@
 function showTab(tab) {
     document.getElementById('list-bundle').classList.toggle('hidden', tab !== 'bundle')
     document.getElementById('list-unlimited-bundles').classList.toggle('hidden', tab !== 'unlimited-bundles')
+    document.getElementById('list-help')?.classList.toggle('hidden', tab !== 'help')
 
     document.getElementById('tab-bundle').classList.toggle('active-bundle', tab === 'bundle')
     document.getElementById('tab-unlimited-bundles').classList.toggle('active-bundle', tab === 'unlimited-bundles')
+    document.getElementById('tab-help')?.classList.toggle('active-bundle', tab === 'help')
 }
 
 const selectedBundles = [];

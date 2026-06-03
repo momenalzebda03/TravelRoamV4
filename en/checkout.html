@@ -22,7 +22,7 @@
         <!-- start content -->
         <section>
             <div class="flex justify-center">
-                <div class="w-[90%] xl:w-[70%] sections-marign-top pt-20">
+                <div class="container sections-marign-top pt-20">
                     <div class="grid md:grid-cols-2 gap-[50px] md:gap-[127px]" data-aos="fade-up">
                         <div class="flex flex-col gap-[28px]">
                             <h2 class="text-3xl font-medium text-[var(--is-pink)]">Express
@@ -94,21 +94,19 @@
                                     <div class="flex flex-wrap gap-3 justify-between items-center w-full">
                                         <div class="flex items-center gap-[11px]">
                                             <img src="../assets/icons/germany.svg" alt="germany"
-                                                class="w-8 h-8 rounded-full object-cover" />
-                                            <p class="font-semibold text-2xl">Germany</p>
+                                                class="w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] rounded-full object-cover" />
+                                            <p class="font-semibold text-xl lg:text-4xl">Germany</p>
                                         </div>
-                                        <div>
-                                            <div
-                                                class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-[10px] rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
-                                                <img src="../assets/icons/star.svg" alt="germany"
-                                                    class="w-5 h-5 rounded-full object-cover" />
-                                                Recommended
-                                            </div>
+                                        <div
+                                            class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
+                                            <img src="../assets/icons/star.svg" alt="germany"
+                                                class="w-5 h-5 rounded-full object-cover" />
+                                            Recommended
                                         </div>
                                     </div>
                                     <div class="flex flex-wrap gap-2 justify-between">
                                         <div class="flex flex-col gap-2">
-                                            <h3 class="font-bold text-3xl">5 GB</h3>
+                                            <h3 class="font-bold text-4xl">5 GB</h3>
                                             <p class="text-nowrap font-medium text-xs">Valid for 30 days from activation
                                             </p>
                                         </div>
@@ -119,15 +117,16 @@
                                 </div>
                                 <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                     <li class="flex items-center gap-2 mx-2 text-center">
-                                        <img src="../assets/icons/wifi.svg" alt="wifi" class="w-8 h-8" />
+                                        <img src="../assets/icons/wifi.svg" alt="wifi" class="w-[43px] h-[43px]" />
                                         <p class="font-medium text-xs">9 hours music</p>
                                     </li>
                                     <li class="flex items-center gap-2 mx-2 text-center">
-                                        <img src="../assets/icons/youtube.svg" alt="youtube" class="w-8 h-8" />
+                                        <img src="../assets/icons/youtube.svg" alt="youtube"
+                                            class="w-[43px] h-[43px]" />
                                         <p class="font-medium text-xs">6 hours video</p>
                                     </li>
                                     <li class="flex items-center gap-2 mx-2 text-center">
-                                        <img src="../assets/icons/mail.svg" alt="mail" class="w-8 h-8" />
+                                        <img src="../assets/icons/mail.svg" alt="mail" class="w-[43px] h-[43px]" />
                                         <p class="font-medium text-xs">18 hours browsing</p>
                                     </li>
                                 </ul>
@@ -212,7 +211,7 @@
                         <h2 class="font-bold text-xl">Split Payment</h2>
                         <span id="cancel-btn" class="cursor-pointer" title="close">✕</span>
                     </div>
-                    <hr class="my-2" />
+                    <hr class="text-[var(--is-gray-17)] my-2" />
                     <ul class="flex flex-col px-[26px]">
                         <li class="flex justify-between text-xl">
                             <p class="font-medium">Total Amount</p>
@@ -223,7 +222,7 @@
                             <p class="font-bold">-$3.29</p>
                         </li>
                     </ul>
-                    <hr class="my-2" />
+                    <hr class="text-[var(--is-gray-17)] my-2" />
                     <ul class="flex flex-col px-[26px]">
                         <li class="flex justify-between text-xl">
                             <p class="font-medium">Remaining balance to Pay
@@ -236,7 +235,7 @@
                                 Remaining balance will be paid using stripee</p>
                         </li>
                     </ul>
-                    <hr class="my-2" />
+                    <hr class="text-[var(--is-gray-17)] my-2" />
                     <div class="flex justify-end gap-[12px] px-[26px]">
                         <button id="cancel-btn"
                             class="text-center hover:before:bg-[var(--is-pink)] border border-1 border-[var(--is-pink)] hover:text-white text-[var(--is-pink)] rounded-[15px] px-12 py-3 btn">

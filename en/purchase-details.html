@@ -34,45 +34,42 @@
                                 <img src="../assets/icons/cup.png" alt="cup" class="w-4 h-4" />
                                 <p class="font-bold text-sm">Your Chosen plan</p>
                             </div>
-                            <div class="flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
+                            <div
+                                class="h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
                                 <div class="flex flex-col gap-[20px]">
                                     <div class="flex flex-wrap gap-3 justify-between items-center w-full">
                                         <div class="flex items-center gap-[11px]">
                                             <img src="../assets/icons/germany.svg" alt="germany"
-                                                class="w-8 h-8 rounded-full object-cover" />
-                                            <p class="font-semibold text-2xl">Germany</p>
+                                                class="w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] rounded-full object-cover" />
+                                            <p class="font-semibold text-xl lg:text-4xl">Germany</p>
                                         </div>
-                                        <div>
-                                            <div
-                                                class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-[10px] rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
-                                                <img src="../assets/icons/star.svg" alt="germany"
-                                                    class="w-5 h-5 rounded-full object-cover" />
-                                                Recommended
-                                            </div>
+                                        <div
+                                            class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
+                                            <img src="../assets/icons/star.svg" alt="germany"
+                                                class="w-5 h-5 rounded-full object-cover" />
+                                            Recommended
                                         </div>
                                     </div>
                                     <div class="flex flex-wrap gap-2 justify-between">
                                         <div class="flex flex-col gap-2">
-                                            <h3 class="font-bold text-3xl">5 GB</h3>
+                                            <h3 class="font-bold text-4xl">5 GB</h3>
                                             <p class="text-nowrap font-medium text-xs">Valid for 30 days from activation
                                             </p>
                                         </div>
-                                        <p class="md:mx-4 font-bold text-2xl" [class.line-through]="plan.discounted">
-                                            $17.00
-                                        </p>
                                     </div>
                                 </div>
                                 <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                     <li class="flex items-center gap-2 mx-2 text-center">
-                                        <img src="../assets/icons/wifi.svg" alt="wifi" class="w-8 h-8" />
+                                        <img src="../assets/icons/wifi.svg" alt="wifi" class="w-[43px] h-[43px]" />
                                         <p class="font-medium text-xs">9 hours music</p>
                                     </li>
                                     <li class="flex items-center gap-2 mx-2 text-center">
-                                        <img src="../assets/icons/youtube.svg" alt="youtube" class="w-8 h-8" />
+                                        <img src="../assets/icons/youtube.svg" alt="youtube"
+                                            class="w-[43px] h-[43px]" />
                                         <p class="font-medium text-xs">6 hours video</p>
                                     </li>
                                     <li class="flex items-center gap-2 mx-2 text-center">
-                                        <img src="../assets/icons/mail.svg" alt="mail" class="w-8 h-8" />
+                                        <img src="../assets/icons/mail.svg" alt="mail" class="w-[43px] h-[43px]" />
                                         <p class="font-medium text-xs">18 hours browsing</p>
                                     </li>
                                 </ul>
@@ -86,51 +83,56 @@
                                 <p class="font-bold text-sm">Your QR Code</p>
                             </div>
                             <div
-                                class="shadow-[0_2px_10px_var(--is-black)] rounded-[25px] py-4 w-full flex justify-center">
-                                <div class="shadow-[0_2px_10px_var(--is-black)] p-5">
-                                    <div id="qrcode">
+                                class="h-full shadow-[0_2px_10px_var(--is-black)] rounded-[25px] py-4 w-full flex justify-center">
+                                <div class="shadow-[0_2px_10px_var(--is-black)] p-5 flex justify-center">
+                                    <div id="qrcode" class="w-[250px] h-[250px]">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div data-aos="fade-up"
-                            class="rounded-[20px] bg-[var(--is-white-4)] py-10 px-7 flex flex-col gap-5 text-[var(--is-blue-3)]">
-                            <h2 class="text-xl font-bold">Your order is complete!</h2>
-                            <p class="text-lg">Use your mobile device's QR code scanner to effortlessly install and
-                                activate your eSIM.
-                                Once you’ve installed and activated your eSIM for data service you’re good to go, in
-                                your chosen destination.</p>
-                            <p class="text-lg">Your eSIM installation instructions have been sent to your registered
-                                email.</p>
-                            <div class="flex flex-wrap gap-3">
-                                <button
-                                    class="text-nowrap text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] w-full lg:w-35 py-[3%] btn">
-                                    <div class="relative z-1 text-sm font-semibold">
-                                        <span>Installation Guide</span>
-                                    </div>
-                                </button>
-                                <button
-                                    class="text-nowrap shadow-[0_2px_5px_var(--is-black)] text-center hover:before:bg-[var(--is-pink)] text-white bg-black rounded-[15px] w-full lg:w-35 py-[3%] btn">
-                                    <div class="relative z-1 text-sm font-semibold">
-                                        <span>Your Account</span>
-                                    </div>
-                                </button>
-                                <button id="open-modal"
-                                    class="hover:border hover:!border-[var(--is-pink)] border border-2 border-black text-center hover:before:bg-[var(--is-pink)] hover:text-white text-black text-[var(--is-gray-14)] rounded-[15px] w-full lg:w-35 py-[3%] btn">
-                                    <div class="relative z-1 text-sm font-semibold">
-                                        <span>Share eSIM</span>
-                                    </div>
-                                </button>
+                        <div>
+                            <div data-aos="fade-up"
+                                class="rounded-[20px] bg-[var(--is-white-4)] py-10 px-7 flex flex-col gap-5 text-[var(--is-blue-3)]">
+                                <h2 class="text-xl font-bold">Your order is complete!</h2>
+                                <p class="text-lg">Use your mobile device's QR code scanner to effortlessly install and
+                                    activate your eSIM.
+                                    Once you’ve installed and activated your eSIM for data service you’re good to go, in
+                                    your chosen destination.</p>
+                                <p class="text-lg">Your eSIM installation instructions have been sent to your registered
+                                    email.</p>
+                                <div class="flex flex-wrap gap-3">
+                                    <button
+                                        class="text-nowrap text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] w-full lg:w-35 py-[3%] btn">
+                                        <div class="relative z-1 text-sm font-semibold">
+                                            <span>Installation Guide</span>
+                                        </div>
+                                    </button>
+                                    <button
+                                        class="text-nowrap shadow-[0_2px_5px_var(--is-black)] text-center hover:before:bg-[var(--is-pink)] text-white bg-black rounded-[15px] w-full lg:w-35 py-[3%] btn">
+                                        <div class="relative z-1 text-sm font-semibold">
+                                            <span>Your Account</span>
+                                        </div>
+                                    </button>
+                                    <button id="open-modal"
+                                        class="hover:border hover:!border-[var(--is-pink)] border border-2 border-black text-center hover:before:bg-[var(--is-pink)] hover:text-white text-black text-[var(--is-gray-14)] rounded-[15px] w-full lg:w-35 py-[3%] btn">
+                                        <div class="relative z-1 text-sm font-semibold">
+                                            <span>Share eSIM</span>
+                                        </div>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                         <div data-aos="fade-up"
                             class="text-xl rounded-[20px] bg-[var(--is-blue-3)] py-10 px-7 flex flex-col text-white gap-2">
                             <h2 class="font-bold">Billing details</h2>
-                            <ul class="flex flex-col text-white gap-2">
+                            <ul class="flex flex-col text-white gap-[18px]">
                                 <li>
                                     <p class="font-semibold">Contact information: </p>
                                     <p>marcusbatey@gmail.com</p>
-                                    <p>Payment method: Stripe</p>
+                                </li>
+                                <li>
+                                    <p class="font-semibold">Payment method:</p>
+                                    <p>Stripe</p>
                                 </li>
                                 <li>
                                     <p class="font-semibold">Mobile number</p>

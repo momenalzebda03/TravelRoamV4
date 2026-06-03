@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/logo.svg" />
+    <link rel="stylesheet" href="../assets/css/aos.css" />
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/output.css">
+    <title>Travel Roam Partners</title>
+</head>
+
+<body>
+    <div id="loadingOverlay" class="fixed inset-0 bg-white flex justify-center items-center z-[9999]">
+        <div class="w-16 h-16 border-6 border-gray-200 border-t-[var(--is-blue)] rounded-full animate-spin"></div>
+    </div>
+    <div id="app" style="display: none;">
+        <!-- start navbar -->
+        <coop-navbar></coop-navbar>
+        <!-- end navbar -->
+        <div class="shadow-2xl container mt-[140px] bg-[var(--is-white-4)] rounded-[25px] p-[30px]">
+            <div class="container grid min-[576px]:grid-cols-[2fr_10fr] gap-[16px] lg:gap-[46px]">
+                <coop-sidebar></coop-sidebar>
+                <div class="me-10 flex flex-col gap-6 mt-[30px]">
+                    <div class="flex flex-col gap-2 md:gap-4">
+                        <h2 class="text-xl md:text-3xl font-normal">Welcome Back, <span
+                                class="font-semibold">Benny!</span></h2>
+                        <div class="flex items-center gap-2">
+                            <p class="text-[var(--is-blue-3)] font-normal text-lg">Referral Code: BENN980C7BE</p>
+                            <img title="BENN980C7BE" src="../assets/icons/copy.svg" alt="copy"
+                                class="cursor-pointer w-[15px] h-[15px]" onclick="copyReferral(this.closest('div'))" />
+                        </div>
+                    </div>
+                    <div>
+                        <ul class="flex w-full" data-aos="fade-up">
+                            <li title="Credit" onclick="showTab('bundle')" id="tab-bundle"
+                                class="cursor-pointer active-bundle last:rounded-e-full first:rounded-s-full last:border-s-0 first:border-e-0 w-full text-center py-[7px] bg-[var(--is-gray-3)] w-full text-[var(--is-blue-3)] text-sm md:text-md border border-2 border-[var(--is-gray-4)] shadow-lg">
+                                Credit
+                            </li>
+                            <li title="Referrals" onclick="showTab('unlimited-bundles')" id="tab-unlimited-bundles"
+                                class="cursor-pointer last:rounded-e-full first:rounded-s-full last:border-s-0 first:border-e-0 w-full text-center py-[7px] bg-[var(--is-gray-3)] w-full text-[var(--is-blue-3)] text-sm md:text-md border border-2 border-[var(--is-gray-4)] shadow-lg">
+                                Referrals
+                            </li>
+                            <li title="Help" onclick="showTab('help')" id="tab-help"
+                                class="cursor-pointer last:rounded-e-full first:rounded-s-full last:border-s-0 first:border-e-0 w-full text-center py-[7px] bg-[var(--is-gray-3)] w-full text-[var(--is-blue-3)] text-sm md:text-md border border-2 border-[var(--is-gray-4)] shadow-lg">
+                                Help
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="list-bundle">
+                        <div class="flex flex-col gap-9">
+                            <div data-aos="fade-up"
+                                class="flex flex-wrap items-center justify-between rounded-[25px] bg-[var(--is-blue-3)] gap-5 md:gap-0 p-5 text-white mx-1 w-full">
+                                <div class="flex flex-col gap-2 md:gap-[15px]">
+                                    <div class="w-full flex items-center gap-[11px]">
+                                        <img src="../assets/icons/wallet-1.svg" alt="wallet"
+                                            class="w-[24px] h-[24px]" />
+                                        <p class="font-medium text-lg">TravelRoam Balance</p>
+                                    </div>
+                                    <h3 class="font-bold text-3xl">£999.99</h3>
+                                    <!-- <h3 class="font-bold text-3xl">£00.00</h3> -->
+                                </div>
+                                <div class="w-full md:w-[unset] flex flex-wrap gap-3">
+                                    <button
+                                        class="text-nowrap text-center hover:before:bg-[var(--is-blue)] bg-white text-[var(--is-pink)] rounded-[15px] w-full lg:w-35 py-[4%] btn">
+                                        <div class="relative z-1 text-sm font-semibold">
+                                            <span>Top Up</span>
+                                        </div>
+                                    </button>
+                                    <button
+                                        class="hover:border hover:!border-[var(--is-pink)] border border-2 border-white text-center hover:before:bg-[var(--is-pink)] text-white rounded-[15px] w-full lg:w-35 py-[4%] btn">
+                                        <div class="relative z-1 text-sm font-semibold">
+                                            <span>Redeem Voucher</span>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <h1 data-aos="fade-up" class="font-semibold text-lg text-[var(--is-blue-3)]">Your Credit
+                                    History</h1>
+                                <ul class="flex flex-col gap-5 bg-[var(--is-gray-19)] py-8 shadow-xl rounded-[15px]">
+                                    <li data-aos="fade-up"
+                                        class="last:border-b-0 border-b-1 border-b-[var(--is-gray-18)]">
+                                        <div class="transition-all duration-300 hover:scale-102 px-8">
+                                            <div class="pb-5 flex w-full justify-between items-center">
+                                                <div class="gap-1 flex flex-col">
+                                                    <p class="font-semibold text-lg text-[var(--is-blue)]">Credit
+                                                        Top Up
+                                                    </p>
+                                                    <p class="font-normal text-md">1 Jan, 2026</p>
+                                                </div>
+                                                <p class="font-bold text-md text-[var(--is-blue)]">$5.00</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-aos="fade-up"
+                                        class="last:border-b-0 border-b-1 border-b-[var(--is-gray-18)]">
+                                        <div class="transition-all duration-300 hover:scale-102 px-8">
+                                            <div class="pb-5 flex w-full justify-between items-center">
+                                                <div class="gap-1 flex flex-col">
+                                                    <p class="font-semibold text-lg text-[var(--is-blue)]">Referral
+                                                        Reward
+                                                    </p>
+                                                    <p class="font-normal text-md">1 Jan, 2026</p>
+                                                </div>
+                                                <p class="font-bold text-md text-[var(--is-blue)]">$0.89</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-aos="fade-up"
+                                        class="last:border-b-0 border-b-1 border-b-[var(--is-gray-18)]">
+                                        <div class="transition-all duration-300 hover:scale-102 px-8">
+                                            <div class="pb-5 flex w-full justify-between items-center">
+                                                <div class="gap-1 flex flex-col">
+                                                    <p class="font-semibold text-lg text-[var(--is-blue)]">10%
+                                                        Cashback
+                                                    </p>
+                                                    <p class="font-normal text-md">1 Jan, 2026</p>
+                                                </div>
+                                                <p class="font-bold text-md text-[var(--is-blue)]">$1.40</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-aos="fade-up"
+                                        class="last:border-b-0 border-b-1 border-b-[var(--is-gray-18)]">
+                                        <div class="transition-all duration-300 hover:scale-102 px-8">
+                                            <div class="pb-5 flex w-full justify-between items-center">
+                                                <div class="gap-1 flex flex-col">
+                                                    <p class="font-semibold text-lg text-[var(--is-blue)]">Referral
+                                                        Reward
+                                                    </p>
+                                                    <p class="font-normal text-md">1 Jan, 2026</p>
+                                                </div>
+                                                <p class="font-bold text-md text-[var(--is-blue)]">$0.89</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-aos="fade-up"
+                                        class="last:border-b-0 border-b-1 border-b-[var(--is-gray-18)]">
+                                        <div class="transition-all duration-300 hover:scale-102 px-8">
+                                            <div class="pb-5 flex w-full justify-between items-center">
+                                                <div class="gap-1 flex flex-col">
+                                                    <p class="font-semibold text-lg text-[var(--is-blue)]">Referral
+                                                        Reward
+                                                    </p>
+                                                    <p class="font-normal text-md">1 Jan, 2026</p>
+                                                </div>
+                                                <p class="font-bold text-md text-[var(--is-blue)]">$0.89</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- <div class="flex flex-col items-center">
+                                    <img src="../assets/icons/no-credit-history.svg" alt="credit history"
+                                        class="w-[180px] h-[144px]" />
+                                    <p>There’s no credit history to show</p>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div id="list-unlimited-bundles" class="hidden">
+                        <div class="flex flex-col gap-9">
+                            <div data-aos="fade-up"
+                                class="flex flex-wrap items-center justify-between rounded-[25px] bg-[var(--is-blue-3)] gap-5 md:gap-0 p-5 text-white mx-1 w-full">
+                                <div class="flex flex-col gap-2 md:gap-[15px]">
+                                    <div class="w-full flex items-center gap-[11px]">
+                                        <img src="../assets/icons/password.svg" alt="password"
+                                            class="w-[24px] h-[24px]" />
+                                        <p class="font-medium text-lg">TravelRoam Code</p>
+                                    </div>
+                                    <h3 class="font-bold text-3xl">+$3.85</h3>
+                                    <!-- <h3 class="font-bold text-3xl">£00.00</h3> -->
+                                </div>
+                                <div class="flex">
+                                    <button
+                                        class="text-nowrap text-center hover:before:bg-[var(--is-blue)] bg-white text-[var(--is-pink)] rounded-[15px] w-full lg:w-35 py-[8%] btn">
+                                        <div class="relative z-1 text-sm font-semibold">
+                                            <span>Share Code</span>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <h1 data-aos="fade-up" class="font-semibold text-lg text-[var(--is-blue-3)]">Your Reward
+                                    History</h1>
+                                <ul class="flex flex-col gap-5 py-8">
+                                    <li data-aos="fade-up">
+                                        <div
+                                            class="p-4 transition-all duration-300 hover:scale-102 px-8 shadow-[0_5px_10px_var(--is-black)] rounded-xl bg-[var(--is-gray-20)]">
+                                            <div class="pb-5 flex w-full justify-between">
+                                                <p class="font-semibold text-lg text-[var(--is-blue)]">Imran Signed
+                                                    up
+                                                </p>
+                                                <div class="flex gap-3">
+                                                    <img src="../assets/icons/credit.svg" alt="credit"
+                                                        class="w-[24px] h-[24px]" />
+                                                    <p class="font-normal text-md text-[var(--is-blue)]">Credit/Debit
+                                                        Card
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="pb-5 flex w-full justify-between">
+                                                <div class="flex flex-col gap-2">
+                                                    <p class="font-normal text-md">Payment Date</p>
+                                                    <p class="font-bold text-2xl text-[var(--is-blue-3)]">1 Jan, 2026
+                                                    </p>
+                                                </div>
+                                                <div class="w-[18%] flex flex-col gap-2">
+                                                    <p class="font-normal text-md">Amount Paid</p>
+                                                    <p class="font-bold text-2xl text-[var(--is-blue-3)]">$0.89
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-aos="fade-up">
+                                        <div
+                                            class="p-4 transition-all duration-300 hover:scale-102 px-8 shadow-[0_5px_10px_var(--is-black)] rounded-xl bg-[var(--is-gray-20)]">
+                                            <div class="pb-5 flex w-full justify-between">
+                                                <p class="font-semibold text-lg text-[var(--is-blue)]">10% Cashback
+                                                </p>
+                                                <div class="flex gap-3">
+                                                    <img src="../assets/icons/credit.svg" alt="credit"
+                                                        class="w-[24px] h-[24px]" />
+                                                    <p class="font-normal text-md text-[var(--is-blue)]">Credit/Debit
+                                                        Card
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="pb-5 flex w-full justify-between">
+                                                <div class="flex flex-col gap-2">
+                                                    <p class="font-normal text-md">Payment Date</p>
+                                                    <p class="font-bold text-2xl text-[var(--is-blue-3)]">1 Jan, 2026
+                                                    </p>
+                                                </div>
+                                                <div class="w-[18%] flex flex-col gap-2">
+                                                    <p class="font-normal text-md">Amount Paid</p>
+                                                    <p class="font-bold text-2xl text-[var(--is-blue-3)]">$1.40
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-aos="fade-up">
+                                        <div
+                                            class="p-4 transition-all duration-300 hover:scale-102 px-8 shadow-[0_5px_10px_var(--is-black)] rounded-xl bg-[var(--is-gray-20)]">
+                                            <div class="pb-5 flex w-full justify-between">
+                                                <p class="font-semibold text-lg text-[var(--is-blue)]">Marcus Signed up
+                                                </p>
+                                                <div class="flex gap-3">
+                                                    <img src="../assets/icons/credit.svg" alt="credit"
+                                                        class="w-[24px] h-[24px]" />
+                                                    <p class="font-normal text-md text-[var(--is-blue)]">Credit/Debit
+                                                        Card
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="pb-5 flex w-full justify-between">
+                                                <div class="flex flex-col gap-2">
+                                                    <p class="font-normal text-md">Payment Date</p>
+                                                    <p class="font-bold text-2xl text-[var(--is-blue-3)]">1 Jan, 2026
+                                                    </p>
+                                                </div>
+                                                <div class="w-[18%] flex flex-col gap-2">
+                                                    <p class="font-normal text-md">Amount Paid</p>
+                                                    <p class="font-bold text-2xl text-[var(--is-blue-3)]">$1.24
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- <div class="flex flex-col items-center">
+                                    <img src="../assets/icons/reward.svg" alt="reward" class="w-[180px] h-[144px]" />
+                                    <p>There’s no reward history to show</p>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div id="list-help" class="hidden">
+                        <div class="flex flex-col gap-4">
+                            <div class="mt-5 flex flex-col gap-2">
+                                <h2 class="text-[var(--is-pink)] font-bold text-3xl">How can we help?</h2>
+                                <div class="w-[70%]">
+                                    <p>Sorry to hear you’re having trouble with something — but we’d be happy to help.
+                                        Have a look at our FAQs below, or click the chat bubble to get in touch.</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="faq.html"
+                                    class="text-nowrap text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] w-full lg:w-35 py-[1.5%] btn">
+                                    <div class="relative z-1 text-sm font-semibold">
+                                        <span>FAQs</span>
+                                    </div>
+                                </a>
+                                <button
+                                    class="text-nowrap shadow-[0_2px_5px_var(--is-black)] text-center hover:before:bg-[var(--is-pink)] text-white bg-black rounded-[15px] w-full lg:w-35 py-[1.5%] btn">
+                                    <div class="relative z-1 text-sm font-semibold">
+                                        <span>Chat with us</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- start footer -->
+        <coop-footer></coop-footer>
+        <!-- end footer -->
+    </div>
+</body>
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/navbar-layout.js"></script>
+<script src="../assets/js/footer-layout.js"></script>
+<script src="../assets/js/global.js"></script>
+<script src="../assets/js/admin.js"></script>
+<script src="../assets/js/sideBar.js"></script>
+<script src="../assets/js/single-country.js"></script>
+<script src="../assets/js/aos.js"></script>
+
+</html>

@@ -34,10 +34,12 @@
                     </div>
                     <div class="relative flex items-center flex-col gap-5">
                         <div class="w-[65%] flex gap-4">
-                            <div class="w-full border border-white rounded-full flex justify-center items-center py-3">
+                            <div title="mail"
+                                class="cursor-pointer w-full border border-white rounded-full flex justify-center items-center py-3">
                                 <img src="../assets/icons/mail.svg" alt="mail" class="w-[24px] h-[24px]" />
                             </div>
-                            <div class="w-full border border-white rounded-full flex justify-center items-center py-3">
+                            <div title="apple"
+                                class="cursor-pointer w-full border border-white rounded-full flex justify-center items-center py-3">
                                 <img src="../assets/icons/apple.svg" alt="apple" class="w-[24px] h-[24px] invert" />
                             </div>
                         </div>
@@ -60,7 +62,8 @@
                             placeholder="Email address" />
 
                         <div class="relative dropdown-wrapper">
-                            <div class="rounded-xl flex items-center relative">
+                            <div
+                                class="border border-1 border-[var(--is-gray-7)] rounded-xl flex items-center relative">
                                 <img src="/assets/icons/untitled-design.svg"
                                     class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2" />
                                 <div
@@ -82,7 +85,7 @@
                                     class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2" />
                                 <input type="text"
                                     class="border border-1 border-[var(--is-gray-7)] px-[40px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
-                                    placeholder="Referral Code" id="destination-input-2"
+                                    placeholder="Country of Residence" id="destination-input-2"
                                     oninput="filterDestinations(this.value, this)" onfocus="openDestinations(this)" />
                             </div>
 
@@ -91,6 +94,10 @@
                             </ul>
 
                         </div>
+
+                        <input type="text"
+                            class="border border-1 border-[var(--is-gray-7)] px-[15px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
+                            placeholder="Referral Code" />
 
                         <input type="password"
                             class="border border-1 border-[var(--is-gray-7)] px-[15px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
@@ -106,21 +113,23 @@
                             <input type="checkbox" id="remeber" />
                             I would like to receive promotional emails.
                         </label>
-                        <div class="flex justify-center">
-                            <button type="submit"
-                                class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-18 py-[3.5%] btn">
-                                <div class="relative z-1 text-xs font-semibold">
-                                    <span>Sign up</span>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="flex justify-center">
-                            <p class="md:text-nowrap">By registering, you agree to our
-                                <a title="Terms & Conditions" href="terms-of-service.html" class="underline">Terms &
-                                    Conditions</a> and
-                                <a title="privacy policy" href="privacy-policy.html" class="underline">Privacy
-                                    Policy.</a>
-                            </p>
+                        <div class="flex gap-3 flex-col">
+                            <div class="flex justify-center">
+                                <button type="submit"
+                                    class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-13 py-[3.5%] btn">
+                                    <div class="relative z-1 text-xs font-semibold">
+                                        <span>Sign up</span>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="flex justify-center">
+                                <p class="md:text-nowrap">By registering, you agree to our
+                                    <a title="Terms & Conditions" href="terms-of-service.html" class="underline">Terms &
+                                        Conditions</a> and
+                                    <a title="privacy policy" href="privacy-policy.html" class="underline">Privacy
+                                        Policy.</a>
+                                </p>
+                            </div>
                         </div>
                     </form>
                 </div>
