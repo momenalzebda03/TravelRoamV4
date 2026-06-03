@@ -61,6 +61,7 @@ class CoopNavbar extends HTMLElement {
       'login': 'bg-[var(--is-blue)]',
       'admin': 'bg-[var(--is-blue)]',
       'sim': 'bg-[var(--is-blue)]',
+      'credit-top-up': 'bg-[var(--is-blue)]',
     };
 
     const matched = Object.keys(backgrounds).find(key =>

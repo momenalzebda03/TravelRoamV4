@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/logo.svg" />
+    <link rel="stylesheet" href="../assets/css/aos.css" />
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/output.css">
+    <title>Travel Roam Partners</title>
+</head>
+
+<body>
+    <div id="loadingOverlay" class="fixed inset-0 bg-white flex justify-center items-center z-[9999]">
+        <div class="w-16 h-16 border-6 border-gray-200 border-t-[var(--is-blue)] rounded-full animate-spin"></div>
+    </div>
+    <div id="app" style="display: none;">
+        <!-- start navbar -->
+        <coop-navbar></coop-navbar>
+        <!-- end navbar -->
+        <section>
+            <div class="container mt-[200px]">
+                <div class="flex flex-col gap-[41px]">
+                    <h2 class="text-2xl text-[var(--is-pink)] font-bold">Top Up <span
+                            class="text-[var(--is-blue-3)] font-semibold">Credit</span></h2>
+                    <div class="grid grid-cols-2 lg:grid-cols-3 gap-5" data-aos="fade-up">
+                        <div class="flex flex-col items-center gap-[17px] md:gap-[37px] text-center">
+                            <div
+                                class="transition-all duration-300 hover:scale-103 w-full hover:shadow-xl shadow-lg border border-1 border-[var(--is-black-9)] rounded-[25px] p-15 md:p-[123px] flex justify-center items-center bg-[var(--is-white-4)]">
+                                <p class="text-[var(--is-blue-3)] text-nowrap font-semibold text-3xl md:text-5xl">5 GBP
+                                </p>
+                            </div>
+                            <p class="font-semibold text-xl">Add 5 GBP credit</p>
+                        </div>
+                        <div class="flex flex-col items-center gap-[17px] md:gap-[37px] text-center">
+                            <div
+                                class="transition-all duration-300 hover:scale-103 w-full hover:shadow-xl shadow-lg border border-1 border-[var(--is-black-9)] rounded-[25px] p-15 md:p-[123px] flex justify-center items-center bg-[var(--is-white-4)]">
+                                <p class="text-[var(--is-blue-3)] text-nowrap font-semibold text-3xl md:text-5xl">10 GBP
+                                </p>
+                            </div>
+                            <p class="font-semibold text-xl">Add 10 GBP credit</p>
+                        </div>
+                        <div class="flex flex-col items-center gap-[17px] md:gap-[37px] text-center">
+                            <div
+                                class="transition-all duration-300 hover:scale-103 w-full hover:shadow-xl shadow-lg border border-1 border-[var(--is-black-9)] rounded-[25px] p-15 md:p-[123px] flex justify-center items-center bg-[var(--is-white-4)]">
+                                <p class="text-[var(--is-pink)] text-nowrap font-semibold text-3xl md:text-5xl">20 GBP
+                                </p>
+                            </div>
+                            <p class="font-semibold text-xl">Add 20 GBP credit</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <form action="" method="" class="flex flex-col gap-[60px] mt-[90px]"> -->
+                <div class="flex flex-col gap-[60px] mt-[90px]">
+                    <div class="flex flex-col gap-5 md:w-[45%]" data-aos="fade-up">
+                        <h3 class="font-bold text-2xl">Choose another amount</h3>
+                        <input type="text"
+                            class="border border-1 border-[var(--is-gray-7)] px-[15px] py-3 w-full placeholder:font-bold placeholder:text-black relative bg-[var(--is-gray-6)] rounded-[10px]"
+                            placeholder="Between 1 and 50 GBP" />
+                    </div>
+                    <div class="flex flex-col gap-8" data-aos="fade-up">
+                        <h3 class="font-bold text-2xl"><span class="text-[var(--is-pink)]">Express</span> Checkout</h3>
+                        <div class="grid md:grid-cols-[7fr_5fr] w-full gap-5">
+                            <div class="flex flex-col gap-3">
+                                <h3 class="font-bold text-xl">Select Payment Option:</h3>
+                                <div class="flex flex-col lg:flex-row gap-3">
+                                    <button
+                                        class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-20 py-[2.5%] btn">
+                                        <div class="relative z-1 text-sm font-semibold">
+                                            <span>Stripe</span>
+                                        </div>
+                                    </button>
+                                    <button
+                                        class="shadow-[0_2px_5px_var(--is-black)] text-center hover:before:bg-[var(--is-pink)] hover:text-white text-[var(--is-gray-14)] rounded-[15px] px-20 py-[2.5%] btn">
+                                        <div class="relative z-1 text-sm font-semibold">
+                                            <span>T-Lync</span>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-5">
+                                <div class="flex items-center gap-13">
+                                    <span>Total:</span>
+                                    <span class="font-bold text-xl text-[var(--is-pink)]">$14.00</span>
+                                </div>
+                                <div class="flex">
+                                    <button id="open-modal"
+                                        class="w-full md:w-[unset] text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-30 py-[3%] btn">
+                                        <div class="relative z-1 text-xs md:text-lg font-semibold">
+                                            <span>Proceed to Pay</span>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- </form> -->
+            </div>
+            <div id="model"
+                class="hidden fixed inset-0 flex justify-center items-center z-[999999] bg-[var(--is-blue-8)]">
+
+                <div
+                    class="relative z-10 bg-white rounded-[20px] container flex flex-col gap-5 overflow-auto max-h-[700px]">
+                    <div class="flex text-white rounded-[20px] text-center bg-[var(--is-pink)] p-8">
+                        <p class="flex-1 font-bold text-md md:text-3xl">Top up successful!</p>
+                        <button title="✕" id="cancel-btn" class="cursor-pointer text-white text-xl font-bold">✕</button>
+                    </div>
+                    <div class="pt-5 pb-10 flex flex-col gap-7 items-center">
+                        <div
+                            class="shadow-lg rounded-[25px] border border-[var(--is-black-11)] bg-[var(--is-black-10)] py-6 px-20">
+                            <h2 class="font-semibold text-2xl md:text-5xl">20 GBP</h2>
+                        </div>
+                        <div class="w-[80%] md:w-[40%] text-center flex flex-col gap-2 items-center">
+                            <h2 class="font-semibold text-xl">20 GBP has been added to your credit</h2>
+                            <p class="">Thanks for topping up your TravelRoam credit! We’ve successfully added the funds
+                                to your
+                                account. </p>
+                        </div>
+                        <button title="Okay" id="cancel-btn"
+                            class="before:bg-[var(--is-blue)] rounded-[20px] text-white bg-[var(--is-pink)] w-45 py-4 btn">
+                            <div class="text-base relative z-1 font-bold">
+                                <span>Okay</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- <div id="model"
+                class="hidden fixed inset-0 flex justify-center items-center z-[999999] bg-[var(--is-blue-8)]">
+                <div class="bg-white rounded-[20px] md:w-[950px] flex flex-col items-center gap-10 py-8 px-10">
+                    <img src="../assets/icons/currency-supported.svg" alt="currency-supported"
+                        class="animate-bounce-scale" />
+                    <h2 class="font-bold text-2xl">The currency is not supported for this payment method
+                    </h2>
+                    <div class="flex gap-3">
+                        <button title="No, don’t cancel" id="cancel-btn"
+                            class="before:bg-[var(--is-pink)] rounded-[20px] text-white bg-black w-45 py-4 btn">
+                            <div class="text-base relative z-1 font-bold">
+                                <span>No, don’t cancel</span>
+                            </div>
+                        </button>
+                        <button title="Yes" id="cancel-btn"
+                            class="before:bg-[var(--is-blue)] rounded-[20px] text-white bg-[var(--is-pink)] w-45 py-4 btn">
+                            <div class="text-base relative z-1 font-bold">
+                                <span>Yes</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div> -->
+        </section>
+        <!-- start footer -->
+        <coop-footer></coop-footer>
+        <!-- end footer -->
+    </div>
+</body>
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/navbar-layout.js"></script>
+<script src="../assets/js/footer-layout.js"></script>
+<script src="../assets/js/global.js"></script>
+<script src="../assets/js/admin.js"></script>
+<script src="../assets/js/sideBar.js"></script>
+<script src="../assets/js/checkout.js"></script>
+<script src="../assets/js/aos.js"></script>
+
+</html>
