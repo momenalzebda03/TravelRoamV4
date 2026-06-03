@@ -49,6 +49,12 @@ class CoopNavbar extends HTMLElement {
     return path;
   }
 
+  get baseLang() {
+    const path = window.location.pathname;
+    if (path.includes('/ar/')) return '/ar';
+    return '/en';
+  }
+
   _navBgClass() {
     const path = window.location.pathname;
 
@@ -84,12 +90,12 @@ class CoopNavbar extends HTMLElement {
       <div class="w-full flex items-center justify-between">
 
         <!-- Logo -->
-        <a href="index.html" title="Coop Lounge">
+        <a href="${this.baseLang}/index.html" title="Coop Lounge">
           <img src="/assets/icons/logo.svg" alt="logo" width="170" height="41" class="object-cover" />
         </a>
 
           <div class="flex gap-2 lg:hidden">
-               <a href="login.html" title=${this.isArabic ? "تسجيل الدخول" : 'Login'} class="md:hidden before:bg-white border-1 border-white rounded-[5px] hover:text-black px-3 py-2 btn">
+               <a href="${this.baseLang}/login.html" title=${this.isArabic ? "تسجيل الدخول" : 'Login'} class="md:hidden before:bg-white border-1 border-white rounded-[5px] hover:text-black px-3 py-2 btn">
               <div class="text-base text-nowrap relative z-1 font-bold"><span>${this.isArabic ? "تسجيل الدخول" : 'Login'}</span></div>
             </a>
       <!-- Mobile Hamburger -->
@@ -114,7 +120,7 @@ class CoopNavbar extends HTMLElement {
               <div class="text-base relative z-1 font-bold"><span>${this.isArabic ? 'دليل التثبيت' : 'Installation Guide'}</span></div>
             </button>
 
-            <a href="login.html" title=${this.isArabic ? "تسجيل الدخول" : 'Login'} class="before:bg-white border-1 border-white rounded-[5px] hover:text-black px-5 py-2 btn">
+            <a href="${this.baseLang}/login.html" title=${this.isArabic ? "تسجيل الدخول" : 'Login'} class="before:bg-white border-1 border-white rounded-[5px] hover:text-black px-5 py-2 btn">
               <div class="text-base relative z-1 font-bold"><span>${this.isArabic ? "تسجيل الدخول" : 'Login'}</span></div>
             </a>
 
@@ -131,13 +137,13 @@ class CoopNavbar extends HTMLElement {
                 </div>
               </div>
               <ul class="dropdown-list">
-                <li class="${this._active('marketplace')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Marketplace')"><a href='marketplace.html'>${this.isArabic ? "سوق" : 'Marketplace'}</a></li>
-                <li class="${this._active('about')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer ${this._active('about')}" onclick="selectItem(this,'About')"><a href="about.html">${this.isArabic ? "حول" : 'About'}</a></li>
-                <li class="${this._active('compatibility')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer ${this._active('compatibility')}" onclick="selectItem(this,'Compatibility')"><a href="compatibility.html">${this.isArabic ? "التوافق" : 'Compatibility'}</a></li>
-                <li class="${this._active('faq')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer ${this._active('faq')}" onclick="selectItem(this,'FAQ')"><a href="faq.html">${this.isArabic ? "الأسئلة الشائعة" : 'FAQ'}</a></li>
-                <li class="${this._active('blog')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer ${this._active('blog')}" onclick="selectItem(this,'Blogs')"><a href="blog.html">${this.isArabic ? "المدونة" : 'Blogs'}</a></li>
-                <li class="${this._active('contact')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Contact')"><a href="contact.html">${this.isArabic ? "اتصال" : 'Contact'}</a></li>
-                <li class="${this._active('login')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Login')"><a href="login.html">${this.isArabic ? "تسجيل الدخول" : 'Login'}</a></li>
+                <li class="${this._active('marketplace')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Marketplace')"><a href='${this.baseLang}/marketplace.html'>${this.isArabic ? "سوق" : 'Marketplace'}</a></li>
+                <li class="${this._active('about')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer ${this._active('about')}" onclick="selectItem(this,'About')"><a href="${this.baseLang}/about.html">${this.isArabic ? "حول" : 'About'}</a></li>
+                <li class="${this._active('compatibility')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer ${this._active('compatibility')}" onclick="selectItem(this,'Compatibility')"><a href="${this.baseLang}/compatibility.html">${this.isArabic ? "التوافق" : 'Compatibility'}</a></li>
+                <li class="${this._active('faq')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer ${this._active('faq')}" onclick="selectItem(this,'FAQ')"><a href="${this.baseLang}/faq.html">${this.isArabic ? "الأسئلة الشائعة" : 'FAQ'}</a></li>
+                <li class="${this._active('blog')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer ${this._active('blog')}" onclick="selectItem(this,'Blogs')"><a href="${this.baseLang}/blog.html">${this.isArabic ? "المدونة" : 'Blogs'}</a></li>
+                <li class="${this._active('contact')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Contact')"><a href="${this.baseLang}/contact.html">${this.isArabic ? "اتصال" : 'Contact'}</a></li>
+                <li class="${this._active('login')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Login')"><a href="${this.baseLang}/login.html">${this.isArabic ? "تسجيل الدخول" : 'Login'}</a></li>
               </ul>
             </div>
 
@@ -188,13 +194,13 @@ class CoopNavbar extends HTMLElement {
             </div>
           </div>
           <ul class="dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 px-22 !w-[20%] bg-[var(--is-blue-1)] backdrop-blur-md py-5">
-            <li class="${this._active('marketplace')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Marketplace')">${this.isArabic ? "سوق" : 'Marketplace'}</li>
-            <li class="${this._active('about')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'About')"><a href="about.html">${this.isArabic ? "حول" : 'About'}</a></li>
-            <li class="${this._active('compatibility')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Compatibility')"><a href="compatibility.html">${this.isArabic ? "التوافق" : 'Compatibility'}</a></li>
-            <li class="${this._active('faq')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'FAQ')"><a href="faq.html">${this.isArabic ? "الأسئلة الشائعة" : 'FAQ'}</a></li>
-            <li class="${this._active('blog')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Blogs')"><a href="blog.html">${this.isArabic ? "المدونة" : 'Blogs'}</a></li>
-            <li class="${this._active('contact')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Contact')"><a href="contact.html">${this.isArabic ? "اتصال" : 'Contact'}</a></li>
-            <li class="${this._active('login')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Login')"><a href="login.html">${this.isArabic ? "تسجيل الدخول" : 'Login'}</a></li>
+            <li class="${this._active('marketplace')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Marketplace')"><a href='${this.baseLang}/marketplace.html'>${this.isArabic ? "سوق" : 'Marketplace'}</a></li>
+            <li class="${this._active('about')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'About')"><a href="${this.baseLang}/about.html">${this.isArabic ? "حول" : 'About'}</a></li>
+            <li class="${this._active('compatibility')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Compatibility')"><a href="${this.baseLang}/compatibility.html">${this.isArabic ? "التوافق" : 'Compatibility'}</a></li>
+            <li class="${this._active('faq')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'FAQ')"><a href="${this.baseLang}/faq.html">${this.isArabic ? "الأسئلة الشائعة" : 'FAQ'}</a></li>
+            <li class="${this._active('blog')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Blogs')"><a href="${this.baseLang}/blog.html">${this.isArabic ? "المدونة" : 'Blogs'}</a></li>
+            <li class="${this._active('contact')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Contact')"><a href="${this.baseLang}/contact.html">${this.isArabic ? "اتصال" : 'Contact'}</a></li>
+            <li class="${this._active('login')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Login')"><a href="${this.baseLang}/login.html">${this.isArabic ? "تسجيل الدخول" : 'Login'}</a></li>
           </ul>
         </div>
 

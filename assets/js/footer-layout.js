@@ -13,6 +13,12 @@ class CoopFooter extends HTMLElement {
     return ['lang', 'currency'];
   }
 
+  get baseLang() {
+    const path = window.location.pathname;
+    if (path.includes('/ar/')) return '/ar';
+    return '/en';
+  }
+
   connectedCallback() {
     this._render();
   }
@@ -95,12 +101,12 @@ class CoopFooter extends HTMLElement {
       <div>
         <h5 class="font-bold mb-3 text-capitalize text-lg">${this.isArabic ? "القائمة" : 'Menu'}</h5>
         <ul class="flex flex-col gap-2">
-          <li><a title="${this.isArabic ? "حول" : 'About'}" class="nav-link" href="about.html">${this.isArabic ? "حول" : 'About'}</a></li>
-          <li><a title="${this.isArabic ? "التوافق" : 'Compatibility'}" class="nav-link" href="compatibility.html">${this.isArabic ? "التوافق" : 'Compatibility'}</a></li>
-          <li><a title="${this.isArabic ? "الأسئلة الشائعة" : 'FAQ'}" class="nav-link" href="faq.html">${this.isArabic ? "الأسئلة الشائعة" : 'FAQ'}</a></li>
-          <li><a title="${this.isArabic ? "اتصال" : 'Contact'}" class="nav-link" href="contact.html">${this.isArabic ? "اتصال" : 'Contact'}</a></li>
-          <li><a title="${this.isArabic ? "مدونة" : 'Blog'}" class="nav-link" href="blog.html">${this.isArabic ? "مدونة" : 'Blog'}</a></li>
-          <li><a title="${this.isArabic ? "تسجيل الدخول / الحساب" : 'Login / Account'}" class="nav-link" href="">${this.isArabic ? "تسجيل الدخول / الحساب" : 'Login / Account'}</a></li>
+          <li><a title="${this.isArabic ? "حول" : 'About'}" class="nav-link" href="${this.baseLang}/about.html">${this.isArabic ? "حول" : 'About'}</a></li>
+          <li><a title="${this.isArabic ? "التوافق" : 'Compatibility'}" class="nav-link" href="${this.baseLang}/compatibility.html">${this.isArabic ? "التوافق" : 'Compatibility'}</a></li>
+          <li><a title="${this.isArabic ? "الأسئلة الشائعة" : 'FAQ'}" class="nav-link" href="${this.baseLang}/faq.html">${this.isArabic ? "الأسئلة الشائعة" : 'FAQ'}</a></li>
+          <li><a title="${this.isArabic ? "اتصال" : 'Contact'}" class="nav-link" href="${this.baseLang}/contact.html">${this.isArabic ? "اتصال" : 'Contact'}</a></li>
+          <li><a title="${this.isArabic ? "مدونة" : 'Blog'}" class="nav-link" href="${this.baseLang}/blog.html">${this.isArabic ? "مدونة" : 'Blog'}</a></li>
+          <li><a title="${this.isArabic ? "تسجيل الدخول / الحساب" : 'Login / Account'}" class="nav-link" href="${this.baseLang}/login.html">${this.isArabic ? "تسجيل الدخول / الحساب" : 'Login / Account'}</a></li>
         </ul>
       </div>
 
@@ -108,12 +114,12 @@ class CoopFooter extends HTMLElement {
       <div>
         <h5 class="font-bold mb-3 text-capitalize text-lg">${this.isArabic ? "المعلومات المفيدة" : 'Useful Information'}</h5>
         <ul class="flex flex-col gap-2">
-          <li><a title="${this.isArabic ? "ما هي بطاقة eSIM" : 'What is an eSIM'}" class="nav-link" href="about.html">${this.isArabic ? "ما هي بطاقة eSIM" : 'What is an eSIM'}</a></li>
+          <li><a title="${this.isArabic ? "ما هي بطاقة eSIM" : 'What is an eSIM'}" class="nav-link" href="${this.baseLang}/about.html">${this.isArabic ? "ما هي بطاقة eSIM" : 'What is an eSIM'}</a></li>
           <li><a title="${this.isArabic ? "دليل التثبيت" : 'Installation Guide'}" class="nav-link" href="">${this.isArabic ? "دليل التثبيت" : 'Installation Guide'}</a></li>
-          <li><a title="${this.isArabic ? "سياسة الاستخدام المقبول" : 'Acceptable Use Policy'}" class="nav-link" href="acceptable-use-policy.html">${this.isArabic ? "سياسة الاستخدام المقبول" : 'Acceptable Use Policy'}</a></li>
-          <li><a title="${this.isArabic ? "سياسة الشكاوى" : 'Complaints Policy'}" class="nav-link" href="complaints-policy.html">${this.isArabic ? "سياسة الشكاوى" : 'Complaints Policy'}</a></li>
-          <li><a title="${this.isArabic ? "سياسة الخصوصية" : 'Privacy policy'}" class="nav-link" href="privacy-policy.html">${this.isArabic ? "سياسة الخصوصية" : 'Privacy policy'}</a></li>
-          <li><a title="${this.isArabic ? "شروط الخدمة" : 'Terms of service'}" class="nav-link" href="terms-of-service.html">${this.isArabic ? "شروط الخدمة" : 'Terms of service'}</a></li>
+          <li><a title="${this.isArabic ? "سياسة الاستخدام المقبول" : 'Acceptable Use Policy'}" class="nav-link" href="${this.baseLang}/acceptable-use-policy.html">${this.isArabic ? "سياسة الاستخدام المقبول" : 'Acceptable Use Policy'}</a></li>
+          <li><a title="${this.isArabic ? "سياسة الشكاوى" : 'Complaints Policy'}" class="nav-link" href="${this.baseLang}/complaints-policy.html">${this.isArabic ? "سياسة الشكاوى" : 'Complaints Policy'}</a></li>
+          <li><a title="${this.isArabic ? "سياسة الخصوصية" : 'Privacy policy'}" class="nav-link" href="${this.baseLang}/privacy-policy.html">${this.isArabic ? "سياسة الخصوصية" : 'Privacy policy'}</a></li>
+          <li><a title="${this.isArabic ? "شروط الخدمة" : 'Terms of service'}" class="nav-link" href="${this.baseLang}/terms-of-service.html">${this.isArabic ? "شروط الخدمة" : 'Terms of service'}</a></li>
         </ul>
       </div>
 
