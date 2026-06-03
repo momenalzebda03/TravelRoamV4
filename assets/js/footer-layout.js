@@ -41,7 +41,7 @@ class CoopFooter extends HTMLElement {
       <div class="flex justify-center">
         <div class="relative dropdown-wrapper w-full md:w-[70%]">
           <div class="relative border border-white rounded-[12px] md:rounded-[5px] flex items-center justify-between gap-3">
-            <img src="../assets/icons/eSIM.svg" alt="eSIM" class="px-5 absolute" />
+            <img src="../../assets/icons/eSIM.svg" alt="eSIM" class="px-5 absolute" />
             <input type="text"
               class="px-12 z-1 w-full text-white placeholder:text-white py-4 outline-none focus:outline-none"
               placeholder="${this.isArabic ? "إلى أين أنت ذاهب؟" : 'Where are you going?'}"
@@ -49,7 +49,7 @@ class CoopFooter extends HTMLElement {
               oninput="filterDestinations(this.value, this)"
               onfocus="openDestinations(this)" />
             <div class="absolute ${this.isArabic ? "left-0" : 'right-0'} px-5">
-              <img src="../assets/icons/search.svg" alt="search" />
+              <img src="../../assets/icons/search.svg" alt="search" />
             </div>
           </div>
                <ul id="destination-list-2"
@@ -63,7 +63,7 @@ class CoopFooter extends HTMLElement {
     <div class="container">
       <div class="flex flex-col md:flex-row items-center justify-center md:justify-between gap-3 md:gap-50">
         <a href="index.html">
-          <img alt="Golden Esim" src="../assets/icons/logo-pink.svg" class="h-10 md:h-[unset]" />
+          <img alt="Golden Esim" src="../../assets/icons/logo-pink.svg" class="h-10 md:h-[unset]" />
         </a>
         <p class="text-gray-500 md:text-white mt-3 text-center md:text-start text-md font-medium">
         ${this.isArabic ? 'نحن نقدم باقات eSIM ميسورة التكلفة وسهلة الاستخدام في أكثر من 200 دولة حول العالم. أقل تعقيدًا، صفقات أفضل على الإنترنت في الخارج.' : 'We provide affordable, easy to use eSIM bundles in over 200+ countries worldwide. Less fuss, better deals on internet abroad.'}          
@@ -121,9 +121,9 @@ class CoopFooter extends HTMLElement {
       <div>
         <h5 class="font-bold mb-3 text-capitalize text-lg">${this.isArabic ? "وسائل التواصل الاجتماعي" : 'Social Media'}</h5>
         <ul class="flex justify-center md:justify-start gap-[12px]">
-          <li><a href="" title=""><img src="../assets/icons/meta.svg" alt="meta" /></a></li>
-          <li><a href="" title=""><img src="../assets/icons/instgram.svg" alt="instagram" /></a></li>
-          <li><a href="" title=""><img src="../assets/icons/tiktok.svg" alt="tiktok" /></a></li>
+          <li><a href="" title=""><img src="../../assets/icons/meta.svg" alt="meta" /></a></li>
+          <li><a href="" title=""><img src="../../assets/icons/instgram.svg" alt="instagram" /></a></li>
+          <li><a href="" title=""><img src="../../assets/icons/tiktok.svg" alt="tiktok" /></a></li>
         </ul>
 
         <div class="flex flex-col gap-3 mt-10">
@@ -171,10 +171,10 @@ class CoopFooter extends HTMLElement {
       <div class="container flex gap-6 flex-col md:flex-row items-center justify-between">
         <p class="text-gray-500 md:text-white">Copyright 2026. TravelRoam Limited. All Rights Reserved.</p>
         <ul class="flex gap-4 items-center">
-          <li><img src="../assets/icons/apple-pay.svg"  alt="Apple Pay"  width="49" height="27" /></li>
-          <li><img src="../assets/icons/google-pay.svg" alt="Google Pay" width="49" height="27" /></li>
-          <li><img src="../assets/icons/visa.svg"       alt="Visa"       width="49" height="27" /></li>
-          <li><img src="../assets/icons/mastercard.svg" alt="Mastercard" width="49" height="27" /></li>
+          <li><img src="../../assets/icons/apple-pay.svg"  alt="Apple Pay"  width="49" height="27" /></li>
+          <li><img src="../../assets/icons/google-pay.svg" alt="Google Pay" width="49" height="27" /></li>
+          <li><img src="../../assets/icons/visa.svg"       alt="Visa"       width="49" height="27" /></li>
+          <li><img src="../../assets/icons/mastercard.svg" alt="Mastercard" width="49" height="27" /></li>
         </ul>
       </div>
     </div>

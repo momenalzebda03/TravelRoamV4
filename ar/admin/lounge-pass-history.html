@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../../assets/icons/logo.svg" />
+    <link rel="stylesheet" href="../../assets/css/aos.css" />
+    <link rel="stylesheet" href="../../assets/css/global.css" />
+    <link rel="stylesheet" href="../../assets/css/output.css">
+    <title>شركاء السفر والتجوال</title>
+</head>
+
+<body>
+    <div id="loadingOverlay" class="fixed inset-0 bg-white flex justify-center items-center z-[9999]">
+        <div class="w-16 h-16 border-6 border-gray-200 border-t-[var(--is-blue)] rounded-full animate-spin"></div>
+    </div>
+    <div id="app" style="display: none;">
+        <!-- start navbar -->
+        <coop-navbar lang="ar"></coop-navbar>
+        <!-- end navbar -->
+        <div class="shadow-2xl container mt-[140px] bg-[var(--is-white-4)] rounded-[25px] p-[30px]">
+            <div class="container grid min-[576px]:grid-cols-[2fr_10fr] gap-[16px] lg:gap-[46px]">
+                <coop-sidebar lang="ar"></coop-sidebar>
+                <div class="mt-[25px] flex flex-col gap-[30px]">
+                    <h2 class="font-normal text-lg lg:text-[30px]">Lounge Pass <span class="font-semibold">تاريخ
+                            الحجوزات</span></h2>
+                    <ul class="flex flex-col gap-[18px]">
+                        <li data-aos="fade-up">
+                            <div
+                                class="transition-all duration-400 hover:scale-102 hover:shadow-lg shadow p-[25px] border border-2 border-[var(--is-pink)] rounded-[18px] grid min-[576px]:grid-cols-[2fr_10fr] gap-[27px]">
+                                <div
+                                    class="rounded-[18px] border border-[var(--is-pink)] h-full relative lg:w-[300px] h-[220px]">
+                                    <img src="/assets/images/lounge-3.png" alt="booking-history"
+                                        class="rounded-[18px] object-cover w-full h-full" />
+                                </div>
+                                <div class="flex flex-col gap-[24px] w-full">
+                                    <div class="flex justify-between w-full">
+                                        <div class="text-[var(--is-blue-3)]">
+                                            <h2 class="text-2xl font-bold">صالات أماي الدولية</h2>
+                                            <div class="flex items-center gap-1">
+                                                <img src="/assets/icons/map-black.svg" alt="map" width="15"
+                                                    height="17" />
+                                                <p class="text-md">مطار روساريو إيسلاس مالفيناس (ROS)</p>
+                                            </div>
+                                        </div>
+                                        <p class="text-[var(--is-blue-3)] text-[16px]"><span
+                                                class="text-[31px] font-bold">£25</span>
+                                            GBP</p>
+                                    </div>
+                                    <div
+                                        class="bg-[var(--is-blue)] p-[20px] rounded-[18px] flex flex-col xl:flex-row justify-between gap-3 xl:gap-0">
+                                        <div class="flex flex-col gap-2 text-white">
+                                            <ul
+                                                class="flex lg:items-center flex-col md:flex-row justify-between gap-2 lg:gap-5 text-lg font-bold">
+                                                <li class="flex items-center gap-2">
+                                                    <img src="/assets/icons/calendar.svg" alt="calendar" width="21"
+                                                        height="21" class="brightness-0 invert" />
+                                                    <span>15 Feb 2026</span>
+                                                </li>
+                                                <li class="flex items-center gap-2">
+                                                    <img src="/assets/icons/time.svg" alt="time" width="21" height="21"
+                                                        class="brightness-0 invert" />
+                                                    <span>21:17</span>
+                                                </li>
+                                            </ul>
+                                            <ul
+                                                class="flex lg:items-center flex-col md:flex-row justify-between gap-2 lg:gap-5 text-sm font-bold">
+                                                <li class="flex items-center gap-2">
+                                                    <img src="/assets/icons/users.svg" alt="users" width="21"
+                                                        height="21" class="brightness-0 invert" />
+                                                    <span>1 بالغ</span>
+                                                </li>
+                                                <li class="flex items-center gap-2">
+                                                    <span>•</span>
+                                                    <span>رحلة: AA 2730</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="font-bold flex flex-col gap-[14px] w-full xl:w-[unset]">
+                                            <button
+                                                class="text-nowrap text-center bg-[var(--is-green-1)] text-white rounded-full w-full lg:w-30 py-[10px]">
+                                                <div class="relative z-1 text-sm font-semibold">
+                                                    <span>تم التأكيد</span>
+                                                </div>
+                                            </button>
+                                            <a href="esim.html"
+                                                class="flex justify-center items-center gap-1 text-nowrap text-center hover:before:bg-[var(--is-green-1)] bg-[var(--is-pink)] text-white rounded-full w-full lg:w-30 py-[10px] btn">
+                                                <div class="relative z-1 text-sm font-semibold">
+                                                    <span>عرض التفاصيل</span>
+                                                </div>
+                                                <img src="/assets/icons/arraw-right.svg" alt="arraw-right" width="12"
+                                                    height="6" class="brightness-0 invert" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-aos="fade-up">
+                            <div
+                                class="transition-all duration-400 hover:scale-102 hover:shadow-lg shadow p-[25px] border border-2 border-[var(--is-pink)] rounded-[18px] grid min-[576px]:grid-cols-[2fr_10fr] gap-[27px]">
+                                <div
+                                    class="rounded-[18px] border border-[var(--is-pink)] h-full relative lg:w-[300px] h-[220px]">
+                                    <img src="/assets/images/lounge-histroy-1.png" alt="booking-history"
+                                        class="rounded-[18px] object-cover w-full h-full" />
+                                </div>
+                                <div class="flex flex-col gap-[24px] w-full">
+                                    <div class="flex justify-between w-full">
+                                        <div class="text-[var(--is-blue-3)]">
+                                            <h2 class="text-2xl font-bold">صالة واحة السماء</h2>
+                                            <div class="flex items-center gap-1">
+                                                <img src="/assets/icons/map-black.svg" alt="map" width="15"
+                                                    height="17" />
+                                                <p class="text-md">مطار لوس أنجلوس الدولي (LAX)</p>
+                                            </div>
+                                        </div>
+                                        <p class="text-[var(--is-blue-3)] text-[16px]"><span
+                                                class="text-[31px] font-bold">£40</span>
+                                            GBP</p>
+                                    </div>
+                                    <div
+                                        class="bg-[var(--is-blue)] p-[20px] rounded-[18px] flex flex-col xl:flex-row justify-between gap-3 xl:gap-0">
+                                        <div class="flex flex-col gap-2 text-white">
+                                            <ul
+                                                class="flex lg:items-center flex-col md:flex-row justify-between gap-2 lg:gap-5 text-lg font-bold">
+                                                <li class="flex items-center gap-2">
+                                                    <img src="/assets/icons/calendar.svg" alt="calendar" width="21"
+                                                        height="21" class="brightness-0 invert" />
+                                                    <span>22 Feb 2026</span>
+                                                </li>
+                                                <li class="flex items-center gap-2">
+                                                    <img src="/assets/icons/time.svg" alt="time" width="21" height="21"
+                                                        class="brightness-0 invert" />
+                                                    <span>10:45</span>
+                                                </li>
+                                            </ul>
+                                            <ul
+                                                class="flex lg:items-center flex-col md:flex-row justify-between gap-2 lg:gap-5 text-sm font-bold">
+                                                <li class="flex items-center gap-2">
+                                                    <img src="/assets/icons/users.svg" alt="users" width="21"
+                                                        height="21" class="brightness-0 invert" />
+                                                    <span>2 بالغ</span>
+                                                </li>
+                                                <li class="flex items-center gap-2">
+                                                    <span>•</span>
+                                                    <span>رحلة: BA 452</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="font-bold flex flex-col gap-[14px] w-full xl:w-[unset]">
+                                            <button
+                                                class="text-nowrap text-center bg-[var(--is-green-1)] text-white rounded-full w-full lg:w-30 py-[10px]">
+                                                <div class="relative z-1 text-sm font-semibold">
+                                                    <span>تم التأكيد</span>
+                                                </div>
+                                            </button>
+                                            <a href="esim.html"
+                                                class="flex justify-center items-center gap-1 text-nowrap text-center hover:before:bg-[var(--is-green-1)] bg-[var(--is-pink)] text-white rounded-full w-full lg:w-30 py-[10px] btn">
+                                                <div class="relative z-1 text-sm font-semibold">
+                                                    <span>عرض التفاصيل</span>
+                                                </div>
+                                                <img src="/assets/icons/arraw-right.svg" alt="arraw-right" width="12"
+                                                    height="6" class="brightness-0 invert" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-aos="fade-up">
+                            <div
+                                class="transition-all duration-400 hover:scale-102 hover:shadow-lg shadow p-[25px] border border-2 border-[var(--is-pink)] rounded-[18px] grid min-[576px]:grid-cols-[2fr_10fr] gap-[27px]">
+                                <div
+                                    class="rounded-[18px] border border-[var(--is-pink)] h-full relative lg:w-[300px] h-[220px]">
+                                    <img src="/assets/images/lounge-histroy-2.png" alt="booking-history"
+                                        class="rounded-[18px] object-cover w-full h-full" />
+                                </div>
+                                <div class="flex flex-col gap-[24px] w-full">
+                                    <div class="flex justify-between w-full">
+                                        <div class="text-[var(--is-blue-3)]">
+                                            <h2 class="text-2xl font-bold">صالة الراحة النخبوية</h2>
+                                            <div class="flex items-center gap-1">
+                                                <img src="/assets/icons/map-black.svg" alt="map" width="15"
+                                                    height="17" />
+                                                <p class="text-md">مطار دبي الدولي (DXB)</p>
+                                            </div>
+                                        </div>
+                                        <p class="text-[var(--is-blue-3)] text-[16px]"><span
+                                                class="text-[31px] font-bold">£32</span>
+                                            GBP</p>
+                                    </div>
+                                    <div
+                                        class="bg-[var(--is-blue)] p-[20px] rounded-[18px] flex flex-col xl:flex-row justify-between gap-3 xl:gap-0">
+                                        <div class="flex flex-col gap-2 text-white">
+                                            <ul
+                                                class="flex lg:items-center flex-col md:flex-row justify-between gap-2 lg:gap-5 text-lg font-bold">
+                                                <li class="flex items-center gap-2">
+                                                    <img src="/assets/icons/calendar.svg" alt="calendar" width="21"
+                                                        height="21" class="brightness-0 invert" />
+                                                    <span>05 Mar 2026</span>
+                                                </li>
+                                                <li class="flex items-center gap-2">
+                                                    <img src="/assets/icons/time.svg" alt="time" width="21" height="21"
+                                                        class="brightness-0 invert" />
+                                                    <span>18:30</span>
+                                                </li>
+                                            </ul>
+                                            <ul
+                                                class="flex lg:items-center flex-col md:flex-row justify-between gap-2 lg:gap-5 text-sm font-bold">
+                                                <li class="flex items-center gap-2">
+                                                    <img src="/assets/icons/users.svg" alt="users" width="21"
+                                                        height="21" class="brightness-0 invert" />
+                                                    <span>Mr. Deena </span>
+                                                </li>
+                                                <li class="flex items-center gap-2">
+                                                    <span>•</span>
+                                                    <span>1 بالغ</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="font-bold flex flex-col gap-[14px] w-full xl:w-[unset]">
+                                            <button
+                                                class="text-nowrap text-center bg-[var(--is-gold-2)] text-black rounded-full w-full lg:w-30 py-[10px]">
+                                                <div class="relative z-1 text-sm font-semibold">
+                                                    <span>قيد الانتظار</span>
+                                                </div>
+                                            </button>
+                                            <a href="esim.html"
+                                                class="flex justify-center items-center gap-1 text-nowrap text-center hover:before:bg-[var(--is-green-1)] bg-[var(--is-pink)] text-white rounded-full w-full lg:w-30 py-[10px] btn">
+                                                <div class="relative z-1 text-sm font-semibold">
+                                                    <span>عرض التفاصيل</span>
+                                                </div>
+                                                <img src="/assets/icons/arraw-right.svg" alt="arraw-right" width="12"
+                                                    height="6" class="brightness-0 invert" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-aos="fade-up">
+                            <div
+                                class="transition-all duration-400 hover:scale-102 hover:shadow-lg shadow p-[25px] border border-2 border-[var(--is-pink)] rounded-[18px] grid min-[576px]:grid-cols-[2fr_10fr] gap-[27px]">
+                                <div
+                                    class="rounded-[18px] border border-[var(--is-pink)] h-full relative lg:w-[300px] h-[220px]">
+                                    <img src="/assets/images/lounge-histroy-3.png" alt="booking-history"
+                                        class="rounded-[18px] object-cover w-full h-full" />
+                                </div>
+                                <div class="flex flex-col gap-[24px] w-full">
+                                    <div class="flex justify-between w-full">
+                                        <div class="text-[var(--is-blue-3)]">
+                                            <h2 class="text-2xl font-bold">صالة نادي هورايزن</h2>
+                                            <div class="flex items-center gap-1">
+                                                <img src="/assets/icons/map-black.svg" alt="map" width="15"
+                                                    height="17" />
+                                                <p class="text-md">مطار هيثرو لندن المبنى ٥ (LHR)</p>
+                                            </div>
+                                        </div>
+                                        <p class="text-[var(--is-blue-3)] text-[16px]"><span
+                                                class="text-[31px] font-bold">£20</span>
+                                            GBP</p>
+                                    </div>
+                                    <div
+                                        class="bg-[var(--is-blue)] p-[20px] rounded-[18px] flex flex-col xl:flex-row justify-between gap-3 xl:gap-0">
+                                        <div class="flex flex-col gap-2 text-white">
+                                            <ul
+                                                class="flex lg:items-center flex-col md:flex-row justify-between gap-2 lg:gap-5 text-lg font-bold">
+                                                <li class="flex items-center gap-2">
+                                                    <img src="/assets/icons/calendar.svg" alt="calendar" width="21"
+                                                        height="21" class="brightness-0 invert" />
+                                                    <span>10 Mar 2026</span>
+                                                </li>
+                                                <li class="flex items-center gap-2">
+                                                    <img src="/assets/icons/time.svg" alt="time" width="21" height="21"
+                                                        class="brightness-0 invert" />
+                                                    <span>08:00</span>
+                                                </li>
+                                            </ul>
+                                            <ul
+                                                class="flex lg:items-center flex-col md:flex-row justify-between gap-2 lg:gap-5 text-sm font-bold">
+                                                <li class="flex items-center gap-2">
+                                                    <span>1 بالغ</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="font-bold flex flex-col gap-[14px] w-full xl:w-[unset]">
+                                            <button
+                                                class="text-nowrap text-center bg-[var(--is-red-4)] text-white rounded-full w-full lg:w-30 py-[10px]">
+                                                <div class="relative z-1 text-sm font-semibold">
+                                                    <span>ملغى</span>
+                                                </div>
+                                            </button>
+                                            <a href="esim.html"
+                                                class="flex justify-center items-center gap-1 text-nowrap text-center hover:before:bg-[var(--is-green-1)] bg-[var(--is-pink)] text-white rounded-full w-full lg:w-30 py-[10px] btn">
+                                                <div class="relative z-1 text-sm font-semibold">
+                                                    <span>عرض التفاصيل</span>
+                                                </div>
+                                                <img src="/assets/icons/arraw-right.svg" alt="arraw-right" width="12"
+                                                    height="6" class="brightness-0 invert" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- start footer -->
+        <coop-footer lang="ar"></coop-footer>
+        <!-- end footer -->
+    </div>
+</body>
+
+<script src="../../assets/js/jquery.min.js"></script>
+<script src="../../assets/js/navbar-layout.js"></script>
+<script src="../../assets/js/footer-layout.js"></script>
+<script src="../../assets/js/global.js"></script>
+<script src="../../assets/js/admin.js"></script>
+<script src="../../assets/js/sideBar.js"></script>
+<script src="../../assets/js/aos.js"></script>
+
+</html>

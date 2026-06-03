@@ -24,40 +24,53 @@ const showDetails = document.getElementById("showDetails");
 const showTimings = document.getElementById("showTimings");
 const showConditions = document.getElementById("showConditions");
 
-const tabs = {
-    details: {
-        btn: details,
-        content: showDetails,
-        translate: "0%"
-    },
-    timings: {
-        btn: timings,
-        content: showTimings,
-        translate: "100%"
-    },
-    conditions: {
-        btn: conditions,
-        content: showConditions,
-        translate: "200%"
-    }
-};
+function gettabs() {
+    return {
+        details: {
+            btn: document.getElementById("details"),
+            content: document.getElementById("showDetails"),
+            translate: "0%"
+        },
+        timings: {
+            btn: document.getElementById("timings"),
+            content: document.getElementById("showTimings"),
+            translate: "100%"
+        },
+        conditions: {
+            btn: document.getElementById("conditions"),
+            content: document.getElementById("showConditions"),
+            translate: "200%"
+        }
+    };
+}
 
 function setActive(tabKey) {
+    const tabs = gettabs();
+    const indicator = document.getElementById("indicator");
+
     Object.values(tabs).forEach(tab => {
+        if (!tab.btn) return;
         tab.btn.classList.remove("!text-black");
-        tab.content.classList.add("hidden");
+        if (indicator) tab.btn.style.color = "var(--is-blue-3)";
+        tab.content?.classList.add("hidden");
     });
 
     const tab = tabs[tabKey];
+    if (!tab.btn) return;
 
-    tab.btn.classList.add("!text-black");
-    tab.content.classList.remove("hidden");
+    if (!indicator) {
+        tab.btn.classList.add("!text-black");
+    } else {
+        tab.btn.style.color = "white";
+    }
 
-    indicator.style.transform = `translateX(${tab.translate})`;
+    tab.content?.classList.remove("hidden");
+    indicator?.style.setProperty("transform", `translateX(${tab.translate})`);
 }
 
-Object.keys(tabs).forEach(key => {
-    tabs[key].btn?.addEventListener("click", () => setActive(key));
+Object.keys(gettabs()).forEach(key => {
+    const btn = document.getElementById(key);
+    btn?.addEventListener("click", () => setActive(key));
 });
 
 document.querySelectorAll(".item").forEach(item => {
@@ -70,6 +83,7 @@ document.querySelectorAll(".item").forEach(item => {
         detailsBox.classList.remove("hidden");
 
         loadLounge(id, name);
+        setActive("details");
     });
 });
 

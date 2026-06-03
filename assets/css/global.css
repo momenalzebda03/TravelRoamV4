@@ -13,6 +13,7 @@
     --is-blue-9: #2E0A35;
     --is-gold: #FFBB00;
     --is-gold-1: #D2AF261A;
+    --is-gold-2: #EAB308;
     --bg-gray: #FFFFFF80;
     --is-gray-1: #25123C99;
     --is-gray-2: #333333;
@@ -61,6 +62,8 @@
     --is-red-1: #FF0000;
     --is-red-2: #FEE4E2;
     --is-red-3: #DC2626;
+    --is-red-4: #E15353;
+    --is-green-1: #22C55E;
 }
 
 @font-face {
@@ -118,7 +121,7 @@ body {
 }
 
 .nav-white .is-style-menu {
-    color: black !important;    
+    color: black !important;
 }
 
 .nav-white button {
@@ -347,6 +350,10 @@ body {
 
 .color-mark {
     filter: brightness(0) saturate(100%) invert(8%) sepia(20%) saturate(2000%) hue-rotate(180deg) brightness(90%)
+}
+
+.color-pink {
+    filter: brightness(0) saturate(100%) invert(27%) sepia(90%) saturate(2000%) hue-rotate(300deg) brightness(100%)
 }
 
 @media (max-width: 990px) {
