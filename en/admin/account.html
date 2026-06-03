@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../../assets/icons/logo.svg" />
+    <link rel="stylesheet" href="../../assets/css/aos.css" />
+    <link rel="stylesheet" href="../../assets/css/global.css" />
+    <link rel="stylesheet" href="../../assets/css/output.css">
+    <title>Travel Roam Partners</title>
+</head>
+
+<body>
+    <div id="loadingOverlay" class="fixed inset-0 bg-white flex justify-center items-center z-[9999]">
+        <div class="w-16 h-16 border-6 border-gray-200 border-t-[var(--is-blue)] rounded-full animate-spin"></div>
+    </div>
+    <div id="app" style="display: none;">
+        <!-- start navbar -->
+        <coop-navbar></coop-navbar>
+        <!-- end navbar -->
+        <div class="shadow-2xl container mt-[140px] bg-[var(--is-white-4)] rounded-[25px] p-[30px]">
+            <div class="container grid min-[576px]:grid-cols-[2fr_10fr] gap-[16px] lg:gap-[46px]">
+                <coop-sidebar></coop-sidebar>
+                <div class="overflow-hidden me-10 flex flex-col gap-6 mt-[30px]">
+                    <div class="flex flex-col gap-2 md:gap-4">
+                        <h2 class="text-xl md:text-3xl font-normal">Welcome Back, <span
+                                class="font-semibold">Benny!</span></h2>
+                        <p class="font-bold text-[42px] text-[var(--is-pink)]">Account</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- start footer -->
+            <coop-footer></coop-footer>
+            <!-- end footer -->
+        </div>
+</body>
+
+<script src="../../assets/js/jquery.min.js"></script>
+<script src="../../assets/js/navbar-layout.js"></script>
+<script src="../../assets/js/footer-layout.js"></script>
+<script src="../../assets/js/global.js"></script>
+<script src="../../assets/js/sideBar.js"></script>
+<script src="../../assets/js/aos.js"></script>
+
+</html>
