@@ -86,7 +86,7 @@ class CoopSideBar extends HTMLElement {
                         </a>
                     </li>
                     <li class="flex">
-                        <a title="${this.isArabic ? "الإشعارات" : 'Notifications'}" href="/Notifications.html" class="flex items-center gap-[17px]
+                        <a title="${this.isArabic ? "الإشعارات" : 'Notifications'}" href="notifications.html" class="flex items-center gap-[17px]
                                     text-white hover:opacity-[1] opacity-[0.6] ${isActive('notifications')}">
                             <img src="/assets/icons/notifications.svg" alt="notifications" width="22" height="22" />
                             <span class="text-nowrap">${this.isArabic ? "الإشعارات" : 'Notifications'}</span>

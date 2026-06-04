@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../../assets/icons/logo.svg" />
+    <link rel="stylesheet" href="../../assets/css/aos.css" />
+    <link rel="stylesheet" href="../../assets/css/global.css" />
+    <link rel="stylesheet" href="../../assets/css/output.css">
+    <title>Travel Roam Partners</title>
+</head>
+
+<body>
+    <div id="loadingOverlay" class="fixed inset-0 bg-white flex justify-center items-center z-[9999]">
+        <div class="w-16 h-16 border-6 border-gray-200 border-t-[var(--is-blue)] rounded-full animate-spin"></div>
+    </div>
+    <div id="app" style="display: none;">
+        <!-- start navbar -->
+        <coop-navbar></coop-navbar>
+        <!-- end navbar -->
+        <div class="shadow-2xl container mt-[140px] bg-[var(--is-white-4)] rounded-[25px] p-[30px]">
+            <div class="container grid min-[576px]:grid-cols-[2fr_10fr] gap-[16px] lg:gap-[46px]">
+                <coop-sidebar></coop-sidebar>
+                <div class="md:me-10 flex flex-col gap-6 mt-[30px]">
+                    <div class="flex flex-col gap-2 md:gap-4">
+                        <h2 class="text-xl md:text-3xl font-normal">Welcome Back, <span
+                                class="font-semibold">Benny!</span></h2>
+                        <p class="font-bold text-[42px] text-[var(--is-pink)]">Notifications</p>
+                    </div>
+                    <form method="" action=""
+                        class="mt-5 shadow-xl bg-white py-8 px-8 rounded-[18px] flex flex-col gap-6">
+                        <h2 class="font-bold text-2xl text-[var(--is-pink)]">Email preferences</h2>
+                        <div class="flex">
+                            <div class="flex flex-col">
+                                <label class="font-normal text-base">Email address</label>
+                                <input type="email" value="yourname@email.com" id="input"
+                                    class="font-bold border-b-black/30 border-b-2" />
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" class="mt-[0.3%]" id="checkbox" />
+                            <label for="checkbox" class="text-[var(--is-gray-21)]">Email notifications
+                                to yourname@email.com</label>
+                        </div>
+                        <div class="flex flex-col xl:flex-row gap-[8px]">
+                            <div onclick="editAndFocus('input')"
+                                class="text-center w-full xl:w-[20%] hover:before:bg-black bg-[var(--is-pink)] text-white rounded-[20px] px-10 py-[13px] btn">
+                                <div class="relative z-1 text-sm font-semibold">
+                                    <span>Save</span>
+                                </div>
+                            </div>
+                            <button
+                                class="w-full xl:w-[20%] text-nowrap text-center hover:before:bg-black bg-white hover:text-white text-[var(--is-blue-3)] rounded-[20px] border border-3 border-[var(--is-blue-3)] py-[12px] btn">
+                                <div class="relative z-1 text-sm font-bold">
+                                    <span>Edit email</span>
+                                </div>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- start footer -->
+        <coop-footer></coop-footer>
+        <!-- end footer -->
+</body>
+
+<script src="../../assets/js/jquery.min.js"></script>
+<script src="../../assets/js/navbar-layout.js"></script>
+<script src="../../assets/js/footer-layout.js"></script>
+<script src="../../assets/js/global.js"></script>
+<script src="../../assets/js/account.js"></script>
+<script src="../../assets/js/sideBar.js"></script>
+<script src="../../assets/js/aos.js"></script>
+
+</html>

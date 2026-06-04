@@ -477,6 +477,15 @@
   .mt-35 {
     margin-top: calc(var(--spacing) * 35);
   }
+  .mt-\[0\.3\%\] {
+    margin-top: 0.3%;
+  }
+  .mt-\[0\.5\%\] {
+    margin-top: 0.5%;
+  }
+  .mt-\[1\%\] {
+    margin-top: 1%;
+  }
   .mt-\[1\.5px\] {
     margin-top: 1.5px;
   }
@@ -2057,6 +2066,9 @@
   }
   .text-\[var\(--is-pink\)\] {
     color: var(--is-pink);
+  }
+  .text-\[var\(--is-pink-13\)\] {
+    color: var(--is-pink-13);
   }
   .text-\[var\(--is-red\)\] {
     color: var(--is-red);
