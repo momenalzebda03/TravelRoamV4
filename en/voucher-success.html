@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/logo.svg" />
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/output.css">
+    <title>Travel Roam Partners</title>
+</head>
+
+<body>
+    <div id="loadingOverlay" class="fixed inset-0 bg-white flex justify-center items-center z-[9999]">
+        <div class="w-16 h-16 border-6 border-gray-200 border-t-[var(--is-blue)] rounded-full animate-spin"></div>
+    </div>
+    <div id="app" style="display: none;">
+        <!-- start register -->
+        <section class="bg-cover
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/bg-login.png')] w-full md:h-screen py-10">
+            <div class="w-full h-full flex justify-center items-center">
+                <div
+                    class="mx-5 lg:mx-0 flex flex-col text-center items-center rounded-[15px] bg-[var(--is-blue-8)] px-10 md:px-20 py-10">
+                    <div class="flex justify-center">
+                        <img src="../assets/icons/logo.svg" alt="logo" class="w-60 h-20" />
+                    </div>
+                    <div class="lg:w-[790px] flex flex-col gap-[23px]">
+                        <div class="text-white flex flex-col gap-4">
+                            <h2 class="font-semibold text-xl md:text-3xl">Great news! Your new internet plan is ready
+                            </h2>
+                            <p class="font-normal text-base">Use your mobile device's QR code scanner to effortlessly
+                                install and activate your eSIM.Once you’ve installed and activated your eSIM for data
+                                service you’re good to go. Your eSIM installation instructions have been sent to your
+                                registered email.</p>
+                        </div>
+                        <div class="flex flex-col md:flex-row justify-center gap-[16px]">
+                            <div class="flex flex-col gap-3">
+                                <div
+                                    class="rounded-[8px] text-[var(--is-blue-3)] flex justify-center gap-2 items-center px-10 py-2 bg-white">
+                                    <img src="../assets/icons/cup.png" alt="cup" class="w-4 h-4 color-mark" />
+                                    <p class="font-bold text-sm">Your Chosen plan</p>
+                                </div>
+                                <div
+                                    class="border border-white rounded-[12px] md:px-20 py-3 flex flex-col items-center gap-3 text-white">
+                                    <h2 class="font-medium text-2xl">1 GB FREE Plan</h2>
+                                    <div class="flex items-center gap-2">
+                                        <img src="../../assets/icons/usa.svg" alt="search"
+                                            class="w-[39px] h-[39px] object-cover rounded-full" />
+                                        <p class="text-lg font-bold">United States</p>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <p class="text-lg font-semibold">48 Hour Bundle</p>
+                                        <p class="text-xs font-normal">Valid for 48 hours from activation</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-[165px] flex flex-col gap-3">
+                                <div
+                                    class="text-nowrap rounded-[8px] text-[var(--is-blue-3)] flex justify-center gap-2 items-center px-10 py-2 bg-white">
+                                    <img src="../assets/icons/qr.svg" alt="qr" class="w-4 h-4 color-mark" />
+                                    <p class="font-bold text-sm">Your QR Code</p>
+                                </div>
+                                <div class="w-full h-full bg-white rounded-[12px] p-[22px]">
+                                    <div id="qrcode">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <button
+                                class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] text-nowrap px-5 md:w-[20%] py-[16px] btn">
+                                <div class="relative z-1 text-sm font-semibold">
+                                    <span>Installation guide</span>
+                                </div>
+                            </button>
+                            <button
+                                class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] text-nowrap px-5 md:w-[20%] py-[16px] btn">
+                                <div class="relative z-1 text-sm font-semibold">
+                                    <span>Your account</span>
+                                </div>
+                            </button>
+                            <button
+                                class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] text-nowrap px-5 md:w-[20%] py-[16px] btn">
+                                <div class="relative z-1 text-sm font-semibold">
+                                    <span>Share eSIM</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end register -->
+    </div>
+</body>
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="../assets/js/qr.js"></script>
+<script src="../assets/js/navbar-layout.js"></script>
+<script src="../assets/js/footer-layout.js"></script>
+<script src="../assets/js/global.js"></script>
+
+</html>
