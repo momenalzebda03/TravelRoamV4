@@ -841,6 +841,9 @@
   .max-w-\[250px\] {
     max-width: 250px;
   }
+  .max-w-\[300px\] {
+    max-width: 300px;
+  }
   .flex-1 {
     flex: 1;
   }

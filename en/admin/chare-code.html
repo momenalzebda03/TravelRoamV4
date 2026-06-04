@@ -100,7 +100,9 @@
                         </div>
                         <div class="items-center shadow-2xl py-[16px] md:px-[13px] rounded-[18px] flex flex-col gap-[23px]"
                             data-aos="fade-up">
-                            <div id="qrcode" class="border border-2 w-[250px] h-[250px] p-5 bg-white rounded-[20px]">
+                            <div class="border border-2 p-5 bg-white rounded-[20px]">
+                                <div id="qrcode" class="w-full max-w-[250px]">
+                                </div>
                             </div>
                             <div class="flex gap-[5px] items-center" onClick={handleCopy}>
                                 <Image src="/assets/icons/copy.svg" alt="copy" class="w-5 h-5" />
