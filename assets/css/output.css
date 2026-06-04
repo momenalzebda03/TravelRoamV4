@@ -838,6 +838,9 @@
   .w-full {
     width: 100%;
   }
+  .max-w-\[128px\] {
+    max-width: 128px;
+  }
   .max-w-\[250px\] {
     max-width: 250px;
   }
