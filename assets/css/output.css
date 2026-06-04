@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-green-500: oklch(72.3% 0.219 149.579);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
@@ -356,9 +357,6 @@
   .mx-5 {
     margin-inline: calc(var(--spacing) * 5);
   }
-  .mx-10 {
-    margin-inline: calc(var(--spacing) * 10);
-  }
   .mx-20 {
     margin-inline: calc(var(--spacing) * 20);
   }
@@ -512,6 +510,9 @@
   .table {
     display: table;
   }
+  .aspect-square {
+    aspect-ratio: 1 / 1;
+  }
   .size-6 {
     width: calc(var(--spacing) * 6);
     height: calc(var(--spacing) * 6);
@@ -560,6 +561,9 @@
   }
   .h-\[6px\] {
     height: 6px;
+  }
+  .h-\[10px\] {
+    height: 10px;
   }
   .h-\[13px\] {
     height: 13px;
@@ -693,6 +697,9 @@
   .w-1\/3 {
     width: calc(1 / 3 * 100%);
   }
+  .w-2 {
+    width: calc(var(--spacing) * 2);
+  }
   .w-3 {
     width: calc(var(--spacing) * 3);
   }
@@ -749,6 +756,9 @@
   }
   .w-\[18px\] {
     width: 18px;
+  }
+  .w-\[20px\] {
+    width: 20px;
   }
   .w-\[21px\] {
     width: 21px;
@@ -822,8 +832,14 @@
   .w-\[492px\] {
     width: 492px;
   }
+  .w-\[full\] {
+    width: full;
+  }
   .w-full {
     width: 100%;
+  }
+  .max-w-\[250px\] {
+    max-width: 250px;
   }
   .flex-1 {
     flex: 1;
@@ -1281,9 +1297,6 @@
   .bg-\[\#25123CE5\] {
     background-color: #25123CE5;
   }
-  .bg-\[var\(--\)\] {
-    background-color: var(--);
-  }
   .bg-\[var\(--bg-gray\)\] {
     background-color: var(--bg-gray);
   }
@@ -1362,9 +1375,6 @@
   .bg-\[var\(--is-gray-22\)\] {
     background-color: var(--is-gray-22);
   }
-  .bg-\[var\(--is-gray-24\)\] {
-    background-color: var(--is-gray-24);
-  }
   .bg-\[var\(--is-green-1\)\] {
     background-color: var(--is-green-1);
   }
@@ -1394,6 +1404,9 @@
   }
   .bg-black {
     background-color: var(--color-black);
+  }
+  .bg-red-500 {
+    background-color: var(--color-red-500);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -1753,6 +1766,9 @@
   .py-\[17px\] {
     padding-block: 17px;
   }
+  .py-\[18px\] {
+    padding-block: 18px;
+  }
   .py-\[19px\] {
     padding-block: 19px;
   }
@@ -1773,6 +1789,9 @@
   }
   .py-\[35px\] {
     padding-block: 35px;
+  }
+  .py-\[40px\] {
+    padding-block: 40px;
   }
   .py-\[41px\] {
     padding-block: 41px;
@@ -1889,6 +1908,9 @@
   .text-xs {
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+  .text-\[8px\] {
+    font-size: 8px;
   }
   .text-\[10px\] {
     font-size: 10px;
@@ -2881,6 +2903,16 @@
       display: none;
     }
   }
+  .sm\:h-\[35px\] {
+    @media (width >= 40rem) {
+      height: 35px;
+    }
+  }
+  .sm\:w-\[25px\] {
+    @media (width >= 40rem) {
+      width: 25px;
+    }
+  }
   .sm\:grid-cols-2 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2894,6 +2926,12 @@
   .sm\:flex-row {
     @media (width >= 40rem) {
       flex-direction: row;
+    }
+  }
+  .sm\:text-2xl {
+    @media (width >= 40rem) {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
     }
   }
   .md\:right-0 {
@@ -2986,6 +3024,11 @@
       height: calc(var(--spacing) * 5);
     }
   }
+  .md\:h-8 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 8);
+    }
+  }
   .md\:h-\[60vh\] {
     @media (width >= 48rem) {
       height: 60vh;
@@ -3044,6 +3087,11 @@
   .md\:w-5 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 5);
+    }
+  }
+  .md\:w-8 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 8);
     }
   }
   .md\:w-\[20\%\] {
@@ -3515,6 +3563,12 @@
       line-height: var(--tw-leading, var(--text-xl--line-height));
     }
   }
+  .md\:text-xs {
+    @media (width >= 48rem) {
+      font-size: var(--text-xs);
+      line-height: var(--tw-leading, var(--text-xs--line-height));
+    }
+  }
   .md\:text-\[32px\] {
     @media (width >= 48rem) {
       font-size: 32px;
@@ -3632,6 +3686,11 @@
   .lg\:w-\[50px\] {
     @media (width >= 64rem) {
       width: 50px;
+    }
+  }
+  .lg\:w-\[60\%\] {
+    @media (width >= 64rem) {
+      width: 60%;
     }
   }
   .lg\:w-\[300px\] {
@@ -3860,6 +3919,26 @@
   --is-green-1: #22C55E;
 }
 @font-face {
+  font-family: "cairo";
+  src: url("/assets/fonts/Cairo-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "cairo";
+  src: url("/assets/fonts/Cairo-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "cairo";
+  src: url("/assets/fonts/Cairo-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "cairo";
+  src: url("/assets/fonts/Cairo-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
   font-family: "SF-Pro";
   src: url("/assets/fonts/SF-Pro-Text-Medium.otf") format("truetype");
   font-weight: 500;
@@ -3879,7 +3958,10 @@
   src: url("/assets/fonts/SF-Pro-Text-Bold.otf") format("truetype");
   font-weight: 700;
 }
-body {
+[lang="ar"] body {
+  font-family: "cairo", sans-serif;
+}
+[lang="en"] body {
   font-family: "SF-Pro", sans-serif;
 }
 .navbar {

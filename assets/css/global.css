@@ -53,7 +53,7 @@
     --is-black-10: #F511681A;
     --is-black-11: #F5116833;
     --is-black-12: #25123C80;
-    --is-black-13: #0D0D20;    
+    --is-black-13: #0D0D20;
     --is-white-1: #ECECEC;
     --is-white-2: #C9C9C9;
     --is-white-3: #D8DBE3;
@@ -66,6 +66,30 @@
     --is-red-3: #DC2626;
     --is-red-4: #E15353;
     --is-green-1: #22C55E;
+}
+
+@font-face {
+    font-family: "cairo";
+    src: url("/assets/fonts/Cairo-Medium.ttf") format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "cairo";
+    src: url("/assets/fonts/Cairo-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "cairo";
+    src: url("/assets/fonts/Cairo-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "cairo";
+    src: url("/assets/fonts/Cairo-Bold.ttf") format("truetype");
+    font-weight: 700;
 }
 
 @font-face {
@@ -92,7 +116,11 @@
     font-weight: 700;
 }
 
-body {
+[lang="ar"] body {
+    font-family: "cairo", sans-serif;
+}
+
+[lang="en"] body {
     font-family: "SF-Pro", sans-serif;
 }
 
