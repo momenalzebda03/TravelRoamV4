@@ -3826,6 +3826,21 @@
       width: 60%;
     }
   }
+  .xl\:w-\[63\%\] {
+    @media (width >= 80rem) {
+      width: 63%;
+    }
+  }
+  .xl\:w-\[65\%\] {
+    @media (width >= 80rem) {
+      width: 65%;
+    }
+  }
+  .xl\:w-\[70\%\] {
+    @media (width >= 80rem) {
+      width: 70%;
+    }
+  }
   .xl\:w-\[unset\] {
     @media (width >= 80rem) {
       width: unset;
