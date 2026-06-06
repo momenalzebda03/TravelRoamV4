@@ -154,7 +154,8 @@
     color: black !important;
 }
 
-.nav-white button {
+.nav-white button,
+.nav-white a {
     border: 2px solid black;
 }
 
