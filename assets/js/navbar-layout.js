@@ -90,7 +90,7 @@ class CoopNavbar extends HTMLElement {
       <div class="w-full flex items-center justify-between">
 
         <!-- Logo -->
-        <a href="${this.baseLang}/index.html" title="Coop Lounge">
+        <a href="${this.baseLang}/index.html" title="Coop Lounge" class="none-broder">
           <img src="/assets/icons/logo.svg" alt="logo" width="170" height="41" class="object-cover" />
         </a>
 
@@ -116,10 +116,6 @@ class CoopNavbar extends HTMLElement {
         <div class="hidden lg:flex gap-[91px] items-center">
           <div class="mt-5 lg:mt-0 flex flex-col lg:flex-row items-center gap-[30px] relative">
 
-            <button class="before:bg-white border-1 border-white rounded-[5px] hover:text-black px-5 py-2 btn" title=${this.isArabic ? 'دليل التثبيت' : 'Installation Guide'}>
-              <div class="text-base relative z-1 font-bold"><span>${this.isArabic ? 'دليل التثبيت' : 'Installation Guide'}</span></div>
-            </button>
-
             <a href="${this.baseLang}/login.html" title=${this.isArabic ? "تسجيل الدخول" : 'Login'} class="before:bg-white border-1 border-white rounded-[5px] hover:text-black px-5 py-2 btn">
               <div class="text-base relative z-1 font-bold"><span>${this.isArabic ? "تسجيل الدخول" : 'Login'}</span></div>
             </a>
@@ -137,13 +133,14 @@ class CoopNavbar extends HTMLElement {
                 </div>
               </div>
               <ul class="dropdown-list">
-                <li class="${this._active('marketplace')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Marketplace')"><a href='${this.baseLang}/marketplace.html'>${this.isArabic ? "سوق" : 'Marketplace'}</a></li>
-                <li class="${this._active('about')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer ${this._active('about')}" onclick="selectItem(this,'About')"><a href="${this.baseLang}/about.html">${this.isArabic ? "حول" : 'About'}</a></li>
-                <li class="${this._active('compatibility')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer ${this._active('compatibility')}" onclick="selectItem(this,'Compatibility')"><a href="${this.baseLang}/compatibility.html">${this.isArabic ? "التوافق" : 'Compatibility'}</a></li>
-                <li class="${this._active('faq')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer ${this._active('faq')}" onclick="selectItem(this,'FAQ')"><a href="${this.baseLang}/faq.html">${this.isArabic ? "الأسئلة الشائعة" : 'FAQ'}</a></li>
-                <li class="${this._active('blog')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer ${this._active('blog')}" onclick="selectItem(this,'Blogs')"><a href="${this.baseLang}/blog.html">${this.isArabic ? "المدونة" : 'Blogs'}</a></li>
-                <li class="${this._active('contact')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Contact')"><a href="${this.baseLang}/contact.html">${this.isArabic ? "اتصال" : 'Contact'}</a></li>
-                <li class="${this._active('login')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Login')"><a href="${this.baseLang}/login.html">${this.isArabic ? "تسجيل الدخول" : 'Login'}</a></li>
+                <li class="${this._active('marketplace')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Marketplace')"><a class="none-broder" href='${this.baseLang}/marketplace.html'>${this.isArabic ? "سوق" : 'Marketplace'}</a></li>
+                <li class="${this._active('about')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer ${this._active('about')}" onclick="selectItem(this,'About')"><a class="none-broder" href="${this.baseLang}/about.html">${this.isArabic ? "حول" : 'About'}</a></li>
+                <li class="${this._active('compatibility')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer ${this._active('compatibility')}" onclick="selectItem(this,'Compatibility')"><a class="none-broder" href="${this.baseLang}/compatibility.html">${this.isArabic ? "التوافق" : 'Compatibility'}</a></li>
+                <li class="${this._active('faq')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer ${this._active('faq')}" onclick="selectItem(this,'FAQ')"><a class="none-broder" href="${this.baseLang}/faq.html">${this.isArabic ? "الأسئلة الشائعة" : 'FAQ'}</a></li>
+                <li class="${this._active('blog')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer ${this._active('blog')}" onclick="selectItem(this,'Blogs')"><a class="none-broder" href="${this.baseLang}/blog.html">${this.isArabic ? "المدونة" : 'Blogs'}</a></li>
+                <li class="${this._active('contact')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Contact')"><a class="none-broder" href="${this.baseLang}/contact.html">${this.isArabic ? "اتصال" : 'Contact'}</a></li>
+                <li class="${this._active('login')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Login')"><a class="none-broder" href="${this.baseLang}/login.html">${this.isArabic ? "تسجيل الدخول" : 'Login'}</a></li>
+                <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"><a class="none-broder" href="">${this.isArabic ? 'دليل التثبيت' : 'Installation Guide'}</a></li>
               </ul>
             </div>
 
@@ -154,8 +151,8 @@ class CoopNavbar extends HTMLElement {
                 <img src="/assets/icons/arraw.svg" alt="arrow" class="dropdown-arrow w-[12px] h-[6px]" />
               </div>
               <ul class="dropdown-list">
-                <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'العربية')"><a href="/ar${this.currentPage}">العربية</a></li>
-                <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'English')"><a href="/en${this.currentPage}">English</a></li>
+                <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'العربية')"><a class="none-broder" href="/ar${this.currentPage}">العربية</a></li>
+                <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'English')"><a class="none-broder" href="/en${this.currentPage}">English</a></li>
               </ul>
             </div>
 
@@ -201,6 +198,7 @@ class CoopNavbar extends HTMLElement {
             <li class="${this._active('blog')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Blogs')"><a href="${this.baseLang}/blog.html">${this.isArabic ? "المدونة" : 'Blogs'}</a></li>
             <li class="${this._active('contact')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Contact')"><a href="${this.baseLang}/contact.html">${this.isArabic ? "اتصال" : 'Contact'}</a></li>
             <li class="${this._active('login')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Login')"><a href="${this.baseLang}/login.html">${this.isArabic ? "تسجيل الدخول" : 'Login'}</a></li>
+            <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"><a class="none-broder" href="">${this.isArabic ? 'دليل التثبيت' : 'Installation Guide'}</a></li>
           </ul>
         </div>
 

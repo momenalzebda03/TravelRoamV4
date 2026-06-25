@@ -25,8 +25,9 @@
                 <div class="container sections-marign-top pt-20">
                     <div class="grid md:grid-cols-2 gap-[50px] md:gap-[127px]" data-aos="fade-up">
                         <div class="flex flex-col gap-[28px]">
-                            <h2 class="text-3xl font-medium text-[var(--is-pink)]">عبور
-                                <span class="font-bold text-[var(--is-blue)]">الدفع</span>
+                            <h2 class="text-3xl font-medium text-[var(--is-pink)]"><span
+                                    class="font-bold text-[var(--is-blue)]">بوابة</span>
+                                الدفع
                             </h2>
                             <div class="flex flex-col gap-[30px]">
                                 <div class="flex flex-col gap-[20px]">
@@ -50,9 +51,23 @@
                                 <div class="flex flex-col gap-[30px]">
                                     <span class="text-[var(--is-blue-3)] text-md md:text-xl font-bold">هل لديك رمز
                                         قسيمة؟</span>
-                                    <input type="text"
-                                        class="border border-1 border-[var(--is-gray-7)] px-[15px] py-3 w-full placeholder:font-bold placeholder:text-[var(--is-gray-14)] relative bg-[var(--is-gray-6)] rounded-[10px]"
-                                        placeholder="أضف رمز القسيمة" />
+                                    <!-- <div
+                                    class="font-bold rounded-[10px] px-4 py-2 text-[var(--is-red-1)] border border-[var(--is-red-1)] bg-[var(--is-gray-6)]">
+                                   الكود الذي أدخلته غير صحيح. حاول مرة أخرى.
+                                </div> -->
+                                    <div class="flex gap-2">
+                                        <input type="text"
+                                            class="border border-1 border-[var(--is-gray-7)] px-[15px] py-3 w-full placeholder:font-bold placeholder:text-[var(--is-gray-14)] relative bg-[var(--is-gray-6)] rounded-[10px]"
+                                            placeholder="أضف رمز القسيمة" />
+                                        <div class="flex">
+                                            <button
+                                                class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[10px] px-12 py-[3%] btn">
+                                                <div class="relative z-1 text-xs font-semibold">
+                                                    <span>تقدّم</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div id="stripe" class="flex flex-col gap-[20px]">
                                     <span class="text-[var(--is-blue-3)] text-md md:text-xl font-bold">ملخص
@@ -60,9 +75,8 @@
                                     <div
                                         class="rounded-[20px] bg-[var(--is-gray-11)] shadow-[0_2px_5px_var(--is-black-2)] py-[23px] px-[18px] flex flex-col justify-between gap-3">
                                         <div class="w-80">
-                                            <p class="font-medium text-xl text-[var(--is-gray-14)]">١× تصريح غير محدود
-                                                لمدة
-                                                ٧ أيام
+                                            <p class="font-medium text-xl text-[var(--is-gray-14)]">تذكرة غير محدودة
+                                                لمدة 7 أيام
                                                 ألمانيا
                                             </p>
                                         </div>
@@ -202,12 +216,12 @@
             <div id="model"
                 class="hidden fixed inset-0 flex justify-center items-center z-[999999] bg-[var(--is-blue-8)]">
                 <div class="bg-white py-[15px] rounded-[18px] flex flex-col gap-2 md:w-[850px]">
-                    <div class="flex justify-between px-[26px]">
-                        <h2 class="font-bold text-xl">الدفع المقسّم</h2>
+                    <div class="flex justify-between py-2 px-[26px]">
+                        <h2 class="mt-1 font-bold text-xl">الدفع المقسّم</h2>
                         <span id="cancel-btn" class="cursor-pointer" title="close">✕</span>
                     </div>
                     <hr class="text-[var(--is-gray-17)] my-2" />
-                    <ul class="flex flex-col px-[26px]">
+                    <ul class="flex flex-col py-2 gap-2 px-[26px]">
                         <li class="flex justify-between text-xl">
                             <p class="font-medium">المبلغ الإجمالي</p>
                             <p class="font-bold">$19.00</p>
@@ -218,7 +232,7 @@
                         </li>
                     </ul>
                     <hr class="text-[var(--is-gray-17)] my-2" />
-                    <ul class="flex flex-col px-[26px]">
+                    <ul class="flex flex-col py-2 gap-2 px-[26px]">
                         <li class="flex justify-between text-xl">
                             <p class="font-medium">الرصيد المتبقي للدفع
                             </p>

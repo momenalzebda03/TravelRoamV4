@@ -31,22 +31,6 @@
                                 class="font-bold">TravelRoam</span>, حتى نعرف أين نرسل لك حزمة الإنترنت المجانية الخاصة
                             بك في الخارج.</p>
                     </div>
-                    <div class="relative flex items-center flex-col gap-5">
-                        <div class="w-[65%] flex gap-4">
-                            <div title="mail"
-                                class="cursor-pointer w-full border border-white rounded-full flex justify-center items-center py-3">
-                                <img src="../assets/icons/mail.svg" alt="mail" class="w-[24px] h-[24px]" />
-                            </div>
-                            <div title="apple"
-                                class="cursor-pointer w-full border border-white rounded-full flex justify-center items-center py-3">
-                                <img src="../assets/icons/apple.svg" alt="apple" class="w-[24px] h-[24px] invert" />
-                            </div>
-                        </div>
-                        <div
-                            class="text-center after:right-23 after:bottom-[12%] after:content-[''] after:absolute after:w-[29%] after:h-[1%] after:bg-white before:left-23 before:bottom-[12%] before:content-[''] before:absolute before:w-[29%] before:h-[1%] before:bg-white">
-                            <p>او</p>
-                        </div>
-                    </div>
                     <form action="" method="" class="flex flex-col gap-4">
                         <div class="flex gap-3">
                             <input type="text"
@@ -54,7 +38,7 @@
                                 placeholder="الاسم الأول" />
                             <input type="text"
                                 class="border border-1 border-[var(--is-gray-7)] px-[15px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
-                                placeholder="الاسم الثاني" />
+                                placeholder="الاسم الاخير" />
                         </div>
                         <input type="email"
                             class="border border-1 border-[var(--is-gray-7)] px-[15px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
@@ -104,10 +88,11 @@
                             class="border border-1 border-[var(--is-gray-7)] px-[15px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
                             placeholder="تأكيد كلمة المرور" />
 
-                        <p>يجب أن تكون كلمة المرور مكونة من 6 أحرف على الأقل وتحتوي على حرف خاص واحد على الأقل وحرف كبير
+                        <p class="text-[var(--bg-gray)]">يجب أن تكون كلمة المرور مكونة من 6 أحرف على الأقل وتحتوي على
+                            حرف خاص واحد على الأقل وحرف كبير
                             واحد.</p>
 
-                        <label for="remeber" class="my-5">
+                        <label for="remeber">
                             <input type="checkbox" id="remeber" />
                             أود أن أتلقى رسائل بريد إلكتروني ترويجية.
                         </label>
@@ -120,8 +105,29 @@
                                     </div>
                                 </button>
                             </div>
+                            <div class="my-2 relative flex items-center flex-col gap-2">
+                                <div
+                                    class="text-center after:right-23 after:top-[13%] after:content-[''] after:absolute after:w-[29%] after:h-[1%] after:bg-white before:left-23 before:top-[13%] before:content-[''] before:absolute before:w-[29%] before:h-[1%] after:opacity-50 before:opacity-50 before:bg-white">
+                                    <p>او</p>
+                                </div>
+                                <div class="w-[65%] flex gap-4">
+                                    <div title="mail"
+                                        class="cursor-pointer w-full border border-white rounded-full flex justify-center items-center py-3">
+                                        <img src="../assets/icons/mail.svg" alt="mail" class="w-[24px] h-[24px]" />
+                                    </div>
+                                    <div title="apple"
+                                        class="cursor-pointer w-full border border-white rounded-full flex justify-center items-center py-3">
+                                        <img src="../assets/icons/apple.svg" alt="apple"
+                                            class="w-[24px] h-[24px] invert" />
+                                    </div>
+                                </div>
+                                <!-- <div
+                                    class="text-center after:right-23 after:bottom-[12%] after:content-[''] after:absolute after:w-[29%] after:h-[1%] after:bg-white before:left-23 before:bottom-[12%] before:content-[''] before:absolute before:w-[29%] before:h-[1%] before:bg-white">
+                                    <p>او</p>
+                                </div> -->
+                            </div>
                             <div class="flex justify-center">
-                                <p class="md:text-nowrap">بالتسجيل، أنت توافق على
+                                <p class="text-[var(--bg-gray)] md:text-nowrap">بالتسجيل، أنت توافق على
                                     <a title="Terms & Conditions" href="terms-of-service.html" class="underline">الأحكام
                                         والشروط</a> و
                                     <a title="privacy policy" href="privacy-policy.html" class="underline">سياسة

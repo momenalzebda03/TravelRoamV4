@@ -1,10 +1,18 @@
 function showTab(tab) {
-    document.getElementById('list-bundle').classList.toggle('hidden', tab !== 'bundle')
-    document.getElementById('list-unlimited-bundles').classList.toggle('hidden', tab !== 'unlimited-bundles')
-    document.getElementById('list-help')?.classList.toggle('hidden', tab !== 'help')
+    document.querySelectorAll('.regular-bundle').forEach(el =>
+        el.classList.toggle('hidden', tab !== 'bundle')
+    );
 
-    document.getElementById('tab-bundle').classList.toggle('active-bundle', tab === 'bundle')
-    document.getElementById('tab-unlimited-bundles').classList.toggle('active-bundle', tab === 'unlimited-bundles')
+    document.querySelectorAll('.list-unlimited-plans').forEach(el =>
+        el.classList.toggle('hidden', tab !== 'unlimited-bundles')
+    );
+
+    document.querySelectorAll('.list-help').forEach(el =>
+        el.classList.toggle('hidden', tab !== 'help')
+    );
+
+    document.getElementById('tab-bundle').classList.toggle('active-bundle', tab === 'bundle');
+    document.getElementById('tab-unlimited-bundles').classList.toggle('active-bundle', tab === 'unlimited-bundles');
     document.getElementById('tab-help')?.classList.toggle('active-bundle', tab === 'help')
 }
 
@@ -15,17 +23,13 @@ document.querySelectorAll('.bundle-item').forEach(item => {
         const bundle = JSON.parse(item.dataset.bundle);
         const isSelected = item.classList.contains('is-selected');
 
-        // أولاً شيل الـ selection من كل العناصر
         document.querySelectorAll('.bundle-item').forEach(el => {
             el.classList.remove('is-selected', 'bg-[var(--is-blue)]', 'text-white');
-            el.querySelector('.radio-circle')?.classList.remove('bg-[var(--is-pink)]', 'border-0');
         });
         selectedBundles.length = 0;
 
-        // لو مش selected حدده
         if (!isSelected) {
             item.classList.add('is-selected', 'bg-[var(--is-blue)]', 'text-white');
-            item.querySelector('.radio-circle')?.classList.add('bg-[var(--is-pink)]', 'border-0');
             selectedBundles.push(bundle);
         }
 

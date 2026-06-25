@@ -158,8 +158,8 @@
                 <div class="flex flex-col gap-[30px] md:w-[850px] bg-white py-[35px] rounded-[18px] px-[26px]">
                     <div class="flex justify-between">
                         <div class="flex items-center gap-3">
-                            <img src="../assets/icons/share-qr.svg" alt="share qr" class="w-[30px] h-[30px]" />
-                            <h2 class="font-bold text-xl">شارك رمز الاستجابة السريعة لبيانات eSim الخاصة بك</h2>
+                            <img src="../assets/icons/share-qr.svg" alt="share qr" class="w-[40px] h-[40px]" />
+                            <h2 class="font-bold text-xl">مشاركة رمز الاستجابة السريعة eSIM</h2>
                         </div>
                         <span id="cancel-btn" class="cursor-pointer" title="close">✕</span>
                     </div>
@@ -183,7 +183,7 @@
                             <p>traveller@examplemail.com</p>
                         </div>
                     </div>
-                    <ul class="flex justify-center gap-[40px]">
+                    <ul class="hidden flex justify-center gap-[40px]" id="media">
                         <li>
                             <a href="" title="meta">
                                 <img src="../assets/icons/meta-1.svg" alt="meta" class="w-10 h-10" />
@@ -200,11 +200,11 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="flex justify-center">
+                    <div onclick="showShare()" class="flex justify-center">
                         <button
                             class="hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-23 py-[1.5%] btn">
                             <div class="relative z-1 text-md font-bold">
-                                <span>مشاركة رمز الاستجابة السريعة</span>
+                                <span>مشاركة</span>
                             </div>
                         </button>
                     </div>

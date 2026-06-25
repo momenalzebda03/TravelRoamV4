@@ -38,3 +38,8 @@ function closeModal() {
 
 if (cancelBooking) cancelBooking.onclick = openModal;
 if (noModel) noModel.onclick = closeModal;
+
+function showShare () {
+    const media = document.getElementById("media");
+    media.classList.remove("hidden")
+}
