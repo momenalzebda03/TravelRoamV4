@@ -116,6 +116,10 @@
     font-weight: 700;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 [lang="ar"] body {
     font-family: "cairo", sans-serif;
 }
@@ -396,7 +400,7 @@
         max-width: 330px !important;
     }
 
-    .custom-checkbox {
+    .custom-check box {
         width: 22px;
     }
 
@@ -413,4 +417,41 @@
     .container {
         max-width: 350px;
     }
+}
+
+.style-scroll::-webkit-scrollbar {
+    width: 0;
+}
+
+.wheel {
+    height: 180px;
+    width: 70px;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+    position: relative;
+}
+
+.wheel::-webkit-scrollbar {
+    display: none;
+}
+
+.time-item {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
+    font-size: 18px;
+    color: #666;
+}
+
+.time-item.active {
+    color: #25123C;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+.last-line::before {
+  right: 0
 }

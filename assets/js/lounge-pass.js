@@ -50,19 +50,14 @@ function setActive(tabKey) {
 
     Object.values(tabs).forEach(tab => {
         if (!tab.btn) return;
-        tab.btn.classList.remove("!text-black");
-        if (indicator) tab.btn.style.color = "var(--is-blue-3)";
+        if (indicator) tab.btn.style.color = "white";
         tab.content?.classList.add("hidden");
     });
 
     const tab = tabs[tabKey];
     if (!tab.btn) return;
 
-    if (!indicator) {
-        tab.btn.classList.add("!text-black");
-    } else {
-        tab.btn.style.color = "white";
-    }
+    tab.btn.style.color = "#25123C";
 
     tab.content?.classList.remove("hidden");
     indicator?.style.setProperty("transform", `translateX(${tab.translate})`);

@@ -63,11 +63,78 @@
                                 </div>
                                 <div class="flex flex-col gap-[10px] md:gap-[20px]">
                                     <span class="text-xl font-bold">تاريخ</span>
-                                    <input type="date" id="date" class="custom-class" value={date} />
+
+                                    <div id="dateTrigger"
+                                        class="custom-class p-3 rounded-[10px] bg-[var(--is-gray-27)] cursor-pointer !text-[var(--is-blue-3)] flex items-center justify-between">
+                                        اختيار
+                                        <img src="../assets/icons/calendar-date.svg" class="w-[20px] h-[20px]" />
+                                    </div>
                                 </div>
+
+                                <div id="dateModal"
+                                    class="hidden fixed inset-0 bg-black/40 z-[999] flex items-center justify-center">
+
+                                    <div class="bg-white rounded-[18px] p-5 w-[320px]">
+
+                                        <div class="flex justify-between mb-3">
+                                            <button id="nextMonth" class="text-[var(--is-blue-3)]">▶</button>
+                                            <h2 id="monthTitle" class="font-bold"></h2>
+                                            <button id="prevMonth" class="text-[var(--is-blue-3)]">◀</button>
+                                        </div>
+
+                                        <div class="grid grid-cols-7 text-center text-sm font-semibold mb-2">
+                                            <span>Su</span><span>Mo</span><span>Tu</span>
+                                            <span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+                                        </div>
+
+                                        <div id="calendar" class="grid grid-cols-7 gap-1 text-center"></div>
+
+                                        <button id="confirmDate"
+                                            class="mt-4 w-full py-2 bg-[var(--is-blue-3)] text-white rounded-[10px]">
+                                            تأكيد
+                                        </button>
+
+                                    </div>
+                                </div>
+
                                 <div class="flex flex-col gap-[10px] md:gap-[20px]">
-                                    <span class="text-xl font-bold">الوقت</span>
-                                    <input type="time" id="time" class="custom-class" value={time} />
+                                    <span class="text-xl font-bold">وقت</span>
+                                    <div id="openTime"
+                                        class="custom-class p-3 rounded-[10px] bg-[var(--is-gray-27)] cursor-pointer !text-[var(--is-blue-3)] flex items-center justify-between">
+                                        <span id="timeText" class="text-gray-400">اختيار</span>
+                                        <img src="../assets/icons/time-1.svg" class="w-[20px] h-[20px]" />
+                                    </div>
+                                </div>
+
+                                <div id="timeModal"
+                                    class="hidden fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+
+                                    <div class="bg-white w-[300px] rounded-[25px] p-5">
+
+                                        <div class="relative flex justify-center gap-6 bg-gray-100 py-6">
+
+                                            <div
+                                                class="pointer-events-none absolute inset-0 bg-gradient-to-b from-gray-100 via-transparent to-gray-100 z-10">
+                                            </div>
+
+                                            <div
+                                                class="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70px] h-[40px] rounded-lg z-20">
+                                            </div>
+
+                                            <div id="hourWheel" class="wheel"></div>
+
+                                            <div class="text-xl font-bold pt-[75px]">:</div>
+
+                                            <div id="minuteWheel" class="wheel"></div>
+
+                                        </div>
+
+                                        <button id="doneTime"
+                                            class="mt-5 w-full bg-[var(--is-blue-3)] text-white py-3 rounded-[12px]">
+                                            تأكيد
+                                        </button>
+
+                                    </div>
                                 </div>
                             </div>
                             <div class="flex flex-col gap-[10px] md:gap-[20px]">
@@ -88,7 +155,8 @@
                                             <div class="flex flex-col gap-[10px] md:gap-[20px] w-full">
                                                 <div class="flex justify-between items-center custom-class">
                                                     <div class="flex flex-col gap-[4px] relative">
-                                                        <span class="text-md font-medium text-[var(--is-gray-7)]">البالغون
+                                                        <span
+                                                            class="text-md font-medium text-[var(--is-gray-7)]">البالغون
                                                             (12+)</span>
                                                         <span class="text-sm font-medium text-[var(--is-blue-3)]"
                                                             id="adults42"></span>
@@ -126,8 +194,7 @@
                                             <div class="flex flex-col gap-[10px] md:gap-[20px] w-full">
                                                 <div class="flex justify-between items-center custom-class">
                                                     <div class="flex flex-col gap-[4px] relative">
-                                                        <span
-                                                            class="text-md font-medium text-[var(--is-gray-7)]">رضيع
+                                                        <span class="text-md font-medium text-[var(--is-gray-7)]">رضيع
                                                             (under 5)</span>
                                                         <span
                                                             class="text-sm font-medium text-[var(--is-blue-3)]">${adults

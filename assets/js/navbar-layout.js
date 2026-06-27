@@ -82,7 +82,18 @@ class CoopNavbar extends HTMLElement {
     return window.location.pathname.includes('login') ? '!relative' : '';
   }
 
+  getUser() {
+    try {
+      const stored = localStorage.getItem("user");
+      return stored ? JSON.parse(stored) : null;
+    } catch {
+      return null;
+    }
+  }
+
   _render() {
+    const user = this.getUser();
+
     this.innerHTML = `
 <nav class="z-9 text-white navbar transition duration-300 w-full py-[33px] ${this._navBgClass()} ${this._navPositionClass()}">
   <div class="container z-1">
@@ -116,9 +127,11 @@ class CoopNavbar extends HTMLElement {
         <div class="hidden lg:flex gap-[91px] items-center">
           <div class="mt-5 lg:mt-0 flex flex-col lg:flex-row items-center gap-[30px] relative">
 
+           ${!user ? `
             <a href="${this.baseLang}/login.html" title=${this.isArabic ? "تسجيل الدخول" : 'Login'} class="before:bg-white border-1 border-white rounded-[5px] hover:text-black px-5 py-2 btn">
               <div class="text-base relative z-1 font-bold"><span>${this.isArabic ? "تسجيل الدخول" : 'Login'}</span></div>
             </a>
+          ` : ''}
 
             <!-- Menu dropdown -->
             <div class="relative flex justify-center dropdown-wrapper">
@@ -139,7 +152,9 @@ class CoopNavbar extends HTMLElement {
                 <li class="${this._active('faq')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer ${this._active('faq')}" onclick="selectItem(this,'FAQ')"><a class="none-broder" href="${this.baseLang}/faq.html">${this.isArabic ? "الأسئلة الشائعة" : 'FAQ'}</a></li>
                 <li class="${this._active('blog')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer ${this._active('blog')}" onclick="selectItem(this,'Blogs')"><a class="none-broder" href="${this.baseLang}/blog.html">${this.isArabic ? "المدونة" : 'Blogs'}</a></li>
                 <li class="${this._active('contact')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Contact')"><a class="none-broder" href="${this.baseLang}/contact.html">${this.isArabic ? "اتصال" : 'Contact'}</a></li>
+               ${!user ? `
                 <li class="${this._active('login')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Login')"><a class="none-broder" href="${this.baseLang}/login.html">${this.isArabic ? "تسجيل الدخول" : 'Login'}</a></li>
+                ` : ``}
                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"><a class="none-broder" href="">${this.isArabic ? 'دليل التثبيت' : 'Installation Guide'}</a></li>
               </ul>
             </div>
@@ -197,7 +212,9 @@ class CoopNavbar extends HTMLElement {
             <li class="${this._active('faq')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'FAQ')"><a href="${this.baseLang}/faq.html">${this.isArabic ? "الأسئلة الشائعة" : 'FAQ'}</a></li>
             <li class="${this._active('blog')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Blogs')"><a href="${this.baseLang}/blog.html">${this.isArabic ? "المدونة" : 'Blogs'}</a></li>
             <li class="${this._active('contact')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Contact')"><a href="${this.baseLang}/contact.html">${this.isArabic ? "اتصال" : 'Contact'}</a></li>
+           ${!user ? `
             <li class="${this._active('login')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Login')"><a href="${this.baseLang}/login.html">${this.isArabic ? "تسجيل الدخول" : 'Login'}</a></li>
+             ` : ''}
             <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"><a class="none-broder" href="">${this.isArabic ? 'دليل التثبيت' : 'Installation Guide'}</a></li>
           </ul>
         </div>

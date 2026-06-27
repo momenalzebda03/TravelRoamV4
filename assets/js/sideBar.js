@@ -107,11 +107,16 @@ class CoopSideBar extends HTMLElement {
                         </a>
                     </li>
                     <li class="flex">
-                        <a title="${this.isArabic ? "تسجيل الخروج" : 'Logout'}" href="Logout" class="flex items-center gap-[17px]
-                                    text-white hover:opacity-[1] opacity-[0.6] ${isActive('logout')}">
-                            <img src="/assets/icons/logout.svg" alt="Logout" width="22" height="22" />
-                            <span class="text-nowrap">${this.isArabic ? "تسجيل الخروج" : 'Logout'}</span>
-                        </a>
+                    <a id="logoutBtn"
+                    onclick="logout(event)"
+   title="${this.isArabic ? "تسجيل الخروج" : 'Logout'}"
+   class="flex items-center gap-[17px]
+   text-white hover:opacity-[1] opacity-[0.6]">
+    <img src="/assets/icons/logout.svg" alt="Logout" width="22" height="22" />
+    <span class="text-nowrap">
+        ${this.isArabic ? "تسجيل الخروج" : 'Logout'}
+    </span>
+</a>
                     </li>
                 </ul>
         `;
@@ -119,3 +124,13 @@ class CoopSideBar extends HTMLElement {
 }
 
 customElements.define('coop-sidebar', CoopSideBar);
+
+const logoutBtn = this.querySelector("#logoutBtn");
+
+function logout(e) {
+    e.preventDefault();
+
+    localStorage.removeItem("user");
+
+    window.location.href = "../index.html";
+}

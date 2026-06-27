@@ -37,15 +37,16 @@
                 <div class="bg-white w-[90%] rounded-[40px] py-[33px] px-[30px] md:px-[60px]">
                     <div
                         class="items-end grid min-[576px]:grid-cols-2 xl:grid-cols-[3.5fr_3.5fr_3.5fr_2fr] gap-[10px] xl:gap-[30px]">
+
                         <div class="relative dropdown-wrapper flex flex-col gap-[10px] md:gap-[20px]">
                             <span class="text-xl font-bold">الوجهة</span>
                             <div
                                 class="rounded-xl flex items-center border border-2 border-[var(--is-gray-12)] shadow-[0_5px_10px_var(--is-black-2)] relative">
-                                <img src="/assets/icons/map.svg"
-                                    class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2" />
+                                <img id="flag" src="/assets/icons/map.svg"
+                                    class="flag w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2" />
                                 <input type="text"
                                     class="destination-wrapper w-full ps-[45px] py-[12px] outline-none focus:outline-none"
-                                    placeholder="Destination" id="destination-input-1"
+                                    placeholder="الوجهة" id="destination-input-1"
                                     oninput="filterDestinations(this.value, this)" onfocus="openDestinations(this)" />
                                 <div class="absolute md:right-0 px-5">
                                     <img src="../assets/icons/arraw.svg" alt="search" class="filter brightness-0" />
@@ -58,57 +59,53 @@
 
                         </div>
 
-                        <div class="flex flex-col gap-[10px] md:gap-[20px]">
+                        <div class="relative dropdown-wrapper flex flex-col gap-[10px] md:gap-[20px]">
                             <span class="text-xl font-bold">المطار</span>
                             <div
                                 class="rounded-xl flex items-center border border-2 border-[var(--is-gray-12)] shadow-[0_5px_10px_var(--is-black-2)] relative">
-                                <img src="/assets/icons/airport.svg" alt="airport" class="absolute left-3 w-5 h-5"
+                                <img src="/assets/icons/airport.svg"
+                                    class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2"
                                     style="filter: brightness(0) saturate(100%) invert(23%) sepia(92%) saturate(7493%) hue-rotate(320deg) brightness(100%) contrast(101%);" />
-                                <select name="" id="" class="w-full ps-[45px] py-[12px] z-1 appearance-none">
-                                    <option value="London Heathrow" disabled selected>London Heathrow</option>
-                                    <option value="London Heathrow Airport (LHR)">London Heathrow Airport (LHR)</option>
-                                    <option value="Istanbul Airport (IST)">Istanbul Airport (IST)</option>
-                                    <option value="Paris Charles de Gaulle Airport (CDG)">Paris Charles de Gaulle
-                                        Airport (CDG)</option>
-                                    <option value="Amsterdam Airport Schiphol (AMS)">Amsterdam Airport Schiphol (AMS)
-                                    </option>
-                                    <option value="Frankfurt Airport (FRA)">Frankfurt Airport (FRA)</option>
-                                    <option value="Adolfo Suárez Madrid–Barajas Airport (MAD) ">Adolfo Suárez
-                                        Madrid–Barajas Airport (MAD) </option>
-                                    <option value="Leonardo da Vinci–Fiumicino Airport (FCO)">Leonardo da
-                                        Vinci–Fiumicino Airport (FCO)</option>
-                                    <option value="Munich Airport (MUC)">Munich Airport (MUC)</option>
-                                    <option value="Barcelona–El Prat Airport (BCN)">Barcelona–El Prat Airport (BCN)
-                                    </option>
-                                    <option value="Zurich Airport (ZRH)">Zurich Airport (ZRH)
-                                    </option>
-                                </select>
-                                <img src="/assets/icons/arraw.svg" alt="arraw" width="13" height="7" class="absolute right-5 top-1/2 -translate-y-1/2 transition-transform
-                                            duration-500 filter brightness-0" />
+                                <input type="text"
+                                    class="destination-wrapper w-full ps-[45px] py-[12px] outline-none focus:outline-none"
+                                    placeholder="مطار لندن هيثرو" oninput="filterAirports(this.value, this)"
+                                    onfocus="filterAirports('', this)" />
+                                <div class="absolute md:right-0 px-5">
+                                    <img src="../assets/icons/arraw.svg" alt="search" class="filter brightness-0" />
+                                </div>
                             </div>
+
+                            <ul id="destination-list"
+                                class="shadow-2xl dropdown-list !block !px-0 absolute w-full mt-15 rounded-[12px] !bg-white overflow-hidden z-50">
+                            </ul>
                         </div>
-                        <div class="flex flex-col gap-[10px] md:gap-[20px]">
-                            <span class="text-xl font-bold">الULA</span>
+
+                        <div class="relative dropdown-wrapper flex flex-col gap-[10px] md:gap-[20px]">
+                            <span class="text-xl font-bold">المبنى</span>
                             <div
                                 class="rounded-xl flex items-center border border-2 border-[var(--is-gray-12)] shadow-[0_5px_10px_var(--is-black-2)] relative">
-                                <img src="/assets/icons/terminal.svg" alt="terminal" class="absolute left-3 w-5 h-5" />
-                                <select name="" id="" class="w-full ps-[45px] py-[12px] z-1 appearance-none">
-                                    <option value="Terminal 1">Terminal 1</option>
-                                    <option value="Terminal 2">Terminal 2</option>
-                                    <option value="Terminal 3">Terminal 3</option>
-                                    <option value="Terminal 4">Terminal 4</option>
-                                    <option value="Terminal 5">Terminal 5</option>
-                                </select>
-                                <img src="/assets/icons/arraw.svg" alt="arraw" width="13" height="7" class="absolute right-5 top-1/2 -translate-y-1/2 transition-transform
-                                            duration-500 filter brightness-0" />
+                                <img src="/assets/icons/terminal.svg"
+                                    class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2" />
+                                <input type="text"
+                                    class="destination-wrapper w-full ps-[45px] py-[12px] outline-none focus:outline-none"
+                                    placeholder="المبنى" oninput="filterTerminals(this.value, this)"
+                                    onfocus="filterTerminals('', this)" />
+                                <div class="absolute md:right-0 px-5">
+                                    <img src="../assets/icons/arraw.svg" alt="search" class="filter brightness-0" />
+                                </div>
                             </div>
+
+                            <ul id="destination-list"
+                                class="shadow-2xl dropdown-list !block !px-0 absolute w-full mt-15 rounded-[12px] !bg-white overflow-hidden z-50">
+                            </ul>
                         </div>
-                        <button title="ابحث عن صالات" id="btn-find"
+
+                        <a href="#section-choose" title="ابحث عن صالات" id="btn-find"
                             class="text-nowrap before:bg-white rounded-[10px] hover:shadow-xl hover:text-black bg-[var(--is-pink)] text-white px-9 py-3 btn">
                             <div class="text-base relative z-1 font-bold">
                                 <span>ابحث عن صالات</span>
                             </div>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -127,7 +124,7 @@
                             shadow-[0_4px_10px_var(--is-black-2)] rounded-[15px] hover:text-white text-[var(--is-blue)]">
                         <img src="/assets/images/lounge-1.png" alt="lounges"
                             class="rounded-[15px] object-cover w-full h-[230px]" />
-                        <div class="pt-[20px] pb-[37px] flex flex-col gap-[16px] px-[23px]">
+                        <div class="pt-[20px] pb-[37px] flex flex-col gap-[16px] px-[23px] h-full">
                             <div class="flex items-center justify-between">
                                 <h3 class="text-lg font-semibold">
                                     صالة IGA
@@ -155,7 +152,7 @@
                                     <span>£60</span>
                                 </li>
                             </ul>
-                            <div class="flex">
+                            <div class="flex h-full items-end">
                                 <button
                                     class="group-hover:before:bg-white bg-[var(--is-pink)] group-hover:text-[var(--is-blue)] text-white rounded-[15px] px-9 py-[15px] md:py-[12px] btn">
                                     <div class="relative z-1 text-xs md:text-base font-semibold">
@@ -171,7 +168,7 @@
                             shadow-[0_4px_10px_var(--is-black-2)] rounded-[15px] hover:text-white text-[var(--is-blue)]">
                         <img src="/assets/images/lounge-2.png" alt="lounges"
                             class="rounded-[15px] object-cover w-full h-[230px]" />
-                        <div class="pt-[20px] pb-[37px] flex flex-col gap-[16px] px-[23px]">
+                        <div class="pt-[20px] pb-[37px] flex flex-col gap-[16px] px-[23px] h-full">
                             <div class="flex items-center justify-between">
                                 <h3 class="text-lg font-semibold">
                                     صالة مؤقتة
@@ -200,7 +197,7 @@
                                     <span>£60</span>
                                 </li>
                             </ul>
-                            <div class="flex">
+                            <div class="flex h-full items-end">
                                 <button
                                     class="group-hover:before:bg-white bg-[var(--is-pink)] group-hover:text-[var(--is-blue)] text-white rounded-[15px] px-9 py-[15px] md:py-[12px] btn">
                                     <div class="relative z-1 text-xs md:text-base font-semibold">
@@ -216,7 +213,7 @@
                             shadow-[0_4px_10px_var(--is-black-2)] rounded-[15px] hover:text-white text-[var(--is-blue)]">
                         <img src="/assets/images/lounge-1.png" alt="lounges"
                             class="rounded-[15px] object-cover w-full h-[230px]" />
-                        <div class="pt-[20px] pb-[37px] flex flex-col gap-[16px] px-[23px]">
+                        <div class="pt-[20px] pb-[37px] flex flex-col gap-[16px] px-[23px] h-full">
                             <div class="flex items-center justify-between">
                                 <h3 class="text-lg font-semibold">
                                     صالة IGA
@@ -244,7 +241,7 @@
                                     <span>£60</span>
                                 </li>
                             </ul>
-                            <div class="flex">
+                            <div class="flex h-full items-end">
                                 <button
                                     class="group-hover:before:bg-white bg-[var(--is-pink)] group-hover:text-[var(--is-blue)] text-white rounded-[15px] px-9 py-[15px] md:py-[12px] btn">
                                     <div class="relative z-1 text-xs md:text-base font-semibold">
@@ -260,7 +257,7 @@
                             shadow-[0_4px_10px_var(--is-black-2)] rounded-[15px] hover:text-white text-[var(--is-blue)]">
                         <img src="/assets/images/lounge-2.png" alt="lounges"
                             class="rounded-[15px] object-cover w-full h-[230px]" />
-                        <div class="pt-[20px] pb-[37px] flex flex-col gap-[16px] px-[23px]">
+                        <div class="pt-[20px] pb-[37px] flex flex-col gap-[16px] px-[23px] h-full">
                             <div class="flex items-center justify-between">
                                 <h3 class="text-lg font-semibold">
                                     صالة مؤقتة
@@ -289,7 +286,7 @@
                                     <span>£60</span>
                                 </li>
                             </ul>
-                            <div class="flex">
+                            <div class="flex h-full items-end">
                                 <button
                                     class="group-hover:before:bg-white bg-[var(--is-pink)] group-hover:text-[var(--is-blue)] text-white rounded-[15px] px-9 py-[15px] md:py-[12px] btn">
                                     <div class="relative z-1 text-xs md:text-base font-semibold">
@@ -808,9 +805,9 @@
                             </div>
                         </div>
                         <div class="hidden lg:block relative flex items-center justify-center" data-aos="fade-up">
-                            <div class="lg:absolute left-0 -bottom-35 w-[492px] h-[659px]">
+                            <div class="lg:absolute left-15 -bottom-30 w-[442px]">
                                 <img src="../assets/images/iPhone.png" alt="iPhone"
-                                    class="w-full h-full object-cover" />
+                                    class="w-full h-full object-contain" />
                             </div>
                         </div>
                     </div>
