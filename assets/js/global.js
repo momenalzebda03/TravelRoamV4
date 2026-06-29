@@ -20,13 +20,9 @@ window.addEventListener("scroll", function () {
     const currentScroll = window.scrollY;
     const isScrollingDown = currentScroll > lastScrollTop;
 
-    if (isScrollingDown) {
-        hideNavbar(navbar);
-    } else {
-        showNavbar(navbar);
-    }
+    isScrollingDown ? hideNavbar(navbar) : showNavbar(navbar);
 
-    setNavbarStyle(navbar, currentScroll <= 300);
+    setNavbarStyle(navbar, currentScroll <= 100);
     lastScrollTop = Math.max(currentScroll, 0);
 });
 

@@ -30,7 +30,9 @@
                     <div class="mt-10 md:mt-15 md:w-[47%] text-white flex flex-col gap-[30px] md:gap-[60px]"
                         data-aos="fade-up">
                         <div class="flex flex-col text-center md:text-start gap-[16px]">
-                            <h1 class="font-bold text-xl md:text-5xl md:leading-15">هل تبحث عن خطط الإنترنت لألمانيا؟
+                            <h1 class="font-bold text-xl md:text-5xl md:leading-15">هل تبحث عن خطط الإنترنت <span
+                                    id="country" class="hidden">لأالمانيا</span> <span id="region"
+                                    class="hidden">لأفريقيا</span>
                             </h1>
                             <p class="text-sm md:text-xl leading-7 md:leading-9 font-normal">إليكم أفضل خططنا....
                             </p>
@@ -54,8 +56,8 @@
     bg-center
     bg-no-repeat -z-1">
                     </div>
-                    <div onclick="openBundleModal()"
-                        class="w-[90%] md:w-[40%] xl:w-[35%] h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
+                    <div id="country" onclick="openBundleModal()"
+                        class="hidden w-[90%] md:w-[40%] xl:w-[35%] h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
                         <div class="flex flex-col gap-[20px]">
                             <div class="flex flex-wrap gap-3 justify-between items-center w-full">
                                 <div class="flex items-center gap-[11px]">
@@ -95,6 +97,47 @@
                             </li>
                         </ul>
                     </div>
+                    <div id="region" onclick="openBundleModal()"
+                        class="hidden w-[90%] md:w-[40%] xl:w-[35%] h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
+                        <div class="flex flex-col gap-[20px]">
+                            <div class="flex flex-wrap gap-3 justify-between items-center w-full">
+                                <div class="flex items-center gap-[11px]">
+                                    <img src="../assets/icons/aferica.svg" alt="aferica"
+                                        class="w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] rounded-full object-cover" />
+                                    <p class="font-semibold text-xl lg:text-4xl">أفريقيا</p>
+                                </div>
+                                <div
+                                    class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
+                                    موصى به
+                                    <img src="../assets/icons/star.svg" alt="star"
+                                        class="w-5 h-5 rounded-full object-cover" />
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-2 justify-between">
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="font-bold text-4xl">5 GB</h3>
+                                    <p class="text-nowrap font-medium text-xs">صالح لمدة 30 يومًا من التفعيل
+                                    </p>
+                                </div>
+                                <p class="md:mx-4 font-bold text-2xl" [class.line-through]="plan.discounted">$17.00
+                                </p>
+                            </div>
+                        </div>
+                        <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-2">
+                            <li class="flex items-center gap-2 mx-2 text-center">
+                                <img src="../assets/icons/wifi.svg" alt="wifi" class="w-[43px] h-[43px]" />
+                                <p class="font-medium text-xs">9 ساعات من الموسيقى</p>
+                            </li>
+                            <li class="flex items-center gap-2 mx-2 text-center">
+                                <img src="../assets/icons/youtube.svg" alt="youtube" class="w-[43px] h-[43px]" />
+                                <p class="font-medium text-xs">6 ساعات فيديو</p>
+                            </li>
+                            <li class="flex items-center gap-2 mx-2 text-center">
+                                <img src="../assets/icons/mail.svg" alt="mail" class="w-[43px] h-[43px]" />
+                                <p class="font-medium text-xs">18 ساعات التصفح</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="list-unlimited-plans pt-5 md:pt-15 flex items-center justify-center hidden">
                     <div style="background-image: url('/assets/images/bg-card.png')" class="absolute flex w-full h-full items-center
@@ -102,9 +145,9 @@
     bg-center
     bg-no-repeat -z-1">
                     </div>
-                    <div onclick="openBundleModal()"
+                    <div id="country" onclick="openBundleModal()"
                         data-bundle='{"name":"Unlimited Plan","price":25,"type":"unlimited"}'
-                        class="w-[90%] md:w-[40%] xl:w-[35%] h-full justify-between flex flex-col gap-6 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-3)]">
+                        class="hidden w-[90%] md:w-[40%] xl:w-[35%] h-full justify-between flex flex-col gap-6 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-3)]">
                         <div class="flex flex-col gap-[20px]">
                             <div class="flex flex-wrap gap-3 justify-between items-center w-full">
                                 <div class="flex items-center gap-[11px]">
@@ -115,6 +158,40 @@
                                 <div
                                     class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
                                     <img src="../assets/icons/star.svg" alt="germany"
+                                        class="w-5 h-5 rounded-full object-cover" />
+                                    موصى به
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex flex-wrap gap-2 justify-between">
+                                <h3 class="font-bold text-4xl">غير محدود لمدة 7 أيام</h3>
+                                <h3 class="font-bold text-4xl">$17.00</h3>
+                            </div>
+                            <p class="opacity-90 text-nowrap font-medium text-xs">وصول غير محدود للإنترنت*
+                            </p>
+                            <p class="opacity-90 font-medium leading-5 text-xs">في حال تجاوزت 1 جيجابايت من البيانات
+                                المسموح بها يوميًا
+                                (بسرعة عالية)،
+                                سيتم تحديد السرعة إلى 512 كيلوبت في الثانية لبقية اليوم، مما قد يؤثر على تجربتك في
+                                مشاهدة
+                                الفيديوهات عبر الإنترنت واستخدام التطبيقات الأخرى التي تستهلك كميات كبيرة من البيانات.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="region" onclick="openBundleModal()"
+                        data-bundle='{"name":"Unlimited Plan","price":25,"type":"unlimited"}'
+                        class="hidden w-[90%] md:w-[40%] xl:w-[35%] h-full justify-between flex flex-col gap-6 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-3)]">
+                        <div class="flex flex-col gap-[20px]">
+                            <div class="flex flex-wrap gap-3 justify-between items-center w-full">
+                                <div class="flex items-center gap-[11px]">
+                                    <img src="../assets/icons/aferica.svg" alt="aferica"
+                                        class="w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] rounded-full object-cover" />
+                                    <p class="font-semibold text-xl lg:text-4xl">أفريقيا</p>
+                                </div>
+                                <div
+                                    class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
+                                    <img src="../assets/icons/star.svg" alt="star"
                                         class="w-5 h-5 rounded-full object-cover" />
                                     موصى به
                                 </div>
@@ -228,7 +305,7 @@
                     class="relative z-10 bg-white rounded-[20px] container flex flex-col gap-5 overflow-auto max-h-[700px]">
                     <div class="flex text-white rounded-[20px] text-center bg-[var(--is-pink)] p-8">
                         <p class="flex-1 font-bold text-md md:text-3xl">يعمل هذا الخطة في 12 دولة:</p>
-                        <button onclick="closeBundleModal()" class="text-white text-xl font-bold">✕</button>
+                        <button onclick="closeBundleModal()" class="cursor-pointer text-white text-xl font-bold">✕</button>
                     </div>
                     <div class="container pt-5 pb-10">
                         <ul class="grid sm:grid-cols-2 lg:grid-cols-4 gap-[16px]">
