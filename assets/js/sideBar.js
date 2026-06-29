@@ -49,7 +49,7 @@ class CoopSideBar extends HTMLElement {
             : 'opacity-[0.6]';
 
         this.innerHTML = `           
-                <ul class="h-full bg-[var(--is-pink)] rounded-[23px] py-[42px] px-[40px] flex flex-col gap-[40px]">
+                <ul class="hidden md:flex h-full bg-[var(--is-pink)] rounded-[23px] py-[42px] px-[40px] flex-col gap-[40px]">
                     <li class="flex">
                         <a title="${this.isArabic ? "لوحىة التحكم" : 'Dashboard'}" href="home.html" class="active flex items-center gap-[17px]
                                     text-white hover:opacity-[1] opacity-[0.6] ${isActive('home')}">

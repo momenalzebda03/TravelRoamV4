@@ -91,6 +91,10 @@ class CoopNavbar extends HTMLElement {
     }
   }
 
+  get isAdmin() {
+    return window.location.pathname.includes('admin');
+  }
+
   _render() {
     const user = this.getUser();
 
@@ -106,9 +110,11 @@ class CoopNavbar extends HTMLElement {
         </a>
 
           <div class="flex gap-2 lg:hidden">
+           ${!user ? `
                <a href="${this.baseLang}/login.html" title=${this.isArabic ? "تسجيل الدخول" : 'Login'} class="md:hidden before:bg-white border-1 border-white rounded-[5px] hover:text-black px-3 py-2 btn">
               <div class="text-base text-nowrap relative z-1 font-bold"><span>${this.isArabic ? "تسجيل الدخول" : 'Login'}</span></div>
             </a>
+             ` : ''}
       <!-- Mobile Hamburger -->
       <div class="inset-y-0 left-0 flex items-center">
         <button type="button" class="coop-hamburger is-style-menu text-white relative inline-flex items-center justify-center rounded-md p-2 hover:bg-white/5 focus:outline-none">
@@ -205,7 +211,7 @@ class CoopNavbar extends HTMLElement {
               </div>
             </div>
           </div>
-          <ul class="dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 px-22 !w-[20%] bg-[var(--is-blue-1)] backdrop-blur-md py-5">
+          <ul class="text-start dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 px-22 !w-[20%] bg-[var(--is-blue-1)] backdrop-blur-md py-5">
             <li class="${this._active('marketplace')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Marketplace')"><a href='${this.baseLang}/marketplace.html'>${this.isArabic ? "سوق" : 'Marketplace'}</a></li>
             <li class="${this._active('about')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'About')"><a href="${this.baseLang}/about.html">${this.isArabic ? "حول" : 'About'}</a></li>
             <li class="${this._active('compatibility')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Compatibility')"><a href="${this.baseLang}/compatibility.html">${this.isArabic ? "التوافق" : 'Compatibility'}</a></li>
@@ -215,8 +221,44 @@ class CoopNavbar extends HTMLElement {
            ${!user ? `
             <li class="${this._active('login')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Login')"><a href="${this.baseLang}/login.html">${this.isArabic ? "تسجيل الدخول" : 'Login'}</a></li>
              ` : ''}
-            <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer"><a class="none-broder" href="">${this.isArabic ? 'دليل التثبيت' : 'Installation Guide'}</a></li>
-          </ul>
+       ${this.isAdmin ? `
+      <li class="${this._active('home')} flex">
+                        <a title="${this.isArabic ? "لوحىة التحكم" : 'Dashboard'}" href="home.html">
+                            <span class="text-nowrap">${this.isArabic ? "لوحة التحكم" : 'Dashboard'}</span>
+                        </a>
+                    </li>
+                          <li class="${this._active('account')} flex">
+                        <a title="${this.isArabic ? "الحساب" : 'Account'}" href="account.html">
+                        <span class="text-nowrap">${this.isArabic ? "الحساب" : 'Account'}</span>
+                        </a>
+                    </li>
+                            <li class="${this._active('esim')} flex">
+                        <a title="${this.isArabic ? "بطاقات eSIM الخاصة بي" : 'My eSIMs'}" href="esim.html">
+                         <span class="text-nowrap">${this.isArabic ? "بطاقات eSIM الخاصة بي" : 'My eSIMs'}</span>
+                        </a>
+                    </li>
+                          <li class="${this._active('esim')} flex">
+                        <a title="${this.isArabic ? "متجر eSIM" : 'eSIM Store'}" href="esim.html">
+                           <span class="text-nowrap">${this.isArabic ? "متجر eSIM" : 'eSIM Store'}</span>
+                        </a>
+                    </li>
+                           <li class="${this._active('notifications')} flex">
+                        <a title="${this.isArabic ? "الإشعارات" : 'Notifications'}" href="notifications.html">
+                        <span class="text-nowrap">${this.isArabic ? "الإشعارات" : 'Notifications'}</span>
+                        </a>
+                    </li>
+                        <li class="${this._active('payment')} flex">
+                        <a title="${this.isArabic ? "الدفع" : 'Payment'}" href="payment.html">
+                        <span class="text-nowrap">${this.isArabic ? "الدفع" : 'Payment'}</span>
+                        </a>
+                    </li>
+                      <li class="${this._active('support')} flex">
+                        <a title="${this.isArabic ? "الدعم الفني" : 'Support'}" href="support.html">
+                        <span class="text-nowrap">${this.isArabic ? "الدعم الفني" : 'Support'}</span>
+                        </a>
+                    </li>
+` : ''}
+            </ul>
         </div>
 
         <!-- Mobile Language dropdown -->

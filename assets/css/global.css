@@ -298,7 +298,7 @@ html {
 }
 
 .active-destinations img {
-    filter: brightness(1) !important;
+    filter: brightness(0) invert(1) !important;
 }
 
 .active-bundle {

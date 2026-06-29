@@ -4,6 +4,12 @@ function showTab(tab) {
 
     document.getElementById('tab-country').classList.toggle('active-destinations', tab === 'country')
     document.getElementById('tab-region').classList.toggle('active-destinations', tab === 'region')
+
+    document.getElementById('btn-list-country').classList.remove('hidden');
+    document.getElementById('btn-list-region').classList.add('hidden');
+
+    document.getElementById('btn-list-region').classList.remove('hidden');
+    document.getElementById('btn-list-country').classList.add('hidden');
 }
 
 function selectDestination(name, code) {

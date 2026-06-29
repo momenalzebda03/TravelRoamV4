@@ -72,298 +72,239 @@
             <div class="container sections-marign-top flex flex-col items-center gap-[30px] md:gap-[73px]">
                 <div class="relative flex flex-col items-center gap-[20px] md:gap-[25px]" data-aos="fade-up">
                     <h3 class="text-2xl md:text-[42px] font-normal text-[var(--is-pink)]">تصفح الكل <span
-                            class="font-semibold text-[var(--is-blue-3)]">وجهات</span>
+                            class="font-semibold text-[var(--is-blue-3)]">الوجهات</span>
                     </h3>
                     <ul class="flex flex-wrap gap-[16px]">
-                        <li title="الدولة">
+                        <li title="Country">
                             <div onclick="showTab('country')" id="tab-country"
                                 class="active-destinations group before:bg-[var(--is-blue-3)] hover:!text-white text-[var(--is-gray-1)] gap-2 flex shadow-[0_5px_10px_var(--is-black)] rounded-[25px] px-4 py-2 md:py-3 btn items-center">
                                 <img src="../assets/icons/country.svg" alt="country"
                                     class="w-5 h-5 transition-all duration-300 [filter:brightness(0)_saturate(100%)_invert(47%)_sepia(10%)_saturate(500%)_hue-rotate(240deg)_brightness(95%)] group-hover:[filter:brightness(1)]" />
-                                <h3 class="relative font-medium text-sm md:text-md">الدولة</h3>
+                                <h3 class="relative font-medium text-sm md:text-md">الدول</h3>
                             </div>
                         </li>
-                        <li title="المنطقة">
+                        <li title="Region">
                             <div onclick="showTab('region')" id="tab-region"
                                 class="group before:bg-[var(--is-blue-3)] hover:!text-white text-[var(--is-gray-1)] gap-2 flex shadow-[0_5px_10px_var(--is-black)] rounded-[25px] px-4 py-2 md:py-3 btn items-center">
                                 <img src="../assets/icons/region.svg" alt="region"
                                     class="w-5 h-5 transition-all duration-300 [filter:brightness(0)_saturate(100%)_invert(47%)_sepia(10%)_saturate(500%)_hue-rotate(240deg)_brightness(95%)] group-hover:[filter:brightness(1)]" />
-                                <h3 class="relative font-medium text-sm md:text-md">المنطقة</h3>
+                                <h3 class="relative font-medium text-sm md:text-md">القارات</h3>
                             </div>
                         </li>
                     </ul>
                 </div>
-                <ul id="list-country" class="w-full grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-[23px]">
-                    <li data-aos="fade-up">
-                        <a title="Africa" href="single-country.html">
+                <!-- class="w-full flex flex-wrap md:justify-center gap-[12px] md:gap-[26px] hidden" -->
+                <ul id="list-country" class="w-full flex flex-wrap md:justify-center gap-[12px] md:gap-[26px]">
+                    <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                        <a title="جزر أولاند" href="single-country.html">
                             <div
-                                class="rounded-[21px] w-full h-full min-h-[161px] bg-cover
+                                class="rounded-[32px] w-full h-full min-h-[206px] bg-cover
     bg-center
     bg-no-repeat bg-[url('/assets/images/item-country-1.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
 
                                 <div class="flex items-end z-1 h-full">
                                     <div
-                                        class="mx-[1%] bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-t-xl rounded-b-[21px] w-full p-3">
-                                        <div class="flex flex-col justify-center">
-                                            <span class="text-sm font-medium">أفريقيا</span>
-                                            <span class="font-light text-xs">
-                                                <span class="text-[var(--is-gray-8)]">من</span> $1.00 في اليوم
-                                            </span>
-                                        </div>
-                                        <img src="../assets/icons/paper-plane.svg" alt="paper"
+                                        class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                        <span class="text-sm font-medium">جزر أولاند</span>
+                                        <img src="../assets/icons/arraw-swiper.svg" alt="arraw"
                                             class="w-[21px] h-[21px]" />
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li data-aos="fade-up">
-                        <a title="Asia" href="single-country.html">
+                    <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                        <a title="ألبانيا" href="single-country.html">
                             <div
-                                class="rounded-[21px] w-full h-full min-h-[161px] bg-cover
+                                class="rounded-[32px] w-full h-full min-h-[206px] bg-cover
     bg-center
     bg-no-repeat bg-[url('/assets/images/item-country-2.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
 
                                 <div class="flex items-end z-1 h-full">
                                     <div
-                                        class="mx-[1%] bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-t-xl rounded-b-[21px] w-full p-3">
-                                        <div class="flex flex-col justify-center">
-                                            <span class="text-sm font-medium">آسيا</span>
-                                            <span class="font-light text-xs">
-                                                <span class="text-[var(--is-gray-8)]">من</span> $1.00 في اليوم
-                                            </span>
-                                        </div>
-                                        <img src="../assets/icons/paper-plane.svg" alt="paper"
+                                        class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                        <span class="text-sm font-medium">ألبانيا</span>
+                                        <img src="../assets/icons/arraw-swiper.svg" alt="arraw"
                                             class="w-[21px] h-[21px]" />
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li data-aos="fade-up">
-                        <a title="اوروبا" href="single-country.html">
+                    <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                        <a title="الجزائر" href="single-country.html">
                             <div
-                                class="rounded-[21px] w-full h-full min-h-[161px] bg-cover
+                                class="rounded-[32px] w-full h-full min-h-[206px] bg-cover
     bg-center
     bg-no-repeat bg-[url('/assets/images/item-country-3.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
 
                                 <div class="flex items-end z-1 h-full">
                                     <div
-                                        class="mx-[1%] bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-t-xl rounded-b-[21px] w-full p-3">
-                                        <div class="flex flex-col justify-center">
-                                            <span class="text-sm font-medium">أوروبا</span>
-                                            <span class="font-light text-xs">
-                                                <span class="text-[var(--is-gray-8)]">من</span> $1.00 في اليوم
-                                            </span>
-                                        </div>
-                                        <img src="../assets/icons/paper-plane.svg" alt="paper"
+                                        class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                        <span class="text-sm font-medium">الجزائر</span>
+                                        <img src="../assets/icons/arraw-swiper.svg" alt="arraw"
                                             class="w-[21px] h-[21px]" />
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li data-aos="fade-up">
-                        <a title="الشرق الاوسط" href="single-country.html">
+                    <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                        <a title="أندورا" href="single-country.html">
                             <div
-                                class="rounded-[21px] w-full h-full min-h-[161px] bg-cover
+                                class="rounded-[32px] w-full h-full min-h-[206px] bg-cover
     bg-center
     bg-no-repeat bg-[url('/assets/images/item-country-4.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
 
                                 <div class="flex items-end z-1 h-full">
                                     <div
-                                        class="mx-[1%] bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-t-xl rounded-b-[21px] w-full p-3">
-                                        <div class="flex flex-col justify-center">
-                                            <span class="text-sm font-medium">الشرق الاوسط</span>
-                                            <span class="font-light text-xs">
-                                                <span class="text-[var(--is-gray-8)]">من</span> $1.00 في اليوم
-                                            </span>
-                                        </div>
-                                        <img src="../assets/icons/paper-plane.svg" alt="paper"
+                                        class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                        <span class="text-sm font-medium">أندورا</span>
+                                        <img src="../assets/icons/arraw-swiper.svg" alt="arraw"
                                             class="w-[21px] h-[21px]" />
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li data-aos="fade-up">
-                        <a title="افريقيا" href="single-country.html">
+                    <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                        <a title="أنغيلا" href="single-country.html">
                             <div
-                                class="rounded-[21px] w-full h-full min-h-[161px] bg-cover
+                                class="rounded-[32px] w-full h-full min-h-[206px] bg-cover
     bg-center
-    bg-no-repeat bg-[url('/assets/images/item-country-1.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+    bg-no-repeat bg-[url('/assets/images/item-country-5.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
 
                                 <div class="flex items-end z-1 h-full">
                                     <div
-                                        class="mx-[1%] bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-t-xl rounded-b-[21px] w-full p-3">
-                                        <div class="flex flex-col justify-center">
-                                            <span class="text-sm font-medium">افريقيا</span>
-                                            <span class="font-light text-xs">
-                                                <span class="text-[var(--is-gray-8)]">من</span> $1.00 في اليوم
-                                            </span>
-                                        </div>
-                                        <img src="../assets/icons/paper-plane.svg" alt="paper"
+                                        class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                        <span class="text-sm font-medium">أنغيلا</span>
+                                        <img src="../assets/icons/arraw-swiper.svg" alt="arraw"
                                             class="w-[21px] h-[21px]" />
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li data-aos="fade-up">
-                        <a title="اسيا" href="single-country.html">
+                    <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                        <a title="أنتيجوا وبربودا" href="single-country.html">
                             <div
-                                class="rounded-[21px] w-full h-full min-h-[161px] bg-cover
+                                class="rounded-[32px] w-full h-full min-h-[206px] bg-cover
     bg-center
-    bg-no-repeat bg-[url('/assets/images/item-country-2.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+    bg-no-repeat bg-[url('/assets/images/item-country-6.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
 
                                 <div class="flex items-end z-1 h-full">
                                     <div
-                                        class="mx-[1%] bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-t-xl rounded-b-[21px] w-full p-3">
-                                        <div class="flex flex-col justify-center">
-                                            <span class="text-sm font-medium">اسيا</span>
-                                            <span class="font-light text-xs">
-                                                <span class="text-[var(--is-gray-8)]">من</span> $1.00 في اليوم
-                                            </span>
-                                        </div>
-                                        <img src="../assets/icons/paper-plane.svg" alt="paper"
+                                        class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                        <span class="text-sm font-medium">أنتيجوا وبربودا</span>
+                                        <img src="../assets/icons/arraw-swiper.svg" alt="arraw"
                                             class="w-[21px] h-[21px]" />
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li data-aos="fade-up">
-                        <a title="افريقيا" href="single-country.html">
+                    <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                        <a title="الأرجنتين" href="single-country.html">
                             <div
-                                class="rounded-[21px] w-full h-full min-h-[161px] bg-cover
+                                class="rounded-[32px] w-full h-full min-h-[206px] bg-cover
     bg-center
-    bg-no-repeat bg-[url('/assets/images/item-country-1.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+    bg-no-repeat bg-[url('/assets/images/item-country-7.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
 
                                 <div class="flex items-end z-1 h-full">
                                     <div
-                                        class="mx-[1%] bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-t-xl rounded-b-[21px] w-full p-3">
-                                        <div class="flex flex-col justify-center">
-                                            <span class="text-sm font-medium">افريقيا</span>
-                                            <span class="font-light text-xs">
-                                                <span class="text-[var(--is-gray-8)]">من</span> $1.00 في اليوم
-                                            </span>
-                                        </div>
-                                        <img src="../assets/icons/paper-plane.svg" alt="paper"
+                                        class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                        <span class="text-sm font-medium">الأرجنتين</span>
+                                        <img src="../assets/icons/arraw-swiper.svg" alt="arraw"
                                             class="w-[21px] h-[21px]" />
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li data-aos="fade-up">
-                        <a title="اسيا" href="single-country.html">
+                    <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                        <a title="أرمينيا" href="single-country.html">
                             <div
-                                class="rounded-[21px] w-full h-full min-h-[161px] bg-cover
+                                class="rounded-[32px] w-full h-full min-h-[206px] bg-cover
     bg-center
-    bg-no-repeat bg-[url('/assets/images/item-country-2.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+    bg-no-repeat bg-[url('/assets/images/item-country-8.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
 
                                 <div class="flex items-end z-1 h-full">
                                     <div
-                                        class="mx-[1%] bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-t-xl rounded-b-[21px] w-full p-3">
-                                        <div class="flex flex-col justify-center">
-                                            <span class="text-sm font-medium">اسيا</span>
-                                            <span class="font-light text-xs">
-                                                <span class="text-[var(--is-gray-8)]">من</span> $1.00 في اليوم
-                                            </span>
-                                        </div>
-                                        <img src="../assets/icons/paper-plane.svg" alt="paper"
+                                        class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                        <span class="text-sm font-medium">أرمينيا</span>
+                                        <img src="../assets/icons/arraw-swiper.svg" alt="arraw"
                                             class="w-[21px] h-[21px]" />
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li data-aos="fade-up">
-                        <a title="اوروبا" href="single-country.html">
+                    <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                        <a title="أروبا" href="single-country.html">
                             <div
-                                class="rounded-[21px] w-full h-full min-h-[161px] bg-cover
+                                class="rounded-[32px] w-full h-full min-h-[206px] bg-cover
     bg-center
-    bg-no-repeat bg-[url('/assets/images/item-country-3.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+    bg-no-repeat bg-[url('/assets/images/item-country-9.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
 
                                 <div class="flex items-end z-1 h-full">
                                     <div
-                                        class="mx-[1%] bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-t-xl rounded-b-[21px] w-full p-3">
-                                        <div class="flex flex-col justify-center">
-                                            <span class="text-sm font-medium">اوروبا</span>
-                                            <span class="font-light text-xs">
-                                                <span class="text-[var(--is-gray-8)]">من</span> $1.00 في اليوم
-                                            </span>
-                                        </div>
-                                        <img src="../assets/icons/paper-plane.svg" alt="paper"
+                                        class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                        <span class="text-sm font-medium">أروبا</span>
+                                        <img src="../assets/icons/arraw-swiper.svg" alt="arraw"
                                             class="w-[21px] h-[21px]" />
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li data-aos="fade-up">
-                        <a title="الشرق الاوسط" href="single-country.html">
+                    <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                        <a title="أستراليا" href="single-country.html">
                             <div
-                                class="rounded-[21px] w-full h-full min-h-[161px] bg-cover
+                                class="rounded-[32px] w-full h-full min-h-[206px] bg-cover
     bg-center
-    bg-no-repeat bg-[url('/assets/images/item-country-4.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+    bg-no-repeat bg-[url('/assets/images/item-country-10.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
 
                                 <div class="flex items-end z-1 h-full">
                                     <div
-                                        class="mx-[1%] bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-t-xl rounded-b-[21px] w-full p-3">
-                                        <div class="flex flex-col justify-center">
-                                            <span class="text-sm font-medium">الشرق الاوسط</span>
-                                            <span class="font-light text-xs">
-                                                <span class="text-[var(--is-gray-8)]">من</span> $1.00 في اليوم
-                                            </span>
-                                        </div>
-                                        <img src="../assets/icons/paper-plane.svg" alt="paper"
+                                        class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                        <span class="text-sm font-medium">أستراليا</span>
+                                        <img src="../assets/icons/arraw-swiper.svg" alt="arraw"
                                             class="w-[21px] h-[21px]" />
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li data-aos="fade-up">
-                        <a title="افريقيا" href="single-country.html">
+                    <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                        <a title="النمسا" href="single-country.html">
                             <div
-                                class="rounded-[21px] w-full h-full min-h-[161px] bg-cover
+                                class="rounded-[32px] w-full h-full min-h-[206px] bg-cover
     bg-center
-    bg-no-repeat bg-[url('/assets/images/item-country-1.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+    bg-no-repeat bg-[url('/assets/images/item-country-11.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
 
                                 <div class="flex items-end z-1 h-full">
                                     <div
-                                        class="mx-[1%] bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-t-xl rounded-b-[21px] w-full p-3">
-                                        <div class="flex flex-col justify-center">
-                                            <span class="text-sm font-medium">افريقيا</span>
-                                            <span class="font-light text-xs">
-                                                <span class="text-[var(--is-gray-8)]">من</span> $1.00 في اليوم
-                                            </span>
-                                        </div>
-                                        <img src="../assets/icons/paper-plane.svg" alt="paper"
+                                        class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                        <span class="text-sm font-medium">النمسا</span>
+                                        <img src="../assets/icons/arraw-swiper.svg" alt="arraw"
                                             class="w-[21px] h-[21px]" />
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li data-aos="fade-up">
-                        <a title="اسيا" href="single-country.html">
+                    <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                        <a title="أذربيجان" href="single-country.html">
                             <div
-                                class="rounded-[21px] w-full h-full min-h-[161px] bg-cover
+                                class="rounded-[32px] w-full h-full min-h-[206px] bg-cover
     bg-center
-    bg-no-repeat bg-[url('/assets/images/item-country-2.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+    bg-no-repeat bg-[url('/assets/images/item-country-12.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
 
                                 <div class="flex items-end z-1 h-full">
                                     <div
-                                        class="mx-[1%] bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-t-xl rounded-b-[21px] w-full p-3">
-                                        <div class="flex flex-col justify-center">
-                                            <span class="text-sm font-medium">اسيا</span>
-                                            <span class="font-light text-xs">
-                                                <span class="text-[var(--is-gray-8)]">من</span> $1.00 في اليوم
-                                            </span>
-                                        </div>
-                                        <img src="../assets/icons/paper-plane.svg" alt="paper"
+                                        class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                        <span class="text-sm font-medium">أذربيجان</span>
+                                        <img src="../assets/icons/arraw-swiper.svg" alt="arraw"
                                             class="w-[21px] h-[21px]" />
                                     </div>
                                 </div>
@@ -371,70 +312,17 @@
                         </a>
                     </li>
                     <li data-aos="fade-up" class="hidden extra-country">
-                        <a title="Asia" href="single-country.html">
+                        <a title="جزر أولاند" href="single-country.html">
                             <div
-                                class="rounded-[21px] w-full h-full min-h-[161px] bg-cover
-    bg-center
-    bg-no-repeat bg-[url('/assets/images/item-country-2.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
-
-                                <div class="flex items-end z-1 h-full">
-                                    <div
-                                        class="mx-[1%] bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-t-xl rounded-b-[21px] w-full p-3">
-                                        <div class="flex flex-col justify-center">
-                                            <span class="text-sm font-medium">Asia</span>
-                                            <span class="font-light text-xs">
-                                                <span class="text-[var(--is-gray-8)]">from</span> $1.00 per day
-                                            </span>
-                                        </div>
-                                        <img src="../assets/icons/paper-plane.svg" alt="paper"
-                                            class="w-[21px] h-[21px]" />
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <ul id="list-region" class="hidden w-full grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-[23px]">
-                    <li data-aos="fade-up">
-                        <a title="افريقيا" href="single-country.html">
-                            <div
-                                class="rounded-[21px] w-full h-full min-h-[161px] bg-cover
+                                class="rounded-[32px] w-full h-full min-h-[206px] bg-cover
     bg-center
     bg-no-repeat bg-[url('/assets/images/item-country-1.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
 
                                 <div class="flex items-end z-1 h-full">
                                     <div
-                                        class="mx-[1%] bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-t-xl rounded-b-[21px] w-full p-3">
-                                        <div class="flex flex-col justify-center">
-                                            <span class="text-sm font-medium">افريقيا</span>
-                                            <span class="font-light text-xs">
-                                                <span class="text-[var(--is-gray-8)]">من</span> $1.00 في اليوم
-                                            </span>
-                                        </div>
-                                        <img src="../assets/icons/paper-plane.svg" alt="paper"
-                                            class="w-[21px] h-[21px]" />
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li data-aos="fade-up">
-                        <a title="اسيا" href="single-country.html">
-                            <div
-                                class="rounded-[21px] w-full h-full min-h-[161px] bg-cover
-    bg-center
-    bg-no-repeat bg-[url('/assets/images/item-country-2.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
-
-                                <div class="flex items-end z-1 h-full">
-                                    <div
-                                        class="mx-[1%] bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-t-xl rounded-b-[21px] w-full p-3">
-                                        <div class="flex flex-col justify-center">
-                                            <span class="text-sm font-medium">اسيا</span>
-                                            <span class="font-light text-xs">
-                                                <span class="text-[var(--is-gray-8)]">من</span> $1.00 في اليوم
-                                            </span>
-                                        </div>
-                                        <img src="../assets/icons/paper-plane.svg" alt="paper"
+                                        class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                        <span class="text-sm font-medium">جزر أولاند</span>
+                                        <img src="../assets/icons/arraw-swiper.svg" alt="arraw"
                                             class="w-[21px] h-[21px]" />
                                     </div>
                                 </div>
@@ -442,10 +330,165 @@
                         </a>
                     </li>
                 </ul>
-                <div data-aos="fade-up" title="عرض جميع الواجهات" onclick="showAll('list-country')"
-                    class="text-white before:bg-[var(--is-blue-3)] rounded-[20px] bg-[var(--is-pink)] px-15 py-4 btn">
+                <div data-aos="fade-up" title="عرض جميع الوجهات" onclick="showAll('list-country')"
+                    id="btn-list-country"
+                    class="w-full text-center md:w-[unset] text-white before:bg-[var(--is-blue-3)] rounded-[20px] bg-[var(--is-pink)] px-15 py-4 btn">
                     <div class="text-xl relative z-1 font-bold">
-                        <span id="toggle-btn">عرض جميع الواجهات</span>
+                        <span>عرض جميع الوجهات</span>
+                    </div>
+                </div>
+                <ul id="list-region" class="w-full flex flex-wrap md:justify-center gap-[12px] md:gap-[26px] hidden">
+                    <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                        <a title="أفريقيا" href="single-country.html">
+                            <div
+                                class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[206px] bg-cover
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/item-region-1.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+
+                                <div class="flex items-end z-1 h-full">
+                                    <div
+                                        class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                        <span class="text-sm font-medium">أفريقيا</span>
+                                        <img src="../assets/icons/arraw-swiper.svg" alt="arraw"
+                                            class="w-[21px] h-[21px]" />
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                        <a title="آسيا" href="single-country.html">
+                            <div
+                                class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[206px] bg-cover
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/item-region-2.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+
+                                <div class="flex items-end z-1 h-full">
+                                    <div
+                                        class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                        <span class="text-sm font-medium">آسيا</span>
+                                        <img src="../assets/icons/arraw-swiper.svg" alt="arraw"
+                                            class="w-[21px] h-[21px]" />
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                        <a title="أوروبا" href="single-country.html">
+                            <div
+                                class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[206px] bg-cover
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/item-region-3.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+
+                                <div class="flex items-end z-1 h-full">
+                                    <div
+                                        class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                        <span class="text-sm font-medium">أوروبا</span>
+                                        <img src="../assets/icons/arraw-swiper.svg" alt="arraw"
+                                            class="w-[21px] h-[21px]" />
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                        <a title="عالمي" href="single-country.html">
+                            <div
+                                class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[206px] bg-cover
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/item-region-4.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+
+                                <div class="flex items-end z-1 h-full">
+                                    <div
+                                        class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                        <span class="text-sm font-medium">عالمي</span>
+                                        <img src="../assets/icons/arraw-swiper.svg" alt="arraw"
+                                            class="w-[21px] h-[21px]" />
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                        <a title="الشرق الأوسط" href="single-country.html">
+                            <div
+                                class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[206px] bg-cover
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/item-region-5.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+
+                                <div class="flex items-end z-1 h-full">
+                                    <div
+                                        class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                        <span class="text-sm font-medium">الشرق الأوسط</span>
+                                        <img src="../assets/icons/arraw-swiper.svg" alt="arraw"
+                                            class="w-[21px] h-[21px]" />
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                        <a title="أمريكا الشمالية" href="single-country.html">
+                            <div
+                                class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[206px] bg-cover
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/item-region-6.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+
+                                <div class="flex items-end z-1 h-full">
+                                    <div
+                                        class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                        <span class="text-sm font-medium">أمريكا الشمالية</span>
+                                        <img src="../assets/icons/arraw-swiper.svg" alt="arraw"
+                                            class="w-[21px] h-[21px]" />
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                        <a title="أوقيانوسيا" href="single-country.html">
+                            <div
+                                class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[206px] bg-cover
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/item-region-7.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+
+                                <div class="flex items-end z-1 h-full">
+                                    <div
+                                        class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                        <span class="text-sm font-medium">أوقيانوسيا</span>
+                                        <img src="../assets/icons/arraw-swiper.svg" alt="arraw"
+                                            class="w-[21px] h-[21px]" />
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-aos="fade-up"
+                        class="hidden extra-country w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                        <a title="جزر أولاند" href="single-country.html">
+                            <div
+                                class="rounded-[32px] w-full h-full min-h-[206px] bg-cover
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/item-country-1.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+
+                                <div class="flex items-end z-1 h-full">
+                                    <div
+                                        class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                        <span class="text-sm font-medium">جزر أولاند</span>
+                                        <img src="../assets/icons/arraw-swiper.svg" alt="arraw"
+                                            class="w-[21px] h-[21px]" />
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div data-aos="fade-up" title="عرض جميع الوجهات" onclick="showAll('list-region')"
+                    id="btn-list-region"
+                    class="hidden w-full text-center md:w-[unset] text-white before:bg-[var(--is-blue-3)] rounded-[20px] bg-[var(--is-pink)] px-15 py-4 btn">
+                    <div class="text-xl relative z-1 font-bold">
+                        <span>عرض جميع الوجهات</span>
                     </div>
                 </div>
             </div>
