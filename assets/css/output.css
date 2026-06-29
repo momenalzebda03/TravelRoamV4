@@ -2219,8 +2219,14 @@
   .opacity-50 {
     opacity: 50%;
   }
+  .opacity-70 {
+    opacity: 70%;
+  }
   .opacity-80 {
     opacity: 80%;
+  }
+  .opacity-90 {
+    opacity: 90%;
   }
   .opacity-\[0\.5\] {
     opacity: 0.5;
