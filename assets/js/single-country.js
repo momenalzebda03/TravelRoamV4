@@ -1,4 +1,8 @@
+let currentTab = 'bundle';
+
 function showTab(tab) {
+    currentTab = tab;
+
     document.querySelectorAll('.regular-bundle').forEach(el =>
         el.classList.toggle('hidden', tab !== 'bundle')
     );

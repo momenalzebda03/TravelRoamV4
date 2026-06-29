@@ -46,7 +46,7 @@ class CoopNavbar extends HTMLElement {
       return '/index.html';
     }
 
-    return path;
+    return path + window.location.search
   }
 
   get baseLang() {

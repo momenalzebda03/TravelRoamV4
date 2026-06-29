@@ -28,3 +28,14 @@ document.querySelectorAll('#payment-btns .btn').forEach(btn => {
         btn.classList.remove('text-[var(--is-gray-14)]', 'shadow-[0_2px_5px_var(--is-black)]');
     });
 });
+
+const params = new URLSearchParams(window.location.search);
+const dataType = params.get('data');
+
+if (!dataType || !['unlimited', 'regular'].includes(dataType)) {
+    window.location.replace('single-country.html');
+} else {
+
+    dataType === 'unlimited' ? document.getElementById('card-unlimited').classList.remove('hidden')
+        : document.getElementById('card-regular').classList.remove('hidden');
+}

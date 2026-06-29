@@ -55,7 +55,7 @@
     bg-no-repeat -z-1">
                     </div>
                     <div onclick="openBundleModal()" data-bundle='{"name":"5GB Plan","price":17,"type":"bundle"}'
-                        class="w-[90%] md:w-[40%] xl:w-[35%] h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
+                        class="shadow-xl w-[90%] md:w-[40%] xl:w-[35%] h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
                         <div class="flex flex-col gap-[20px]">
                             <div class="flex flex-wrap gap-3 justify-between items-center w-full">
                                 <div class="flex items-center gap-[11px]">
@@ -104,7 +104,7 @@
                     </div>
                     <div onclick="openBundleModal()"
                         data-bundle='{"name":"Unlimited Plan","price":25,"type":"unlimited"}'
-                        class="w-[90%] md:w-[40%] xl:w-[35%] h-full justify-between flex flex-col gap-4 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-3)]">
+                        class="shadow-xl w-[90%] md:w-[40%] xl:w-[35%] h-full justify-between flex flex-col gap-6 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-3)]">
                         <div class="flex flex-col gap-[20px]">
                             <div class="flex flex-wrap gap-3 justify-between items-center w-full">
                                 <div class="flex items-center gap-[11px]">
@@ -574,12 +574,14 @@
 
                     <div data-aos="fade-up" class="flex w-full">
                         <a href="checkout.html" title="Buy Now"
+                            onclick="this.href='checkout.html?data=' + (currentTab === 'unlimited-bundles' ? 'unlimited' : 'regular')"
                             class="text-center transition-all duration-300 hover:shadow-xl hover:scale-102 cursor-pointer w-full before:bg-white rounded-[20px] text-white bg-[var(--is-pink)] px-5 py-4">
                             <div class="text-base relative z-1 font-bold">
                                 <span>Buy Now</span>
                             </div>
                         </a>
                     </div>
+
                     <div class="flex justify-center gap-1 items-center" data-aos="fade-up">
                         <img src="../assets/icons/secure-payment.svg" alt="secure payment" class="w-4 h-4" />
                         <h3 class="font-normal text-md">Secure payment guaranteed</h3>
@@ -724,7 +726,7 @@
                             </div>
                         </div>
                         <div class="hidden lg:block relative flex items-center justify-center" data-aos="fade-up">
-                           <div class="lg:absolute right-10 -bottom-45 w-[502px]">
+                            <div class="lg:absolute right-10 -bottom-45 w-[502px]">
                                 <img src="../assets/images/iPhone.png" alt="iPhone"
                                     class="w-full h-full object-contain" />
                             </div>
