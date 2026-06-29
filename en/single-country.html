@@ -56,7 +56,7 @@
     bg-center
     bg-no-repeat -z-1">
                     </div>
-                    <div id="country" onclick="openBundleModal()"
+                    <div id="country" onclick="openModal('countryModal')"
                         data-bundle='{"name":"5GB Plan","price":17,"type":"bundle"}'
                         class="hidden shadow-xl w-[90%] md:w-[40%] xl:w-[35%] h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
                         <div class="flex flex-col gap-[20px]">
@@ -98,7 +98,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div id="region" onclick="openBundleModal()"
+                    <div id="region" onclick="openModal('regionModal')"
                         data-bundle='{"name":"5GB Plan","price":17,"type":"bundle"}'
                         class="hidden shadow-xl w-[90%] md:w-[40%] xl:w-[35%] h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
                         <div class="flex flex-col gap-[20px]">
@@ -147,7 +147,7 @@
     bg-center
     bg-no-repeat -z-1">
                     </div>
-                    <div id="country" onclick="openBundleModal()"
+                    <div id="country" onclick="openModal('countryModal')"
                         data-bundle='{"name":"Unlimited Plan","price":25,"type":"unlimited"}'
                         class="hidden shadow-xl w-[90%] md:w-[40%] xl:w-[35%] h-full justify-between flex flex-col gap-6 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-3)]">
                         <div class="flex flex-col gap-[20px]">
@@ -178,7 +178,7 @@
                             </p>
                         </div>
                     </div>
-                    <div id="region" onclick="openBundleModal()"
+                    <div id="region" onclick="openModal('regionModal')"
                         data-bundle='{"name":"Unlimited Plan","price":25,"type":"unlimited"}'
                         class="hidden shadow-xl w-[90%] md:w-[40%] xl:w-[35%] h-full justify-between flex flex-col gap-6 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-3)]">
                         <div class="flex flex-col gap-[20px]">
@@ -296,327 +296,308 @@
                     </div>
                 </div>
             </div> -->
-            <div id="country" class="hidden">
-                <div id="bundleModal" class="hidden fixed inset-0 z-50 flex items-center justify-center">
-                    <div class="absolute inset-0 bg-[#25123CE5]" onclick="closeBundleModal()"></div>
+            <div id="countryModal" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+                <div class="absolute inset-0 bg-[#25123CE5]" onclick="closeModal('countryModal')"></div>
 
-                    <div
-                        class="relative z-10 bg-white rounded-[20px] container flex flex-col gap-5 overflow-auto max-h-[700px]">
-                        <div class="flex text-white rounded-[20px] text-center bg-[var(--is-pink)] p-8">
-                            <p class="flex-1 font-bold text-md md:text-3xl">This plan works in 12 countries:</p>
-                            <button onclick="closeBundleModal()"
-                                class="cursor-pointer text-white text-xl font-bold">✕</button>
-                        </div>
-                        <div class="container pt-5 pb-10">
-                            <ul class="grid sm:grid-cols-2 lg:grid-cols-4 gap-[16px]">
-                                <li data-aos="fade-up">
-                                    <a href="single-country.html" title="France"
-                                        class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-[16px]">
-                                            <img src="https://flagcdn.com/24x18/fr.png" alt="fr"
-                                                class="rounded-lg w-8 h-5" />
-                                            <div class="text-[var(--is-blue-3)]">
-                                                <h3 class="font-semibold text-base">France</h3>
-                                            </div>
+                <div
+                    class="relative z-10 bg-white rounded-[20px] container flex flex-col gap-5 overflow-auto max-h-[700px]">
+                    <div class="flex text-white rounded-[20px] text-center bg-[var(--is-pink)] p-8">
+                        <p class="flex-1 font-bold text-md md:text-3xl">This plan works in 12 countries:</p>
+                        <button onclick="closeModal('countryModal')"
+                            class="cursor-pointer text-white text-xl font-bold">✕</button>
+                    </div>
+                    <div class="container pt-5 pb-10">
+                        <ul class="grid sm:grid-cols-2 lg:grid-cols-4 gap-[16px]">
+                            <li data-aos="fade-up">
+                                <a href="single-country.html" title="France"
+                                    class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                                    <div class="flex items-center gap-[16px]">
+                                        <img src="https://flagcdn.com/24x18/fr.png" alt="fr"
+                                            class="rounded-lg w-8 h-5" />
+                                        <div class="text-[var(--is-blue-3)]">
+                                            <h3 class="font-semibold text-base">France</h3>
                                         </div>
-                                    </a>
-                                </li>
-                                <li data-aos="fade-up">
-                                    <a href="single-country.html" title="India"
-                                        class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-[16px]">
-                                            <img src="https://flagcdn.com/24x18/in.png" alt="in"
-                                                class="rounded-lg w-8 h-5" />
-                                            <div class="text-[var(--is-blue-3)]">
-                                                <h3 class="font-semibold text-base">India</h3>
-                                            </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up">
+                                <a href="single-country.html" title="India"
+                                    class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                                    <div class="flex items-center gap-[16px]">
+                                        <img src="https://flagcdn.com/24x18/in.png" alt="in"
+                                            class="rounded-lg w-8 h-5" />
+                                        <div class="text-[var(--is-blue-3)]">
+                                            <h3 class="font-semibold text-base">India</h3>
                                         </div>
-                                    </a>
-                                </li>
-                                <li data-aos="fade-up">
-                                    <a href="single-country.html" title="Italy"
-                                        class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-[16px]">
-                                            <img src="https://flagcdn.com/24x18/it.png" alt="it"
-                                                class="rounded-lg w-8 h-5" />
-                                            <div class="text-[var(--is-blue-3)]">
-                                                <h3 class="font-semibold text-base">Italy</h3>
-                                            </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up">
+                                <a href="single-country.html" title="Italy"
+                                    class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                                    <div class="flex items-center gap-[16px]">
+                                        <img src="https://flagcdn.com/24x18/it.png" alt="it"
+                                            class="rounded-lg w-8 h-5" />
+                                        <div class="text-[var(--is-blue-3)]">
+                                            <h3 class="font-semibold text-base">Italy</h3>
                                         </div>
-                                    </a>
-                                </li>
-                                <li data-aos="fade-up">
-                                    <a href="single-country.html" title="Mexico"
-                                        class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-[16px]">
-                                            <img src="https://flagcdn.com/24x18/mx.png" alt="mx"
-                                                class="rounded-lg w-8 h-5" />
-                                            <div class="text-[var(--is-blue-3)]">
-                                                <h3 class="font-semibold text-base">Mexico</h3>
-                                            </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up">
+                                <a href="single-country.html" title="Mexico"
+                                    class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                                    <div class="flex items-center gap-[16px]">
+                                        <img src="https://flagcdn.com/24x18/mx.png" alt="mx"
+                                            class="rounded-lg w-8 h-5" />
+                                        <div class="text-[var(--is-blue-3)]">
+                                            <h3 class="font-semibold text-base">Mexico</h3>
                                         </div>
-                                    </a>
-                                </li>
-                                <li data-aos="fade-up">
-                                    <a href="single-country.html" title="Morocco"
-                                        class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-[16px]">
-                                            <img src="https://flagcdn.com/24x18/ma.png" alt="ma"
-                                                class="rounded-lg w-8 h-5" />
-                                            <div class="text-[var(--is-blue-3)]">
-                                                <h3 class="font-semibold text-base">Morocco</h3>
-                                            </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up">
+                                <a href="single-country.html" title="Morocco"
+                                    class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                                    <div class="flex items-center gap-[16px]">
+                                        <img src="https://flagcdn.com/24x18/ma.png" alt="ma"
+                                            class="rounded-lg w-8 h-5" />
+                                        <div class="text-[var(--is-blue-3)]">
+                                            <h3 class="font-semibold text-base">Morocco</h3>
                                         </div>
-                                    </a>
-                                </li>
-                                <li data-aos="fade-up">
-                                    <a href="single-country.html" title="Saudi Arabia"
-                                        class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-[16px]">
-                                            <img src="https://flagcdn.com/24x18/sa.png" alt="sa"
-                                                class="rounded-lg w-8 h-5" />
-                                            <div class="text-[var(--is-blue-3)]">
-                                                <h3 class="font-semibold text-base">Saudi Arabia</h3>
-                                            </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up">
+                                <a href="single-country.html" title="Saudi Arabia"
+                                    class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                                    <div class="flex items-center gap-[16px]">
+                                        <img src="https://flagcdn.com/24x18/sa.png" alt="sa"
+                                            class="rounded-lg w-8 h-5" />
+                                        <div class="text-[var(--is-blue-3)]">
+                                            <h3 class="font-semibold text-base">Saudi Arabia</h3>
                                         </div>
-                                    </a>
-                                </li>
-                                <li data-aos="fade-up">
-                                    <a href="single-country.html" title="Spain"
-                                        class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-[16px]">
-                                            <img src="https://flagcdn.com/24x18/es.png" alt="es"
-                                                class="rounded-lg w-8 h-5" />
-                                            <div class="text-[var(--is-blue-3)]">
-                                                <h3 class="font-semibold text-base">Spain</h3>
-                                            </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up">
+                                <a href="single-country.html" title="Spain"
+                                    class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                                    <div class="flex items-center gap-[16px]">
+                                        <img src="https://flagcdn.com/24x18/es.png" alt="es"
+                                            class="rounded-lg w-8 h-5" />
+                                        <div class="text-[var(--is-blue-3)]">
+                                            <h3 class="font-semibold text-base">Spain</h3>
                                         </div>
-                                    </a>
-                                </li>
-                                <li data-aos="fade-up">
-                                    <a href="single-country.html" title="Sri Lanka"
-                                        class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-[16px]">
-                                            <img src="https://flagcdn.com/24x18/lk.png" alt="lk"
-                                                class="rounded-lg w-8 h-5" />
-                                            <div class="text-[var(--is-blue-3)]">
-                                                <h3 class="font-semibold text-base">Sri Lanka</h3>
-                                            </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up">
+                                <a href="single-country.html" title="Sri Lanka"
+                                    class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                                    <div class="flex items-center gap-[16px]">
+                                        <img src="https://flagcdn.com/24x18/lk.png" alt="lk"
+                                            class="rounded-lg w-8 h-5" />
+                                        <div class="text-[var(--is-blue-3)]">
+                                            <h3 class="font-semibold text-base">Sri Lanka</h3>
                                         </div>
-                                    </a>
-                                </li>
-                                <li data-aos="fade-up">
-                                    <a href="single-country.html" title="Turkey"
-                                        class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-[16px]">
-                                            <img src="https://flagcdn.com/24x18/tr.png" alt="tr"
-                                                class="rounded-lg w-8 h-5" />
-                                            <div class="text-[var(--is-blue-3)]">
-                                                <h3 class="font-semibold text-base">Turkey</h3>
-                                            </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up">
+                                <a href="single-country.html" title="Turkey"
+                                    class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                                    <div class="flex items-center gap-[16px]">
+                                        <img src="https://flagcdn.com/24x18/tr.png" alt="tr"
+                                            class="rounded-lg w-8 h-5" />
+                                        <div class="text-[var(--is-blue-3)]">
+                                            <h3 class="font-semibold text-base">Turkey</h3>
                                         </div>
-                                    </a>
-                                </li>
-                                <li data-aos="fade-up">
-                                    <a href="single-country.html" title="United Arab Emirates"
-                                        class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-[16px]">
-                                            <img src="https://flagcdn.com/24x18/ae.png" alt="ae"
-                                                class="rounded-lg w-8 h-5" />
-                                            <div class="text-[var(--is-blue-3)]">
-                                                <h3 class="font-semibold text-base">United Arab Emirates</h3>
-                                            </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up">
+                                <a href="single-country.html" title="United Arab Emirates"
+                                    class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                                    <div class="flex items-center gap-[16px]">
+                                        <img src="https://flagcdn.com/24x18/ae.png" alt="ae"
+                                            class="rounded-lg w-8 h-5" />
+                                        <div class="text-[var(--is-blue-3)]">
+                                            <h3 class="font-semibold text-base">United Arab Emirates</h3>
                                         </div>
-                                    </a>
-                                </li>
-                                <li data-aos="fade-up">
-                                    <a href="single-country.html" title="United Kingdom"
-                                        class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-[16px]">
-                                            <img src="https://flagcdn.com/24x18/gb.png" alt="gb"
-                                                class="rounded-lg w-8 h-5" />
-                                            <div class="text-[var(--is-blue-3)]">
-                                                <h3 class="font-semibold text-base">United Kingdom</h3>
-                                            </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up">
+                                <a href="single-country.html" title="United Kingdom"
+                                    class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                                    <div class="flex items-center gap-[16px]">
+                                        <img src="https://flagcdn.com/24x18/gb.png" alt="gb"
+                                            class="rounded-lg w-8 h-5" />
+                                        <div class="text-[var(--is-blue-3)]">
+                                            <h3 class="font-semibold text-base">United Kingdom</h3>
                                         </div>
-                                    </a>
-                                </li>
-                                <li data-aos="fade-up">
-                                    <a href="single-country.html" title=">United States"
-                                        class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-[16px]">
-                                            <img src="https://flagcdn.com/24x18/us.png" alt="us"
-                                                class="rounded-lg w-8 h-5" />
-                                            <div class="text-[var(--is-blue-3)]">
-                                                <h3 class="font-semibold text-base">United States</h3>
-                                            </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up">
+                                <a href="single-country.html" title=">United States"
+                                    class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
+                                    <div class="flex items-center gap-[16px]">
+                                        <img src="https://flagcdn.com/24x18/us.png" alt="us"
+                                            class="rounded-lg w-8 h-5" />
+                                        <div class="text-[var(--is-blue-3)]">
+                                            <h3 class="font-semibold text-base">United States</h3>
                                         </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div id="region" class="hidden">
-                <div id="bundleModal" class="hidden fixed inset-0 z-50 flex items-center justify-center">
-                    <div class="absolute inset-0 bg-[#25123CE5]" onclick="closeBundleModal()"></div>
+            <div id="regionModal" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+                <div class="absolute inset-0 bg-[#25123CE5]" onclick="closeModal('regionModal')"></div>
 
-                    <div
-                        class="relative z-10 bg-white rounded-[20px] container flex flex-col gap-5 overflow-auto max-h-[700px]">
-                        <div class="flex text-white rounded-[20px] text-center bg-[var(--is-pink)] p-8">
-                            <p class="flex-1 font-bold text-md md:text-3xl">This plan works in 12 countries:</p>
-                            <button onclick="closeBundleModal()"
-                                class="cursor-pointer text-white text-xl font-bold">✕</button>
-                        </div>
-                        <div class="container pt-5 pb-10">
-                            <ul class="grid sm:grid-cols-2 lg:grid-cols-4 gap-[16px]">
-                                <li data-aos="fade-up">
-                                    <a href="single-country.html" title="France"
-                                        class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-[16px]">
-                                            <img src="https://flagcdn.com/24x18/fr.png" alt="fr"
-                                                class="rounded-lg w-8 h-5" />
-                                            <div class="text-[var(--is-blue-3)]">
-                                                <h3 class="font-semibold text-base">France</h3>
+                <div
+                    class="relative z-10 bg-white rounded-[20px] container flex flex-col gap-5 overflow-auto max-h-[700px]">
+                    <div class="flex text-white rounded-[20px] text-center bg-[var(--is-pink)] p-8">
+                        <p class="flex-1 font-bold text-md md:text-3xl">This plan works in 7 regions:</p>
+                        <button onclick="closeModal('regionModal')"
+                            class="cursor-pointer text-white text-xl font-bold">✕</button>
+                    </div>
+                    <div class="mx-30 pt-5 pb-10">
+                        <ul class="flex flex-wrap md:justify-center gap-[12px] md:gap-[26px]">
+                            <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                                <a title="Africa" onclick="this.href='single-country.html?data=region'">
+                                    <div
+                                        class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[186px] bg-cover cursor-pointer
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/item-region-1.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+
+                                        <div class="flex items-end z-1 h-full">
+                                            <div
+                                                class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                                <span class="text-sm font-medium">Africa</span>
                                             </div>
                                         </div>
-                                    </a>
-                                </li>
-                                <li data-aos="fade-up">
-                                    <a href="single-country.html" title="India"
-                                        class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-[16px]">
-                                            <img src="https://flagcdn.com/24x18/in.png" alt="in"
-                                                class="rounded-lg w-8 h-5" />
-                                            <div class="text-[var(--is-blue-3)]">
-                                                <h3 class="font-semibold text-base">India</h3>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                                <a title="Asia" onclick="this.href='single-country.html?data=region'">
+                                    <div
+                                        class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[186px] bg-cover cursor-pointer
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/item-region-2.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+
+                                        <div class="flex items-end z-1 h-full">
+                                            <div
+                                                class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                                <span class="text-sm font-medium">Asia</span>
                                             </div>
                                         </div>
-                                    </a>
-                                </li>
-                                <li data-aos="fade-up">
-                                    <a href="single-country.html" title="Italy"
-                                        class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-[16px]">
-                                            <img src="https://flagcdn.com/24x18/it.png" alt="it"
-                                                class="rounded-lg w-8 h-5" />
-                                            <div class="text-[var(--is-blue-3)]">
-                                                <h3 class="font-semibold text-base">Italy</h3>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                                <a title="Europe" onclick="this.href='single-country.html?data=region'">
+                                    <div
+                                        class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[186px] bg-cover cursor-pointer
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/item-region-3.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+
+                                        <div class="flex items-end z-1 h-full">
+                                            <div
+                                                class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                                <span class="text-sm font-medium">Europe</span>
                                             </div>
                                         </div>
-                                    </a>
-                                </li>
-                                <li data-aos="fade-up">
-                                    <a href="single-country.html" title="Mexico"
-                                        class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-[16px]">
-                                            <img src="https://flagcdn.com/24x18/mx.png" alt="mx"
-                                                class="rounded-lg w-8 h-5" />
-                                            <div class="text-[var(--is-blue-3)]">
-                                                <h3 class="font-semibold text-base">Mexico</h3>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                                <a title="Global" onclick="this.href='single-country.html?data=region'">
+                                    <div
+                                        class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[186px] bg-cover cursor-pointer
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/item-region-4.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+
+                                        <div class="flex items-end z-1 h-full">
+                                            <div
+                                                class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                                <span class="text-sm font-medium">Global</span>
                                             </div>
                                         </div>
-                                    </a>
-                                </li>
-                                <li data-aos="fade-up">
-                                    <a href="single-country.html" title="Morocco"
-                                        class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-[16px]">
-                                            <img src="https://flagcdn.com/24x18/ma.png" alt="ma"
-                                                class="rounded-lg w-8 h-5" />
-                                            <div class="text-[var(--is-blue-3)]">
-                                                <h3 class="font-semibold text-base">Morocco</h3>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                                <a title="Middle East" onclick="this.href='single-country.html?data=region'">
+                                    <div
+                                        class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[186px] bg-cover cursor-pointer
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/item-region-5.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+
+                                        <div class="flex items-end z-1 h-full">
+                                            <div
+                                                class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                                <span class="text-sm font-medium">Middle East</span>
                                             </div>
                                         </div>
-                                    </a>
-                                </li>
-                                <li data-aos="fade-up">
-                                    <a href="single-country.html" title="Saudi Arabia"
-                                        class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-[16px]">
-                                            <img src="https://flagcdn.com/24x18/sa.png" alt="sa"
-                                                class="rounded-lg w-8 h-5" />
-                                            <div class="text-[var(--is-blue-3)]">
-                                                <h3 class="font-semibold text-base">Saudi Arabia</h3>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                                <a title="North America" onclick="this.href='single-country.html?data=region'">
+                                    <div
+                                        class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[186px] bg-cover cursor-pointer
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/item-region-6.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+
+                                        <div class="flex items-end z-1 h-full">
+                                            <div
+                                                class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                                <span class="text-sm font-medium">North America</span>
                                             </div>
                                         </div>
-                                    </a>
-                                </li>
-                                <li data-aos="fade-up">
-                                    <a href="single-country.html" title="Spain"
-                                        class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-[16px]">
-                                            <img src="https://flagcdn.com/24x18/es.png" alt="es"
-                                                class="rounded-lg w-8 h-5" />
-                                            <div class="text-[var(--is-blue-3)]">
-                                                <h3 class="font-semibold text-base">Spain</h3>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                                <a title="Oceania" onclick="this.href='single-country.html?data=region'">
+                                    <div
+                                        class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[186px] bg-cover cursor-pointer
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/item-region-7.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+
+                                        <div class="flex items-end z-1 h-full">
+                                            <div
+                                                class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                                <span class="text-sm font-medium">Oceania</span>
                                             </div>
                                         </div>
-                                    </a>
-                                </li>
-                                <li data-aos="fade-up">
-                                    <a href="single-country.html" title="Sri Lanka"
-                                        class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-[16px]">
-                                            <img src="https://flagcdn.com/24x18/lk.png" alt="lk"
-                                                class="rounded-lg w-8 h-5" />
-                                            <div class="text-[var(--is-blue-3)]">
-                                                <h3 class="font-semibold text-base">Sri Lanka</h3>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up"
+                                class="hidden extra-country w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                                <a title="Aland Islands" onclick="this.href='single-country.html?data=region'">
+                                    <div
+                                        class="rounded-[32px] w-full h-full min-h-[206px] bg-cover cursor-pointer
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/item-country-1.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+
+                                        <div class="flex items-end z-1 h-full">
+                                            <div
+                                                class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                                <span class="text-sm font-medium">Aland Islands</span>
                                             </div>
                                         </div>
-                                    </a>
-                                </li>
-                                <li data-aos="fade-up">
-                                    <a href="single-country.html" title="Turkey"
-                                        class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-[16px]">
-                                            <img src="https://flagcdn.com/24x18/tr.png" alt="tr"
-                                                class="rounded-lg w-8 h-5" />
-                                            <div class="text-[var(--is-blue-3)]">
-                                                <h3 class="font-semibold text-base">Turkey</h3>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li data-aos="fade-up">
-                                    <a href="single-country.html" title="United Arab Emirates"
-                                        class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-[16px]">
-                                            <img src="https://flagcdn.com/24x18/ae.png" alt="ae"
-                                                class="rounded-lg w-8 h-5" />
-                                            <div class="text-[var(--is-blue-3)]">
-                                                <h3 class="font-semibold text-base">United Arab Emirates</h3>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li data-aos="fade-up">
-                                    <a href="single-country.html" title="United Kingdom"
-                                        class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-[16px]">
-                                            <img src="https://flagcdn.com/24x18/gb.png" alt="gb"
-                                                class="rounded-lg w-8 h-5" />
-                                            <div class="text-[var(--is-blue-3)]">
-                                                <h3 class="font-semibold text-base">United Kingdom</h3>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li data-aos="fade-up">
-                                    <a href="single-country.html" title=">United States"
-                                        class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-[16px]">
-                                            <img src="https://flagcdn.com/24x18/us.png" alt="us"
-                                                class="rounded-lg w-8 h-5" />
-                                            <div class="text-[var(--is-blue-3)]">
-                                                <h3 class="font-semibold text-base">United States</h3>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

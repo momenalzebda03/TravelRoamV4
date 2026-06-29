@@ -51,11 +51,22 @@ document.querySelectorAll('.bundle-item').forEach(item => {
     });
 });
 
-function openBundleModal() {
-    document.getElementById('bundleModal').classList.remove('hidden');
+function openModal(id) {
+    const modal = document.getElementById(id);
+    if (!modal) return;
+
+    modal.classList.remove('hidden');
+
+    document.body.style.overflow = 'hidden';
 }
-function closeBundleModal() {
-    document.getElementById('bundleModal').classList.add('hidden');
+
+function closeModal(id) {
+    const modal = document.getElementById(id);
+    if (!modal) return;
+
+    modal.classList.add('hidden');
+
+    document.body.style.overflow = '';
 }
 
 const params = new URLSearchParams(window.location.search);

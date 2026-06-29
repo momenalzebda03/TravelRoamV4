@@ -56,7 +56,7 @@
     bg-center
     bg-no-repeat -z-1">
                     </div>
-                    <div id="country" onclick="openBundleModal()"
+                    <div id="country" onclick="openModal('countryModal')"
                         class="hidden w-[90%] md:w-[40%] xl:w-[35%] h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
                         <div class="flex flex-col gap-[20px]">
                             <div class="flex flex-wrap gap-3 justify-between items-center w-full">
@@ -97,7 +97,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div id="region" onclick="openBundleModal()"
+                    <div id="region" onclick="openModal('regionModal')"
                         class="hidden w-[90%] md:w-[40%] xl:w-[35%] h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
                         <div class="flex flex-col gap-[20px]">
                             <div class="flex flex-wrap gap-3 justify-between items-center w-full">
@@ -145,7 +145,7 @@
     bg-center
     bg-no-repeat -z-1">
                     </div>
-                    <div id="country" onclick="openBundleModal()"
+                    <div id="country" onclick="openModal('countryModal')"
                         data-bundle='{"name":"Unlimited Plan","price":25,"type":"unlimited"}'
                         class="hidden w-[90%] md:w-[40%] xl:w-[35%] h-full justify-between flex flex-col gap-6 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-3)]">
                         <div class="flex flex-col gap-[20px]">
@@ -179,7 +179,7 @@
                             </p>
                         </div>
                     </div>
-                    <div id="region" onclick="openBundleModal()"
+                    <div id="region" onclick="openModal('regionModal')"
                         data-bundle='{"name":"Unlimited Plan","price":25,"type":"unlimited"}'
                         class="hidden w-[90%] md:w-[40%] xl:w-[35%] h-full justify-between flex flex-col gap-6 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-3)]">
                         <div class="flex flex-col gap-[20px]">
@@ -298,14 +298,15 @@
                     </div>
                 </div>
             </div> -->
-            <div id="bundleModal" class="hidden fixed inset-0 z-50 flex items-center justify-center">
-                <div class="absolute inset-0 bg-[#25123CE5]" onclick="closeBundleModal()"></div>
+            <div id="countryModal" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+                <div class="absolute inset-0 bg-[#25123CE5]" onclick="closeModal('countryModal')"></div>
 
                 <div
                     class="relative z-10 bg-white rounded-[20px] container flex flex-col gap-5 overflow-auto max-h-[700px]">
                     <div class="flex text-white rounded-[20px] text-center bg-[var(--is-pink)] p-8">
                         <p class="flex-1 font-bold text-md md:text-3xl">يعمل هذا الخطة في 12 دولة:</p>
-                        <button onclick="closeBundleModal()" class="cursor-pointer text-white text-xl font-bold">✕</button>
+                        <button onclick="closeModal('countryModal')"
+                            class="cursor-pointer text-white text-xl font-bold">✕</button>
                     </div>
                     <div class="container pt-5 pb-10">
                         <ul class="grid sm:grid-cols-2 lg:grid-cols-4 gap-[16px]">
@@ -449,6 +450,151 @@
                                             class="rounded-lg w-8 h-5" />
                                         <div class="text-[var(--is-blue-3)]">
                                             <h3 class="font-semibold text-base">الولايات المتحدة</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="regionModal" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+                <div class="absolute inset-0 bg-[#25123CE5]" onclick="closeModal('regionModal')"></div>
+
+                <div
+                    class="relative z-10 bg-white rounded-[20px] container flex flex-col gap-5 overflow-auto max-h-[700px]">
+                    <div class="flex text-white rounded-[20px] text-center bg-[var(--is-pink)] p-8">
+                        <p class="flex-1 font-bold text-md md:text-3xl">هذا الخطة تعمل في 7 مناطق:</p>
+                        <button onclick="closeModal('regionModal')"
+                            class="cursor-pointer text-white text-xl font-bold">✕</button>
+                    </div>
+                    <div class="mx-30 pt-5 pb-10">
+                        <ul class="flex flex-wrap md:justify-center gap-[12px] md:gap-[26px]">
+                            <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                                <a title="افريقيا" onclick="this.href='single-country.html?data=region'">
+                                    <div
+                                        class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[186px] bg-cover cursor-pointer
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/item-region-1.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+
+                                        <div class="flex items-end z-1 h-full">
+                                            <div
+                                                class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                                <span class="text-sm font-medium">افريقيا</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                                <a title="اسيا" onclick="this.href='single-country.html?data=region'">
+                                    <div
+                                        class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[186px] bg-cover cursor-pointer
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/item-region-2.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+
+                                        <div class="flex items-end z-1 h-full">
+                                            <div
+                                                class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                                <span class="text-sm font-medium">اسيا</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                                <a title="اوروبا" onclick="this.href='single-country.html?data=region'">
+                                    <div
+                                        class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[186px] bg-cover cursor-pointer
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/item-region-3.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+
+                                        <div class="flex items-end z-1 h-full">
+                                            <div
+                                                class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                                <span class="text-sm font-medium">اوروبا</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                                <a title="عالمي" onclick="this.href='single-country.html?data=region'">
+                                    <div
+                                        class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[186px] bg-cover cursor-pointer
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/item-region-4.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+
+                                        <div class="flex items-end z-1 h-full">
+                                            <div
+                                                class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                                <span class="text-sm font-medium">عالمي</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                                <a title="الشرق الاوسط" onclick="this.href='single-country.html?data=region'">
+                                    <div
+                                        class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[186px] bg-cover cursor-pointer
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/item-region-5.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+
+                                        <div class="flex items-end z-1 h-full">
+                                            <div
+                                                class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                                <span class="text-sm font-medium">الشرق الاوسط</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                                <a title="امريكيا الشمالية" onclick="this.href='single-country.html?data=region'">
+                                    <div
+                                        class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[186px] bg-cover cursor-pointer
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/item-region-6.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+
+                                        <div class="flex items-end z-1 h-full">
+                                            <div
+                                                class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                                <span class="text-sm font-medium">امريكيا الشمالية</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                                <a title="أوقيانوسيا" onclick="this.href='single-country.html?data=region'">
+                                    <div
+                                        class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[186px] bg-cover cursor-pointer
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/item-region-7.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+
+                                        <div class="flex items-end z-1 h-full">
+                                            <div
+                                                class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                                <span class="text-sm font-medium">أوقيانوسيا</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-aos="fade-up"
+                                class="hidden extra-country w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
+                                <a title="جزر أولاند" onclick="this.href='single-country.html?data=region'">
+                                    <div
+                                        class="rounded-[32px] w-full h-full min-h-[206px] bg-cover cursor-pointer
+    bg-center
+    bg-no-repeat bg-[url('/assets/images/item-country-1.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+
+                                        <div class="flex items-end z-1 h-full">
+                                            <div
+                                                class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
+                                                <span class="text-sm font-medium">جزر أولاند</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </a>
