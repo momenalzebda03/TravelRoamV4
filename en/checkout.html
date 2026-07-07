@@ -318,4 +318,17 @@
 <script src="../assets/js/checkout.js"></script>
 <script src="../assets/js/aos.js"></script>
 
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const dataType = params.get('data');
+
+    if (!dataType || !['unlimited', 'regular'].includes(dataType)) {
+        window.location.replace('single-country.html');
+    } else {
+
+        dataType === 'unlimited' ? document.getElementById('card-unlimited').classList.remove('hidden')
+            : document.getElementById('card-regular').classList.remove('hidden');
+    }
+</script>
+
 </html>

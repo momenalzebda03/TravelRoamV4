@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="../../assets/icons/logo.svg" />
+    <link rel="stylesheet" href="../../assets/css/aos.css" />
     <link rel="stylesheet" href="../../assets/css/global.css" />
     <link rel="stylesheet" href="../../assets/css/output.css">
     <title>شركاء السفر والتجوال</title>
@@ -23,108 +24,139 @@
                 <coop-sidebar lang="ar"></coop-sidebar>
                 <div class="flex flex-col gap-6 mt-[30px]">
                     <div class="flex flex-col gap-2">
-                        <h2 class="text-xl md:text-3xl font-normal">مرحبا بعودتك, <span
+                        <h2 class="text-xl md:text-3xl font-normal">مرحبًا بعودتك, <span
                                 class="font-semibold">مؤمن!</span></h2>
-                        <p class="font-bold text-xl md:text-[42px] text-[var(--is-pink)]">بطاقات eSIM الخاصة بي</p>
+                        <p class="font-bold text-xl md:text-[42px] text-[var(--is-pink)]">تفاصيل eSIM</p>
                     </div>
                     <div>
                         <ul class="flex w-full" data-aos="fade-up">
-                            <li title="الخطط النشطة" onclick="showTab('bundle')" id="tab-bundle"
+                            <li title="الخطة النشطة" onclick="showTab('bundle')" id="tab-bundle"
                                 class="cursor-pointer active-bundle last:rounded-e-full first:rounded-s-full last:border-s-0 first:border-e-0 w-full text-center py-[7px] bg-[var(--is-gray-3)] w-full text-[var(--is-blue-3)] text-sm md:text-md border border-2 border-[var(--is-gray-4)] shadow-lg">
-                                الخطط النشطة
+                                الخطة النشطة
                             </li>
-                            <li title="خطط غير نشطة" onclick="showTab('unlimited-bundles')" id="tab-unlimited-bundles"
+                            <li title="الخطة الغير نشطة" onclick="showTab('unlimited-bundles')"
+                                id="tab-unlimited-bundles"
                                 class="cursor-pointer last:rounded-e-full first:rounded-s-full last:border-s-0 first:border-e-0 w-full text-center py-[7px] bg-[var(--is-gray-3)] w-full text-[var(--is-blue-3)] text-sm md:text-md border border-2 border-[var(--is-gray-4)] shadow-lg">
-                                خطط غير نشطة
+                                الخطة الغير نشطة
                             </li>
                         </ul>
                     </div>
                     <div class="regular-bundle">
-                        <div class="grid lg:grid-cols-2 mt-[25px]">
+                        <div class="grid lg:grid-cols-2 gap-5 mt-[25px]">
                             <div data-aos="fade-up">
+
                                 <div
                                     class="group hover:scale-103 flex flex-col gap-3 bg-white w-full px-[31px] py-[23px] rounded-[23px] transition-all duration-400 group-hover:shadow-2xl shadow-lg">
                                     <p class="text-[var(--is-pink)] font-semibold text-xl">
                                         8943108161006290203</p>
-                                    <div
-                                        class="rounded-[25px] bg-[var(--is-blue)] py-[16px] px-[20px] text-white sm:mx-1 w-full">
-                                        <div class="flex justify-between">
-                                            <div class="flex items-center gap-[11px]">
-                                                <img src="/assets/icons/usa.svg" alt="country"
-                                                    class="w-10 h-10 rounded-full object-cover" />
-                                                <p class="font-semibold text-xl">الولايات المتحدة</p>
-                                            </div>
-                                            <div>
+
+                                    <div class="shadow-2xl p-1 rounded-[25px] w-full bg-[var(--is-blue-3)]">
+                                        <div
+                                            class="p-4 border-2 border-[var(--is-gray-41)] rounded-[25px] flex flex-col gap-3 text-white mx-1">
+                                            <div class="text-white w-full flex justify-between items-center">
+
                                                 <div
-                                                    class="text-xs rounded-full bg-[var(--is-white-5)] text-green-500 px-4 py-2">
-                                                    <span>نشط</span>
+                                                    class="text-white flex items-center justify-center gap-2 backdrop-blur-[15.73px] border-2 border-[var(--is-gray-15)] bg-[var(--is-gray-16)] py-[4px] px-2 rounded-full">
+                                                    <img src="/assets/icons/usa.svg" alt="country"
+                                                        class="w-5 h-5 rounded-full object-cover" />
+                                                    <span
+                                                        class="mt-[3px] font-semibold text-[var(--is-gray-38)] text-xs">الولايات
+                                                        المتحدة</span>
+                                                </div>
+
+                                                <!-- <div class="flex-item-center gap-[11px] bg-red-500">
+                      <ion-img [src]="item.image" alt="country" class="w-8 h-8 rounded-full object-cover" />
+                      <p class="font-semibold text-xl">{{ getLang() === 'ar' ? item.countryAr : item.countryEn }}</p>
+                    </div> -->
+                                                <div>
+                                                    <div
+                                                        class="text-xs rounded-full bg-[var(--is-green-5)] text-[var(--is-green-4)] border-2 border-[var(--is-green-5)] px-3 py-1">
+                                                        <p>نشط</p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <ul class="mt-[10px] text-md">
-                                            <li class="font-bold">بطاقة مرور غير محدودة لمدة 7 أيام</li>
-                                            <li>متبقي يومان</li>
-                                            <li>صالحة حتى: 28 فبراير</li>
-                                        </ul>
-                                        <div class="mt-5 flex">
-                                            <a href="esim-details.html"
-                                                class="hover:text-white w-full text-nowrap text-center hover:before:bg-[var(--is-blue)] bg-white text-black rounded-[15px] py-[4%] btn">
-                                                <div class="relative z-1 text-md font-bold">
-                                                    <span>تفاصيل eSIM</span>
+                                            <div class="mt-3 flex flex-col gap-3">
+                                                <p class="font-bold text-sm text-[var(--is-pink)]">الخطة الحالية</p>
+                                                <div class="flex flex-col gap-2">
+                                                    <h3 class="font-semibold text-xl">تصريح غير محدود لمدة 7 أيام</h3>
+                                                    <p class="font-light text-sm">تبقى يومان</p>
+                                                    <p class="font-light text-sm">صالحة حتى: 28 فبراير</p>
                                                 </div>
-                                            </a>
+                                                <a href="esim-details.html"
+                                                    class="mt-3 hover:text-white w-full text-nowrap text-center hover:before:bg-[var(--is-blue)] bg-white text-black rounded-[15px] py-[4%] btn">
+                                                    <div class="relative z-1 text-md font-bold">
+                                                        <span>eSIM تفاصيل</span>
+                                                    </div>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
-                        <div class="grid lg:grid-cols-2 mt-[83px]">
+                        <div class="grid lg:grid-cols-2 mt-[33px]">
                             <div data-aos="fade-up" class="flex flex-col gap-[29px]">
                                 <p class="font-bold text-xl text-[var(--is-pink)]">اشحن مرة أخرى</p>
                                 <div
-                                    class="border border-[var(--is-gray-21)] hover:scale-103 group flex flex-col gap-3 bg-white w-full px-[31px] py-[23px] rounded-[23px] transition-all duration-400 group-hover:shadow-2xl shadow-lg">
-                                    <p class="text-[var(--is-gray-21)] font-semibold text-xl">
-                                        8943108161006290203</p>
-                                    <div
-                                        class="rounded-[25px] bg-[var(--is-gray-22)] py-[16px] px-[20px] text-white mx-1 w-full">
-                                        <div class="flex justify-between">
-                                            <div class="flex items-center gap-[11px]">
+                                    class="rounded-[20px] shadow-[0px_4px_5px_var(--is-black-7)] bg-white overflow-visible">
+                                    <div class="p-5 flex flex-col w-full gap-3">
+                                        <p class="text-[var(--is-gray-21)] font-semibold text-xl">
+                                            8943108161006290203</p>
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center gap-3">
+
                                                 <img src="/assets/icons/usa.svg" alt="country"
                                                     class="w-10 h-10 rounded-full object-cover" />
-                                                <p class="text-[var(--is-blue-3)] font-semibold text-xl">الولايات
-                                                    المتحدة
-                                                </p>
-                                            </div>
-                                            <div>
-                                                <div
-                                                    class="text-nowrap border border-[var(--is-red-3)] text-[8px] md:text-xs rounded-full bg-[var(--is-red-2)] text-[var(--is-red-3)] p-2">
-                                                    <span>انتهت البيانات</span>
+
+                                                <div class="flex flex-col">
+                                                    <p class="text-[var(--is-blue)] font-semibold text-md">الولايات
+                                                        المتحدة</p>
+                                                    <button
+                                                        class="flex gap-1 font-medium text-xs rounded-full p-1 px-0 text-[var(--is-pink)]">
+                                                        <img src="/assets/icons/out-of-data-1.svg" alt="country"
+                                                            class="mt-[1px] w-3 h-3 rounded-full object-cover" />
+
+                                                        نفدت البيانات
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
-                                        <ul class="text-[var(--is-blue-3)] mt-[10px] text-md">
-                                            <li class="font-bold">بطاقة مرور غير محدودة لمدة 7 أيام</li>
-                                            <li>متبقي يومان</li>
-                                            <li>صالحة حتى: 28 فبراير</li>
-                                        </ul>
-                                        <div class="mt-5 flex">
-                                            <a href="esim-details.html"
-                                                class="hover:text-white w-full text-nowrap text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] py-[4%] btn">
-                                                <div class="relative z-1 text-md font-bold">
-                                                    <span>إعادة شحن</span>
-                                                </div>
-                                            </a>
+
+                                        <div>
+
+                                            <h3 class="tracking-[-2px] text-[var(--is-blue)] font-semibold text-lg">
+                                                تصريح 7 أيام غير محدود
+                                            </h3>
+
+                                            <div class="w-[70%]">
+                                                <p class="text-sm">انتهت صلاحية هذه البطاقة.
+                                                    يمكنك إعادة شحن هذه الشريحة الإلكترونية لاستخدامها مرة أخرى</p>
+                                            </div>
                                         </div>
+
+                                        <a href="credit-top-up.html"
+                                            class="mt-4 text-nowrap text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] w-full py-[14px] btn">
+                                            <div class="relative z-1 text-sm font-semibold">
+                                                <span>اشحن</span>
+                                            </div>
+                                        </a>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="list-unlimited-plans hidden">
-                        <!-- <div class="flex flex-col items-center gap-5" data-aos="fade-up">
-                            <div class="flex items-center flex-col mt-10 gap-[7px] text-[var(--is-gray-21)]">
-                                <h2 class="font-semibold text-lg">There’s nothing here</h2>
-                                <p class="font-normal text-base">اشترِ شرائح eSIM وأكثر أدناه.</p>
+                        <div class="flex flex-col items-center gap-5" data-aos="fade-up">
+                            <div class="flex items-center flex-col mt-10 gap-[7px]">
+
+                                <img src="/assets/icons/history.svg" alt="history" width="180" height="180" />
+
+                                <h2 class="font-semibold text-lg">ما في شيء هنا</h2>
+                                <span class="text-[var(--is-gray-21)] font-normal text-base">اشترِ شريح eSIM والمزيد
+                                    أدناه.
+                                </span>
                             </div>
                             <div class="flex flex-wrap gap-3">
                                 <button
@@ -142,131 +174,169 @@
                                 <a href="faq.html"
                                     class="text-nowrap text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[20px] w-full lg:w-55 py-[2%] btn">
                                     <div class="relative z-1 text-sm font-semibold">
-                                        <span>الأسئلة الشائعة</span>
+                                        <span>الاسئلةالشائعة</span>
                                     </div>
                                 </a>
                             </div>
-                            <div class="text-center rounded-[16px] p-5 py-7 bg-[var(--is-black-8)] mt-10">
-                                <p class="text-[var(--is-blue-3)]">يرجى التأكد من تمكين التجوال للبيانات على شريحة eSIM
-                                    الخاصة بك وأن بيانات الهاتف المحمول مُهيأة في إعدادات هاتفك لاستخدام شريحة eSIM التي
-                                    قمت بشرائها.</p>
+                            <div class="shadow-xl text-center rounded-[16px] p-5 py-7 bg-[var(--is-black-8)] mt-10">
+                                <p class="text-[var(--is-blue-3)]">يرجى التأكد من تفعيل التجوال للبيانات على شريحتك
+                                    الإلكترونية وأن بيانات الهاتف مُعدة في إعدادات هاتفك لاستخدام شريحة eSIM التي
+                                    اشتريتها.</p>
                             </div>
-                        </div> -->
-                        <div class="grid lg:grid-cols-2 mt-[25px] gap-5">
+                        </div>
+
+                        <!-- <div class="grid lg:grid-cols-2 gap-5 mt-[25px]">
                             <div data-aos="fade-up">
+
                                 <div
                                     class="group hover:scale-103 flex flex-col gap-3 bg-white w-full px-[31px] py-[23px] rounded-[23px] transition-all duration-400 group-hover:shadow-2xl shadow-lg">
                                     <p class="text-[var(--is-pink)] font-semibold text-xl">
                                         8943108161006290203</p>
-                                    <div
-                                        class="rounded-[25px] bg-[var(--is-blue)] py-[16px] px-[20px] text-white sm:mx-1 w-full">
-                                        <div class="flex justify-between">
-                                            <div class="flex items-center gap-[11px]">
-                                                <img src="/assets/icons/usa.svg" alt="country"
-                                                    class="w-10 h-10 rounded-full object-cover" />
-                                                <p class="font-semibold text-xl">الولايات المتحدة</p>
-                                            </div>
-                                            <div>
+
+                                    <div class="shadow-2xl p-1 rounded-[25px] w-full bg-[var(--is-blue-3)]">
+                                        <div
+                                            class="p-4 border-2 border-[var(--is-gray-41)] rounded-[25px] flex flex-col gap-3 text-white mx-1">
+                                            <div class="text-white w-full flex justify-between items-center">
+
                                                 <div
-                                                    class="text-xs rounded-full bg-[var(--is-white-6)] text-[var(--is-gray-23)] px-4 py-2">
-                                                    <span>غير نشط</span>
+                                                    class="text-white flex items-center justify-center gap-2 backdrop-blur-[15.73px] border-2 border-[var(--is-gray-15)] bg-[var(--is-gray-16)] py-[4px] px-2 rounded-full">
+                                                    <img src="/assets/icons/usa.svg" alt="country"
+                                                        class="w-5 h-5 rounded-full object-cover" />
+                                                    <span
+                                                        class="mt-[3px] font-semibold text-[var(--is-gray-38)] text-xs">الولايات المتحدة</span>
+                                                </div>
+
+                                                <div class="flex-item-center gap-[11px] bg-red-500">
+                      <ion-img [src]="item.image" alt="country" class="w-8 h-8 rounded-full object-cover" />
+                      <p class="font-semibold text-xl">{{ getLang() === 'ar' ? item.countryAr : item.countryEn }}</p>
+                    </div>
+                                                <div>
+                                                    <div
+                                                        class="text-xs rounded-full bg-[var(--is-white-6)] text-[var(--is-gray-23)] px-4 py-2">
+                                                        <span>غير نشط</span>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <ul class="mt-[10px] text-md">
-                                            <li class="font-bold">بطاقة مرور غير محدودة لمدة 7 أيام</li>
-                                            <li>تنتهي صلاحية الخطة بعد 7 أيام من التفعيل</li>
-                                        </ul>
-                                        <div class="mt-5 flex">
-                                            <a href="esim-details.html"
-                                                class="hover:text-white w-full text-nowrap text-center hover:before:bg-[var(--is-blue)] bg-white text-black rounded-[15px] py-[4%] btn">
-                                                <div class="relative z-1 text-md font-bold">
-                                                    <span>تفاصيل eSIM</span>
+                                            <div class="mt-3 flex flex-col gap-3">
+                                                <p class="font-bold text-sm text-[var(--is-pink)]">Current Plan</p>
+                                                <div class="flex flex-col gap-2">
+                                                    <h3 class="font-semibold text-xl">تصريح غير محدود لمدة 7 أيام</h3>
+                                                    <p class="font-light text-sm">تنتهي صلاحية الخطة بعد 7 أيام من التفعيل
+                                                    </p>
                                                 </div>
-                                            </a>
+                                                <a href="esim-details.html"
+                                                    class="mt-3 hover:text-white w-full text-nowrap text-center hover:before:bg-[var(--is-blue)] bg-white text-black rounded-[15px] py-[4%] btn">
+                                                    <div class="relative z-1 text-md font-bold">
+                                                        <span>فعّل</span>
+                                                    </div>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
+
+                                </div>
+                            </div>
+                            <div data-aos="fade-up">
+
+                                <div
+                                    class="group hover:scale-103 flex flex-col gap-3 bg-white w-full px-[31px] py-[23px] rounded-[23px] transition-all duration-400 group-hover:shadow-2xl shadow-lg">
+                                    <p class="text-[var(--is-pink)] font-semibold text-xl">
+                                        8943108161006290203</p>
+
+                                    <div class="shadow-2xl p-1 rounded-[25px] w-full bg-[var(--is-blue-3)]">
+                                        <div
+                                            class="p-4 border-2 border-[var(--is-gray-41)] rounded-[25px] flex flex-col gap-3 text-white mx-1">
+                                            <div class="text-white w-full flex justify-between items-center">
+
+                                                <div
+                                                    class="text-white flex items-center justify-center gap-2 backdrop-blur-[15.73px] border-2 border-[var(--is-gray-15)] bg-[var(--is-gray-16)] py-[4px] px-2 rounded-full">
+                                                    <img src="/assets/icons/usa.svg" alt="country"
+                                                        class="w-5 h-5 rounded-full object-cover" />
+                                                    <span
+                                                        class="mt-[3px] font-semibold text-[var(--is-gray-38)] text-xs">الولايات المتحدة</span>
+                                                </div>
+
+                                                <div class="flex-item-center gap-[11px] bg-red-500">
+                      <ion-img [src]="item.image" alt="country" class="w-8 h-8 rounded-full object-cover" />
+                      <p class="font-semibold text-xl">{{ getLang() === 'ar' ? item.countryAr : item.countryEn }}</p>
+                    </div>
+                                                <div>
+                                                    <div
+                                                        class="text-xs rounded-full bg-[var(--is-white-6)] text-[var(--is-gray-23)] px-4 py-2">
+                                                        <span>غير نشط</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mt-3 flex flex-col gap-3">
+                                                <p class="font-bold text-sm text-[var(--is-pink)]">الخطة الحالية</p>
+                                                <div class="flex flex-col gap-2">
+                                                    <h3 class="font-semibold text-xl">بطاقة دخول غير محدودة لمدة 7 أيام</h3>
+                                                    <p class="font-light text-sm">تنتهي صلاحية الخطة بعد 7 أيام من التفعيل
+                                                    </p>
+                                                </div>
+                                                <a href="esim-details.html"
+                                                    class="mt-3 hover:text-white w-full text-nowrap text-center hover:before:bg-[var(--is-blue)] bg-white text-black rounded-[15px] py-[4%] btn">
+                                                    <div class="relative z-1 text-md font-bold">
+                                                        <span>نشط</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
-                        <div class="grid lg:grid-cols-2 mt-[83px] gap-5">
+
+                        <div class="grid lg:grid-cols-2 mt-[33px]">
                             <div data-aos="fade-up" class="flex flex-col gap-[29px]">
-                                <p class="font-bold text-xl text-[var(--is-pink)]">منتهي الصلاحية</p>
+                                <p class="font-bold text-xl text-[var(--is-pink)]">Expired</p>
                                 <div
-                                    class="hover:scale-103 group flex flex-col gap-3 bg-white w-full px-[31px] py-[23px] rounded-[23px] transition-all duration-400 group-hover:shadow-2xl shadow-lg">
-                                    <p class="text-[var(--is-gray-21)] font-semibold text-xl">
-                                        8943108161006290203</p>
-                                    <div
-                                        class="rounded-[25px] bg-[var(--is-gray-22)] py-[16px] px-[20px] text-white mx-1 w-full">
-                                        <div class="flex justify-between">
-                                            <div class="flex items-center gap-[11px]">
+                                    class="rounded-[20px] shadow-[0px_4px_5px_var(--is-black-7)] bg-white overflow-visible">
+                                    <div class="p-5 flex flex-col w-full gap-3">
+                                        <p class="text-[var(--is-gray-21)] font-semibold text-xl">
+                                            8943108161006290203</p>
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center gap-3">
+
                                                 <img src="/assets/icons/usa.svg" alt="country"
                                                     class="w-10 h-10 rounded-full object-cover" />
-                                                <p class="text-[var(--is-blue-3)] font-semibold text-xl">الولايات
-                                                    المتحدة
-                                                </p>
-                                            </div>
-                                            <div>
-                                                <div
-                                                    class="border border-[var(--is-red-3)] text-xs rounded-full bg-[var(--is-red-2)] text-[var(--is-red-3)] p-2">
-                                                    <span>منتهي الصلاحية</span>
+
+                                                <div class="flex flex-col">
+                                                    <p class="text-[var(--is-blue)] font-semibold text-md">الولايات المتحدة</p>
+                                                    <button
+                                                        class="flex gap-1 font-medium text-xs rounded-full p-1 px-0 text-[var(--is-pink)]">
+                                                        <img src="/assets/icons/out-of-data-1.svg" alt="country"
+                                                            class="mt-[1px] w-3 h-3 rounded-full object-cover" />
+
+                                                        منتهي الصلاحية
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
-                                        <ul class="text-[var(--is-blue-3)] mt-[10px] text-md">
-                                            <li class="font-bold">بطاقة مرور غير محدودة لمدة 7 أيام</li>
-                                            <li>0 أيام متبقية</li>
-                                        </ul>
-                                        <div class="mt-5 flex">
-                                            <a href="esim-details.html"
-                                                class="hover:text-white w-full text-nowrap text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] py-[4%] btn">
-                                                <div class="relative z-1 text-md font-bold">
-                                                    <span>إعادة شحن</span>
-                                                </div>
-                                            </a>
+
+                                        <div>
+
+                                            <h3 class="tracking-[-2px] text-[var(--is-blue)] font-semibold text-lg">
+                                        تصريح 7 أيام غير محدود
+                                            </h3>
+
+                                            <div class="w-[70%]">
+                                                <p class="text-sm">0 أيام متبقية</p>
+                                            </div>
                                         </div>
+
+                                        <a href="esim-details.html"
+                                            class="mt-4 text-nowrap text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] w-full py-[14px] btn">
+                                            <div class="relative z-1 text-sm font-semibold">
+                                                <span>eSIM تفاصيل</span>
+                                            </div>
+                                        </a>
+
                                     </div>
                                 </div>
                             </div>
-                            <div data-aos="fade-up" class="flex flex-col gap-[29px]">
-                                <p class="opacity-1 font-bold text-xl text-[var(--is-pink)]">s</p>
-                                <div
-                                    class="hover:scale-103 group flex flex-col gap-3 bg-white w-full px-[31px] py-[23px] rounded-[23px] transition-all duration-400 group-hover:shadow-2xl shadow-lg">
-                                    <p class="text-[var(--is-gray-21)] font-semibold text-xl">
-                                        8943108161006290203</p>
-                                    <div
-                                        class="rounded-[25px] bg-[var(--is-gray-22)] py-[16px] px-[20px] text-white mx-1 w-full">
-                                        <div class="flex justify-between">
-                                            <div class="flex items-center gap-[11px]">
-                                                <img src="/assets/icons/usa.svg" alt="country"
-                                                    class="w-10 h-10 rounded-full object-cover" />
-                                                <p class="text-[var(--is-blue-3)] font-semibold text-xl">الولايات
-                                                    المتحدة
-                                                </p>
-                                            </div>
-                                            <div>
-                                                <div
-                                                    class="border border-[var(--is-red-3)] text-xs rounded-full bg-[var(--is-red-2)] text-[var(--is-red-3)] p-2">
-                                                    <span>منتهي الصلاحية</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <ul class="text-[var(--is-blue-3)] mt-[10px] text-md">
-                                            <li class="font-bold">بطاقة مرور غير محدودة لمدة 7 أيام</li>
-                                            <li>0 أيام متبقية</li>
-                                        </ul>
-                                        <div class="mt-5 flex">
-                                            <a href="esim-details.html"
-                                                class="hover:text-white w-full text-nowrap text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] py-[4%] btn">
-                                                <div class="relative z-1 text-md font-bold">
-                                                    <span>إعادة شحن</span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
