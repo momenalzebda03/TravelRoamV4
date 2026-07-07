@@ -54,8 +54,16 @@ function openDestinations(inputEl) {
 }
 
 function openDestinationsByList(listId) {
-    $(`#${listId}`).addClass('open');
-    renderDestinations(destinations, listId, null);
+    const $list = $(`#${listId}`);
+    const isOpen = $list.hasClass('open');
+
+    // close any other open dropdowns
+    $('.dropdown-list').removeClass('open');
+
+    if (!isOpen) {
+        renderDestinations(destinations, listId, null); // render items first
+        $list.addClass('open');                          // add class AFTER render
+    }
 }
 
 function filterDestinations(value, inputEl) {
@@ -128,10 +136,13 @@ $(document).on('click', '.destination-item', function () {
         $(`#${inputId}`).val(name);
 
         $(`#${inputId}`).closest('.dropdown-wrapper').find('#flag').attr('src', `https://flagcdn.com/24x18/${code}.png`);
+
+        $('.phone-code').text(phone);
+        $('.phone-code').closest('.dropdown-wrapper').find('#flag').attr('src', `https://flagcdn.com/24x18/${code}.png`);
     } else {
         const $wrapper = $(`#${listId}`).closest('.dropdown-wrapper');
         $wrapper.find('.phone-code').text(phone);
-        $wrapper.find('img').attr('src', `https://flagcdn.com/24x18/${code}.png`);
+        $wrapper.find('#flag').attr('src', `https://flagcdn.com/24x18/${code}.png`);
     }
 
     $(`#${listId}`).removeClass('open');

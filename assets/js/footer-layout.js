@@ -34,10 +34,16 @@ class CoopFooter extends HTMLElement {
     return this.lang === 'ar';
   }
 
+  get isContactPage() {
+    return window.location.pathname.includes('contact.html');
+  }
+
   _render() {
+    const marginClass = this.isContactPage ? '' : 'sections-marign-top';
+
     this.innerHTML = `
 <footer class="bg-[var(--is-black-1)]">
-  <div class="overflow-hidden sections-marign-top text-white py-10 md:py-20 text-center flex flex-col gap-8 md:gap-20">
+  <div class="overflow-hidden ${marginClass} text-white py-10 md:py-20 text-center flex flex-col gap-8 md:gap-20">
 
     <!-- Top CTA -->
     <div class="container flex flex-col gap-8">
