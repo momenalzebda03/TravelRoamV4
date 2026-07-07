@@ -69,6 +69,7 @@ class CoopNavbar extends HTMLElement {
       'sim': 'bg-[var(--is-blue)]',
       'credit-top-up': 'bg-[var(--is-blue)]',
       'payment': 'bg-[var(--is-blue)]',
+      'not-found': 'bg-[var(--is-blue)]',
     };
 
     const matched = Object.keys(backgrounds).find(key =>

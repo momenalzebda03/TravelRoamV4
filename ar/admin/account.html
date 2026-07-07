@@ -29,101 +29,144 @@
                         <p class="font-bold text-xl md:text-[42px] text-[var(--is-pink)]">الحساب</p>
                     </div>
                     <form method="" action=""
-                        class="mt-5 md:shadow-xl pb-10 py-4 md:px-8 rounded-[18px] flex flex-col gap-4">
+                        class="mt-5 md:shadow-xl bg-[var(--is-gray-25)] pb-10 py-4 md:px-8 rounded-[18px] flex flex-col gap-5">
                         <h2 class="font-bold text-2xl text-[var(--is-black-13)]">تفاصيلك</h2>
-                        <div class="flex flex-col xl:flex-row justify-between gap-5">
-                            <div class="grid sm:grid-cols-2 w-full gap-3">
-                                <div class="flex flex-col w-full">
-                                    <label class="font-normal text-base">الأسم الاول</label>
-                                    <input type="text" value="الأسم" class="font-bold border-b-black/30 border-b-2"
-                                        id="input" />
-                                </div>
-                                <div class="flex flex-col w-full">
-                                    <label class="font-normal text-base">الأسم الأخير</label>
-                                    <input type="text" value="الأسم" class="font-bold border-b-black/30 border-b-2" />
-                                </div>
-                                <div class="flex flex-col w-full">
-                                    <label class="font-normal text-base">عنوان الأيميل</label>
-                                    <input type="email" value="yourname@email.com"
-                                        class="font-bold border-b-black/30 border-b-2" />
-                                </div>
-                                <div class="flex flex-col w-full">
-                                    <label class="font-normal text-base">رقم الهاتف</label>
-                                    <input type="number" value="00000000000"
-                                        class="font-bold border-b-black/30 border-b-2" />
-                                </div>
-                            </div>
-                            <div class="flex justify-end w-full xl:w-[60%]">
-                                <div class="flex xl:flex-col items-end gap-3 w-full">
-                                    <a href="home.html"
-                                        class="w-full xl:w-[50%] text-nowrap text-center hover:before:bg-black bg-white hover:text-white text-[var(--is-blue-3)] rounded-[20px] border border-3 border-[var(--is-blue-3)] py-[12px] btn">
-                                        <div class="relative z-1 text-sm font-bold">
-                                            <span>رجوع</span>
+                        <div class="grid sm:grid-cols-2 w-full gap-5">
+
+                            <label for="" class="flex flex-col gap-4">
+                                <span class="text-[var(--is-blue-3)] font-semibold text-lg">الأسم الأول</span>
+                                <input type="text"
+                                    class="bg-white py-3 px-4 rounded-[10px] border border-1 border-[var(--is-gray-7)]"
+                                    placeholder="الأسم" id="input" />
+                            </label>
+
+                            <label for="" class="flex flex-col gap-4">
+                                <span class="text-[var(--is-blue-3)] font-semibold text-lg">الأسم الأخير</span>
+                                <input type="text"
+                                    class="bg-white py-3 px-4 rounded-[10px] border border-1 border-[var(--is-gray-7)]"
+                                    placeholder="الأسم" />
+                            </label>
+
+                            <label for="" class="flex flex-col gap-4">
+                                <span class="text-[var(--is-blue-3)] font-semibold text-lg">البريد الإلكتروني</span>
+                                <input type="email"
+                                    class="bg-white py-3 px-4 rounded-[10px] border border-1 border-[var(--is-gray-7)]"
+                                    placeholder="yourname@email.com" />
+                            </label>
+
+                            <label for="" class="flex flex-col gap-4">
+
+                                <span class="text-[var(--is-blue-3)] font-semibold text-xl">رقم الهاتف</span>
+
+                                <div class="relative dropdown-wrapper">
+                                    <div
+                                        class="border border-1 border-[var(--is-gray-7)] rounded-xl flex items-center relative">
+                                        <img src="/assets/icons/untitled-design.svg" id="flag"
+                                            class="w-5 h-5 absolute right-3 top-1/2 -translate-y-1/2" />
+                                        <div class="flex items-center w-full bg-white rounded-[10px]">
+                                            <div class="flex items-center cursor-pointer"
+                                                onclick="openDestinationsByList('destination-list-1')">
+                                                <p class="phone-code ps-[40px]">+675</p>
+                                                <img src="/assets/icons/down-arrow.svg" alt="down arrow" width="20"
+                                                    height="20" />
+                                            </div>
+                                            <input class="py-3 ms-8 w-full" type="number"
+                                                placeholder="(000) 000-0000" />
                                         </div>
-                                    </a>
-                                    <button
-                                        class="w-full xl:w-[50%] text-nowrap text-center hover:before:bg-[var(--is-pink)] bg-black text-white rounded-[20px] border border-3 border-[var(--is-blue-3)] py-[12px] btn">
-                                        <div class="relative z-1 text-sm font-bold">
-                                            <span>ادارة eSIMs</span>
-                                        </div>
-                                    </button>
+                                    </div>
+                                    <ul id="destination-list-1"
+                                        class="shadow-2xl dropdown-list !block !px-0 absolute w-full mt-3 rounded-[12px] !bg-white overflow-hidden z-50">
+                                    </ul>
                                 </div>
-                            </div>
+                            </label>
+
                         </div>
-                        <div class="flex flex-col gap-4 mt-[45px]">
+
+                        <div class="my-5 flex w-[45%] gap-3">
+                            <a href="home.html"
+                                class="w-full xl:w-[50%] text-nowrap text-center hover:before:bg-black bg-white hover:text-white text-[var(--is-blue-3)] rounded-[20px] border border-3 border-[var(--is-blue-3)] py-[14px] btn">
+                                <div class="relative z-1 text-sm font-bold">
+                                    <span>رجوع</span>
+                                </div>
+                            </a>
+                            <button
+                                class="hover:text-black w-full xl:w-[50%] text-nowrap text-center hover:before:bg-white bg-black text-white rounded-[20px] border border-3 border-[var(--is-blue-3)] py-[14px] btn">
+                                <div class="relative z-1 text-sm font-bold">
+                                    <span>ادارة</span>
+                                </div>
+                            </button>
+                        </div>
+
+                        <div class="flex flex-col gap-4">
                             <h2 class="font-bold text-2xl text-[var(--is-black-13)]">عنوانك</h2>
                             <div class="grid sm:grid-cols-2 gap-y-3 sm:gap-y-7 gap-x-10">
-                                <div class="flex flex-col">
-                                    <label class="font-normal text-base">العنوان الافتراضي</label>
-                                    <input type="text" value="العنوان" class="font-bold border-b-black/30 border-b-2" />
-                                </div>
-                                <div class="relative dropdown-wrapper">
-                                    <label class="font-normal text-base">الدولة</label>
-                                    <div
-                                        class="border opacity-50 md:opacity-100 bg-[var(--bg-gray)] border-white rounded-[20px] flex items-center">
-                                        <div class="absolute left-0 top-[24.5px]">
-                                            <img id="flag" src="../../assets/icons/usa.svg" alt="search"
-                                                class="rounded-full object-cover w-5 h-5" />
+
+                                <label for="" class="flex flex-col gap-4">
+                                    <span class="text-[var(--is-blue-3)] font-semibold text-lg">العنوان الأفتراضي</span>
+                                    <input type="text"
+                                        class="bg-white py-3 px-4 rounded-[10px] border border-1 border-[var(--is-gray-7)]"
+                                        placeholder="العنوان" />
+                                </label>
+
+                                <label for="" class="relative flex flex-col gap-4">
+
+                                    <span class="text-[var(--is-blue-3)] font-semibold text-xl">بلد الإقامة</span>
+
+                                    <div class="relative dropdown-wrapper">
+                                        <div
+                                            class="border border-1 border-[var(--is-gray-7)] rounded-xl flex items-center relative">
+                                            <div class="w-full rounded-xl flex items-center relative">
+                                                <img src="/assets/icons/untitled-design.svg" id="flag"
+                                                    class="w-5 h-5 absolute right-3 top-1/2 -translate-y-1/2" />
+                                                <div
+                                                    class="flex items-center w-full bg-[var(--is-gray-6)] rounded-[10px]">
+                                                    <input type="text" class="py-3 ms-10 w-full"
+                                                        placeholder="بلد الإقامة" id="destination-input-2"
+                                                        oninput="filterDestinations(this.value, this)"
+                                                        onfocus="openDestinations(this)" />
+                                                </div>
+                                            </div>
+
+                                            <ul id="destination-list-2"
+                                                class="shadow-2xl dropdown-list !block !px-0 absolute w-full mt-3 rounded-[12px] !bg-white overflow-hidden z-50">
+                                            </ul>
+
                                         </div>
-                                        <input type="text" value="Country"
-                                            class="w-full font-bold border-b-black/30 border-b-2"
-                                            oninput="filterDestinations(this.value, this)"
-                                            onfocus="openDestinations(this)" id="destination-input-1" />
                                     </div>
+                                </label>
 
-                                    <ul id="destination-list-1"
-                                        class="shadow-2xl dropdown-list !block !px-0 absolute w-full mt-2 rounded-[12px] !bg-white overflow-hidden z-50">
-                                    </ul>
+                                <label for="" class="flex flex-col gap-4">
+                                    <span class="text-[var(--is-blue-3)] font-semibold text-lg">دينا</span>
+                                    <input type="text"
+                                        class="bg-white py-3 px-4 rounded-[10px] border border-1 border-[var(--is-gray-7)]"
+                                        placeholder="دساد، في" />
+                                </label>
 
-                                </div>
-                                <div class="flex flex-col">
-                                    <label class="font-normal text-base">Deena</label>
-                                    <input type="text" value="dsad, IN"
-                                        class="font-bold border-b-black/30 border-b-2" />
-                                </div>
-                                <div class="flex flex-col">
-                                    <label class="font-normal text-base">Deena</label>
-                                    <input type="text" value="Demo, IN"
-                                        class="font-bold border-b-black/30 border-b-2" />
-                                </div>
+                                <label for="" class="flex flex-col gap-4">
+                                    <span class="text-[var(--is-blue-3)] font-semibold text-lg">دينا</span>
+                                    <input type="text"
+                                        class="bg-white py-3 px-4 rounded-[10px] border border-1 border-[var(--is-gray-7)]"
+                                        placeholder="عرض تجريبي، في" />
+                                </label>
+
                             </div>
                             <div class="flex flex-col xl:flex-row mt-5 gap-[8px]">
-                                <button onclick="editAndFocus('input')"
+                                <div onclick="editAndFocus('input')"
                                     class="flex justify-center items-center gap-3 w-full xl:w-[20%] hover:before:bg-black bg-[var(--is-pink)] text-white rounded-[20px] px-10 py-[13px] btn">
                                     <img src="../../assets/icons/edit.svg" alt="edit" class="relative" />
                                     <div class="relative z-1 text-sm font-semibold">
-                                        <span>تحديث</span>
+                                        <span>تعديل</span>
                                     </div>
-                                </button>
+                                </div>
                                 <button
                                     class="w-full xl:w-[20%] text-nowrap text-center hover:before:bg-[var(--is-pink)] bg-black text-white rounded-[20px] py-[13px] btn">
                                     <div class="relative z-1 text-sm font-bold">
-                                        <span>تعديل العنوان</span>
+                                        <span>تغير العنوان</span>
                                     </div>
                                 </button>
-                                <div class="mx-5 flex justify-center items-center gap-2">
-                                    <input type="checkbox" class="" id="checkbox" />
-                                    <label for="checkbox">تعيين كعنوان افتراضي</label>
+                                <div class="mx-3 flex justify-center items-center gap-2">
+                                    <input type="checkbox" class="w-4 h-4" id="checkbox" />
+                                    <label for="checkbox">تعيين كالعنوان الافتراضي</label>
                                 </div>
                             </div>
                         </div>
@@ -134,14 +177,15 @@
         <!-- start footer -->
         <coop-footer lang="ar"></coop-footer>
         <!-- end footer -->
+    </div>
 </body>
 
 <script src="../../assets/js/jquery.min.js"></script>
 <script src="../../assets/js/navbar-layout.js"></script>
 <script src="../../assets/js/footer-layout.js"></script>
 <script src="../../assets/js/global.js"></script>
-<script src="../../assets/js/sideBar.js"></script>
 <script src="../../assets/js/account.js"></script>
+<script src="../../assets/js/sideBar.js"></script>
 <script src="../../assets/js/aos.js"></script>
 <script src="../../assets/js/auth.js"></script>
 

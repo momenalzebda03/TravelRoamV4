@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/logo.svg" />
+    <link rel="stylesheet" href="../assets/css/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/output.css">
+    <title>Travel Roam Partners</title>
+</head>
+
+<body class="md:overflow-hidden">
+    <div id="loadingOverlay" class="fixed inset-0 bg-white flex justify-center items-center z-[9999]">
+        <div class="w-16 h-16 border-6 border-gray-200 border-t-[var(--is-blue)] rounded-full animate-spin"></div>
+    </div>
+    <div id="app" style="display: none;">
+        <!-- start navbar -->
+        <coop-navbar></coop-navbar>
+        <!-- end navbar -->
+        <!-- start content -->
+        <section>
+            <div class="mt-10 h-screen container">
+                <div class="flex flex-col gap-10 justify-center items-center w-full h-full">
+
+                    <img src="/assets/images/not-found.jpg" alt="not found" class="w-[250px] h-[250px]" />
+
+                    <div class="md:w-[48%] flex flex-col text-center gap-3">
+                        <h2 class="font-bold text-[var(--is-blue-3)] text-xl">Page Not Found</h2>
+                        <p class="text-[var(--is-gray-26)] font-medium text-lg">The page you are looking for might
+                            have
+                            been
+                            removed had its name
+                            changed or is
+                            temporarily
+                            unavailable.</p>
+                    </div>
+
+                    <button title="Go to Homepage"
+                        class="before:bg-white rounded-[20px] hover:text-black text-white bg-[var(--is-pink)] px-5 py-3 btn">
+                        <div class="text-base relative z-1 font-bold">
+                            <span>Go to Homepage</span>
+                        </div>
+                    </button>
+
+                </div>
+            </div>
+        </section>
+        <!-- end content -->
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/navbar-layout.js"></script>
+<script src="../assets/js/global.js"></script>
+<script src="../assets/js/aos.js"></script>
+
+</html>

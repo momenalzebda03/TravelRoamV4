@@ -29,83 +29,126 @@
                         <p class="font-bold text-xl md:text-[42px] text-[var(--is-pink)]">Account</p>
                     </div>
                     <form method="" action=""
-                        class="mt-5 md:shadow-xl pb-10 py-4 md:px-8 rounded-[18px] flex flex-col gap-4">
-                        <h2 class="font-bold text-2xl text-[var(--is-black-13)]">Your details</h2>
-                        <div class="flex flex-col xl:flex-row justify-between gap-5">
-                            <div class="grid sm:grid-cols-2 w-full gap-3">
-                                <div class="flex flex-col w-full">
-                                    <label class="font-normal text-base">First name</label>
-                                    <input type="text" value="Name" class="font-bold border-b-black/30 border-b-2"
-                                        id="input" />
-                                </div>
-                                <div class="flex flex-col w-full">
-                                    <label class="font-normal text-base">Last name</label>
-                                    <input type="text" value="Name" class="font-bold border-b-black/30 border-b-2" />
-                                </div>
-                                <div class="flex flex-col w-full">
-                                    <label class="font-normal text-base">Email address</label>
-                                    <input type="email" value="yourname@email.com"
-                                        class="font-bold border-b-black/30 border-b-2" />
-                                </div>
-                                <div class="flex flex-col w-full">
-                                    <label class="font-normal text-base">Mobile number</label>
-                                    <input type="number" value="00000000000"
-                                        class="font-bold border-b-black/30 border-b-2" />
-                                </div>
-                            </div>
-                            <div class="flex justify-end w-full xl:w-[60%]">
-                                <div class="flex xl:flex-col items-end gap-3 w-full">
-                                    <a href="home.html"
-                                        class="w-full xl:w-[50%] text-nowrap text-center hover:before:bg-black bg-white hover:text-white text-[var(--is-blue-3)] rounded-[20px] border border-3 border-[var(--is-blue-3)] py-[12px] btn">
-                                        <div class="relative z-1 text-sm font-bold">
-                                            <span>Back</span>
-                                        </div>
-                                    </a>
-                                    <button
-                                        class="w-full xl:w-[50%] text-nowrap text-center hover:before:bg-[var(--is-pink)] bg-black text-white rounded-[20px] border border-3 border-[var(--is-blue-3)] py-[12px] btn">
-                                        <div class="relative z-1 text-sm font-bold">
-                                            <span>Manage eSIMs</span>
-                                        </div>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-4 mt-[45px]">
-                            <h2 class="font-bold text-2xl text-[var(--is-black-13)]">Your address</h2>
-                            <div class="grid sm:grid-cols-2 gap-y-3 sm:gap-y-7 gap-x-10">
-                                <div class="flex flex-col">
-                                    <label class="font-normal text-base">Default address</label>
-                                    <input type="text" value="Address" class="font-bold border-b-black/30 border-b-2" />
-                                </div>
+                        class="mt-5 md:shadow-xl bg-[var(--is-gray-25)] pb-10 py-4 md:px-8 rounded-[18px] flex flex-col gap-5">
+                        <h2 class="font-bold text-2xl text-[var(--is-black-13)]">Your Details</h2>
+                        <div class="grid sm:grid-cols-2 w-full gap-5">
+
+                            <label for="" class="flex flex-col gap-4">
+                                <span class="text-[var(--is-blue-3)] font-semibold text-lg">First Name</span>
+                                <input type="text"
+                                    class="bg-white py-3 px-4 rounded-[10px] border border-1 border-[var(--is-gray-7)]"
+                                    placeholder="Name" id="input" />
+                            </label>
+
+                            <label for="" class="flex flex-col gap-4">
+                                <span class="text-[var(--is-blue-3)] font-semibold text-lg">Last Name</span>
+                                <input type="text"
+                                    class="bg-white py-3 px-4 rounded-[10px] border border-1 border-[var(--is-gray-7)]"
+                                    placeholder="Name" />
+                            </label>
+
+                            <label for="" class="flex flex-col gap-4">
+                                <span class="text-[var(--is-blue-3)] font-semibold text-lg">Email address</span>
+                                <input type="email"
+                                    class="bg-white py-3 px-4 rounded-[10px] border border-1 border-[var(--is-gray-7)]"
+                                    placeholder="yourname@email.com" />
+                            </label>
+
+                            <label for="" class="flex flex-col gap-4">
+
+                                <span class="text-[var(--is-blue-3)] font-semibold text-xl">Mobile Number</span>
+
                                 <div class="relative dropdown-wrapper">
-                                    <label class="font-normal text-base">Country</label>
                                     <div
-                                        class="border opacity-50 md:opacity-100 border-white rounded-[20px] flex items-center">
-                                        <div class="absolute left-0 top-[24.5px]">
-                                            <img id="flag" src="../../assets/icons/usa.svg" alt="search"
-                                                class="rounded-full object-cover w-5 h-5" />
+                                        class="border border-1 border-[var(--is-gray-7)] rounded-xl flex items-center relative">
+                                        <img src="/assets/icons/untitled-design.svg" id="flag"
+                                            class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2" />
+                                        <div class="flex items-center w-full bg-white rounded-[10px]">
+                                            <div class="flex items-center cursor-pointer"
+                                                onclick="openDestinationsByList('destination-list-1')">
+                                                <p class="phone-code ps-[40px]">+675</p>
+                                                <img src="/assets/icons/down-arrow.svg" alt="down arrow" width="20"
+                                                    height="20" />
+                                            </div>
+                                            <input class="py-3 ms-8 w-full" type="number"
+                                                placeholder="(000) 000-0000" />
                                         </div>
-                                        <input type="text" value="Country"
-                                            class="w-full px-7 font-bold border-b-black/30 border-b-2"
-                                            oninput="filterDestinations(this.value, this)"
-                                            onfocus="openDestinations(this)" id="destination-input-1" />
                                     </div>
-
                                     <ul id="destination-list-1"
-                                        class="shadow-2xl dropdown-list !block !px-0 absolute w-full mt-2 rounded-[12px] !bg-white overflow-hidden z-50">
+                                        class="shadow-2xl dropdown-list !block !px-0 absolute w-full mt-3 rounded-[12px] !bg-white overflow-hidden z-50">
                                     </ul>
+                                </div>
+                            </label>
 
+                        </div>
+
+                        <div class="my-5 flex w-[45%] gap-3">
+                            <a href="home.html"
+                                class="w-full xl:w-[50%] text-nowrap text-center hover:before:bg-black bg-white hover:text-white text-[var(--is-blue-3)] rounded-[20px] border border-3 border-[var(--is-blue-3)] py-[14px] btn">
+                                <div class="relative z-1 text-sm font-bold">
+                                    <span>Back</span>
                                 </div>
-                                <div class="flex flex-col">
-                                    <label class="font-normal text-base">Deena</label>
-                                    <input type="text" value="dsad, IN"
-                                        class="font-bold border-b-black/30 border-b-2" />
+                            </a>
+                            <button
+                                class="hover:text-black w-full xl:w-[50%] text-nowrap text-center hover:before:bg-white bg-black text-white rounded-[20px] border border-3 border-[var(--is-blue-3)] py-[14px] btn">
+                                <div class="relative z-1 text-sm font-bold">
+                                    <span>Manage eSIMs</span>
                                 </div>
-                                <div class="flex flex-col">
-                                    <label class="font-normal text-base">Deena</label>
-                                    <input type="text" value="Demo, IN"
-                                        class="font-bold border-b-black/30 border-b-2" />
-                                </div>
+                            </button>
+                        </div>
+
+                        <div class="flex flex-col gap-4">
+                            <h2 class="font-bold text-2xl text-[var(--is-black-13)]">Your Address</h2>
+                            <div class="grid sm:grid-cols-2 gap-y-3 sm:gap-y-7 gap-x-10">
+
+                                <label for="" class="flex flex-col gap-4">
+                                    <span class="text-[var(--is-blue-3)] font-semibold text-lg">Default Address</span>
+                                    <input type="text"
+                                        class="bg-white py-3 px-4 rounded-[10px] border border-1 border-[var(--is-gray-7)]"
+                                        placeholder="Address" />
+                                </label>
+
+                                <label for="" class="relative flex flex-col gap-4">
+
+                                    <span class="text-[var(--is-blue-3)] font-semibold text-xl">Country of
+                                        Residence</span>
+
+                                    <div class="relative dropdown-wrapper">
+                                        <div
+                                            class="border border-1 border-[var(--is-gray-7)] rounded-xl flex items-center relative">
+                                            <div class="w-full rounded-xl flex items-center relative">
+                                                <img src="/assets/icons/untitled-design.svg" id="flag"
+                                                    class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2" />
+                                                <div class="flex items-center w-full bg-white rounded-[10px]">
+                                                    <input type="text" class="py-3 ms-10 w-full"
+                                                        placeholder="Enter your country" id="destination-input-2"
+                                                        oninput="filterDestinations(this.value, this)"
+                                                        onfocus="openDestinations(this)" />
+                                                </div>
+                                            </div>
+
+                                            <ul id="destination-list-2"
+                                                class="shadow-2xl dropdown-list !block !px-0 absolute w-full mt-3 rounded-[12px] !bg-white overflow-hidden z-50">
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </label>
+
+                                <label for="" class="flex flex-col gap-4">
+                                    <span class="text-[var(--is-blue-3)] font-semibold text-lg">Deena</span>
+                                    <input type="text"
+                                        class="bg-white py-3 px-4 rounded-[10px] border border-1 border-[var(--is-gray-7)]"
+                                        placeholder="dsad, IN" />
+                                </label>
+
+                                <label for="" class="flex flex-col gap-4">
+                                    <span class="text-[var(--is-blue-3)] font-semibold text-lg">Deena</span>
+                                    <input type="text"
+                                        class="bg-white py-3 px-4 rounded-[10px] border border-1 border-[var(--is-gray-7)]"
+                                        placeholder="demo, IN" />
+                                </label>
+
                             </div>
                             <div class="flex flex-col xl:flex-row mt-5 gap-[8px]">
                                 <div onclick="editAndFocus('input')"
@@ -121,8 +164,8 @@
                                         <span>Change address</span>
                                     </div>
                                 </button>
-                                <div class="mx-5 flex justify-center items-center gap-2">
-                                    <input type="checkbox" class="" id="checkbox" />
+                                <div class="mx-3 flex justify-center items-center gap-2">
+                                    <input type="checkbox" class="w-4 h-4" id="checkbox" />
                                     <label for="checkbox">Set as default address</label>
                                 </div>
                             </div>
@@ -134,6 +177,7 @@
         <!-- start footer -->
         <coop-footer></coop-footer>
         <!-- end footer -->
+    </div>
 </body>
 
 <script src="../../assets/js/jquery.min.js"></script>
