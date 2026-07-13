@@ -112,7 +112,7 @@ class CoopFooter extends HTMLElement {
           <li><a title="${this.isArabic ? "الأسئلة الشائعة" : 'FAQ'}" class="nav-link" href="${this.baseLang}/faq.html">${this.isArabic ? "الأسئلة الشائعة" : 'FAQ'}</a></li>
           <li><a title="${this.isArabic ? "اتصال" : 'Contact'}" class="nav-link" href="${this.baseLang}/contact.html">${this.isArabic ? "اتصال" : 'Contact'}</a></li>
           <li><a title="${this.isArabic ? "مدونة" : 'Blog'}" class="nav-link" href="${this.baseLang}/blog.html">${this.isArabic ? "مدونة" : 'Blog'}</a></li>
-          <li><a title="${this.isArabic ? "تسجيل الدخول / الحساب" : 'Login / Account'}" class="nav-link" href="${this.baseLang}/login.html">${this.isArabic ? "تسجيل الدخول / الحساب" : 'Login / Account'}</a></li>
+          <li><a title="${this.isArabic ? "تسجيل الدخول / الحساب" : 'Login'}" class="nav-link" href="${this.baseLang}/login.html">${this.isArabic ? "تسجيل الدخول" : 'Login'}</a></li>
         </ul>
       </div>
 
