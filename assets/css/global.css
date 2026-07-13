@@ -136,6 +136,12 @@
     font-weight: 700;
 }
 
+@font-face {
+    font-family: "SF-Pro";
+    src: url("/assets/fonts/SF-Pro-Text-Light.otf") format("truetype");
+    font-weight: 300;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -211,7 +217,7 @@ html {
 }
 
 .container-single-country {
-    max-width: 1350px;
+    max-width: 1300px;
 }
 
 .sections-marign-top {
@@ -347,6 +353,11 @@ html {
 
 .is-selected img {
     filter: invert(1);
+}
+
+.is-selected {
+    background-color: var(--is-blue);
+    color: white;
 }
 
 .custom-checkbox {

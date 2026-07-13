@@ -19,12 +19,14 @@ function showTab(tab) {
 
     document.querySelectorAll('.bundle-item').forEach(el => {
         el.classList.remove('is-selected', 'bg-[var(--is-blue)]', 'text-white');
+        el.classList.add('bg-white');
     });
     selectedBundles.length = 0;
 
     const activeList = tab === 'bundle' ? '.regular-bundle' : '.list-unlimited-plans';
     const firstItem = document.querySelector(`${activeList} .bundle-item`);
     if (firstItem) {
+        firstItem.classList.remove('bg-white');
         firstItem.classList.add('is-selected', 'bg-[var(--is-blue)]', 'text-white');
         selectedBundles.push(JSON.parse(firstItem.dataset.bundle));
     }
