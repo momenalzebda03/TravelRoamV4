@@ -262,8 +262,26 @@
   .top-11 {
     top: calc(var(--spacing) * 11);
   }
+  .top-\[3\.6\$\] {
+    top: 3.6$;
+  }
+  .top-\[3\.6\%\] {
+    top: 3.6%;
+  }
   .top-\[3\.6px\] {
     top: 3.6px;
+  }
+  .top-\[4\.6\%\] {
+    top: 4.6%;
+  }
+  .top-\[6\.6\%\] {
+    top: 6.6%;
+  }
+  .top-\[16\.6\%\] {
+    top: 16.6%;
+  }
+  .top-\[16\.6px\] {
+    top: 16.6px;
   }
   .top-\[25\%\] {
     top: 25%;
@@ -2845,6 +2863,11 @@
     &:last-child {
       border-bottom-style: var(--tw-border-style);
       border-bottom-width: 0px;
+    }
+  }
+  .checked\:bg-\[var\(--is-pink\)\] {
+    &:checked {
+      background-color: var(--is-pink);
     }
   }
   .checked\:bg-purple-500 {
