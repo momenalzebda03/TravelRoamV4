@@ -196,6 +196,7 @@ html {
 }
 
 .container-footer,
+.container-single-country,
 .container {
     width: 95%;
     max-width: 1200px;
@@ -206,6 +207,10 @@ html {
 }
 
 .container-footer {
+    max-width: 1350px;
+}
+
+.container-single-country {
     max-width: 1350px;
 }
 

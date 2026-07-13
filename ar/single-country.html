@@ -43,268 +43,407 @@
         </main>
         <!-- end hero -->
         <!-- start choose your plan -->
-        <section>
-            <div class="sections-marign-top flex flex-col md:gap-10 relative" data-aos="fade-up">
-                <div class="text-center">
-                    <h3 class="text-2xl md:text-[42px] font-normal text-[var(--is-pink)]">اختر
-                        <span class="font-semibold text-[var(--is-blue-3)]">خطتك</span>
-                    </h3>
-                </div>
-                <div class="container-mobile regular-bundle pt-5 md:pt-15 flex items-center justify-center">
-                    <div style="background-image: url('/assets/images/bg-card.png')" class="absolute flex w-full h-full items-center
-    bg-cover
-    bg-center
-    bg-no-repeat -z-1">
+        <section class="relative">
+
+            <div data-aos="fade-up" style="background-image: url('/assets/images/bg-card.png')" class="left-0 -top-20 absolute flex w-full h-full
+bg-cover
+bg-center
+bg-no-repeat -z-1">
+            </div>
+
+            <div class="container-single-country sections-marign-top grid md:grid-cols-[5.3fr_6.8fr] gap-10 lg:gap-20">
+
+                <div class="flex flex-col gap-5 md:gap-15" data-aos="fade-up">
+                    <div class="text-center">
+                        <h3 class="font-semibold text-2xl md:text-[32px] text-[var(--is-pink)]">اختر
+                            <span class="text-[var(--is-blue-3)]">باقتك</span>
+                        </h3>
                     </div>
-                    <div id="country" onclick="openModal('countryModal')"
-                        class="hidden shadow-xl min-[390px]:w-[90%] md:w-[45%] xl:w-[35%] h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
-                        <div class="flex flex-col gap-[20px]">
-                            <div class="flex flex-wrap gap-3 justify-between items-center w-full">
-                                <div class="flex items-center gap-[11px]">
-                                    <img src="../assets/icons/germany.svg" alt="germany"
-                                        class="w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] rounded-full object-cover" />
-                                    <p class="font-semibold text-xl lg:text-4xl">المانيا</p>
+                    <div class="regular-bundle flex items-center justify-center">
+                        <div id="country" onclick="openModal('countryModal')"
+                            data-bundle='{"name":"5GB Plan","price":17,"type":"bundle"}'
+                            class="w-full hidden shadow-xl justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
+                            <div class="flex flex-col gap-[20px]">
+                                <div class="flex flex-wrap gap-3 justify-between items-center w-full">
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="../assets/icons/germany.svg" alt="germany"
+                                            class="w-[30px] lg:w-[50px] h-[30px] lg:h-[50px] rounded-full object-cover" />
+                                        <p class="font-semibold text-md lg:text-4xl">ألمانيا</p>
+                                    </div>
+                                    <div
+                                        class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-xs lg:text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
+                                        <img src="../assets/icons/star.svg" alt="germany"
+                                            class="w-3 lg:w-5 h-3 lg:h-5 rounded-full object-cover" />
+                                        <span class="leading-none">موصى به</span>
+                                    </div>
                                 </div>
-                                <div
-                                    class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
-                                    موصى به
-                                    <img src="../assets/icons/star.svg" alt="germany"
-                                        class="w-5 h-5 rounded-full object-cover" />
+                                <div class="flex flex-wrap gap-2 justify-between">
+                                    <div class="flex flex-col gap-2">
+                                        <h3 class="font-bold text-4xl">5 جيجا</h3>
+                                        <p class="text-nowrap font-medium text-xs">صالحة لمدة 30 يوم من
+                                            تاريخ التفعيل
+                                        </p>
+                                    </div>
+                                    <h3 class="hidden lg:block font-bold text-4xl">$17.00</h3>
                                 </div>
                             </div>
-                            <div class="flex flex-wrap gap-2 justify-between">
-                                <div class="flex flex-col gap-2">
-                                    <h3 class="font-bold text-4xl">5 GB</h3>
-                                    <p class="text-nowrap font-medium text-xs">صالح لمدة 30 يومًا من التفعيل
-                                    </p>
+                            <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                <li class="flex items-center gap-2 mx-2">
+                                    <img src="../assets/icons/wifi.svg" alt="wifi" class="w-[43px] h-[43px]" />
+                                    <p class="font-medium text-xs">9 ساعات <br /> استماع للموسيقى</p>
+                                </li>
+                                <li class="flex items-center gap-2 mx-2">
+                                    <img src="../assets/icons/youtube.svg" alt="youtube" class="w-[43px] h-[43px]" />
+                                    <p class="font-medium text-xs">6 ساعات <br /> فيديو</p>
+                                </li>
+                                <li class="flex items-center gap-2 mx-2">
+                                    <img src="../assets/icons/mail.svg" alt="mail" class="w-[43px] h-[43px]" />
+                                    <p class="font-medium text-xs">18 ساعة <br /> تصفح</p>
+                                </li>
+                            </ul>
+                            <h3 class="text-end lg:hidden font-bold text-4xl">$17.00</h3>
+                        </div>
+                        <div id="region" onclick="openModal('regionModal')"
+                            data-bundle='{"name":"5GB Plan","price":17,"type":"bundle"}'
+                            class="hidden shadow-xl w-full h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
+                            <div class="flex flex-col gap-[20px]">
+                                <div class="flex flex-wrap gap-3 justify-between items-center w-full">
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="../assets/icons/aferica.svg" alt="aferica"
+                                            class="w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] rounded-full object-cover" />
+                                        <p class="font-semibold text-xl lg:text-4xl">أفريقيا</p>
+                                    </div>
+                                    <div
+                                        class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-xs lg:text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
+                                        <img src="../assets/icons/star.svg" alt="germany"
+                                            class="w-3 lg:w-5 h-3 lg:h-5 rounded-full object-cover" />
+                                        <span class="leading-none">موصى به</span>
+                                    </div>
                                 </div>
-                                <p class="md:mx-4 font-bold text-2xl" [class.line-through]="plan.discounted">$17.00
+                                <div class="flex flex-wrap gap-2 justify-between">
+                                    <div class="flex flex-col gap-2">
+                                        <h3 class="font-bold text-4xl">5 جيجا</h3>
+                                        <p class="text-nowrap font-medium text-xs">صالحة لمدة 30 يوم من
+                                            تاريخ التفعيل
+                                        </p>
+                                    </div>
+                                    <h3 class="hidden lg:block font-bold text-4xl">$17.00</h3>
+                                </div>
+                            </div>
+                            <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                <li class="flex items-center gap-2 mx-2">
+                                    <img src="../assets/icons/wifi.svg" alt="wifi" class="w-[43px] h-[43px]" />
+                                    <p class="font-medium text-xs">9 ساعات <br /> استماع للموسيقى</p>
+                                </li>
+                                <li class="flex items-center gap-2 mx-2">
+                                    <img src="../assets/icons/youtube.svg" alt="youtube" class="w-[43px] h-[43px]" />
+                                    <p class="font-medium text-xs">6 ساعات <br /> فيديو</p>
+                                </li>
+                                <li class="flex items-center gap-2 mx-2">
+                                    <img src="../assets/icons/mail.svg" alt="mail" class="w-[43px] h-[43px]" />
+                                    <p class="font-medium text-xs">18 ساعة <br /> تصفح</p>
+                                </li>
+                            </ul>
+                            <h3 class="text-end lg:hidden font-bold text-4xl">$17.00</h3>
+                        </div>
+                    </div>
+                    <div class="list-unlimited-plans flex items-center justify-center hidden">
+                        <div id="country" onclick="openModal('countryModal')"
+                            data-bundle='{"name":"Unlimited Plan","price":25,"type":"unlimited"}'
+                            class="hidden shadow-xl w-full h-full justify-between flex flex-col gap-6 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-3)]">
+                            <div class="flex flex-col gap-[20px]">
+                                <div class="flex flex-wrap gap-3 justify-between items-center w-full">
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="../assets/icons/germany.svg" alt="germany"
+                                            class="w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] rounded-full object-cover" />
+                                        <p class="font-semibold text-xl lg:text-4xl">ألمانيا</p>
+                                    </div>
+                                    <div
+                                        class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-xs lg:text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
+                                        <img src="../assets/icons/star.svg" alt="germany"
+                                            class="w-3 lg:w-5 h-3 lg:h-5 rounded-full object-cover" />
+                                        <span class="leading-none">موصى به</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-4">
+                                <div class="flex flex-wrap gap-2 justify-between">
+                                    <h3 class="font-bold text-4xl">إنترنت غير محدود 7 أيام</h3>
+                                    <h3 class="font-bold text-4xl">$17.00</h3>
+                                </div>
+                                <p class="opacity-90 text-nowrap font-medium text-xs">إنترنت غير محدود*
+                                </p>
+                                <p class="opacity-90 font-medium leading-5 text-xs">في حال تجاوز السقف اليومي 1 جيجا
+                                    من السرعة العالية، ستنخفض السرعة إلى 512 كيلوبت بالثانية لبقية اليوم، وهذا
+                                    قد
+                                    يؤثر على تجربتك بمشاهدة الفيديو والتطبيقات التي تستهلك بيانات كثيرة.
                                 </p>
                             </div>
                         </div>
-                        <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <li class="flex items-center gap-2 mx-2">
-                                <img src="../assets/icons/wifi.svg" alt="wifi" class="w-[43px] h-[43px]" />
-                                <p class="font-medium text-xs">9 ساعات من الموسيقى</p>
-                            </li>
-                            <li class="flex items-center gap-2 mx-2">
-                                <img src="../assets/icons/youtube.svg" alt="youtube" class="w-[43px] h-[43px]" />
-                                <p class="font-medium text-xs">6 ساعات فيديو</p>
-                            </li>
-                            <li class="flex items-center gap-2 mx-2">
-                                <img src="../assets/icons/mail.svg" alt="mail" class="w-[43px] h-[43px]" />
-                                <p class="font-medium text-xs">18 ساعات التصفح</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div id="region" onclick="openModal('regionModal')"
-                        class="hidden shadow-xl min-[390px]:w-[90%] md:w-[45%] xl:w-[35%] h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
-                        <div class="flex flex-col gap-[20px]">
-                            <div class="flex flex-wrap gap-3 justify-between items-center w-full">
-                                <div class="flex items-center gap-[11px]">
-                                    <img src="../assets/icons/aferica.svg" alt="aferica"
-                                        class="w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] rounded-full object-cover" />
-                                    <p class="font-semibold text-xl lg:text-4xl">أفريقيا</p>
-                                </div>
-                                <div
-                                    class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
-                                    موصى به
-                                    <img src="../assets/icons/star.svg" alt="star"
-                                        class="w-5 h-5 rounded-full object-cover" />
+                        <div id="region" onclick="openModal('regionModal')"
+                            data-bundle='{"name":"Unlimited Plan","price":25,"type":"unlimited"}'
+                            class="hidden shadow-xl w-full h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-3)]">
+                            <div class="flex flex-col gap-[20px]">
+                                <div class="flex flex-wrap gap-3 justify-between items-center w-full">
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="../assets/icons/aferica.svg" alt="aferica"
+                                            class="w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] rounded-full object-cover" />
+                                        <p class="font-semibold text-xl lg:text-4xl">أفريقيا</p>
+                                    </div>
+                                    <div
+                                        class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-xs lg:text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
+                                        <img src="../assets/icons/star.svg" alt="germany"
+                                            class="w-3 lg:w-5 h-3 lg:h-5 rounded-full object-cover" />
+                                        <span class="leading-none">موصى به</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="flex flex-wrap gap-2 justify-between">
-                                <div class="flex flex-col gap-2">
-                                    <h3 class="font-bold text-4xl">5 GB</h3>
-                                    <p class="text-nowrap font-medium text-xs">صالح لمدة 30 يومًا من التفعيل
-                                    </p>
+                            <div class="flex flex-col gap-4">
+                                <div class="flex flex-wrap gap-2 justify-between">
+                                    <h3 class="font-bold text-4xl">إنترنت غير محدود 7 أيام</h3>
+                                    <h3 class="font-bold text-4xl">$17.00</h3>
                                 </div>
-                                <p class="md:mx-4 font-bold text-2xl" [class.line-through]="plan.discounted">$17.00
+                                <p class="opacity-90 text-nowrap font-medium text-xs">إنترنت غير محدود*
+                                </p>
+                                <p class="opacity-90 font-medium leading-5 text-xs">في حال تجاوز السقف اليومي 1 جيجا
+                                    من السرعة العالية، ستنخفض السرعة إلى 512 كيلوبت بالثانية لبقية اليوم، وهذا
+                                    قد
+                                    يؤثر على تجربتك بمشاهدة الفيديو والتطبيقات التي تستهلك بيانات كثيرة.
                                 </p>
                             </div>
                         </div>
-                        <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <li class="flex items-center gap-2 mx-2">
-                                <img src="../assets/icons/wifi.svg" alt="wifi" class="w-[43px] h-[43px]" />
-                                <p class="font-medium text-xs">9 ساعات من الموسيقى</p>
-                            </li>
-                            <li class="flex items-center gap-2 mx-2">
-                                <img src="../assets/icons/youtube.svg" alt="youtube" class="w-[43px] h-[43px]" />
-                                <p class="font-medium text-xs">6 ساعات فيديو</p>
-                            </li>
-                            <li class="flex items-center gap-2 mx-2">
-                                <img src="../assets/icons/mail.svg" alt="mail" class="w-[43px] h-[43px]" />
-                                <p class="font-medium text-xs">18 ساعات التصفح</p>
-                            </li>
-                        </ul>
                     </div>
                 </div>
-                <div class="list-unlimited-plans pt-5 md:pt-15 flex items-center justify-center hidden">
-                    <div style="background-image: url('/assets/images/bg-card.png')" class="absolute flex w-full h-full items-center
-    bg-cover
-    bg-center
-    bg-no-repeat -z-1">
+                <div class="flex flex-col items-center gap-5 relative">
+
+                    <div class="flex justify-center gap-3 items-center" data-aos="fade-up">
+                        <img src="../assets/icons/bundles.svg" alt="bunldes" class="w-6 h-6" />
+                        <h3 class="font-medium text-md md:text-xl">تشير إلى أن الباقة مؤهلة لاسترداد النقود</h3>
                     </div>
-                    <div id="country" onclick="openModal('countryModal')"
-                        data-bundle='{"name":"5GB Plan","price":17,"type":"bundle"}'
-                        class="hidden shadow-xl min-[390px]:w-[90%] md:w-[45%] xl:w-[35%] h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-3)]">
-                        <div class="flex flex-col gap-[20px]">
-                            <div class="flex flex-wrap gap-3 justify-between items-center w-full">
-                                <div class="flex items-center gap-[11px]">
-                                    <img src="../assets/icons/germany.svg" alt="germany"
-                                        class="w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] rounded-full object-cover" />
-                                    <p class="font-semibold text-xl lg:text-4xl">المانيا</p>
-                                </div>
+
+                    <ul class="font-bold flex w-full md:w-[80%]" data-aos="fade-up">
+                        <li title="الباقات العادية" onclick="showTab('bundle')" id="tab-bundle"
+                            class="cursor-pointer active-bundle last:rounded-e-full first:rounded-s-full last:border-s-0 first:border-e-0 w-full text-center py-[7px] bg-[var(--is-gray-3)] w-full text-[var(--is-blue-3)] text-xs border border-2 border-[var(--is-gray-4)] shadow-lg">
+                            الباقات العادية
+                        </li>
+                        <li title="باقات غير محدودة" onclick="showTab('unlimited-bundles')" id="tab-unlimited-bundles"
+                            class="cursor-pointer last:rounded-e-full first:rounded-s-full last:border-s-0 first:border-e-0 w-full text-center py-[7px] bg-[var(--is-gray-3)] w-full text-[var(--is-blue-3)] text-xs border border-2 border-[var(--is-gray-4)] shadow-lg">
+                            باقات غير محدودة
+                        </li>
+                    </ul>
+
+                    <div class="w-full flex flex-col items-center gap-5">
+                        <ul class="regular-bundle w-full flex flex-col gap-[10px]">
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item is-selected bg-[var(--is-blue)] text-white"
+                                data-aos="fade-up" data-bundle='{"size":"1GB","name":"7 Days Bundle","price":"$3.00"}'>
                                 <div
-                                    class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
-                                    <img src="../assets/icons/star.svg" alt="germany"
-                                        class="w-5 h-5 rounded-full object-cover" />
-                                    موصى به
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">5 جيجا</p>
+                                    <p class="text-sm md:text-base">باقة 30 يوم</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$17.00</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-4">
-                            <div class="flex flex-wrap gap-2 justify-between">
-                                <h3 class="font-bold text-4xl">غير محدود لمدة 7 أيام</h3>
-                                <h3 class="font-bold text-4xl">$17.00</h3>
-                            </div>
-                            <p class="opacity-90 text-nowrap font-medium text-xs">وصول غير محدود للإنترنت*
-                            </p>
-                            <p class="opacity-90 font-medium leading-5 text-xs">في حال تجاوزت 1 جيجابايت من البيانات
-                                المسموح بها يوميًا
-                                (بسرعة عالية)،
-                                سيتم تحديد السرعة إلى 512 كيلوبت في الثانية لبقية اليوم، مما قد يؤثر على تجربتك في
-                                مشاهدة
-                                الفيديوهات عبر الإنترنت واستخدام التطبيقات الأخرى التي تستهلك كميات كبيرة من البيانات.
-                            </p>
-                        </div>
-                    </div>
-                    <div id="region" onclick="openModal('regionModal')"
-                        data-bundle='{"name":"Unlimited Plan","price":25,"type":"unlimited"}'
-                        class="hidden shadow-xl min-[390px]:w-[90%] md:w-[45%] xl:w-[35%] h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-3)]">
-                        <div class="flex flex-col gap-[20px]">
-                            <div class="flex flex-wrap gap-3 justify-between items-center w-full">
-                                <div class="flex items-center gap-[11px]">
-                                    <img src="../assets/icons/aferica.svg" alt="aferica"
-                                        class="w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] rounded-full object-cover" />
-                                    <p class="font-semibold text-xl lg:text-4xl">أفريقيا</p>
-                                </div>
+                            </li>
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item bg-white"
+                                data-aos="fade-up" title="باقة 7 أيام"
+                                data-bundle='{"size":"1GB","name":"7 Days Bundle","price":"$3.00"}'>
                                 <div
-                                    class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
-                                    <img src="../assets/icons/star.svg" alt="star"
-                                        class="w-5 h-5 rounded-full object-cover" />
-                                    موصى به
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">1 جيجا</p>
+                                    <p class="text-sm md:text-base">باقة 7 أيام</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$3.00</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </li>
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item bg-white"
+                                data-aos="fade-up" title="باقة 15 يوم"
+                                data-bundle='{"size":"2GB","name":"15 Days Bundle","price":"$8.00"}'>
+                                <div
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">2 جيجا</p>
+                                    <p class="text-sm md:text-base">باقة 15 يوم</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$8.00</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item bg-white"
+                                data-aos="fade-up" title="باقة 30 يوم"
+                                data-bundle='{"size":"10GB","name":"30 Days Bundle","price":"$24.00"}'>
+                                <div
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">10 جيجا</p>
+                                    <p class="text-sm md:text-base">باقة 30 يوم</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$24.00</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item bg-white"
+                                data-aos="fade-up" title="باقة 30 يوم"
+                                data-bundle='{"size":"20GB","name":"30 Days Bundle","price":"$36.00"}'>
+                                <div
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">20 جيجا</p>
+                                    <p class="text-sm md:text-base">باقة 30 يوم</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$36.00</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item bg-white"
+                                data-aos="fade-up" title="باقة 30 يوم"
+                                data-bundle='{"size":"50GB","name":"30 Days Bundle","price":"$68.00"}'>
+                                <div
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">50 جيجا</p>
+                                    <p class="text-sm md:text-base">باقة 30 يوم</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$68.00</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="list-unlimited-plans w-full flex flex-col gap-[10px] hidden">
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
+                                data-aos="fade-up" title="إنترنت غير محدود"
+                                data-bundle='{"size":"7 Days","name":"Unlimited Internet","price":"$17.00"}'>
+                                <div
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">7 أيام</p>
+                                    <p class="text-sm md:text-base">إنترنت غير محدود</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$17.00</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item bg-white"
+                                data-aos="fade-up" title="إنترنت غير محدود"
+                                data-bundle='{"size":"1 Days","name":"Unlimited Internet","price":"$3.00"}'>
+                                <div
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">يوم واحد</p>
+                                    <p class="text-sm md:text-base">إنترنت غير محدود</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$3.00</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item bg-white"
+                                data-aos="fade-up" title="إنترنت غير محدود"
+                                data-bundle='{"size":"3 Days","name":"Unlimited Internet","price":"$8.00"}'>
+                                <div
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">3 أيام</p>
+                                    <p class="text-sm md:text-base">إنترنت غير محدود</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$8.00</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item bg-white"
+                                data-aos="fade-up" title="إنترنت غير محدود"
+                                data-bundle='{"size":"6 Days","name":"Unlimited Internet","price":"$13.00"}'>
+                                <div
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">6 أيام</p>
+                                    <p class="text-sm md:text-base">إنترنت غير محدود</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$13.00</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item bg-white"
+                                data-aos="fade-up" title="إنترنت غير محدود"
+                                data-bundle='{"size":"10 Days","name":"Unlimited Internet","price":"$24.00"}'>
+                                <div
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">10 أيام</p>
+                                    <p class="text-sm md:text-base">إنترنت غير محدود</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$24.00</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item bg-white"
+                                data-aos="fade-up" title="إنترنت غير محدود"
+                                data-bundle='{"size":"15 Days","name":"Unlimited Internet","price":"$36.00"}'>
+                                <div
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">15 يوم</p>
+                                    <p class="text-sm md:text-base">إنترنت غير محدود</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$36.00</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item bg-white"
+                                data-aos="fade-up" title="إنترنت غير محدود"
+                                data-bundle='{"size":"30 Days","name":"Unlimited Internet","price":"$68.00"}'>
+                                <div
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">30 يوم</p>
+                                    <p class="text-sm md:text-base">إنترنت غير محدود</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$68.00</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div data-aos="fade-up" class="flex w-full">
+                            <a href="checkout.html" title="اشترِ الآن"
+                                onclick="this.href='checkout.html?data=' + (currentTab === 'unlimited-bundles' ? 'unlimited' : 'regular')"
+                                class="text-center transition-all duration-300 hover:shadow-xl hover:scale-102 cursor-pointer w-full before:bg-white rounded-[20px] text-white bg-[var(--is-pink)] px-5 py-3">
+                                <div class="text-base relative z-1 font-bold">
+                                    <span>اشترِ الآن</span>
+                                </div>
+                            </a>
                         </div>
-                        <div class="flex flex-col gap-4">
-                            <div class="flex flex-wrap gap-2 justify-between">
-                                <h3 class="font-bold text-4xl">غير محدود لمدة 7 أيام</h3>
-                                <h3 class="font-bold text-4xl">$17.00</h3>
-                            </div>
-                            <p class="opacity-90 text-nowrap font-medium text-xs">وصول غير محدود للإنترنت*
-                            </p>
-                            <p class="opacity-90 font-medium leading-5 text-xs">في حال تجاوزت 1 جيجابايت من البيانات
-                                المسموح بها يوميًا
-                                (بسرعة عالية)،
-                                سيتم تحديد السرعة إلى 512 كيلوبت في الثانية لبقية اليوم، مما قد يؤثر على تجربتك في
-                                مشاهدة
-                                الفيديوهات عبر الإنترنت واستخدام التطبيقات الأخرى التي تستهلك كميات كبيرة من البيانات.
-                            </p>
+
+                        <div class="flex justify-center gap-3 items-center" data-aos="fade-up">
+                            <img src="../assets/icons/secure-payment.svg" alt="secure payment" class="w-3 h-3" />
+                            <p class="leading-none font-normal text-xs">الدفع الآمن مضمون</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- <div id="bundleModal" class="hidden fixed inset-0 z-50 flex items-center justify-center">
-                <div class="absolute inset-0 bg-[#25123CE5]" onclick="closeBundleModal()"></div>
 
-                <div
-                    class="relative z-10 bg-white rounded-[20px] container flex flex-col gap-5 overflow-auto max-h-[700px]">
-                    <div class="text-end p-5 pb-0">
-                        <button onclick="closeBundleModal()" class="text-xl font-bold">✕</button>
-                    </div>
-                    <div class="flex flex-col items-center gap-10 pb-10 px-5 pt-0">
-                        <div class="w-[50%] flex flex-col gap-10 items-center text-center">
-                            <img src="../assets/icons/error.svg" alt="error" class="animate-bounce-scale" />
-                            <h2 class="font-bold text-2xl">جهازك غير متوافق مع eSIM</h2>
-                        </div>
-                        <div class="flex gap-3">
-                            <button title="حسنًا"
-                                class="before:bg-[var(--is-blue)] rounded-[20px] text-white bg-[var(--is-pink)] px-15 py-3 btn">
-                                <div class="text-base relative z-1 font-bold">
-                                    <span>حسنًا</span>
-                                </div>
-                            </button>
-                            <button title="إلغاء"
-                                class="before:bg-[var(--is-pink)] rounded-[20px] text-white bg-[var(--is-blue)] px-15 py-3 btn">
-                                <div class="text-base relative z-1 font-bold">
-                                    <span>إلغاء</span>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!-- <div id="bundleModal" class="hidden fixed inset-0 z-50 flex items-center justify-center">
-                <div class="absolute inset-0 bg-[#25123CE5]" onclick="closeBundleModal()"></div>
-
-                <div
-                    class="relative z-10 bg-white rounded-[20px] container flex flex-col gap-5 overflow-auto max-h-[700px]">
-                    <div class="text-end p-5 pb-0">
-                        <button onclick="closeBundleModal()" class="text-xl font-bold">✕</button>
-                    </div>
-                    <div class="flex flex-col items-center gap-10 pb-10 px-5 pt-0">
-                        <div class="w-[50%] flex flex-col gap-10 items-center text-center">
-                            <img src="../assets/icons/success.svg" alt="success"
-                                class="animate-bounce-scale" />
-                            <h2 class="font-bold text-2xl">جهازك متوافق مع شريحة eSIM</h2>
-                        </div>
-                        <button title="استمرار"
-                            class="before:bg-[var(--is-blue)] rounded-[20px] text-white bg-[var(--is-pink)] px-15 py-3 btn">
-                            <div class="text-base relative z-1 font-bold">
-                                <span>استمرار</span>
-                            </div>
-                        </button>
-                    </div>
-                </div>
-            </div> -->
-            <!-- <div id="bundleModal" class="hidden fixed inset-0 z-50 flex items-center justify-center">
-                <div class="absolute inset-0 bg-[#25123CE5]" onclick="closeBundleModal()"></div>
-
-                <div
-                    class="relative z-10 bg-white rounded-[20px] container flex flex-col gap-5 overflow-auto max-h-[700px]">
-                    <div class="text-end p-5 pb-0">
-                        <button onclick="closeBundleModal()" class="text-xl font-bold">✕</button>
-                    </div>
-                    <div class="flex flex-col items-center gap-3 pb-10 px-5 pt-0">
-                        <div class="w-[50%] flex flex-col gap-3 items-center text-center">
-                            <h2 class="font-bold text-2xl">فحص توافق الجهاز</h2>
-                            <p class="font-medium text-2xl">قد لا يدعم جهازك eSIM. قد لا يعمل هذا التخطيط على جهازك.</p>
-                        </div>
-                        <div class="flex gap-3">
-                            <button title="الغاء"
-                                class="before:bg-[var(--is-pink)] rounded-[20px] text-white bg-[var(--is-blue)] px-5 py-3 btn">
-                                <div class="text-base relative z-1 font-bold">
-                                    <span>الغاء</span>
-                                </div>
-                            </button>
-                            <button title="متابعه"
-                                class="before:bg-[var(--is-blue)] rounded-[20px] text-white bg-[var(--is-pink)] px-15 py-3 btn">
-                                <div class="text-base relative z-1 font-bold">
-                                    <span>متابعه</span>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             <div id="countryModal" class="hidden fixed inset-0 z-50 flex items-center justify-center">
                 <div class="absolute inset-0 bg-[#25123CE5]" onclick="closeModal('countryModal')"></div>
 
                 <div
                     class="relative z-10 bg-white rounded-[20px] container flex flex-col gap-5 overflow-auto max-h-[700px]">
                     <div class="flex text-white rounded-[20px] text-center bg-[var(--is-pink)] p-8">
-                        <p class="flex-1 font-bold text-md md:text-3xl">يعمل هذا الخطة في 12 دولة:</p>
+                        <p class="flex-1 font-bold text-md md:text-3xl">هذه الباقة تعمل في 12 دولة:</p>
                         <button onclick="closeModal('countryModal')"
                             class="cursor-pointer text-white text-xl font-bold">✕</button>
                     </div>
@@ -371,13 +510,13 @@
                                 </a>
                             </li>
                             <li data-aos="fade-up">
-                                <a href="single-country.html" title="المملكة العربية السعودية"
+                                <a href="single-country.html" title="السعودية"
                                     class="hover:shadow-xl shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-[var(--is-blue-3)] rounded-[20px] px-2 py-4 flex items-center justify-between">
                                     <div class="flex items-center gap-[16px]">
                                         <img src="https://flagcdn.com/24x18/sa.png" alt="sa"
                                             class="rounded-lg w-8 h-5" />
                                         <div class="text-[var(--is-blue-3)]">
-                                            <h3 class="font-semibold text-base">"المملكة العربية السعودية</h3>
+                                            <h3 class="font-semibold text-base">السعودية</h3>
                                         </div>
                                     </div>
                                 </a>
@@ -437,7 +576,7 @@
                                         <img src="https://flagcdn.com/24x18/gb.png" alt="gb"
                                             class="rounded-lg w-8 h-5" />
                                         <div class="text-[var(--is-blue-3)]">
-                                            <h3 class="font-semibold text-base">"المملكة المتحدة"</h3>
+                                            <h3 class="font-semibold text-base">المملكة المتحدة</h3>
                                         </div>
                                     </div>
                                 </a>
@@ -464,55 +603,55 @@
                 <div
                     class="relative z-10 bg-white rounded-[20px] container flex flex-col gap-5 overflow-auto max-h-[700px]">
                     <div class="flex text-white rounded-[20px] text-center bg-[var(--is-pink)] p-8">
-                        <p class="flex-1 font-bold text-md md:text-3xl">هذا الخطة تعمل في 7 مناطق:</p>
+                        <p class="flex-1 font-bold text-md md:text-3xl">هذه الباقة تعمل في 7 مناطق:</p>
                         <button onclick="closeModal('regionModal')"
                             class="cursor-pointer text-white text-xl font-bold">✕</button>
                     </div>
                     <div class="mx-30 pt-5 pb-10">
                         <ul class="flex flex-wrap md:justify-center gap-[12px] md:gap-[26px]">
                             <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
-                                <a title="افريقيا" onclick="this.href='single-country.html?data=region'">
+                                <a title="أفريقيا" onclick="this.href='single-country.html?data=region'">
                                     <div
                                         class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[186px] bg-cover cursor-pointer
-    bg-center
-    bg-no-repeat bg-[url('/assets/images/item-region-1.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+bg-center
+bg-no-repeat bg-[url('/assets/images/item-region-1.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
 
                                         <div class="flex items-end z-1 h-full">
                                             <div
                                                 class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
-                                                <span class="text-sm font-medium">افريقيا</span>
+                                                <span class="text-sm font-medium">أفريقيا</span>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
                             </li>
                             <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
-                                <a title="اسيا" onclick="this.href='single-country.html?data=region'">
+                                <a title="آسيا" onclick="this.href='single-country.html?data=region'">
                                     <div
                                         class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[186px] bg-cover cursor-pointer
-    bg-center
-    bg-no-repeat bg-[url('/assets/images/item-region-2.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+bg-center
+bg-no-repeat bg-[url('/assets/images/item-region-2.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
 
                                         <div class="flex items-end z-1 h-full">
                                             <div
                                                 class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
-                                                <span class="text-sm font-medium">اسيا</span>
+                                                <span class="text-sm font-medium">آسيا</span>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
                             </li>
                             <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
-                                <a title="اوروبا" onclick="this.href='single-country.html?data=region'">
+                                <a title="أوروبا" onclick="this.href='single-country.html?data=region'">
                                     <div
                                         class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[186px] bg-cover cursor-pointer
-    bg-center
-    bg-no-repeat bg-[url('/assets/images/item-region-3.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+bg-center
+bg-no-repeat bg-[url('/assets/images/item-region-3.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
 
                                         <div class="flex items-end z-1 h-full">
                                             <div
                                                 class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
-                                                <span class="text-sm font-medium">اوروبا</span>
+                                                <span class="text-sm font-medium">أوروبا</span>
                                             </div>
                                         </div>
                                     </div>
@@ -522,8 +661,8 @@
                                 <a title="عالمي" onclick="this.href='single-country.html?data=region'">
                                     <div
                                         class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[186px] bg-cover cursor-pointer
-    bg-center
-    bg-no-repeat bg-[url('/assets/images/item-region-4.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+bg-center
+bg-no-repeat bg-[url('/assets/images/item-region-4.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
 
                                         <div class="flex items-end z-1 h-full">
                                             <div
@@ -535,32 +674,32 @@
                                 </a>
                             </li>
                             <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
-                                <a title="الشرق الاوسط" onclick="this.href='single-country.html?data=region'">
+                                <a title="الشرق الأوسط" onclick="this.href='single-country.html?data=region'">
                                     <div
                                         class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[186px] bg-cover cursor-pointer
-    bg-center
-    bg-no-repeat bg-[url('/assets/images/item-region-5.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+bg-center
+bg-no-repeat bg-[url('/assets/images/item-region-5.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
 
                                         <div class="flex items-end z-1 h-full">
                                             <div
                                                 class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
-                                                <span class="text-sm font-medium">الشرق الاوسط</span>
+                                                <span class="text-sm font-medium">الشرق الأوسط</span>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
                             </li>
                             <li data-aos="fade-up" class="w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
-                                <a title="امريكيا الشمالية" onclick="this.href='single-country.html?data=region'">
+                                <a title="أمريكا الشمالية" onclick="this.href='single-country.html?data=region'">
                                     <div
                                         class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[186px] bg-cover cursor-pointer
-    bg-center
-    bg-no-repeat bg-[url('/assets/images/item-region-6.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+bg-center
+bg-no-repeat bg-[url('/assets/images/item-region-6.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
 
                                         <div class="flex items-end z-1 h-full">
                                             <div
                                                 class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
-                                                <span class="text-sm font-medium">امريكيا الشمالية</span>
+                                                <span class="text-sm font-medium">أمريكا الشمالية</span>
                                             </div>
                                         </div>
                                     </div>
@@ -570,8 +709,8 @@
                                 <a title="أوقيانوسيا" onclick="this.href='single-country.html?data=region'">
                                     <div
                                         class="rounded-[32px] w-full h-full min-h-[150px] md:min-h-[186px] bg-cover cursor-pointer
-    bg-center
-    bg-no-repeat bg-[url('/assets/images/item-region-7.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+bg-center
+bg-no-repeat bg-[url('/assets/images/item-region-7.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
 
                                         <div class="flex items-end z-1 h-full">
                                             <div
@@ -584,16 +723,16 @@
                             </li>
                             <li data-aos="fade-up"
                                 class="hidden extra-country w-[48%] sm:w-[calc(50%-13px)] md:w-[calc(25%-20px)]">
-                                <a title="جزر أولاند" onclick="this.href='single-country.html?data=region'">
+                                <a title="جزر آلاند" onclick="this.href='single-country.html?data=region'">
                                     <div
                                         class="rounded-[32px] w-full h-full min-h-[206px] bg-cover cursor-pointer
-    bg-center
-    bg-no-repeat bg-[url('/assets/images/item-country-1.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+bg-center
+bg-no-repeat bg-[url('/assets/images/item-country-1.png')] shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
 
                                         <div class="flex items-end z-1 h-full">
                                             <div
                                                 class="bg-gradient-to-b from-[var(--is-black-6)] to-[var(--is-blue)] text-white flex justify-between rounded-b-[32px] rounded-t-[8px] w-full py-5 px-6">
-                                                <span class="text-sm font-medium">جزر أولاند</span>
+                                                <span class="text-sm font-medium">جزر آلاند</span>
                                             </div>
                                         </div>
                                     </div>

@@ -37,12 +37,14 @@ document.querySelectorAll('.bundle-item').forEach(item => {
         const bundle = JSON.parse(item.dataset.bundle);
         const isSelected = item.classList.contains('is-selected');
 
-        document.querySelectorAll('.bundle-item').forEach(el => {
+        document.querySelectorAll('.bundle-item.is-selected').forEach(el => {
             el.classList.remove('is-selected', 'bg-[var(--is-blue)]', 'text-white');
+            el.classList.add('bg-white');
         });
         selectedBundles.length = 0;
 
         if (!isSelected) {
+            item.classList.remove('bg-white');
             item.classList.add('is-selected', 'bg-[var(--is-blue)]', 'text-white');
             selectedBundles.push(bundle);
         }

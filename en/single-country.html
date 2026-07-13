@@ -43,174 +43,400 @@
         </main>
         <!-- end hero -->
         <!-- start choose your plan -->
-        <section>
-            <div class="sections-marign-top flex flex-col md:gap-10 relative" data-aos="fade-up">
-                <div class="text-center">
-                    <h3 class="text-2xl md:text-[42px] font-normal text-[var(--is-pink)]">Choose
-                        <span class="font-semibold text-[var(--is-blue-3)]">Your Plan</span>
-                    </h3>
-                </div>
-                <div class="container-mobile regular-bundle pt-5 md:pt-15 flex items-center justify-center">
-                    <div style="background-image: url('/assets/images/bg-card.png')" class="absolute flex w-full h-full items-center
+        <section class="relative">
+
+            <div data-aos="fade-up" style="background-image: url('/assets/images/bg-card.png')" class="left-0 -top-20 absolute flex w-full h-full
     bg-cover
     bg-center
     bg-no-repeat -z-1">
+            </div>
+
+            <div class="container-single-country sections-marign-top grid md:grid-cols-[5.3fr_6.8fr] gap-10 lg:gap-20">
+
+                <div class="flex flex-col gap-5 md:gap-15" data-aos="fade-up">
+                    <div class="text-center">
+                        <h3 class="font-semibold text-2xl md:text-[32px] text-[var(--is-pink)]">Choose
+                            <span class="text-[var(--is-blue-3)]">Your Plan</span>
+                        </h3>
                     </div>
-                    <div id="country" onclick="openModal('countryModal')"
-                        data-bundle='{"name":"5GB Plan","price":17,"type":"bundle"}'
-                        class="hidden shadow-xl min-[390px]:w-[90%] md:w-[45%] xl:w-[35%] h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
-                        <div class="flex flex-col gap-[20px]">
-                            <div class="flex flex-wrap gap-3 justify-between items-center w-full">
-                                <div class="flex items-center gap-[11px]">
-                                    <img src="../assets/icons/germany.svg" alt="germany"
-                                        class="w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] rounded-full object-cover" />
-                                    <p class="font-semibold text-xl lg:text-4xl">Germany</p>
+                    <div class="regular-bundle flex items-center justify-center">
+                        <div id="country" onclick="openModal('countryModal')"
+                            data-bundle='{"name":"5GB Plan","price":17,"type":"bundle"}'
+                            class="w-full hidden shadow-xl justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
+                            <div class="flex flex-col gap-[20px]">
+                                <div class="flex flex-wrap gap-3 justify-between items-center w-full">
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="../assets/icons/germany.svg" alt="germany"
+                                            class="w-[30px] lg:w-[50px] h-[30px] lg:h-[50px] rounded-full object-cover" />
+                                        <p class="font-semibold text-md lg:text-4xl">Germany</p>
+                                    </div>
+                                    <div
+                                        class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-xs lg:text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
+                                        <img src="../assets/icons/star.svg" alt="germany"
+                                            class="w-3 lg:w-5 h-3 lg:h-5 rounded-full object-cover" />
+                                        <span class="leading-none">Recommended</span>
+                                    </div>
                                 </div>
-                                <div
-                                    class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
-                                    <img src="../assets/icons/star.svg" alt="germany"
-                                        class="w-5 h-5 rounded-full object-cover" />
-                                    Recommended
+                                <div class="flex flex-wrap gap-2 justify-between">
+                                    <div class="flex flex-col gap-2">
+                                        <h3 class="font-bold text-4xl">5 GB</h3>
+                                        <p class="text-nowrap font-medium text-xs">Valid for 30 days from
+                                            activation
+                                        </p>
+                                    </div>
+                                    <h3 class="hidden lg:block font-bold text-4xl">$17.00</h3>
                                 </div>
                             </div>
-                            <div class="flex flex-wrap gap-2 justify-between">
-                                <div class="flex flex-col gap-2">
-                                    <h3 class="font-bold text-4xl">5 GB</h3>
-                                    <p class="text-nowrap font-medium text-xs">Valid for 30 days from
-                                        activation
-                                    </p>
+                            <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                <li class="flex items-center gap-2 mx-2">
+                                    <img src="../assets/icons/wifi.svg" alt="wifi" class="w-[43px] h-[43px]" />
+                                    <p class="font-medium text-xs">9 hours <br /> music</p>
+                                </li>
+                                <li class="flex items-center gap-2 mx-2">
+                                    <img src="../assets/icons/youtube.svg" alt="youtube" class="w-[43px] h-[43px]" />
+                                    <p class="font-medium text-xs">6 hours <br /> video</p>
+                                </li>
+                                <li class="flex items-center gap-2 mx-2">
+                                    <img src="../assets/icons/mail.svg" alt="mail" class="w-[43px] h-[43px]" />
+                                    <p class="font-medium text-xs">18 hours <br /> browsing</p>
+                                </li>
+                            </ul>
+                            <h3 class="text-end lg:hidden font-bold text-4xl">$17.00</h3>
+                        </div>
+                        <div id="region" onclick="openModal('regionModal')"
+                            data-bundle='{"name":"5GB Plan","price":17,"type":"bundle"}'
+                            class="hidden shadow-xl w-full h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
+                            <div class="flex flex-col gap-[20px]">
+                                <div class="flex flex-wrap gap-3 justify-between items-center w-full">
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="../assets/icons/aferica.svg" alt="aferica"
+                                            class="w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] rounded-full object-cover" />
+                                        <p class="font-semibold text-xl lg:text-4xl">Africa</p>
+                                    </div>
+                                    <div
+                                        class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-xs lg:text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
+                                        <img src="../assets/icons/star.svg" alt="germany"
+                                            class="w-3 lg:w-5 h-3 lg:h-5 rounded-full object-cover" />
+                                        <span class="leading-none">Recommended</span>
+                                    </div>
                                 </div>
-                                <h3 class="font-bold text-4xl">$17.00</h3>
+                                <div class="flex flex-wrap gap-2 justify-between">
+                                    <div class="flex flex-col gap-2">
+                                        <h3 class="font-bold text-4xl">5 GB</h3>
+                                        <p class="text-nowrap font-medium text-xs">Valid for 30 days from
+                                            activation
+                                        </p>
+                                    </div>
+                                    <h3 class="hidden lg:block font-bold text-4xl">$17.00</h3>
+                                </div>
+                            </div>
+                            <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                <li class="flex items-center gap-2 mx-2">
+                                    <img src="../assets/icons/wifi.svg" alt="wifi" class="w-[43px] h-[43px]" />
+                                    <p class="font-medium text-xs">9 hours <br /> music</p>
+                                </li>
+                                <li class="flex items-center gap-2 mx-2">
+                                    <img src="../assets/icons/youtube.svg" alt="youtube" class="w-[43px] h-[43px]" />
+                                    <p class="font-medium text-xs">6 hours <br /> video</p>
+                                </li>
+                                <li class="flex items-center gap-2 mx-2">
+                                    <img src="../assets/icons/mail.svg" alt="mail" class="w-[43px] h-[43px]" />
+                                    <p class="font-medium text-xs">18 hours <br /> browsing</p>
+                                </li>
+                            </ul>
+                            <h3 class="text-end lg:hidden font-bold text-4xl">$17.00</h3>
+                        </div>
+                    </div>
+                    <div class="list-unlimited-plans flex items-center justify-center hidden">
+                        <div id="country" onclick="openModal('countryModal')"
+                            data-bundle='{"name":"Unlimited Plan","price":25,"type":"unlimited"}'
+                            class="hidden shadow-xl w-full h-full justify-between flex flex-col gap-6 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-3)]">
+                            <div class="flex flex-col gap-[20px]">
+                                <div class="flex flex-wrap gap-3 justify-between items-center w-full">
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="../assets/icons/germany.svg" alt="germany"
+                                            class="w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] rounded-full object-cover" />
+                                        <p class="font-semibold text-xl lg:text-4xl">Germany</p>
+                                    </div>
+                                    <div
+                                        class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-xs lg:text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
+                                        <img src="../assets/icons/star.svg" alt="germany"
+                                            class="w-3 lg:w-5 h-3 lg:h-5 rounded-full object-cover" />
+                                        <span class="leading-none">Recommended</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-4">
+                                <div class="flex flex-wrap gap-2 justify-between">
+                                    <h3 class="font-bold text-4xl">Unlimited 7 Days</h3>
+                                    <h3 class="font-bold text-4xl">$17.00</h3>
+                                </div>
+                                <p class="opacity-90 text-nowrap font-medium text-xs">Unlimited Internet Access*
+                                </p>
+                                <p class="opacity-90 font-medium leading-5 text-xs">In case of exceeding daily 1 GB
+                                    high-speed allowance, speed will be limited to 512 Kbps for the remaining day, which
+                                    may
+                                    impact your experience with video streaming and other data-intensive applications.
+                                </p>
                             </div>
                         </div>
-                        <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <li class="flex items-center gap-2 mx-2">
-                                <img src="../assets/icons/wifi.svg" alt="wifi" class="w-[43px] h-[43px]" />
-                                <p class="font-medium text-xs">9 hours music</p>
-                            </li>
-                            <li class="flex items-center gap-2 mx-2">
-                                <img src="../assets/icons/youtube.svg" alt="youtube" class="w-[43px] h-[43px]" />
-                                <p class="font-medium text-xs">6 hours video</p>
-                            </li>
-                            <li class="flex items-center gap-2 mx-2">
-                                <img src="../assets/icons/mail.svg" alt="mail" class="w-[43px] h-[43px]" />
-                                <p class="font-medium text-xs">18 hours browsing</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div id="region" onclick="openModal('regionModal')"
-                        data-bundle='{"name":"5GB Plan","price":17,"type":"bundle"}'
-                        class="hidden shadow-xl min-[390px]:w-[90%] md:w-[45%] xl:w-[35%] h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
-                        <div class="flex flex-col gap-[20px]">
-                            <div class="flex flex-wrap gap-3 justify-between items-center w-full">
-                                <div class="flex items-center gap-[11px]">
-                                    <img src="../assets/icons/aferica.svg" alt="aferica"
-                                        class="w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] rounded-full object-cover" />
-                                    <p class="font-semibold text-xl lg:text-4xl">Africa</p>
-                                </div>
-                                <div
-                                    class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
-                                    <img src="../assets/icons/star.svg" alt="star"
-                                        class="w-5 h-5 rounded-full object-cover" />
-                                    Recommended
+                        <div id="region" onclick="openModal('regionModal')"
+                            data-bundle='{"name":"Unlimited Plan","price":25,"type":"unlimited"}'
+                            class="hidden shadow-xl w-full h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-3)]">
+                            <div class="flex flex-col gap-[20px]">
+                                <div class="flex flex-wrap gap-3 justify-between items-center w-full">
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="../assets/icons/aferica.svg" alt="aferica"
+                                            class="w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] rounded-full object-cover" />
+                                        <p class="font-semibold text-xl lg:text-4xl">Africa</p>
+                                    </div>
+                                    <div
+                                        class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-xs lg:text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
+                                        <img src="../assets/icons/star.svg" alt="germany"
+                                            class="w-3 lg:w-5 h-3 lg:h-5 rounded-full object-cover" />
+                                        <span class="leading-none">Recommended</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="flex flex-wrap gap-2 justify-between">
-                                <div class="flex flex-col gap-2">
-                                    <h3 class="font-bold text-4xl">5 GB</h3>
-                                    <p class="text-nowrap font-medium text-xs">Valid for 30 days from
-                                        activation
-                                    </p>
+                            <div class="flex flex-col gap-4">
+                                <div class="flex flex-wrap gap-2 justify-between">
+                                    <h3 class="font-bold text-4xl">Unlimited 7 Days</h3>
+                                    <h3 class="font-bold text-4xl">$17.00</h3>
                                 </div>
-                                <h3 class="font-bold text-4xl">$17.00</h3>
+                                <p class="opacity-90 text-nowrap font-medium text-xs">Unlimited Internet Access*
+                                </p>
+                                <p class="opacity-90 font-medium leading-5 text-xs">In case of exceeding daily 1 GB
+                                    high-speed allowance, speed will be limited to 512 Kbps for the remaining day, which
+                                    may
+                                    impact your experience with video streaming and other data-intensive applications.
+                                </p>
                             </div>
                         </div>
-                        <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <li class="flex items-center gap-2 mx-2">
-                                <img src="../assets/icons/wifi.svg" alt="wifi" class="w-[43px] h-[43px]" />
-                                <p class="font-medium text-xs">9 hours music</p>
-                            </li>
-                            <li class="flex items-center gap-2 mx-2">
-                                <img src="../assets/icons/youtube.svg" alt="youtube" class="w-[43px] h-[43px]" />
-                                <p class="font-medium text-xs">6 hours video</p>
-                            </li>
-                            <li class="flex items-center gap-2 mx-2">
-                                <img src="../assets/icons/mail.svg" alt="mail" class="w-[43px] h-[43px]" />
-                                <p class="font-medium text-xs">18 hours browsing</p>
-                            </li>
-                        </ul>
                     </div>
                 </div>
-                <div class="list-unlimited-plans pt-5 md:pt-15 flex items-center justify-center hidden">
-                    <div style="background-image: url('/assets/images/bg-card.png')" class="absolute flex w-full h-full items-center
-    bg-cover
-    bg-center
-    bg-no-repeat -z-1">
+                <div class="flex flex-col items-center gap-5 relative">
+
+                    <div class="flex justify-center gap-3 items-center" data-aos="fade-up">
+                        <img src="../assets/icons/bundles.svg" alt="bunldes" class="w-6 h-6" />
+                        <h3 class="font-medium text-md md:text-xl">Denotes bundle qualifies for cashback</h3>
                     </div>
-                    <div id="country" onclick="openModal('countryModal')"
-                        data-bundle='{"name":"Unlimited Plan","price":25,"type":"unlimited"}'
-                        class="hidden shadow-xl w-[90%] md:w-[40%] xl:w-[35%] h-full justify-between flex flex-col gap-6 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-3)]">
-                        <div class="flex flex-col gap-[20px]">
-                            <div class="flex flex-wrap gap-3 justify-between items-center w-full">
-                                <div class="flex items-center gap-[11px]">
-                                    <img src="../assets/icons/germany.svg" alt="germany"
-                                        class="w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] rounded-full object-cover" />
-                                    <p class="font-semibold text-xl lg:text-4xl">Germany</p>
-                                </div>
+
+                    <ul class="font-bold flex w-full md:w-[80%]" data-aos="fade-up">
+                        <li title="egular Plans" onclick="showTab('bundle')" id="tab-bundle"
+                            class="cursor-pointer active-bundle last:rounded-e-full first:rounded-s-full last:border-s-0 first:border-e-0 w-full text-center py-[7px] bg-[var(--is-gray-3)] w-full text-[var(--is-blue-3)] text-xs border border-2 border-[var(--is-gray-4)] shadow-lg">
+                            Regular Plans
+                        </li>
+                        <li title="Unlimited Plans" onclick="showTab('unlimited-bundles')" id="tab-unlimited-bundles"
+                            class="cursor-pointer last:rounded-e-full first:rounded-s-full last:border-s-0 first:border-e-0 w-full text-center py-[7px] bg-[var(--is-gray-3)] w-full text-[var(--is-blue-3)] text-xs border border-2 border-[var(--is-gray-4)] shadow-lg">
+                            Unlimited Plans
+                        </li>
+                    </ul>
+
+                    <div class="w-full flex flex-col items-center gap-5">
+                        <ul class="regular-bundle w-full flex flex-col gap-[10px]">
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item is-selected bg-[var(--is-blue)] text-white"
+                                data-aos="fade-up" data-bundle='{"size":"1GB","name":"7 Days Bundle","price":"$3.00"}'>
                                 <div
-                                    class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
-                                    <img src="../assets/icons/star.svg" alt="star"
-                                        class="w-5 h-5 rounded-full object-cover" />
-                                    Recommended
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">5GB</p>
+                                    <p class="text-sm md:text-base">30 Days Bundle</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$17.00</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-4">
-                            <div class="flex flex-wrap gap-2 justify-between">
-                                <h3 class="font-bold text-4xl">Unlimited 7 Days</h3>
-                                <h3 class="font-bold text-4xl">$17.00</h3>
-                            </div>
-                            <p class="opacity-90 text-nowrap font-medium text-xs">Unlimited Internet Access*
-                            </p>
-                            <p class="opacity-90 font-medium leading-5 text-xs">In case of exceeding daily 1 GB
-                                high-speed allowance, speed will be limited to 512 Kbps for the remaining day, which may
-                                impact your experience with video streaming and other data-intensive applications.
-                            </p>
-                        </div>
-                    </div>
-                    <div id="region" onclick="openModal('regionModal')"
-                        data-bundle='{"name":"Unlimited Plan","price":25,"type":"unlimited"}'
-                        class="hidden shadow-xl min-[390px]:w-[90%] md:w-[45%] xl:w-[35%] h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-3)]">
-                        <div class="flex flex-col gap-[20px]">
-                            <div class="flex flex-wrap gap-3 justify-between items-center w-full">
-                                <div class="flex items-center gap-[11px]">
-                                    <img src="../assets/icons/aferica.svg" alt="aferica"
-                                        class="w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] rounded-full object-cover" />
-                                    <p class="font-semibold text-xl lg:text-4xl">Africa</p>
-                                </div>
+                            </li>
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item bg-white"
+                                data-aos="fade-up" title="7 Days Bundle"
+                                data-bundle='{"size":"1GB","name":"7 Days Bundle","price":"$3.00"}'>
                                 <div
-                                    class="border border-1 border-[var(--is-white)] flex items-center gap-1 text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[8px] py-[6px]">
-                                    <img src="../assets/icons/star.svg" alt="star"
-                                        class="w-5 h-5 rounded-full object-cover" />
-                                    Recommended
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">1GB</p>
+                                    <p class="text-sm md:text-base">7 Days Bundle</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$3.00</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </li>
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item bg-white"
+                                data-aos="fade-up" title="15 Days Bundle"
+                                data-bundle='{"size":"2GB","name":"15 Days Bundle","price":"$8.00"}'>
+                                <div
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">2GB</p>
+                                    <p class="text-sm md:text-base">15 Days Bundle</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$8.00</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item bg-white"
+                                data-aos="fade-up" title="30 Days Bundle"
+                                data-bundle='{"size":"10GB","name":"30 Days Bundle","price":"$24.00"}'>
+                                <div
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">10GB</p>
+                                    <p class="text-sm md:text-base">30 Days Bundle</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$24.00</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item bg-white"
+                                data-aos="fade-up" title="30 Days Bundle"
+                                data-bundle='{"size":"20GB","name":"30 Days Bundle","price":"$36.00"}'>
+                                <div
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">20GB</p>
+                                    <p class="text-sm md:text-base">30 Days Bundle</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$36.00</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item bg-white"
+                                data-aos="fade-up" title="30 Days Bundle"
+                                data-bundle='{"size":"50GB","name":"30 Days Bundle","price":"$68.00"}'>
+                                <div
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">50GB</p>
+                                    <p class="text-sm md:text-base">30 Days Bundle</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$68.00</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="list-unlimited-plans w-full flex flex-col gap-[10px] hidden">
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
+                                data-aos="fade-up" title="Unlimited Internet"
+                                data-bundle='{"size":"7 Days","name":"Unlimited Internet","price":"$17.00"}'>
+                                <div
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">7 Days</p>
+                                    <p class="text-sm md:text-base">Unlimited Internet</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$17.00</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item bg-white"
+                                data-aos="fade-up" title="Unlimited Internet"
+                                data-bundle='{"size":"1 Days","name":"Unlimited Internet","price":"$3.00"}'>
+                                <div
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">1 Days</p>
+                                    <p class="text-sm md:text-base">Unlimited Internet</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$3.00</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item bg-white"
+                                data-aos="fade-up" title="Unlimited Internet"
+                                data-bundle='{"size":"3 Days","name":"Unlimited Internet","price":"$8.00"}'>
+                                <div
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">3 Days</p>
+                                    <p class="text-sm md:text-base">Unlimited Internet</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$8.00</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item bg-white"
+                                data-aos="fade-up" title="Unlimited Internet"
+                                data-bundle='{"size":"6 Days","name":"Unlimited Internet","price":"$13.00"}'>
+                                <div
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">6 Days</p>
+                                    <p class="text-sm md:text-base">Unlimited Internet</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$13.00</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item bg-white"
+                                data-aos="fade-up" title="Unlimited Internet"
+                                data-bundle='{"size":"10 Days","name":"Unlimited Internet","price":"$24.00"}'>
+                                <div
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">10 Days</p>
+                                    <p class="text-sm md:text-base">Unlimited Internet</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$24.00</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item bg-white"
+                                data-aos="fade-up" title="Unlimited Internet"
+                                data-bundle='{"size":"15 Days","name":"Unlimited Internet","price":"$36.00"}'>
+                                <div
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">15 Days</p>
+                                    <p class="text-sm md:text-base">Unlimited Internet</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$36.00</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item bg-white"
+                                data-aos="fade-up" title="Unlimited Internet"
+                                data-bundle='{"size":"30 Days","name":"Unlimited Internet","price":"$68.00"}'>
+                                <div
+                                    class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[3fr_4fr_2fr] lg:grid-cols-[5fr_5fr_1.8fr]">
+                                    <p class="text-sm md:text-lg">30 Days</p>
+                                    <p class="text-sm md:text-base">Unlimited Internet</p>
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="../assets/icons/cashback.svg" alt="cashback"
+                                            class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
+                                        <p class="text-sm md:text-base break-all text-center text-nowrap">$68.00</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div data-aos="fade-up" class="flex w-full">
+                            <a href="checkout.html" title="Buy Now"
+                                onclick="this.href='checkout.html?data=' + (currentTab === 'unlimited-bundles' ? 'unlimited' : 'regular')"
+                                class="text-center transition-all duration-300 hover:shadow-xl hover:scale-102 cursor-pointer w-full before:bg-white rounded-[20px] text-white bg-[var(--is-pink)] px-5 py-3">
+                                <div class="text-base relative z-1 font-bold">
+                                    <span>Buy Now</span>
+                                </div>
+                            </a>
                         </div>
-                        <div class="flex flex-col gap-4">
-                            <div class="flex flex-wrap gap-2 justify-between">
-                                <h3 class="font-bold text-4xl">Unlimited 7 Days</h3>
-                                <h3 class="font-bold text-4xl">$17.00</h3>
-                            </div>
-                            <p class="opacity-90 text-nowrap font-medium text-xs">Unlimited Internet Access*
-                            </p>
-                            <p class="opacity-90 font-medium leading-5 text-xs">In case of exceeding daily 1 GB
-                                high-speed allowance, speed will be limited to 512 Kbps for the remaining day, which may
-                                impact your experience with video streaming and other data-intensive applications.
-                            </p>
+
+                        <div class="flex justify-center gap-3 items-center" data-aos="fade-up">
+                            <img src="../assets/icons/secure-payment.svg" alt="secure payment" class="w-3 h-3" />
+                            <p class="leading-none font-normal text-xs">Secure payment guaranteed</p>
                         </div>
                     </div>
                 </div>
             </div>
+
             <!-- <div id="bundleModal" class="hidden fixed inset-0 z-50 flex items-center justify-center">
                 <div class="absolute inset-0 bg-[#25123CE5]" onclick="closeBundleModal()"></div>
 
@@ -603,228 +829,6 @@
             </div>
         </section>
         <!-- end choose your plan -->
-        <!-- start bundles -->
-        <section>
-            <div class="container sections-marign-top flex flex-col items-center gap-5 md:gap-10 relative">
-                <div class="flex justify-center gap-3 items-center" data-aos="fade-up">
-                    <img src="../assets/icons/bundles.svg" alt="bunldes" class="w-6 h-6" />
-                    <h3 class="font-medium text-md md:text-xl">Denotes bundle qualifies for cashback</h3>
-                </div>
-                <ul class="flex w-full md:w-[50%]" data-aos="fade-up">
-                    <li title="egular Plans" onclick="showTab('bundle')" id="tab-bundle"
-                        class="cursor-pointer active-bundle last:rounded-e-full first:rounded-s-full last:border-s-0 first:border-e-0 w-full text-center py-[7px] bg-[var(--is-gray-3)] w-full text-[var(--is-blue-3)] text-xs border border-2 border-[var(--is-gray-4)] shadow-lg">
-                        Regular Plans
-                    </li>
-                    <li title="Unlimited Plans" onclick="showTab('unlimited-bundles')" id="tab-unlimited-bundles"
-                        class="cursor-pointer last:rounded-e-full first:rounded-s-full last:border-s-0 first:border-e-0 w-full text-center py-[7px] bg-[var(--is-gray-3)] w-full text-[var(--is-blue-3)] text-xs border border-2 border-[var(--is-gray-4)] shadow-lg">
-                        Unlimited Plans
-                    </li>
-                </ul>
-                <div class="w-full md:w-[75%] flex flex-col items-center gap-5">
-                    <ul class="regular-bundle w-full flex flex-col gap-[10px]">
-                        <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item is-selected bg-[var(--is-blue)] text-white"
-                            data-bundle='{"size":"1GB","name":"7 Days Bundle","price":"$3.00"}'>
-                            <div
-                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
-                                <p class="text-sm md:text-2xl">5GB</p>
-                                <p class="text-sm md:text-lg">30 Days Bundle</p>
-                                <div class="flex items-center gap-[5px]">
-                                    <img src="../assets/icons/cashback.svg" alt="cashback"
-                                        class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$17.00</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
-                            data-aos="fade-up" title="7 Days Bundle"
-                            data-bundle='{"size":"1GB","name":"7 Days Bundle","price":"$3.00"}'>
-                            <div
-                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
-                                <p class="text-sm md:text-2xl">1GB</p>
-                                <p class="text-sm md:text-lg">7 Days Bundle</p>
-                                <div class="flex items-center gap-[5px]">
-                                    <img src="../assets/icons/cashback.svg" alt="cashback"
-                                        class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$3.00</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
-                            data-aos="fade-up" title="15 Days Bundle"
-                            data-bundle='{"size":"2GB","name":"15 Days Bundle","price":"$8.00"}'>
-                            <div
-                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
-                                <p class="text-sm md:text-2xl">2GB</p>
-                                <p class="text-sm md:text-lg">15 Days Bundle</p>
-                                <div class="flex items-center gap-[5px]">
-                                    <img src="../assets/icons/cashback.svg" alt="cashback"
-                                        class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$8.00</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
-                            data-aos="fade-up" title="30 Days Bundle"
-                            data-bundle='{"size":"10GB","name":"30 Days Bundle","price":"$24.00"}'>
-                            <div
-                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
-                                <p class="text-sm md:text-2xl">10GB</p>
-                                <p class="text-sm md:text-lg">30 Days Bundle</p>
-                                <div class="flex items-center gap-[5px]">
-                                    <img src="../assets/icons/cashback.svg" alt="cashback"
-                                        class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$24.00</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
-                            data-aos="fade-up" title="30 Days Bundle"
-                            data-bundle='{"size":"20GB","name":"30 Days Bundle","price":"$36.00"}'>
-                            <div
-                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
-                                <p class="text-sm md:text-2xl">20GB</p>
-                                <p class="text-sm md:text-lg">30 Days Bundle</p>
-                                <div class="flex items-center gap-[5px]">
-                                    <img src="../assets/icons/cashback.svg" alt="cashback"
-                                        class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$36.00</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
-                            data-aos="fade-up" title="30 Days Bundle"
-                            data-bundle='{"size":"50GB","name":"30 Days Bundle","price":"$68.00"}'>
-                            <div
-                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
-                                <p class="text-sm md:text-2xl">50GB</p>
-                                <p class="text-sm md:text-lg">30 Days Bundle</p>
-                                <div class="flex items-center gap-[5px]">
-                                    <img src="../assets/icons/cashback.svg" alt="cashback"
-                                        class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$68.00</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul class="list-unlimited-plans w-full flex flex-col gap-[10px] hidden">
-                        <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
-                            data-aos="fade-up" title="Unlimited Internet"
-                            data-bundle='{"size":"7 Days","name":"Unlimited Internet","price":"$17.00"}'>
-                            <div
-                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
-                                <p class="text-sm md:text-2xl">7 Days</p>
-                                <p class="text-sm md:text-lg">Unlimited Internet</p>
-                                <div class="flex items-center gap-[5px]">
-                                    <img src="../assets/icons/cashback.svg" alt="cashback"
-                                        class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$17.00</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
-                            data-aos="fade-up" title="Unlimited Internet"
-                            data-bundle='{"size":"1 Days","name":"Unlimited Internet","price":"$3.00"}'>
-                            <div
-                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
-                                <p class="text-sm md:text-2xl">1 Days</p>
-                                <p class="text-sm md:text-lg">Unlimited Internet</p>
-                                <div class="flex items-center gap-[5px]">
-                                    <img src="../assets/icons/cashback.svg" alt="cashback"
-                                        class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$3.00</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
-                            data-aos="fade-up" title="Unlimited Internet"
-                            data-bundle='{"size":"3 Days","name":"Unlimited Internet","price":"$8.00"}'>
-                            <div
-                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
-                                <p class="text-sm md:text-2xl">3 Days</p>
-                                <p class="text-sm md:text-lg">Unlimited Internet</p>
-                                <div class="flex items-center gap-[5px]">
-                                    <img src="../assets/icons/cashback.svg" alt="cashback"
-                                        class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$8.00</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
-                            data-aos="fade-up" title="Unlimited Internet"
-                            data-bundle='{"size":"6 Days","name":"Unlimited Internet","price":"$13.00"}'>
-                            <div
-                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
-                                <p class="text-sm md:text-2xl">6 Days</p>
-                                <p class="text-sm md:text-lg">Unlimited Internet</p>
-                                <div class="flex items-center gap-[5px]">
-                                    <img src="../assets/icons/cashback.svg" alt="cashback"
-                                        class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$13.00</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
-                            data-aos="fade-up" title="Unlimited Internet"
-                            data-bundle='{"size":"10 Days","name":"Unlimited Internet","price":"$24.00"}'>
-                            <div
-                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
-                                <p class="text-sm md:text-2xl">10 Days</p>
-                                <p class="text-sm md:text-lg">Unlimited Internet</p>
-                                <div class="flex items-center gap-[5px]">
-                                    <img src="../assets/icons/cashback.svg" alt="cashback"
-                                        class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$24.00</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
-                            data-aos="fade-up" title="Unlimited Internet"
-                            data-bundle='{"size":"15 Days","name":"Unlimited Internet","price":"$36.00"}'>
-                            <div
-                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
-                                <p class="text-sm md:text-2xl">15 Days</p>
-                                <p class="text-sm md:text-lg">Unlimited Internet</p>
-                                <div class="flex items-center gap-[5px]">
-                                    <img src="../assets/icons/cashback.svg" alt="cashback"
-                                        class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$36.00</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
-                            data-aos="fade-up" title="Unlimited Internet"
-                            data-bundle='{"size":"30 Days","name":"Unlimited Internet","price":"$68.00"}'>
-                            <div
-                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
-                                <p class="text-sm md:text-2xl">30 Days</p>
-                                <p class="text-sm md:text-lg">Unlimited Internet</p>
-                                <div class="flex items-center gap-[5px]">
-                                    <img src="../assets/icons/cashback.svg" alt="cashback"
-                                        class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$68.00</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <div data-aos="fade-up" class="flex w-full">
-                        <a href="checkout.html" title="Buy Now"
-                            onclick="this.href='checkout.html?data=' + (currentTab === 'unlimited-bundles' ? 'unlimited' : 'regular')"
-                            class="text-center transition-all duration-300 hover:shadow-xl hover:scale-102 cursor-pointer w-full before:bg-white rounded-[20px] text-white bg-[var(--is-pink)] px-5 py-4">
-                            <div class="text-base relative z-1 font-bold">
-                                <span>Buy Now</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="flex justify-center gap-1 items-center" data-aos="fade-up">
-                        <img src="../assets/icons/secure-payment.svg" alt="secure payment" class="w-4 h-4" />
-                        <h3 class="font-normal text-md">Secure payment guaranteed</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- end bundles -->
         <!-- start why choose tv4 -->
         <section>
             <div class="container sections-marign-top">
