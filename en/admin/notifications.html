@@ -39,11 +39,20 @@
                                 placeholder="yourname@email.com" id="input" />
                         </label>
 
-                        <div class="flex items-center gap-2">
-                            <input type="checkbox" class="mt-[0.3%]" id="checkbox" />
-                            <label for="checkbox" class="text-[var(--is-gray-21)]">Email notifications
-                                to yourname@email.com</label>
-                        </div>
+                        <label class="relative flex items-center gap-2 cursor-pointer mx-3">
+                            <input type="checkbox" id="remember" class="peer appearance-none w-4 h-4 rounded-[4px] bg-white
+               checked:bg-[var(--is-pink)] relative transition-colors checked:border-0 border-1" />
+
+                            <svg class="absolute top-[14.6%] inset-0 w-4 h-4 p-[2px] pointer-events-none opacity-0 peer-checked:opacity-100 transition-opacity"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+
+                            <span class="text-[var(--is-gray-21)]">Email notifications
+                                to yourname@email.com</span>
+                        </label>
+
                         <div class="flex flex-col xl:flex-row gap-[8px]">
                             <button
                                 class="text-center w-full xl:w-[20%] hover:before:bg-black bg-[var(--is-pink)] text-white rounded-[20px] px-10 py-[13px] btn">

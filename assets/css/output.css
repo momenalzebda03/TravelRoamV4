@@ -261,8 +261,8 @@
   .top-11 {
     top: calc(var(--spacing) * 11);
   }
-  .top-\[3\.6\%\] {
-    top: 3.6%;
+  .top-\[14\.6\%\] {
+    top: 14.6%;
   }
   .top-\[16\.6\%\] {
     top: 16.6%;
@@ -270,23 +270,8 @@
   .top-\[25\%\] {
     top: 25%;
   }
-  .top-\[26\.6\%\] {
-    top: 26.6%;
-  }
-  .top-\[33\.6\%\] {
-    top: 33.6%;
-  }
   .top-\[34\.6\%\] {
     top: 34.6%;
-  }
-  .top-\[36\.6\%\] {
-    top: 36.6%;
-  }
-  .top-\[46\.6\%\] {
-    top: 46.6%;
-  }
-  .top-\[56\.6\%\] {
-    top: 56.6%;
   }
   .top-\[70px\] {
     top: 70px;
@@ -473,9 +458,6 @@
   }
   .mt-35 {
     margin-top: calc(var(--spacing) * 35);
-  }
-  .mt-\[0\.3\%\] {
-    margin-top: 0.3%;
   }
   .mt-\[1\.5px\] {
     margin-top: 1.5px;
@@ -694,6 +676,9 @@
   .h-\[101px\] {
     height: 101px;
   }
+  .h-\[106px\] {
+    height: 106px;
+  }
   .h-\[144px\] {
     height: 144px;
   }
@@ -703,11 +688,17 @@
   .h-\[167px\] {
     height: 167px;
   }
+  .h-\[176px\] {
+    height: 176px;
+  }
   .h-\[185px\] {
     height: 185px;
   }
   .h-\[200px\] {
     height: 200px;
+  }
+  .h-\[206px\] {
+    height: 206px;
   }
   .h-\[220px\] {
     height: 220px;
@@ -753,6 +744,9 @@
   }
   .max-h-\[700px\] {
     max-height: 700px;
+  }
+  .min-h-\[106px\] {
+    min-height: 106px;
   }
   .min-h-\[150px\] {
     min-height: 150px;
@@ -861,9 +855,6 @@
   }
   .w-\[43px\] {
     width: 43px;
-  }
-  .w-\[45\%\] {
-    width: 45%;
   }
   .w-\[48\%\] {
     width: 48%;
@@ -3321,6 +3312,11 @@
       height: 185px;
     }
   }
+  .md\:h-\[206px\] {
+    @media (width >= 48rem) {
+      height: 206px;
+    }
+  }
   .md\:h-\[300px\] {
     @media (width >= 48rem) {
       height: 300px;
@@ -4603,7 +4599,7 @@ input[type="password"]::-webkit-credentials-auto-fill-button, input[type="passwo
   position: absolute;
   right: 0;
 }
-input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+.input-autofill:-webkit-autofill, .input-autofill:-webkit-autofill:hover, .input-autofill:-webkit-autofill:focus, .input-autofill:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
   -webkit-text-fill-color: white !important;
   transition: background-color 5000s ease-in-out 0s;

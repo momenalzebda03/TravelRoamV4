@@ -34,14 +34,14 @@
                     <form action="" method="" class="flex flex-col gap-4">
                         <div class="flex gap-3">
                             <input type="text"
-                                class="border-1 border-white px-[15px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
+                                class="input-autofill border-1 border-white px-[15px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
                                 placeholder="الاسم الأول" />
                             <input type="text"
-                                class="border-1 border-white px-[15px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
+                                class="input-autofill border-1 border-white px-[15px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
                                 placeholder="الاسم الاخير" />
                         </div>
                         <input type="email"
-                            class="border-1 border-white px-[15px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
+                            class="input-autofill border-1 border-white px-[15px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
                             placeholder="عنوان البريد الإلكتروني" />
 
                         <div class="relative dropdown-wrapper">
@@ -54,7 +54,7 @@
                                     class="flex items-center w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]">
                                     <p class="phone-code ps-[40px] pe-4 cursor-pointer"
                                         onclick="openDestinationsByList('destination-list-1')">+675</p>
-                                    <input class="w-full py-2 placeholder:text-white" type="number"
+                                    <input class="input-autofill w-full py-2 placeholder:text-white" type="number"
                                         placeholder="رقم الهاتف المحمول" />
                                 </div>
                             </div>
@@ -70,7 +70,7 @@
                                     class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 rounded-full" />
 
                                 <input type="text"
-                                    class="border-1 border-white px-[40px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
+                                    class="input-autofill border-1 border-white px-[40px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
                                     placeholder="بلد الإقامة" id="destination-input-2"
                                     oninput="filterDestinations(this.value, this)" onfocus="openDestinations(this)" />
                             </div>
@@ -82,14 +82,14 @@
                         </div>
 
                         <input type="text"
-                            class="border-1 border-white px-[15px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
+                            class="input-autofill border-1 border-white px-[15px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
                             placeholder="رمز الإحالة" />
 
                         <div
                             class="relative flex items-center border-1 border-white bg-[var(--is-gray-16)] rounded-[10px]">
 
                             <input type="password" placeholder="كلمة المرور"
-                                class="password-input placeholder:text-white w-full px-[15px] py-2 bg-transparent outline-none text-white" />
+                                class="input-autofill password-input placeholder:text-white w-full px-[15px] py-2 bg-transparent outline-none text-white" />
 
                             <button type="button" class="toggle-password absolute left-4 flex items-center">
                                 <svg class="eye-open h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -108,7 +108,7 @@
                             class="relative flex items-center border-1 border-white bg-[var(--is-gray-16)] rounded-[10px]">
 
                             <input type="password" placeholder="تأكيد كلمة المرور"
-                                class="password-input placeholder:text-white w-full px-[15px] py-2 bg-transparent outline-none text-white" />
+                                class="input-autofill password-input placeholder:text-white w-full px-[15px] py-2 bg-transparent outline-none text-white" />
 
                             <button type="button" class="toggle-password absolute left-4 flex items-center">
                                 <svg class="eye-open h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
