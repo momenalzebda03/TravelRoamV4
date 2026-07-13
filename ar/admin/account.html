@@ -20,7 +20,7 @@
         <coop-navbar lang="ar"></coop-navbar>
         <!-- end navbar -->
         <div class="shadow-2xl container mt-[140px] bg-[var(--is-white-4)] rounded-[25px] p-[30px]">
-            <div class="container grid min-[576px]:grid-cols-[2fr_10fr] gap-[16px] lg:gap-[46px]">
+            <div class="container grid min-[786px]:grid-cols-[2fr_10fr] gap-[16px] lg:gap-[46px]">
                 <coop-sidebar lang="ar"></coop-sidebar>
                 <div class="md:me-10 flex flex-col gap-6 mt-[30px]">
                     <div class="flex flex-col gap-2 md:gap-4">
@@ -82,7 +82,7 @@
 
                         </div>
 
-                        <div class="my-5 flex w-[45%] gap-3">
+                        <div class="my-5 flex xl:w-[45%] gap-3">
                             <a href="home.html"
                                 class="w-full xl:w-[50%] text-nowrap text-center hover:before:bg-black bg-white hover:text-white text-[var(--is-blue-3)] rounded-[20px] border border-3 border-[var(--is-blue-3)] py-[14px] btn">
                                 <div class="relative z-1 text-sm font-bold">
@@ -164,10 +164,20 @@
                                         <span>تغير العنوان</span>
                                     </div>
                                 </button>
-                                <div class="mx-3 flex justify-center items-center gap-2">
-                                    <input type="checkbox" class="w-4 h-4" id="checkbox" />
-                                    <label for="checkbox">تعيين كالعنوان الافتراضي</label>
-                                </div>
+
+                                <label class="relative flex items-center gap-2 cursor-pointer mx-3">
+                                    <input type="checkbox" id="remember" class="peer appearance-none w-4 h-4 rounded-[4px] bg-white
+               checked:bg-[var(--is-pink)] relative transition-colors checked:border-0 border-1" />
+
+                                    <svg class="absolute top-[34.6%] inset-0 w-4 h-4 p-[2px] pointer-events-none opacity-0 peer-checked:opacity-100 transition-opacity"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                        stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+
+                                    <span>تعيين كالعنوان الافتراضي</span>
+                                </label>
+
                             </div>
                         </div>
                     </form>

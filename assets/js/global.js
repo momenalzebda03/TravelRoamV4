@@ -187,6 +187,11 @@ function selectItem(li, value) {
     $(li).addClass('active');
 }
 
+$(window).on('scroll', function () {
+    $('.dropdown-list.open').removeClass('open');
+    $('.dropdown-wrapper .dropdown-arrow.open, .dropdown-wrapper .menu-icon.open').removeClass('open');
+});
+
 $(document).on('click', function (e) {
     if (!$(e.target).closest('.dropdown-wrapper').length) {
         $('.dropdown-list, .dropdown-arrow, .menu-icon').removeClass('open');
