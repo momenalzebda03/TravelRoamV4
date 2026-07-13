@@ -48,9 +48,8 @@ function getListId(inputId) {
 function openDestinations(inputEl) {
     const listId = getListId(inputEl.id);
 
-    $(`#${listId}`).addClass('open');
-
     renderDestinations(destinations, listId, inputEl.id);
+    $(`#${listId}`).addClass('open');
 }
 
 function openDestinationsByList(listId) {

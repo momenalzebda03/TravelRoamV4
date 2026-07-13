@@ -50,7 +50,7 @@
                         <span class="font-semibold text-[var(--is-blue-3)]">Your Plan</span>
                     </h3>
                 </div>
-                <div class="regular-bundle pt-5 md:pt-15 flex items-center justify-center">
+                <div class="container-mobile regular-bundle pt-5 md:pt-15 flex items-center justify-center">
                     <div style="background-image: url('/assets/images/bg-card.png')" class="absolute flex w-full h-full items-center
     bg-cover
     bg-center
@@ -58,7 +58,7 @@
                     </div>
                     <div id="country" onclick="openModal('countryModal')"
                         data-bundle='{"name":"5GB Plan","price":17,"type":"bundle"}'
-                        class="hidden shadow-xl w-[90%] md:w-[40%] xl:w-[35%] h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
+                        class="hidden shadow-xl min-[390px]:w-[90%] md:w-[45%] xl:w-[35%] h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
                         <div class="flex flex-col gap-[20px]">
                             <div class="flex flex-wrap gap-3 justify-between items-center w-full">
                                 <div class="flex items-center gap-[11px]">
@@ -84,15 +84,15 @@
                             </div>
                         </div>
                         <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <li class="flex items-center gap-2 mx-2 text-center">
+                            <li class="flex items-center gap-2 mx-2">
                                 <img src="../assets/icons/wifi.svg" alt="wifi" class="w-[43px] h-[43px]" />
                                 <p class="font-medium text-xs">9 hours music</p>
                             </li>
-                            <li class="flex items-center gap-2 mx-2 text-center">
+                            <li class="flex items-center gap-2 mx-2">
                                 <img src="../assets/icons/youtube.svg" alt="youtube" class="w-[43px] h-[43px]" />
                                 <p class="font-medium text-xs">6 hours video</p>
                             </li>
-                            <li class="flex items-center gap-2 mx-2 text-center">
+                            <li class="flex items-center gap-2 mx-2">
                                 <img src="../assets/icons/mail.svg" alt="mail" class="w-[43px] h-[43px]" />
                                 <p class="font-medium text-xs">18 hours browsing</p>
                             </li>
@@ -100,7 +100,7 @@
                     </div>
                     <div id="region" onclick="openModal('regionModal')"
                         data-bundle='{"name":"5GB Plan","price":17,"type":"bundle"}'
-                        class="hidden shadow-xl w-[90%] md:w-[40%] xl:w-[35%] h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
+                        class="hidden shadow-xl min-[390px]:w-[90%] md:w-[45%] xl:w-[35%] h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
                         <div class="flex flex-col gap-[20px]">
                             <div class="flex flex-wrap gap-3 justify-between items-center w-full">
                                 <div class="flex items-center gap-[11px]">
@@ -126,15 +126,15 @@
                             </div>
                         </div>
                         <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <li class="flex items-center gap-2 mx-2 text-center">
+                            <li class="flex items-center gap-2 mx-2">
                                 <img src="../assets/icons/wifi.svg" alt="wifi" class="w-[43px] h-[43px]" />
                                 <p class="font-medium text-xs">9 hours music</p>
                             </li>
-                            <li class="flex items-center gap-2 mx-2 text-center">
+                            <li class="flex items-center gap-2 mx-2">
                                 <img src="../assets/icons/youtube.svg" alt="youtube" class="w-[43px] h-[43px]" />
                                 <p class="font-medium text-xs">6 hours video</p>
                             </li>
-                            <li class="flex items-center gap-2 mx-2 text-center">
+                            <li class="flex items-center gap-2 mx-2">
                                 <img src="../assets/icons/mail.svg" alt="mail" class="w-[43px] h-[43px]" />
                                 <p class="font-medium text-xs">18 hours browsing</p>
                             </li>
@@ -180,7 +180,7 @@
                     </div>
                     <div id="region" onclick="openModal('regionModal')"
                         data-bundle='{"name":"Unlimited Plan","price":25,"type":"unlimited"}'
-                        class="hidden shadow-xl w-[90%] md:w-[40%] xl:w-[35%] h-full justify-between flex flex-col gap-6 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-3)]">
+                        class="hidden shadow-xl min-[390px]:w-[90%] md:w-[45%] xl:w-[35%] h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-3)]">
                         <div class="flex flex-col gap-[20px]">
                             <div class="flex flex-wrap gap-3 justify-between items-center w-full">
                                 <div class="flex items-center gap-[11px]">
@@ -624,78 +624,84 @@
                     <ul class="regular-bundle w-full flex flex-col gap-[10px]">
                         <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item is-selected bg-[var(--is-blue)] text-white"
                             data-bundle='{"size":"1GB","name":"7 Days Bundle","price":"$3.00"}'>
-                            <div class="font-bold w-full py-2 px-3 md:px-4 flex justify-between items-center">
+                            <div
+                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
                                 <p class="text-sm md:text-2xl">5GB</p>
                                 <p class="text-sm md:text-lg">30 Days Bundle</p>
-                                <div class="flex items-center gap-[5px] w-[110px] min-w-[20px]">
+                                <div class="flex items-center gap-[5px]">
                                     <img src="../assets/icons/cashback.svg" alt="cashback"
                                         class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center">$17.00</p>
+                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$17.00</p>
                                 </div>
                             </div>
                         </li>
                         <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
                             data-aos="fade-up" title="7 Days Bundle"
                             data-bundle='{"size":"1GB","name":"7 Days Bundle","price":"$3.00"}'>
-                            <div class="font-bold w-full py-2 px-3 md:px-4 flex justify-between items-center">
+                            <div
+                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
                                 <p class="text-sm md:text-2xl">1GB</p>
                                 <p class="text-sm md:text-lg">7 Days Bundle</p>
-                                <div class="flex items-center gap-[5px] w-[110px] min-w-[20px]">
+                                <div class="flex items-center gap-[5px]">
                                     <img src="../assets/icons/cashback.svg" alt="cashback"
                                         class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center">$3.00</p>
+                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$3.00</p>
                                 </div>
                             </div>
                         </li>
                         <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
                             data-aos="fade-up" title="15 Days Bundle"
                             data-bundle='{"size":"2GB","name":"15 Days Bundle","price":"$8.00"}'>
-                            <div class="font-bold w-full py-2 px-3 md:px-4 flex justify-between items-center">
+                            <div
+                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
                                 <p class="text-sm md:text-2xl">2GB</p>
                                 <p class="text-sm md:text-lg">15 Days Bundle</p>
-                                <div class="flex items-center gap-[5px] w-[110px] min-w-[20px]">
+                                <div class="flex items-center gap-[5px]">
                                     <img src="../assets/icons/cashback.svg" alt="cashback"
                                         class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center">$8.00</p>
+                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$8.00</p>
                                 </div>
                             </div>
                         </li>
                         <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
                             data-aos="fade-up" title="30 Days Bundle"
                             data-bundle='{"size":"10GB","name":"30 Days Bundle","price":"$24.00"}'>
-                            <div class="font-bold w-full py-2 px-3 md:px-4 flex justify-between items-center">
+                            <div
+                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
                                 <p class="text-sm md:text-2xl">10GB</p>
                                 <p class="text-sm md:text-lg">30 Days Bundle</p>
-                                <div class="flex items-center gap-[5px] w-[110px] min-w-[20px]">
+                                <div class="flex items-center gap-[5px]">
                                     <img src="../assets/icons/cashback.svg" alt="cashback"
                                         class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center">$24.00</p>
+                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$24.00</p>
                                 </div>
                             </div>
                         </li>
                         <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
                             data-aos="fade-up" title="30 Days Bundle"
                             data-bundle='{"size":"20GB","name":"30 Days Bundle","price":"$36.00"}'>
-                            <div class="font-bold w-full py-2 px-3 md:px-4 flex justify-between items-center">
+                            <div
+                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
                                 <p class="text-sm md:text-2xl">20GB</p>
                                 <p class="text-sm md:text-lg">30 Days Bundle</p>
-                                <div class="flex items-center gap-[5px] w-[110px] min-w-[20px]">
+                                <div class="flex items-center gap-[5px]">
                                     <img src="../assets/icons/cashback.svg" alt="cashback"
                                         class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center">$36.00</p>
+                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$36.00</p>
                                 </div>
                             </div>
                         </li>
                         <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
                             data-aos="fade-up" title="30 Days Bundle"
                             data-bundle='{"size":"50GB","name":"30 Days Bundle","price":"$68.00"}'>
-                            <div class="font-bold w-full py-2 px-3 md:px-4 flex justify-between items-center">
+                            <div
+                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
                                 <p class="text-sm md:text-2xl">50GB</p>
                                 <p class="text-sm md:text-lg">30 Days Bundle</p>
-                                <div class="flex items-center gap-[5px] w-[110px] min-w-[20px]">
+                                <div class="flex items-center gap-[5px]">
                                     <img src="../assets/icons/cashback.svg" alt="cashback"
                                         class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center">$68.00</p>
+                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$68.00</p>
                                 </div>
                             </div>
                         </li>
@@ -704,91 +710,98 @@
                         <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
                             data-aos="fade-up" title="Unlimited Internet"
                             data-bundle='{"size":"7 Days","name":"Unlimited Internet","price":"$17.00"}'>
-                            <div class="font-bold w-full py-2 px-3 md:px-4 flex justify-between items-center">
+                            <div
+                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
                                 <p class="text-sm md:text-2xl">7 Days</p>
                                 <p class="text-sm md:text-lg">Unlimited Internet</p>
-                                <div class="flex items-center gap-[5px] w-[110px] min-w-[20px]">
+                                <div class="flex items-center gap-[5px]">
                                     <img src="../assets/icons/cashback.svg" alt="cashback"
                                         class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center">$17.00</p>
+                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$17.00</p>
                                 </div>
                             </div>
                         </li>
                         <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
                             data-aos="fade-up" title="Unlimited Internet"
                             data-bundle='{"size":"1 Days","name":"Unlimited Internet","price":"$3.00"}'>
-                            <div class="font-bold w-full py-2 px-3 md:px-4 flex justify-between items-center">
+                            <div
+                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
                                 <p class="text-sm md:text-2xl">1 Days</p>
                                 <p class="text-sm md:text-lg">Unlimited Internet</p>
-                                <div class="flex items-center gap-[5px] w-[110px] min-w-[20px]">
+                                <div class="flex items-center gap-[5px]">
                                     <img src="../assets/icons/cashback.svg" alt="cashback"
                                         class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center">$3.00</p>
+                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$3.00</p>
                                 </div>
                             </div>
                         </li>
                         <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
                             data-aos="fade-up" title="Unlimited Internet"
                             data-bundle='{"size":"3 Days","name":"Unlimited Internet","price":"$8.00"}'>
-                            <div class="font-bold w-full py-2 px-3 md:px-4 flex justify-between items-center">
+                            <div
+                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
                                 <p class="text-sm md:text-2xl">3 Days</p>
                                 <p class="text-sm md:text-lg">Unlimited Internet</p>
-                                <div class="flex items-center gap-[5px] w-[110px] min-w-[20px]">
+                                <div class="flex items-center gap-[5px]">
                                     <img src="../assets/icons/cashback.svg" alt="cashback"
                                         class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center">$8.00</p>
+                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$8.00</p>
                                 </div>
                             </div>
                         </li>
                         <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
                             data-aos="fade-up" title="Unlimited Internet"
                             data-bundle='{"size":"6 Days","name":"Unlimited Internet","price":"$13.00"}'>
-                            <div class="font-bold w-full py-2 px-3 md:px-4 flex justify-between items-center">
+                            <div
+                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
                                 <p class="text-sm md:text-2xl">6 Days</p>
                                 <p class="text-sm md:text-lg">Unlimited Internet</p>
-                                <div class="flex items-center gap-[5px] w-[110px] min-w-[20px]">
+                                <div class="flex items-center gap-[5px]">
                                     <img src="../assets/icons/cashback.svg" alt="cashback"
                                         class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center">$13.00</p>
+                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$13.00</p>
                                 </div>
                             </div>
                         </li>
                         <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
                             data-aos="fade-up" title="Unlimited Internet"
                             data-bundle='{"size":"10 Days","name":"Unlimited Internet","price":"$24.00"}'>
-                            <div class="font-bold w-full py-2 px-3 md:px-4 flex justify-between items-center">
+                            <div
+                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
                                 <p class="text-sm md:text-2xl">10 Days</p>
                                 <p class="text-sm md:text-lg">Unlimited Internet</p>
-                                <div class="flex items-center gap-[5px] w-[110px] min-w-[20px]">
+                                <div class="flex items-center gap-[5px]">
                                     <img src="../assets/icons/cashback.svg" alt="cashback"
                                         class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center">$24.00</p>
+                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$24.00</p>
                                 </div>
                             </div>
                         </li>
                         <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
                             data-aos="fade-up" title="Unlimited Internet"
                             data-bundle='{"size":"15 Days","name":"Unlimited Internet","price":"$36.00"}'>
-                            <div class="font-bold w-full py-2 px-3 md:px-4 flex justify-between items-center">
+                            <div
+                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
                                 <p class="text-sm md:text-2xl">15 Days</p>
                                 <p class="text-sm md:text-lg">Unlimited Internet</p>
-                                <div class="flex items-center gap-[5px] w-[110px] min-w-[20px]">
+                                <div class="flex items-center gap-[5px]">
                                     <img src="../assets/icons/cashback.svg" alt="cashback"
                                         class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center">$36.00</p>
+                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$36.00</p>
                                 </div>
                             </div>
                         </li>
                         <li class="cursor-pointer group hover:bg-[var(--is-blue)] hover:text-white rounded-[10px] border border-[var(--is-blue)] bundle-item"
                             data-aos="fade-up" title="Unlimited Internet"
                             data-bundle='{"size":"30 Days","name":"Unlimited Internet","price":"$68.00"}'>
-                            <div class="font-bold w-full py-2 px-3 md:px-4 flex justify-between items-center">
+                            <div
+                                class="font-bold py-2 px-3 md:px-4 grid min-[332px]:grid-cols-[3fr_5fr_3fr] grid-cols-[3fr_5fr_2fr] sm:grid-cols-[5fr_5fr_2fr] lg:grid-cols-[5fr_5fr_1.5fr]">
                                 <p class="text-sm md:text-2xl">30 Days</p>
                                 <p class="text-sm md:text-lg">Unlimited Internet</p>
-                                <div class="flex items-center gap-[5px] w-[110px] min-w-[20px]">
+                                <div class="flex items-center gap-[5px]">
                                     <img src="../assets/icons/cashback.svg" alt="cashback"
                                         class="w-3 h-3 md:w-5 md:h-5 group-hover:invert" />
-                                    <p class="text-sm md:text-lg break-all text-center">$68.00</p>
+                                    <p class="text-sm md:text-lg break-all text-center text-nowrap">$68.00</p>
                                 </div>
                             </div>
                         </li>

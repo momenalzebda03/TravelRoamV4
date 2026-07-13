@@ -43,7 +43,7 @@ class CoopFooter extends HTMLElement {
 
     this.innerHTML = `
 <footer class="bg-[var(--is-black-1)]">
-  <div class="overflow-hidden ${marginClass} text-white py-10 md:py-20 text-center flex flex-col gap-8 md:gap-20">
+  <div class="overflow-hidden ${marginClass} text-white py-12 text-center flex flex-col gap-8 md:gap-12">
 
     <!-- Top CTA -->
     <div class="container flex flex-col gap-8">
@@ -72,7 +72,7 @@ class CoopFooter extends HTMLElement {
     </div>
 
     <!-- Logo + Description -->
-    <div class="container">
+    <div class="container-footer">
       <div class="flex flex-col md:flex-row items-center justify-center md:justify-between gap-3 md:gap-50">
         <a href="index.html">
           <img alt="Golden Esim" src="../../assets/icons/logo-pink.svg" class="h-10 md:h-[unset]" />
@@ -86,7 +86,7 @@ class CoopFooter extends HTMLElement {
     <hr class="hidden md:block" />
 
     <!-- Links Grid -->
-    <div class="text-gray-500 md:text-white container-footer-mobile container flex justify-between flex-col md:flex-row gap-10 md:gap-5 py-3 text-center md:text-start">
+    <div class="text-gray-500 md:text-white container-footer flex justify-between flex-col md:flex-row gap-10 md:gap-5 py-3 text-center md:text-start">
 
       <!-- Popular Countries -->
       <div>
@@ -180,7 +180,7 @@ class CoopFooter extends HTMLElement {
     <!-- Bottom Bar -->
     <div class="flex flex-col gap-10">
       <hr />
-      <div class="container flex gap-6 flex-col md:flex-row items-center justify-between">
+      <div class="container-footer flex gap-6 flex-col md:flex-row items-center justify-between">
         <p class="text-gray-500 md:text-white">Copyright 2026. TravelRoam Limited. All Rights Reserved.</p>
         <ul class="flex gap-4 items-center">
           <li><img src="../../assets/icons/apple-pay.svg"  alt="Apple Pay"  width="49" height="27" /></li>

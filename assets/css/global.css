@@ -11,7 +11,7 @@
     --is-blue-7: #634F7C;
     --is-blue-8: #25123CE5;
     --is-blue-9: #2E0A35;
-    --is-blue-10: #DBEAFE;    
+    --is-blue-10: #DBEAFE;
 
     --is-gold: #FFBB00;
     --is-gold-1: #D2AF261A;
@@ -195,6 +195,7 @@ html {
     background-color: black;
 }
 
+.container-footer,
 .container {
     width: 95%;
     max-width: 1200px;
@@ -202,6 +203,10 @@ html {
     margin-right: auto;
     padding-left: 0rem;
     padding-right: 0rem;
+}
+
+.container-footer {
+    max-width: 1350px;
 }
 
 .sections-marign-top {
@@ -416,7 +421,7 @@ html {
         margin-top: 60px;
     }
 
-    .container-footer-mobile {
+    .container-footer {
         max-width: 330px !important;
     }
 
@@ -436,6 +441,15 @@ html {
 @media (max-width: 390px) {
     .container {
         max-width: 350px;
+    }
+
+    .container-mobile {
+        width: 95%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0rem;
+        padding-right: 0rem;
     }
 }
 
@@ -474,4 +488,18 @@ html {
 
 .last-line::before {
     right: 0
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-contacts-auto-fill-button {
+    visibility: hidden;
+    display: none !important;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
 }
