@@ -595,6 +595,12 @@ function goToPaymentStep() {
     updateButtonTexts();
 }
 
+document.addEventListener("input", (e) => {
+    if (e.target.id === "billingAddress" && e.target.value < 0) {
+        e.target.value = 0;
+    }
+});
+
 nextBtn.addEventListener("click", () => {
     if (isInPaymentStep) {
         window.location.href = isArabic

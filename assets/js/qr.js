@@ -43,3 +43,10 @@ function showShare () {
     const media = document.getElementById("media");
     media.classList.remove("hidden")
 }
+
+const input = document.getElementById("billingAddress");
+document.addEventListener("input", (e) => {
+    if (e.target.id === "billingAddress" && e.target.value < 0) {
+        e.target.value = 0;
+    }
+});
