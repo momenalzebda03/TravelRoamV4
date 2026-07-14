@@ -65,6 +65,7 @@ class CoopNavbar extends HTMLElement {
       'checkout': 'bg-[var(--is-blue)]',
       'purchase-details': 'bg-[var(--is-blue)]',
       'login': 'bg-[var(--is-blue)]',
+      'register': 'bg-[var(--is-blue)]',
       'admin': 'bg-[var(--is-blue)]',
       'sim': 'bg-[var(--is-blue)]',
       'credit-top-up': 'bg-[var(--is-blue)]',

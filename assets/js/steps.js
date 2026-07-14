@@ -408,7 +408,7 @@ function payment() {
                                         class="relative flex-1 items-center shadow-[0_2px_5px_var(--is-black-2)] bg-[var(--is-white-3)] rounded-[10px]">
                                         <input type="number" id="inputCode"
                                             class="px-[15px] py-[12px] w-full placeholder:text-[var(--is-blue-5)] relative bg-[var(--is-white-3)] rounded-[10px]"
-                                            placeholder="Enter your 00 digit code" />
+                                            placeholder="${t("Enter your 00 digit code", "أدخل الرمز المكوّن من 00 رقم")}" />
                                     </div>
                                                 <div id="apply">
                                                     <div class="flex justify-center text-nowrap shadow-[0_2px_5px_var(--is-black-2)] !border-0 !rounded-[12px] px-10 bg-[var(--is-blue)] before:bg-[var(--is-blue-3)] transition-all duration-800
@@ -422,7 +422,7 @@ function payment() {
                                                         <div class="gap-[8px] relative z-1
                                                                         !text-[var(--is-blue-4)] text-xs md:text-base
                                                                         flex items-center !text-white font-semibold">
-                                                            <span>Apply</span>
+                                                            <span>${t("Apply", "قدّم")}</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -445,27 +445,32 @@ function payment() {
                                                 <Image src="/assets/icons/wallet.svg" alt="wallet" width={24}
                                                     height={24} />
                                             </div>
-                                            <p class="text-xl font-medium text-[var(--is-gray-2)]">This
-                                                purchase qualifies for cashback</p>
+                                            <p class="text-xl font-medium text-[var(--is-gray-2)]">
+                                            ${t("This purchase qualifies for cashback", "هذا الشراء مؤهل لاسترداد النقود")}
+                                            </p>
                                             <p class="text-md font-normal text-[var(--is-gray-2)]">
-                                                You’ll earn 10% cashback, which is <span
-                                                    class="text-[var(--is-blue-3)]">$1.40</span> added
-                                                to your account.</p>
+${t(" You’ll earn 10% cashback, which is", "ستحصل على 10% استرجاع نقدي، وهو")}
+                                                <span
+                                                    class="text-[var(--is-blue-3)]">$1.40</span>
+                                                    ${t("added to your account.", "تمت الإضافة إلى حسابك.")}
+                                                    </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div id="model"
                                     class="hidden fixed inset-0 flex justify-center items-center z-[999999] bg-[var(--is-blue-8)]">
-                                    <div class="bg-white py-[15px] rounded-[18px]">
+                                    <div class="bg-white py-7 rounded-[18px]">
                                         <div class="flex flex-col gap-2 md:w-[850px]">
-                                            <div class="flex justify-between px-[26px]">
-                                                <h2 class="font-bold text-xl">Split Payment</h2>
+                                            <div class="flex justify-between px-[26px] text-[var(--is-blue-3)]">
+                                                <h2 class="font-bold text-xl">
+                                                 ${t("Split Payment", "الدفع المقسّم")}
+                                                </h2>
                                                 <span id="closeModel" class="cursor-pointer" title="close">✕</span>
                                             </div>
-                                           <hr class="text-[var(--is-gray-17)] my-2" />
-                                            <ul class="flex flex-col px-[26px]">
+                                           <hr class="text-[var(--is-gray-17)] my-4" />
+                                            <ul class="text-[var(--is-blue-3)] flex flex-col gap-3 px-[26px]">
                                                 <li class="flex justify-between text-xl">
-                                                    <p class="font-medium">Total Amount</p>
+                                                    <p class="font-medium">${t("Total Amount", "المبلغ الإجمالي")}</p>
                                                     <p class="font-bold">${totalEl.textContent}</p>
                                                 </li>
                                                 <li class="flex justify-between text-xl">
@@ -473,31 +478,33 @@ function payment() {
                                                     <p class="font-bold">${walletBalance}</p>
                                                 </li>
                                             </ul>
-                                           <hr class="text-[var(--is-gray-17)] my-2" />
-                                            <ul class="flex flex-col px-[26px]">
+                                           <hr class="text-[var(--is-gray-17)] my-4" />
+                                            <ul class="flex flex-col gap-3 px-[26px]">
                                                 <li class="flex justify-between text-xl">
-                                                    <p class="font-medium">Remaining balance to Pay
+                                                    <p class="text-[var(--is-blue-3)] font-medium">
+                                                    ${t("Remaining balance to Pay", "المتبقي للدفع")}
                                                     </p>
                                                     <p class="font-bold text-[var(--is-pink)]">
                                                         $15.71</p>
                                                 </li>
                                                 <li class="flex justify-between text-xl">
                                                     <p class="font-medium text-[var(--is-pink)]">
-                                                        Remaining balance will be paid using stripee</p>
+                                                    ${t("Remaining balance will be paid using stripe", "سيتم دفع الرصيد المتبقي باستخدام سترايب")}
+                                                        </p>
                                                 </li>
                                             </ul>
-<hr class="text-[var(--is-gray-17)] my-2" />
-                                            <div class="flex justify-end gap-[12px] px-[26px]">
+<hr class="text-[var(--is-gray-17)] my-4" />
+                                            <div class="mt-4 flex justify-center gap-[12px] px-[26px]">
                                               <button
-                                                     class="text-center hover:before:bg-[var(--is-pink)] border border-1 border-[var(--is-pink)] hover:text-white text-[var(--is-gray-14)] rounded-[15px] px-12 py-3 btn">
+                                                     class="text-center hover:before:bg-[var(--is-pink)] border border-1 border-[var(--is-pink)] hover:text-white text-[var(--is-pink)] rounded-[15px] px-12 py-3 btn">
                                                      <div class="relative z-1 text-xs font-semibold">
-                                                         <span>Cancel</span>
+                                                         <span>${t("Cancel", "إلغاء")}</span>
                                                      </div>
                                                  </button>
                                                  <button
                                                      class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-12 py-3 btn">
                                                      <div class="relative z-1 text-xs font-semibold">
-                                                         <span>Pay Now</span>
+                                                         <span>${t("Pay Now", "شراء الان")}</span>
                                                      </div>
                                                  </button>
                                             </div>

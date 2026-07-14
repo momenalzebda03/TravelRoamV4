@@ -401,6 +401,9 @@
   .my-2 {
     margin-block: calc(var(--spacing) * 2);
   }
+  .my-4 {
+    margin-block: calc(var(--spacing) * 4);
+  }
   .my-5 {
     margin-block: calc(var(--spacing) * 5);
   }
@@ -511,6 +514,9 @@
   }
   .mb-3 {
     margin-bottom: calc(var(--spacing) * 3);
+  }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
   }
   .mb-5 {
     margin-bottom: calc(var(--spacing) * 5);
@@ -3707,6 +3713,11 @@
       padding-inline: 30px;
     }
   }
+  .md\:px-\[40px\] {
+    @media (width >= 48rem) {
+      padding-inline: 40px;
+    }
+  }
   .md\:px-\[60px\] {
     @media (width >= 48rem) {
       padding-inline: 60px;
@@ -3750,11 +3761,6 @@
   .md\:py-\[12px\] {
     @media (width >= 48rem) {
       padding-block: 12px;
-    }
-  }
-  .md\:py-\[35px\] {
-    @media (width >= 48rem) {
-      padding-block: 35px;
     }
   }
   .md\:py-\[42px\] {
