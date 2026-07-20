@@ -2017,6 +2017,9 @@
   .pt-22 {
     padding-top: calc(var(--spacing) * 22);
   }
+  .pt-30 {
+    padding-top: calc(var(--spacing) * 30);
+  }
   .pt-40 {
     padding-top: calc(var(--spacing) * 40);
   }
