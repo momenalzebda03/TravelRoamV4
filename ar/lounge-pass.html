@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../assets/css/aos.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.css" />
     <link rel="stylesheet" href="../assets/css/output.css">
     <title>شركاء السفر والتجوال</title>
 </head>
@@ -415,51 +416,57 @@
                                             بـ <span class="font-bold">قضمات خفيفة</span> على المقاعد والطاولات, <span
                                                 class="font-bold">مقسمة للخصوصية:</span> بعيد كل البعد عن صالة المغادرة
                                             المزدحمة.<span class="font-bold">يتوفر أيضًا الواي فاي.</span></p>
-                                        <div class="flex items-center justify-between">
-                                            <ul class="text-[var(--is-blue-3)]">
-                                                <li class="flex gap-1">
+                                        <div class="flex flex-col gap-8">
+                                            <ul
+                                                class="grid max-[430px]:grid-cols-1 grid-cols-2 gap-y-2 gap-x-5 text-[var(--is-blue-3)] text-xs">
+                                                <li class="flex gap-2 items-center">
                                                     <img src="/assets/icons/time.svg" alt="image" width="16"
                                                         height="16" />
-                                                    <p class="font-normal"><span class="font-bold">مفتوح يوميًا:</span>
+                                                    <p class="font-normal mt-[2px]"><span class="font-bold">
+                                                            مفتوح يوميًا:</span>
                                                         21:00 – 02:00</p>
                                                 </li>
-                                                <li class="flex gap-1">
-                                                    <img src="/assets/icons/time.svg" alt="image" width="16"
-                                                        height="16" />
-                                                    <p class="font-normal"><span class="font-bold">3 ساعات</span>
-                                                        لكل زيارة</p>
-                                                </li>
-                                                <li class="flex gap-1">
-                                                    <img src="/assets/icons/interface.svg" alt="image" width="16"
-                                                        height="16" />
-                                                    <p class="font-normal"><span class="font-bold">الأطفال:</span>
-                                                        مجاني</p>
-                                                </li>
-                                                <li class="flex gap-1">
+                                                <li class="flex gap-2 items-center">
                                                     <img src="/assets/icons/children.svg" alt="image" width="16"
                                                         height="16" />
-                                                    <p class="font-normal"><span class="font-bold">الأطفال مسموح
-                                                            بهم:</span>
+                                                    <p class="font-normal mt-[2px]"><span class="font-bold">الأطفال
+                                                            مسموح
+                                                            لهم:</span>
                                                         نعم</p>
                                                 </li>
-                                                <li class="flex gap-1">
+                                                <li class="flex gap-2 items-center">
+                                                    <img src="/assets/icons/time.svg" alt="image" width="16"
+                                                        height="16" />
+                                                    <p class="font-normal mt-[2px]"><span class="font-bold">3
+                                                            ساعات</span>
+                                                        لكل زيارة</p>
+                                                </li>
+                                                <li class="flex gap-2 items-center">
                                                     <img src="/assets/icons/users.svg" alt="image" width="16"
                                                         height="16" />
-                                                    <p class="font-normal"><span class="font-bold">البالغون:</span>
+                                                    <p class="font-normal mt-[2px]"><span
+                                                            class="font-bold">البالغون:</span>
                                                         £25 GBP</p>
                                                 </li>
+                                                <li class="flex gap-2 items-center">
+                                                    <img src="/assets/icons/interface.svg" alt="image" width="16"
+                                                        height="16" />
+                                                    <p class="font-normal mt-[2px]"><span
+                                                            class="font-bold">الرضع:</span>
+                                                        مجاني</p>
+                                                </li>
                                             </ul>
-                                            <div class="flex flex-col gap-1">
+                                            <div class="flex max-[430px]:flex-col gap-3">
                                                 <button
-                                                    class="close-btn text-center hover:before:bg-[var(--is-pink)] bg-[var(--is-blue)] text-white rounded-[15px] px-5 py-3 btn">
+                                                    class="close-btn w-full shadow-2xl text-center hover:before:bg-[var(--is-pink)] bg-[var(--is-blue)] text-white rounded-[15px] px-10 py-4 btn">
                                                     <div class="relative z-1 text-xs font-semibold">
                                                         <span>العودة إلى السابق</span>
                                                     </div>
                                                 </button>
                                                 <a href="steps.html"
-                                                    class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-5 py-3 btn">
+                                                    class="w-full shadow-2xl text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-10 py-4 btn">
                                                     <div class="relative z-1 text-xs font-semibold">
-                                                        <span>استمر</span>
+                                                        <span>استمرار</span>
                                                     </div>
                                                 </a>
                                             </div>
@@ -467,27 +474,30 @@
                                     </div>
                                 </div>
                                 <div id="showTimings" class="hidden flex flex-col gap-[15px]">
-                                    <span class="text-sm font-light text-[var(--is-blue-3)]">مضيء بواسطة جدار من <span
-                                            class="font-bold">ضوء طبيعي</span>, يوفر هذا الصالة المريحة والدافئة في
-                                        المطار بيئة دافئة للمسافرين للانتعاش قبل رحلتهم. يمكن للمسافرين مقاومة الجوع بـ
-                                        <span class="font-bold">قرمات خفيفة</span> على المقاعد والطاولات, <span
-                                            class="font-bold">مقسّم للخصوصية:</span> بعيد كل البعد عن صالة المغادرة
-                                        المزدحمة.<span class="font-bold">يتوفر أيضًا الواي فاي.</span></span>
-                                    <div class="flex items-center justify-between">
+                                    <div class="flex flex-col gap-8">
+                                        <span class="text-sm font-light text-[var(--is-blue-3)]">مضيء بواسطة جدار من
+                                            <span class="font-bold">ضوء طبيعي</span>, يوفر هذا الصالة المريحة والدافئة
+                                            في
+                                            المطار بيئة دافئة للمسافرين للانتعاش قبل رحلتهم. يمكن للمسافرين مقاومة الجوع
+                                            بـ
+                                            <span class="font-bold">قرمات خفيفة</span> على المقاعد والطاولات, <span
+                                                class="font-bold">مقسّم للخصوصية:</span> بعيد كل البعد عن صالة المغادرة
+                                            المزدحمة.<span class="font-bold">يتوفر أيضًا الواي فاي.</span></span>
                                         <div class="flex flex-col gap-5">
-                                            <h2>Open :</h2>
-                                            <ul class="text-[var(--is-blue-3)]">
+                                            <h2>مفتوح :</h2>
+                                            <ul
+                                                class="grid max-[430px]:grid-cols-1 grid-cols-2 gap-y-2 gap-x-5 text-[var(--is-blue-3)] text-xs">
                                                 <li class="flex gap-1">
                                                     <p class="font-normal">05:00 - 21:00 الأحد</p>
                                                 </li>
                                                 <li class="flex gap-1">
-                                                    <p class="font-normal">05:00 - 21:00 الاثنين</p>
+                                                    <p class="font-normal">05:00 - 21:00 الأثنين</p>
                                                 </li>
                                                 <li class="flex gap-1">
                                                     <p class="font-normal">05:00 - 21:00 الثلاثاء</p>
                                                 </li>
                                                 <li class="flex gap-1">
-                                                    <p class="font-normal">05:00 - 21:00 الأربعاء</p>
+                                                    <p class="font-normal">05:00 - 21:00 الإربعاء</p>
                                                 </li>
                                                 <li class="flex gap-1">
                                                     <p class="font-normal">05:00 - 21:00 الخميس</p>
@@ -500,15 +510,15 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <div class="flex flex-col gap-1">
+                                        <div class="flex max-[430px]:flex-col gap-3">
                                             <button
-                                                class="close-btn text-center hover:before:bg-[var(--is-pink)] bg-[var(--is-blue)] text-white rounded-[15px] px-5 py-3 btn">
+                                                class="close-btn w-full text-center hover:before:bg-[var(--is-pink)] bg-[var(--is-blue)] text-white rounded-[15px] px-5 py-3 btn">
                                                 <div class="relative z-1 text-xs font-semibold">
                                                     <span>العودة إلى السابق</span>
                                                 </div>
                                             </button>
                                             <a href="steps.html"
-                                                class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-5 py-3 btn">
+                                                class="w-full text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-5 py-3 btn">
                                                 <div class="relative z-1 text-xs font-semibold">
                                                     <span>استمر</span>
                                                 </div>
@@ -536,15 +546,15 @@
                                             السينما • يتوفر بوفيه خدمة ذاتية • ارتداء ملابس كاجوال أنيقة في جميع
                                             الأوقات</span>
                                     </div>
-                                    <div class="flex flex-col gap-1">
+                                    <div class="flex max-[430px]:flex-col gap-3">
                                         <button
-                                            class="close-btn text-center hover:before:bg-[var(--is-pink)] bg-[var(--is-blue)] text-white rounded-[15px] px-5 py-3 btn">
+                                            class="close-btn w-full text-center hover:before:bg-[var(--is-pink)] bg-[var(--is-blue)] text-white rounded-[15px] px-5 py-3 btn">
                                             <div class="relative z-1 text-xs font-semibold">
                                                 <span>العودة إلى السابق</span>
                                             </div>
                                         </button>
                                         <a href="steps.html"
-                                            class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-5 py-3 btn">
+                                            class="w-full text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-5 py-3 btn">
                                             <div class="relative z-1 text-xs font-semibold">
                                                 <span>استمر</span>
                                             </div>
@@ -577,7 +587,7 @@
                                 class="text-center style-hover-card h-full group transition-transform duration-500 shadow-[0_4px_5px_var(--is-black)] scale-100 hover:scale-103 hover:shadow-[4px_4px_15px_var(--is-black)] rounded-[25px] border border-2 border-[var(--is-pink)] hover:border-[var(--is-blue-3)] px-5 py-10 flex flex-col items-center justify-between gap-[24px] md:gap-[40px]">
                                 <div
                                     class="group-hover:bg-[var(--is-pink)] border border-[var(--is-pink)] flex items-center justify-center w-[80px] h-[80px] rounded-full">
-                                    <Image src="../assets/icons/countrys.svg" alt="lounges" width="35" height="25"
+                                    <Image src="../assets/icons/countrys.svg" alt="lounges" width="35" height="2    5"
                                         class="rounded-[15px] object-cover filter group-hover:invert group-hover:brightness-0" />
                                 </div>
                                 <h3 class="text-2xl font-medium">أكثر من 200 دولة</h3>

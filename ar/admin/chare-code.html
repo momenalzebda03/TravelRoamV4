@@ -65,11 +65,11 @@
                                                 مساءً</span>
                                         </div>
                                     </div>
-                                    <img src="/assets/icons/coop.svg" alt="coop" width="200" height="197"
+                                    <img src="/assets/icons/coop.svg" alt="coop" width="200" height="107"
                                         class="hidden xl:block" />
                                 </div>
                                 <ul
-                                    class="flex gap-1 flex-col absolute top-[25%] text-[var(--is-gray-15)] right-3 text-2 font-normal">
+                                    class="flex gap-1 flex-col absolute top-[25%] text-[var(--is-gray-15)] left-3 text-2 font-normal">
                                     <li class="rotate-90">
                                         1
                                     </li>
@@ -125,7 +125,7 @@
                                     </div>
                                 </div>
                                 <div id="cancelBooking"
-                                    class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-red)] text-white rounded-[15px] px-5 py-[12px] btn">
+                                    class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-red-1)] text-white rounded-[15px] px-5 py-[12px] btn">
                                     <div class="text-nowrap relative z-1 text-xs font-semibold">
                                         <span>إلغاء الحجز</span>
                                     </div>
@@ -155,7 +155,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mt-10 grid xl:grid-cols-2 gap-10">
+                    <div class="mt-10 grid xl:grid-cols-2 gap-12">
                         <div class="w-full flex flex-col gap-[10px]">
                             <div>
                                 <h2 class="text-3xl font-bold">صالة أسباير
@@ -163,7 +163,7 @@
                                 <span class="text-2xl text-[var(--is-blue-3)] font-medium">بلفاست جورج بيست
                                     مدينة</span>
                             </div>
-                            <div class="w-full h-[265px] relative cursor-pointer">
+                            <div class="w-full h-[333px] relative cursor-pointer">
                                 <img src="/assets/images/lounge-3.png" alt="image card" data-fancybox="gallery"
                                     data-src="/assets/images/lounge-3.png"
                                     class="object-cover rounded-[18px] w-full h-full" />
@@ -259,46 +259,49 @@
                                             class="font-bold">مقسمة للخصوصية:</span> بعيد كل البعد عن صالة المغادرة
                                         المزدحمة.<span class="font-bold">يتوفر أيضًا الواي فاي.</span>
                                     </p>
-                                    <div class="flex items-center justify-between">
-                                        <ul class="text-[var(--is-blue-3)]">
-                                            <li class="flex gap-1">
+                                    <div class="flex flex-col gap-8">
+                                        <ul
+                                            class="grid max-[430px]:grid-cols-1 grid-cols-2 gap-y-2 gap-x-5 text-[var(--is-blue-3)] text-xs">
+                                            <li class="flex gap-2 items-center">
                                                 <img src="/assets/icons/time.svg" alt="image" width="16" height="16" />
-                                                <p class="font-normal"><span class="font-bold">مفتوح يوميًا:</span>
+                                                <p class="font-normal mt-[2px]"><span class="font-bold">
+                                                        مفتوح يوميًا:</span>
                                                     21:00 – 02:00</p>
                                             </li>
-                                            <li class="flex gap-1">
-                                                <img src="/assets/icons/time.svg" alt="image" width="16" height="16" />
-                                                <p class="font-normal"><span class="font-bold">3 ساعات</span>
-                                                    لكل زيارة</p>
-                                            </li>
-                                            <li class="flex gap-1">
-                                                <img src="/assets/icons/interface.svg" alt="image" width="16"
-                                                    height="16" />
-                                                <p class="font-normal"><span class="font-bold">الرضع:</span>
-                                                    مجاني</p>
-                                            </li>
-                                            <li class="flex gap-1">
+                                            <li class="flex gap-2 items-center">
                                                 <img src="/assets/icons/children.svg" alt="image" width="16"
                                                     height="16" />
-                                                <p class="font-normal"><span class="font-bold">الأطفال مسموح لهم:</span>
+                                                <p class="font-normal mt-[2px]"><span class="font-bold">الأطفال مسموح
+                                                        لهم:</span>
                                                     نعم</p>
                                             </li>
-                                            <li class="flex gap-1">
+                                            <li class="flex gap-2 items-center">
+                                                <img src="/assets/icons/time.svg" alt="image" width="16" height="16" />
+                                                <p class="font-normal mt-[2px]"><span class="font-bold">3 ساعات</span>
+                                                    لكل زيارة</p>
+                                            </li>
+                                            <li class="flex gap-2 items-center">
                                                 <img src="/assets/icons/users.svg" alt="image" width="16" height="16" />
-                                                <p class="font-normal"><span class="font-bold">البالغون:</span>
+                                                <p class="font-normal mt-[2px]"><span class="font-bold">البالغون:</span>
                                                     £25 GBP</p>
                                             </li>
+                                            <li class="flex gap-2 items-center">
+                                                <img src="/assets/icons/interface.svg" alt="image" width="16"
+                                                    height="16" />
+                                                <p class="font-normal mt-[2px]"><span class="font-bold">الرضع:</span>
+                                                    مجاني</p>
+                                            </li>
                                         </ul>
-                                        <div class="flex flex-col gap-1">
+                                        <div class="flex max-[430px]:flex-col gap-3">
                                             <button
-                                                class="close-btn text-center hover:before:bg-[var(--is-pink)] bg-[var(--is-blue)] text-white rounded-[15px] px-5 py-3 btn">
-                                                <div class="relative z-1 text-xs font-semibold">
-                                                    <span>العودة إلى السابق</span>
+                                                class="close-btn w-full shadow-2xl text-center hover:before:bg-[var(--is-pink)] bg-black text-white rounded-[15px] px-10 py-4 btn">
+                                                <div class="relative z-1 text-xs font-bold">
+                                                    <span>عودة</span>
                                                 </div>
                                             </button>
                                             <a href="lounge-pass-history.html"
-                                                class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-5 py-3 btn">
-                                                <div class="relative z-1 text-xs font-semibold">
+                                                class="w-full shadow-2xl text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-10 py-4 btn">
+                                                <div class="relative z-1 text-xs font-bold">
                                                     <span>استمرار</span>
                                                 </div>
                                             </a>
@@ -418,7 +421,7 @@
                                 class="bg-white rounded-[20px] bg-[var(--is-gray-11)] shadow-[0_5px_5px_var(--is-black-2)] py-[33px] px-[18px] flex justify-between items-end">
                                 <ul class="flex flex-col gap-2 font-medium text-xl text-[var(--is-blue-7)]">
                                     <li>
-                                       صالة عادية
+                                        صالة عادية
                                     </li>
                                     <li>بالغ 1: $22</li>
                                     <li>طفل 1 $25</li>

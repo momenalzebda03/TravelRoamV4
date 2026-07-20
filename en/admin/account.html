@@ -24,82 +24,71 @@
                 <coop-sidebar></coop-sidebar>
                 <div class="md:me-10 flex flex-col gap-6 mt-[30px]">
                     <div class="flex flex-col gap-2 md:gap-4">
+                        <img src="/assets/icons/back.svg" alt="back" width="40" height="40"
+                            class="close-btn cursor-pointer" title="back" />
                         <h2 class="text-xl md:text-3xl font-normal">Welcome Back, <span
                                 class="font-semibold">Benny!</span></h2>
                         <p class="font-bold text-xl md:text-[42px] text-[var(--is-pink)]">Account</p>
                     </div>
                     <form method="" action=""
-                        class="mt-5 md:shadow-xl bg-[var(--is-gray-25)] pb-10 py-4 md:px-8 rounded-[18px] flex flex-col gap-5">
-                        <h2 class="font-bold text-2xl text-[var(--is-black-13)]">Your Details</h2>
-                        <div class="grid sm:grid-cols-2 w-full gap-5">
+                        class="mt-5 md:shadow-xl bg-[var(--is-gray-25)] pb-10 py-4 md:px-8 rounded-[18px] flex flex-col gap-10">
+                        <div class="flex flex-col gap-7">
+                            <h2 class="font-bold text-2xl text-[var(--is-black-13)]">Your Details</h2>
+                            <div class="grid sm:grid-cols-2 w-full gap-5">
 
-                            <label for="" class="flex flex-col gap-4">
-                                <span class="text-[var(--is-blue-3)] font-semibold text-lg">First Name</span>
-                                <input type="text"
-                                    class="bg-white py-3 px-4 rounded-[10px] border border-1 border-[var(--is-gray-7)]"
-                                    placeholder="Name" id="input" />
-                            </label>
+                                <label for="" class="flex flex-col gap-4">
+                                    <span class="text-[var(--is-blue-3)] font-semibold text-lg">First Name</span>
+                                    <input type="text"
+                                        class="bg-white py-3 px-4 rounded-[10px] border border-1 border-[var(--is-gray-7)]"
+                                        placeholder="Name" id="input" />
+                                </label>
 
-                            <label for="" class="flex flex-col gap-4">
-                                <span class="text-[var(--is-blue-3)] font-semibold text-lg">Last Name</span>
-                                <input type="text"
-                                    class="bg-white py-3 px-4 rounded-[10px] border border-1 border-[var(--is-gray-7)]"
-                                    placeholder="Name" />
-                            </label>
+                                <label for="" class="flex flex-col gap-4">
+                                    <span class="text-[var(--is-blue-3)] font-semibold text-lg">Last Name</span>
+                                    <input type="text"
+                                        class="bg-white py-3 px-4 rounded-[10px] border border-1 border-[var(--is-gray-7)]"
+                                        placeholder="Name" />
+                                </label>
 
-                            <label for="" class="flex flex-col gap-4">
-                                <span class="text-[var(--is-blue-3)] font-semibold text-lg">Email address</span>
-                                <input type="email"
-                                    class="bg-white py-3 px-4 rounded-[10px] border border-1 border-[var(--is-gray-7)]"
-                                    placeholder="yourname@email.com" />
-                            </label>
+                                <label for="" class="flex flex-col gap-4">
+                                    <span class="text-[var(--is-blue-3)] font-semibold text-lg">Email address</span>
+                                    <input type="email"
+                                        class="bg-white py-3 px-4 rounded-[10px] border border-1 border-[var(--is-gray-7)]"
+                                        placeholder="yourname@email.com" />
+                                </label>
 
-                            <label for="" class="flex flex-col gap-4">
+                                <label for="" class="flex flex-col gap-4">
 
-                                <span class="text-[var(--is-blue-3)] font-semibold text-xl">Mobile Number</span>
+                                    <span class="text-[var(--is-blue-3)] font-semibold text-xl">Mobile Number</span>
 
-                                <div class="relative dropdown-wrapper">
-                                    <div
-                                        class="border border-1 border-[var(--is-gray-7)] rounded-xl flex items-center relative">
+                                    <div class="relative dropdown-wrapper">
+                                        <div
+                                            class="border border-1 border-[var(--is-gray-7)] rounded-xl flex items-center relative">
 
-                                        <img src="/assets/icons/untitled-design.svg" id="flag"
-                                            class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 rounded-full" />
+                                            <img src="/assets/icons/untitled-design.svg" id="flag"
+                                                class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 rounded-full" />
 
-                                        <div class="flex items-center w-full bg-white rounded-[10px]">
-                                            <div class="flex items-center cursor-pointer"
-                                                onclick="openDestinationsByList('destination-list-1')">
-                                                <p class="phone-code ps-[40px]">+675</p>
-                                                <img src="/assets/icons/down-arrow.svg" alt="down arrow" width="20"
-                                                    height="20" />
+                                            <div class="flex items-center w-full bg-white rounded-[10px]">
+                                                <div class="flex items-center cursor-pointer"
+                                                    onclick="openDestinationsByList('destination-list-1')">
+                                                    <p class="phone-code ps-[40px]">+675</p>
+                                                    <img src="/assets/icons/down-arrow.svg" alt="down arrow" width="20"
+                                                        height="20" />
+                                                </div>
+                                                <input class="py-3 ms-8 w-full" type="number"
+                                                    placeholder="(000) 000-0000" />
                                             </div>
-                                            <input class="py-3 ms-8 w-full" type="number"
-                                                placeholder="(000) 000-0000" />
                                         </div>
+                                        <ul id="destination-list-1"
+                                            class="shadow-2xl dropdown-list !block !px-0 absolute w-full mt-3 rounded-[12px] !bg-white overflow-hidden z-50">
+                                        </ul>
                                     </div>
-                                    <ul id="destination-list-1"
-                                        class="shadow-2xl dropdown-list !block !px-0 absolute w-full mt-3 rounded-[12px] !bg-white overflow-hidden z-50">
-                                    </ul>
-                                </div>
-                            </label>
+                                </label>
 
+                            </div>
                         </div>
 
-                        <div class="my-5 flex xl:w-[45%] gap-3">
-                            <a href="home.html"
-                                class="w-full xl:w-[50%] text-nowrap text-center hover:before:bg-black bg-white hover:text-white text-[var(--is-blue-3)] rounded-[20px] border border-3 border-[var(--is-blue-3)] py-[14px] btn">
-                                <div class="relative z-1 text-sm font-bold">
-                                    <span>Back</span>
-                                </div>
-                            </a>
-                            <button
-                                class="hover:text-black w-full xl:w-[50%] text-nowrap text-center hover:before:bg-white bg-black text-white rounded-[20px] border border-3 border-[var(--is-blue-3)] py-[14px] btn">
-                                <div class="relative z-1 text-sm font-bold">
-                                    <span>Manage eSIMs</span>
-                                </div>
-                            </button>
-                        </div>
-
-                        <div class="flex flex-col gap-4">
+                        <div class="flex flex-col gap-7">
                             <h2 class="font-bold text-2xl text-[var(--is-black-13)]">Your Address</h2>
                             <div class="grid sm:grid-cols-2 gap-y-3 sm:gap-y-7 gap-x-10">
 

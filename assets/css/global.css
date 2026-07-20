@@ -360,6 +360,11 @@ html {
     color: white;
 }
 
+.fancybox__slide.has-image.is-animating,
+.fancybox__slide.has-image.is-selected {
+    background-color: transparent !important;
+}
+
 .custom-checkbox {
     appearance: none;
     width: 18px;
