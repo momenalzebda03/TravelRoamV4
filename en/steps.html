@@ -99,7 +99,7 @@
                                     <span class="text-[var(--is-blue-3)] text-xl font-bold">TIME</span>
                                     <div id="openTime"
                                         class="custom-class p-3 rounded-[10px] bg-[var(--is-gray-27)] cursor-pointer !text-[var(--is-blue-3)] flex items-center justify-between">
-                                         <span id="timeText" class="text-gray-400">Select</span>
+                                        <span id="timeText" class="text-gray-400">Select</span>
                                         <img src="../assets/icons/time-1.svg" class="w-[20px] h-[20px]" />
                                     </div>
                                 </div>
@@ -195,16 +195,16 @@
                                                         <span
                                                             class="text-md font-medium text-[var(--is-gray-7)]">Infants
                                                             (under 5)</span>
-                                                        <span
-                                                            class="text-sm font-medium text-[var(--is-blue-3)]">${adults
-                                                            * 42}</span>
+                                                        <span id="infants42"
+                                                            class="text-sm font-medium text-[var(--is-blue-3)]">$
+                                                            0</span>
                                                     </div>
                                                     <div
                                                         class="flex justify-between py-[6px] px-[7px] w-[100px] rounded-full bg-white shadow-[0_1px_5px_var(--is-black-2)]">
-                                                        <button type="button" class="cursor-pointer"
-                                                            title="Incomplete">-</button>
-                                                        <span>{adults}</span>
-                                                        <button type="button" class="cursor-pointer"
+                                                        <button type="button" class="cursor-pointer" id="minusInfants"
+                                                            title="Minus">-</button>
+                                                        <span id="infants">0</span>
+                                                        <button type="button" class="cursor-pointer" id="plusInfants"
                                                             title="Plus">+</button>
                                                     </div>
                                                 </div>
@@ -215,17 +215,16 @@
                                                         <span class="text-md font-medium text-[var(--is-gray-7)]">Senior
                                                             Citizens
                                                             (12)</span>
-                                                        <span
-                                                            class="text-sm font-medium text-[var(--is-blue-3)]">${child
-                                                            *
-                                                            22}</span>
+                                                        <span id="seniors22"
+                                                            class="text-sm font-medium text-[var(--is-blue-3)]">$
+                                                            0</span>
                                                     </div>
                                                     <div
                                                         class="flex justify-between py-[6px] px-[7px] w-[100px] rounded-full bg-white shadow-[0_1px_5px_var(--is-black-2)]">
-                                                        <button type="button" class="cursor-pointer"
-                                                            title="Incomplete">-</button>
-                                                        <span>{adults}</span>
-                                                        <button type="button" class="cursor-pointer"
+                                                        <button type="button" class="cursor-pointer" id="minusSeniors"
+                                                            title="Minus">-</button>
+                                                        <span id="seniors">0</span>
+                                                        <button type="button" class="cursor-pointer" id="plusSeniors"
                                                             title="Plus">+</button>
                                                     </div>
                                                 </div>

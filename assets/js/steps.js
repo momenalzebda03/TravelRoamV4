@@ -106,14 +106,25 @@ document.addEventListener("click", (e) => {
 
 var plusAdults = document.getElementById("plusAdults");
 var minusAdults = document.getElementById("minusAdults");
+var plusInfants = document.getElementById("plusInfants");
+var minusInfants = document.getElementById("minusInfants");
 
+var seniors = 0;
+var infants = 0;
 var adults = 0;
 var child = 0;
 var totalEl = document.getElementById("total");
 var passengers = document.getElementById("passengers");
 
+var plusSeniors = document.getElementById("plusSeniors");
+var minusSeniors = document.getElementById("minusSeniors");
+var seniorsEl = document.getElementById("seniors");
+var seniors22 = document.getElementById("seniors22");
+
 var adults42 = document.getElementById("adults42");
 var adultsEl = document.getElementById("adults");
+var infantsEl = document.getElementById("infants");
+var infants42 = document.getElementById("infants42");
 
 var plusChild = document.getElementById("plusChild");
 var minusChild = document.getElementById("minusChild");
@@ -122,6 +133,8 @@ var child22 = document.getElementById("child22");
 
 const ADULT_PRICE = 42;
 const CHILD_PRICE = 42;
+const INFANT_PRICE = 42;
+const SENIOR_PRICE = 22;
 
 var subtotalEl = document.getElementById("subtotal");
 
@@ -129,19 +142,25 @@ function calculate() {
     return {
         adultsTotal: adults * ADULT_PRICE,
         childTotal: child * CHILD_PRICE,
-        passengersTotal: adults + child
+        infantsTotal: infants * INFANT_PRICE,
+        seniorsTotal: seniors * SENIOR_PRICE,
+        passengersTotal: adults + child + infants + seniors
     };
 }
 
 function renderAll() {
     const calc = calculate();
-    const subtotal = calc.adultsTotal + calc.childTotal;
+    const subtotal = calc.adultsTotal + calc.childTotal + calc.infantsTotal + calc.seniorsTotal;
 
     if (adultsEl) adultsEl.textContent = adults;
     if (childEl) childEl.textContent = child;
+    if (infantsEl) infantsEl.textContent = infants;
+    if (seniorsEl) seniorsEl.textContent = seniors;
 
     if (adults42) adults42.textContent = `$ ${calc.adultsTotal}`;
     if (child22) child22.textContent = `$ ${calc.childTotal}`;
+    if (infants42) infants42.textContent = `$ ${calc.infantsTotal}`;
+    if (seniors22) seniors22.textContent = `$ ${calc.seniorsTotal}`;
 
     if (passengers) passengers.textContent = calc.passengersTotal;
 
@@ -160,6 +179,16 @@ function updateCounter(type, action) {
         if (action === "minus" && child > 0) child--;
     }
 
+    if (type === "infants") {
+        if (action === "plus") infants++;
+        if (action === "minus" && infants > 0) infants--;
+    }
+
+    if (type === "seniors") {
+        if (action === "plus") seniors++;
+        if (action === "minus" && seniors > 0) seniors--;
+    }
+
     renderAll();
 }
 
@@ -167,6 +196,10 @@ plusAdults.onclick = () => updateCounter("adults", "plus");
 minusAdults.onclick = () => updateCounter("adults", "minus");
 plusChild.onclick = () => updateCounter("child", "plus");
 minusChild.onclick = () => updateCounter("child", "minus");
+plusInfants.onclick = () => updateCounter("infants", "plus");
+minusInfants.onclick = () => updateCounter("infants", "minus");
+plusSeniors.onclick = () => updateCounter("seniors", "plus");
+minusSeniors.onclick = () => updateCounter("seniors", "minus");
 
 renderAll();
 
@@ -328,6 +361,10 @@ function buildStepsData() {
     for (let i = 1; i <= child; i++) {
         stepsData.push({ type: "Child", index: i });
     }
+
+    for (let i = 1; i <= infants; i++) {
+        stepsData.push({ type: "Infant", index: i });
+    }
 }
 
 function renderCurrentStep() {
@@ -353,6 +390,7 @@ function renderOrderSummary() {
                                             </li>
                                             <li class="text-xl text-[var(--is-blue-5)]">${t("Adult", "بالغ")} : ${adults}</li>
                                             <li class="text-xl text-[var(--is-blue-5)]">${t("Child", "طفل")} : ${child}</li>
+                                            <li class="text-xl text-[var(--is-blue-5)]">${t("Infant", "رضيع")} : ${infants}</li>
                                         </ul>
                                         <span class="text-xl font-bold">${totalEl.textContent}</span>
                                     </div>

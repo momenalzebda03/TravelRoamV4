@@ -149,10 +149,19 @@
                             least one special character and
                             one capital letter.</p>
 
-                        <label for="remeber">
-                            <input type="checkbox" id="remeber" />
-                            I would like to receive promotional emails.
+                        <label class="relative flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" id="remember" class="peer appearance-none w-4 h-4 rounded-[4px] bg-white
+               checked:bg-[var(--is-pink)] relative transition-colors" />
+
+                            <svg class="absolute top-[16.6%] inset-0 w-4 h-4 p-[2px] pointer-events-none opacity-0 peer-checked:opacity-100 transition-opacity"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+
+                            <span>I would like to receive promotional emails</span>
                         </label>
+
                         <div class="flex gap-3 flex-col">
                             <div class="flex justify-center">
                                 <button type="submit"
