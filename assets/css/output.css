@@ -240,6 +240,9 @@
   .inset-y-0 {
     inset-block: calc(var(--spacing) * 0);
   }
+  .end-3 {
+    inset-inline-end: calc(var(--spacing) * 3);
+  }
   .-top-20 {
     top: calc(var(--spacing) * -20);
   }
@@ -3854,6 +3857,11 @@
       padding-inline: 40px;
     }
   }
+  .md\:px-\[50px\] {
+    @media (width >= 48rem) {
+      padding-inline: 50px;
+    }
+  }
   .md\:px-\[100px\] {
     @media (width >= 48rem) {
       padding-inline: 100px;
@@ -3862,6 +3870,11 @@
   .md\:px-\[107px\] {
     @media (width >= 48rem) {
       padding-inline: 107px;
+    }
+  }
+  .md\:px-\[150px\] {
+    @media (width >= 48rem) {
+      padding-inline: 150px;
     }
   }
   .md\:\!py-\[10px\] {

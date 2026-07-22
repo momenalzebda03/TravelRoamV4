@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/logo.svg" />
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/output.css">
+    <title>شركاء السفر والتجوال</title>
+</head>
+
+<body>
+    <div id="loadingOverlay" class="fixed inset-0 bg-white flex justify-center items-center z-[9999]">
+        <div class="w-16 h-16 border-6 border-gray-200 border-t-[var(--is-blue)] rounded-full animate-spin"></div>
+    </div>
+    <div id="app" style="display: none;">
+
+        <!-- start register -->
+        <section class="top-0 left-0 pt-10 pb-10 absolute bg-cover
+    bg-center
+    bg-no-repeat bg-[url('../images/bg-login.png')] w-full h-auto min-h-full">
+            <div class="w-full h-full flex justify-center items-center">
+                <div
+                    class="flex flex-col gap-[23px] text-white rounded-[15px] bg-[var(--is-blue-8)] px-10 md:px-20 py-5 w-[90%] lg:w-[45%]">
+                    <div class="flex justify-center">
+                        <img src="../assets/icons/logo.svg" alt="logo" class="w-60 h-20" />
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <h2 class="font-semibold text-xl md:text-3xl">خطوة أخيرة</h2>
+                        <p class="font-normal text-base">سجّل مع شريكنا في البيانات <span
+                                class="font-bold">TravelRoam</span>، لنعرف
+                            إلى أين نُرسل
+                            باقة الإنترنت المجانية أثناء سفرك.</p>
+                    </div>
+
+                    <form action="login.html" method="" class="flex flex-col gap-4">
+                        <div class="flex gap-3">
+                            <input type="text"
+                                class="input-autofill border-1 border-white px-[15px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
+                                placeholder="الاسم الأول" />
+                            <input type="text"
+                                class="input-autofill border-1 border-white px-[15px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
+                                placeholder="اسم العائلة" />
+                        </div>
+                        <input type="email"
+                            class="input-autofill border-1 border-white px-[15px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
+                            placeholder="البريد الإلكتروني" />
+
+                        <div class="relative dropdown-wrapper">
+                            <div class="border-1 border-white rounded-xl flex items-center relative">
+
+                                <img id="flag" src="../assets/icons/untitled-design.svg"
+                                    class="w-5 h-5 absolute end-3 top-1/2 -translate-y-1/2 rounded-full" />
+                                <div
+                                    class="flex items-center w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]">
+                                    <p class="phone-code ps-[40px] pe-4 cursor-pointer"
+                                        onclick="openDestinationsByList('destination-list-1')">+675</p>
+                                    <input class="input-autofill w-full py-2 placeholder:text-white" type="number"
+                                        placeholder="رقم الهاتف المحمول" />
+                                </div>
+                            </div>
+                            <ul id="destination-list-1"
+                                class="shadow-2xl dropdown-list !block !px-0 absolute w-full mt-3 rounded-[12px] !bg-white overflow-hidden z-50">
+                            </ul>
+                        </div>
+
+                        <div class="relative dropdown-wrapper">
+                            <div class="rounded-xl flex items-center relative">
+
+                                <img id="flag" src="../assets/icons/untitled-design.svg"
+                                    class="w-5 h-5 absolute end-3 top-1/2 -translate-y-1/2 rounded-full" />
+
+                                <input type="text"
+                                    class="input-autofill border-1 border-white px-[40px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
+                                    placeholder="بلد الإقامة" id="destination-input-2"
+                                    oninput="filterDestinations(this.value, this)" onfocus="openDestinations(this)" />
+                            </div>
+
+                            <ul id="destination-list-2"
+                                class="shadow-2xl dropdown-list !block !px-0 absolute w-full mt-3 rounded-[12px] !bg-white overflow-hidden z-50">
+                            </ul>
+
+                        </div>
+
+                        <input type="text"
+                            class="input-autofill border-1 border-white px-[15px] py-2 w-full placeholder:text-white bg-[var(--is-gray-16)] rounded-[10px]"
+                            placeholder="رمز الإحالة" />
+
+                        <div
+                            class="relative flex items-center border-1 border-white bg-[var(--is-gray-16)] rounded-[10px]">
+
+                            <input type="password" placeholder="كلمة المرور"
+                                class="input-autofill password-input placeholder:text-white w-full px-[15px] py-2 bg-transparent outline-none text-white" />
+
+                            <button type="button" class="toggle-password absolute left-4 flex items-center">
+                                <svg class="eye-open h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <img src="../assets/icons/eye-close.svg" alt="close eye" width="24" height="24"
+                                    class="eye-closed h-5 w-5 text-white hidden" />
+                            </button>
+                        </div>
+
+                        <div
+                            class="relative flex items-center border-1 border-white bg-[var(--is-gray-16)] rounded-[10px]">
+
+                            <input type="password" placeholder="تأكيد كلمة المرور"
+                                class="password-input placeholder:text-white w-full px-[15px] py-2 bg-transparent outline-none text-white" />
+
+                            <button type="button" class="toggle-password absolute left-4 flex items-center">
+                                <svg class="eye-open h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <img src="../assets/icons/eye-close.svg" alt="close eye" width="24" height="24"
+                                    class="eye-closed h-5 w-5 text-white hidden" />
+                            </button>
+                        </div>
+
+                        <p class="text-[var(--bg-gray)]">يجب أن تتكوّن كلمة المرور من 6 أحرف على الأقل، وتحتوي على
+                            رمز خاص واحد وحرف كبير واحد على الأقل.</p>
+
+                        <label for="remeber">
+                            <input type="checkbox" id="remeber" />
+                            أرغب في تلقّي رسائل بريد إلكتروني ترويجية.
+                        </label>
+                        <div class="flex gap-3 flex-col">
+                            <div class="flex justify-center">
+                                <button type="submit"
+                                    class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-13 py-[15px] btn">
+                                    <div class="relative z-1 text-sm font-semibold">
+                                        <span>إنشاء حساب</span>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="my-2 flex items-center flex-col gap-2">
+
+                                <div class="w-full flex justify-center items-center gap-3 text-center">
+                                    <div class="mt-[3px] w-[40%] relative h-[1.5px]">
+                                        <div class="absolute left-0 bottom-0 w-full h-full bg-white opacity-[0.5]">
+                                        </div>
+                                    </div>
+                                    <p class="text-nowrap">أو</p>
+                                    <div class="mt-[3px] w-[40%] relative h-[1.5px]">
+                                        <div class="absolute left-0 bottom-0 w-full h-full bg-white opacity-[0.5]">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="w-[65%] flex gap-4">
+                                    <div title="البريد الإلكتروني"
+                                        class="cursor-pointer w-full border border-white rounded-full flex justify-center items-center py-3">
+                                        <img src="../assets/icons/mail.svg" alt="البريد الإلكتروني"
+                                            class="w-[24px] h-[24px]" />
+                                    </div>
+                                    <div title="أبل"
+                                        class="cursor-pointer w-full border border-white rounded-full flex justify-center items-center py-3">
+                                        <img src="../assets/icons/apple.svg" alt="أبل"
+                                            class="w-[24px] h-[24px] invert" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex text-center justify-center">
+                                <p class="text-[var(--bg-gray)]">بتسجيلك، فإنك توافق على
+                                    <a title="الشروط والأحكام" href="terms-of-service.html" class="underline">الشروط
+                                        والأحكام</a> و
+                                    <a title="سياسة الخصوصية" href="privacy-policy.html" class="underline">سياسة
+                                        الخصوصية.</a>
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- end register -->
+    </div>
+</body>
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/navbar-layout.js"></script>
+<script src="../assets/js/footer-layout.js"></script>
+<script src="../assets/js/global.js"></script>
+<script src="../assets/js/loginAndRegister.js"></script>
+
+</html>
