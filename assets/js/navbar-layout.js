@@ -66,8 +66,12 @@ class CoopNavbar extends HTMLElement {
       'purchase-details': 'bg-[var(--is-blue)]',
       'login': 'bg-[var(--is-blue)]',
       'register': 'bg-[var(--is-blue)]',
-      'admin': 'bg-[var(--is-blue)]',
+      'dashboard': 'bg-[var(--is-blue)]',
+      'account': 'bg-[var(--is-blue)]',
       'sim': 'bg-[var(--is-blue)]',
+      'notifications': 'bg-[var(--is-blue)]',
+      'support': 'bg-[var(--is-blue)]',
+      'chare-code': 'bg-[var(--is-blue)]',
       'credit-top-up': 'bg-[var(--is-blue)]',
       'payment': 'bg-[var(--is-blue)]',
       'not-found': 'bg-[var(--is-blue)]',
@@ -225,7 +229,7 @@ class CoopNavbar extends HTMLElement {
              ` : ''}
        ${this.isAdmin ? `
       <li class="${this._active('home')} flex">
-                        <a class="!border-0" title="${this.isArabic ? "لوحىة التحكم" : 'Dashboard'}" href="home.html">
+                        <a class="!border-0" title="${this.isArabic ? "لوحىة التحكم" : 'Dashboard'}" href="dashboard.html">
                             <span class="text-nowrap">${this.isArabic ? "لوحة التحكم" : 'Dashboard'}</span>
                         </a>
                     </li>
