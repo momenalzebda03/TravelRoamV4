@@ -7,6 +7,15 @@
  * الـ mobile hamburger بس عنده listener خاص لأنو ما في global function له.
  */
 
+function getUser() {
+  try {
+    const stored = localStorage.getItem("user");
+    return stored ? JSON.parse(stored) : null;
+  } catch {
+    return null;
+  }
+}
+
 class CoopNavbar extends HTMLElement {
 
   static get observedAttributes() {
@@ -89,12 +98,7 @@ class CoopNavbar extends HTMLElement {
   }
 
   getUser() {
-    try {
-      const stored = localStorage.getItem("user");
-      return stored ? JSON.parse(stored) : null;
-    } catch {
-      return null;
-    }
+    return getUser();
   }
 
   get isAdmin() {

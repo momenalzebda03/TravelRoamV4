@@ -61,164 +61,182 @@ bg-no-repeat -z-1">
                     </div>
                     <div class="regular-bundle flex items-center justify-center">
                         <div id="country" onclick="openModal('countryModal')"
-                            data-bundle='{"name":"5GB Plan","price":17,"type":"bundle"}'
-                            class="w-full hidden shadow-xl justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
-                            <div class="flex flex-col gap-[20px]">
-                                <div class="flex flex-wrap gap-3 justify-between items-center w-full">
-                                    <div class="flex items-center gap-[11px]">
-                                        <img src="../assets/icons/germany.svg" alt="germany"
-                                            class="w-[30px] lg:w-[50px] h-[30px] lg:h-[50px] rounded-full object-cover" />
-                                        <p class="font-semibold text-md lg:text-4xl">ألمانيا</p>
-                                    </div>
+                            data-bundle='{"name":"5GB Plan","price":17,"type":"bundle"}' class="w-full shadow-xl rounded-[25px] text-white bg-cover cursor-pointer
+                        bg-center
+                        bg-no-repeat bg-[url('/assets/images/plan-german.png')]">
+                            <div
+                                class="bg-gradient-to-b from-[var(--is-pink-10)] to-[var(--is-blue-11)] flex justify-between flex-col gap-8 rounded-[25px] py-8 px-5">
+                                <div class="flex flex-col gap-[20px]">
+                                    <div class="flex flex-wrap gap-3 justify-between items-center w-full">
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="../assets/icons/germany.svg" alt="germany"
+                                                class="w-[30px] lg:w-[50px] h-[30px] lg:h-[50px] rounded-full object-cover" />
+                                            <p class="font-semibold text-md lg:text-4xl">ألمانيا</p>
+                                        </div>
 
-                                    <div
-                                        class="border-1 border-gray-500 flex items-center gap-1 text-xs lg:text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[12px] py-[6px]">
-                                        <img src="../assets/icons/star.svg" alt="germany"
-                                            class="w-3 lg:w-5 h-3 lg:h-5 rounded-full object-cover" />
-                                        <span class="leading-none">موصى به</span>
-                                    </div>
+                                        <div
+                                            class="border-1 border-gray-500 flex items-center gap-1 text-xs lg:text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[12px] py-[6px]">
+                                            <img src="../assets/icons/star.svg" alt="germany"
+                                                class="w-3 lg:w-5 h-3 lg:h-5 rounded-full object-cover" />
+                                            <span class="leading-none">موصى به</span>
+                                        </div>
 
-                                </div>
-                                <div class="flex flex-wrap gap-2 justify-between">
-                                    <div class="flex flex-col gap-2">
-                                        <h3 class="font-bold text-4xl">5 جيجا</h3>
-                                        <p class="text-nowrap font-light text-xs">صالحة لمدة 30 يوم من
-                                            تاريخ التفعيل
-                                        </p>
                                     </div>
-                                    <h3 class="hidden lg:block font-bold text-4xl">$17.00</h3>
+                                    <div class="flex flex-wrap gap-2 justify-between">
+                                        <div class="flex flex-col gap-2">
+                                            <h3 class="font-bold text-4xl">5 جيجا</h3>
+                                            <p class="text-nowrap font-light text-xs">صالحة لمدة 30 يوم من
+                                                تاريخ التفعيل
+                                            </p>
+                                        </div>
+                                        <h3 class="hidden lg:block font-bold text-4xl">$17.00</h3>
+                                    </div>
                                 </div>
+                                <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                    <li class="flex items-center gap-2 mx-2">
+                                        <img src="../assets/icons/wifi.svg" alt="wifi" class="w-[43px] h-[43px]" />
+                                        <p class="font-medium text-xs">9 ساعات <br /> استماع للموسيقى</p>
+                                    </li>
+                                    <li class="flex items-center gap-2 mx-2">
+                                        <img src="../assets/icons/youtube.svg" alt="youtube"
+                                            class="w-[43px] h-[43px]" />
+                                        <p class="font-medium text-xs">6 ساعات <br /> فيديو</p>
+                                    </li>
+                                    <li class="flex items-center gap-2 mx-2">
+                                        <img src="../assets/icons/mail.svg" alt="mail" class="w-[43px] h-[43px]" />
+                                        <p class="font-medium text-xs">18 ساعة <br /> تصفح</p>
+                                    </li>
+                                </ul>
+                                <h3 class="text-end lg:hidden font-bold text-4xl">$17.00</h3>
                             </div>
-                            <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                <li class="flex items-center gap-2 mx-2">
-                                    <img src="../assets/icons/wifi.svg" alt="wifi" class="w-[43px] h-[43px]" />
-                                    <p class="font-medium text-xs">9 ساعات <br /> استماع للموسيقى</p>
-                                </li>
-                                <li class="flex items-center gap-2 mx-2">
-                                    <img src="../assets/icons/youtube.svg" alt="youtube" class="w-[43px] h-[43px]" />
-                                    <p class="font-medium text-xs">6 ساعات <br /> فيديو</p>
-                                </li>
-                                <li class="flex items-center gap-2 mx-2">
-                                    <img src="../assets/icons/mail.svg" alt="mail" class="w-[43px] h-[43px]" />
-                                    <p class="font-medium text-xs">18 ساعة <br /> تصفح</p>
-                                </li>
-                            </ul>
-                            <h3 class="text-end lg:hidden font-bold text-4xl">$17.00</h3>
                         </div>
                         <div id="region" onclick="openModal('regionModal')"
-                            data-bundle='{"name":"5GB Plan","price":17,"type":"bundle"}'
-                            class="hidden shadow-xl w-full h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-4)]">
-                            <div class="flex flex-col gap-[20px]">
-                                <div class="flex flex-wrap gap-3 justify-between items-center w-full">
-                                    <div class="flex items-center gap-[11px]">
-                                        <img src="../assets/icons/aferica.svg" alt="aferica"
-                                            class="w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] rounded-full object-cover" />
-                                        <p class="font-semibold text-xl lg:text-4xl">أفريقيا</p>
+                            data-bundle='{"name":"5GB Plan","price":17,"type":"bundle"}' class="shadow-xl w-full h-full rounded-[25px] text-white bg-cover cursor-pointer
+                        bg-center
+                        bg-no-repeat bg-[url('/assets/images/plan-regional.png')]">
+                            <div
+                                class="bg-gradient-to-b from-[var(--is-blue-12)] to-[var(--is-blue-11)] flex justify-between flex-col gap-8 rounded-[25px] py-8 px-5">
+                                <div class="flex flex-col gap-[20px]">
+                                    <div class="flex flex-wrap gap-3 justify-between items-center w-full">
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="../assets/icons/aferica.svg" alt="aferica"
+                                                class="w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] rounded-full object-cover" />
+                                            <p class="font-semibold text-xl lg:text-4xl">أفريقيا</p>
+                                        </div>
+
+                                        <div
+                                            class="border-1 border-gray-500 flex items-center gap-1 text-xs lg:text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[12px] py-[6px]">
+                                            <img src="../assets/icons/star.svg" alt="germany"
+                                                class="w-3 lg:w-5 h-3 lg:h-5 rounded-full object-cover" />
+                                            <span class="leading-none">موصى به</span>
+                                        </div>
+
                                     </div>
 
-                                    <div
-                                        class="border-1 border-gray-500 flex items-center gap-1 text-xs lg:text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[12px] py-[6px]">
-                                        <img src="../assets/icons/star.svg" alt="germany"
-                                            class="w-3 lg:w-5 h-3 lg:h-5 rounded-full object-cover" />
-                                        <span class="leading-none">موصى به</span>
+                                    <div class="flex flex-wrap gap-2 justify-between">
+                                        <div class="flex flex-col gap-2">
+                                            <h3 class="font-bold text-4xl">5 جيجا</h3>
+                                            <p class="text-nowrap font-light text-xs">صالحة لمدة 30 يوم من
+                                                تاريخ التفعيل
+                                            </p>
+                                        </div>
+                                        <h3 class="hidden lg:block font-bold text-4xl">$17.00</h3>
                                     </div>
-
                                 </div>
-                                
-                                <div class="flex flex-wrap gap-2 justify-between">
-                                    <div class="flex flex-col gap-2">
-                                        <h3 class="font-bold text-4xl">5 جيجا</h3>
-                                        <p class="text-nowrap font-light text-xs">صالحة لمدة 30 يوم من
-                                            تاريخ التفعيل
-                                        </p>
-                                    </div>
-                                    <h3 class="hidden lg:block font-bold text-4xl">$17.00</h3>
-                                </div>
+                                <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                    <li class="flex items-center gap-2 mx-2">
+                                        <img src="../assets/icons/wifi.svg" alt="wifi" class="w-[43px] h-[43px]" />
+                                        <p class="font-medium text-xs">9 ساعات <br /> استماع للموسيقى</p>
+                                    </li>
+                                    <li class="flex items-center gap-2 mx-2">
+                                        <img src="../assets/icons/youtube.svg" alt="youtube"
+                                            class="w-[43px] h-[43px]" />
+                                        <p class="font-medium text-xs">6 ساعات <br /> فيديو</p>
+                                    </li>
+                                    <li class="flex items-center gap-2 mx-2">
+                                        <img src="../assets/icons/mail.svg" alt="mail" class="w-[43px] h-[43px]" />
+                                        <p class="font-medium text-xs">18 ساعة <br /> تصفح</p>
+                                    </li>
+                                </ul>
+                                <h3 class="text-end lg:hidden font-bold text-4xl">$17.00</h3>
                             </div>
-                            <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                <li class="flex items-center gap-2 mx-2">
-                                    <img src="../assets/icons/wifi.svg" alt="wifi" class="w-[43px] h-[43px]" />
-                                    <p class="font-medium text-xs">9 ساعات <br /> استماع للموسيقى</p>
-                                </li>
-                                <li class="flex items-center gap-2 mx-2">
-                                    <img src="../assets/icons/youtube.svg" alt="youtube" class="w-[43px] h-[43px]" />
-                                    <p class="font-medium text-xs">6 ساعات <br /> فيديو</p>
-                                </li>
-                                <li class="flex items-center gap-2 mx-2">
-                                    <img src="../assets/icons/mail.svg" alt="mail" class="w-[43px] h-[43px]" />
-                                    <p class="font-medium text-xs">18 ساعة <br /> تصفح</p>
-                                </li>
-                            </ul>
-                            <h3 class="text-end lg:hidden font-bold text-4xl">$17.00</h3>
                         </div>
                     </div>
                     <div class="list-unlimited-plans flex items-center justify-center hidden">
                         <div id="country" onclick="openModal('countryModal')"
-                            data-bundle='{"name":"Unlimited Plan","price":25,"type":"unlimited"}'
-                            class="hidden shadow-xl w-full h-full justify-between flex flex-col gap-6 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-3)]">
-                            <div class="flex flex-col gap-[20px]">
-                                <div class="flex flex-wrap gap-3 justify-between items-center w-full">
-                                    <div class="flex items-center gap-[11px]">
-                                        <img src="../assets/icons/germany.svg" alt="germany"
-                                            class="w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] rounded-full object-cover" />
-                                        <p class="font-semibold text-xl lg:text-4xl">ألمانيا</p>
-                                    </div>
+                            data-bundle='{"name":"Unlimited Plan","price":25,"type":"unlimited"}' class="shadow-xl w-full h-full rounded-[25px] text-white bg-cover cursor-pointer
+                        bg-center
+                        bg-no-repeat bg-[url('/assets/images/plan-german.png')]">
+                            <div
+                                class="bg-gradient-to-b from-[var(--is-blue-3)] to-[var(--is-pink-11)] flex justify-between flex-col gap-8 rounded-[25px] py-8 px-5">
+                                <div class="flex flex-col gap-[20px]">
+                                    <div class="flex flex-wrap gap-3 justify-between items-center w-full">
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="../assets/icons/germany.svg" alt="germany"
+                                                class="w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] rounded-full object-cover" />
+                                            <p class="font-semibold text-xl lg:text-4xl">ألمانيا</p>
+                                        </div>
 
-                                    <div
-                                        class="border-1 border-gray-500 flex items-center gap-1 text-xs lg:text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[12px] py-[6px]">
-                                        <img src="../assets/icons/star.svg" alt="germany"
-                                            class="w-3 lg:w-5 h-3 lg:h-5 rounded-full object-cover" />
-                                        <span class="leading-none">موصى به</span>
-                                    </div>
+                                        <div
+                                            class="border-1 border-gray-500 flex items-center gap-1 text-xs lg:text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[12px] py-[6px]">
+                                            <img src="../assets/icons/star.svg" alt="germany"
+                                                class="w-3 lg:w-5 h-3 lg:h-5 rounded-full object-cover" />
+                                            <span class="leading-none">موصى به</span>
+                                        </div>
 
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex flex-col gap-4">
-                                <div class="flex flex-wrap gap-2 justify-between">
-                                    <h3 class="font-bold text-4xl">إنترنت غير محدود 7 أيام</h3>
-                                    <h3 class="font-bold text-4xl">$17.00</h3>
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex flex-wrap gap-2 justify-between">
+                                        <h3 class="font-bold text-4xl">إنترنت غير محدود 7 أيام</h3>
+                                        <h3 class="font-bold text-4xl">$17.00</h3>
+                                    </div>
+                                    <p class="opacity-90 text-nowrap font-medium text-xs">إنترنت غير محدود*
+                                    </p>
+                                    <p class="opacity-90 font-medium leading-5 text-xs">في حال تجاوز السقف اليومي 1 جيجا
+                                        من السرعة العالية، ستنخفض السرعة إلى 512 كيلوبت بالثانية لبقية اليوم، وهذا
+                                        قد
+                                        يؤثر على تجربتك بمشاهدة الفيديو والتطبيقات التي تستهلك بيانات كثيرة.
+                                    </p>
                                 </div>
-                                <p class="opacity-90 text-nowrap font-medium text-xs">إنترنت غير محدود*
-                                </p>
-                                <p class="opacity-90 font-medium leading-5 text-xs">في حال تجاوز السقف اليومي 1 جيجا
-                                    من السرعة العالية، ستنخفض السرعة إلى 512 كيلوبت بالثانية لبقية اليوم، وهذا
-                                    قد
-                                    يؤثر على تجربتك بمشاهدة الفيديو والتطبيقات التي تستهلك بيانات كثيرة.
-                                </p>
                             </div>
                         </div>
                         <div id="region" onclick="openModal('regionModal')"
-                            data-bundle='{"name":"Unlimited Plan","price":25,"type":"unlimited"}'
-                            class="hidden shadow-xl w-full h-full justify-between flex flex-col gap-8 rounded-[25px] py-8 px-5 text-white bg-[var(--is-blue-3)]">
-                            <div class="flex flex-col gap-[20px]">
-                                <div class="flex flex-wrap gap-3 justify-between items-center w-full">
-                                    <div class="flex items-center gap-[11px]">
-                                        <img src="../assets/icons/aferica.svg" alt="aferica"
-                                            class="w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] rounded-full object-cover" />
-                                        <p class="font-semibold text-xl lg:text-4xl">أفريقيا</p>
-                                    </div>
+                            data-bundle='{"name":"Unlimited Plan","price":25,"type":"unlimited"}' class="shadow-xl w-full h-full rounded-[25px] text-white bg-cover cursor-pointer
+                        bg-center
+                        bg-no-repeat bg-[url('/assets/images/plan-regional.png')]">
+                            <div
+                                class="bg-gradient-to-b from-[var(--is-blue-11)] to-[var(--is-blue-12)] flex justify-between flex-col gap-8 rounded-[25px] py-8 px-5">
+                                <div class="flex flex-col gap-[20px]">
+                                    <div class="flex flex-wrap gap-3 justify-between items-center w-full">
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="../assets/icons/aferica.svg" alt="aferica"
+                                                class="w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] rounded-full object-cover" />
+                                            <p class="font-semibold text-xl lg:text-4xl">أفريقيا</p>
+                                        </div>
 
-                                    <div
-                                        class="border-1 border-gray-500 flex items-center gap-1 text-xs lg:text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[12px] py-[6px]">
-                                        <img src="../assets/icons/star.svg" alt="germany"
-                                            class="w-3 lg:w-5 h-3 lg:h-5 rounded-full object-cover" />
-                                        <span class="leading-none">موصى به</span>
-                                    </div>
+                                        <div
+                                            class="border-1 border-gray-500 flex items-center gap-1 text-xs lg:text-md rounded-full bg-[var(--is-gold-1)] text-[var(--is-gold)] px-[12px] py-[6px]">
+                                            <img src="../assets/icons/star.svg" alt="germany"
+                                                class="w-3 lg:w-5 h-3 lg:h-5 rounded-full object-cover" />
+                                            <span class="leading-none">موصى به</span>
+                                        </div>
 
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex flex-col gap-4">
-                                <div class="flex flex-wrap gap-2 justify-between">
-                                    <h3 class="font-bold text-4xl">إنترنت غير محدود 7 أيام</h3>
-                                    <h3 class="font-bold text-4xl">$17.00</h3>
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex flex-wrap gap-2 justify-between">
+                                        <h3 class="font-bold text-4xl">إنترنت غير محدود 7 أيام</h3>
+                                        <h3 class="font-bold text-4xl">$17.00</h3>
+                                    </div>
+                                    <p class="opacity-90 text-nowrap font-medium text-xs">إنترنت غير محدود*
+                                    </p>
+                                    <p class="opacity-90 font-medium leading-5 text-xs">في حال تجاوز السقف اليومي 1 جيجا
+                                        من السرعة العالية، ستنخفض السرعة إلى 512 كيلوبت بالثانية لبقية اليوم، وهذا
+                                        قد
+                                        يؤثر على تجربتك بمشاهدة الفيديو والتطبيقات التي تستهلك بيانات كثيرة.
+                                    </p>
                                 </div>
-                                <p class="opacity-90 text-nowrap font-medium text-xs">إنترنت غير محدود*
-                                </p>
-                                <p class="opacity-90 font-medium leading-5 text-xs">في حال تجاوز السقف اليومي 1 جيجا
-                                    من السرعة العالية، ستنخفض السرعة إلى 512 كيلوبت بالثانية لبقية اليوم، وهذا
-                                    قد
-                                    يؤثر على تجربتك بمشاهدة الفيديو والتطبيقات التي تستهلك بيانات كثيرة.
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -429,19 +447,42 @@ bg-no-repeat -z-1">
                         </ul>
 
                         <div data-aos="fade-up" class="flex w-full">
-                            <a href="checkout.html" title="اشترِ الآن"
+
+                            <div title="Buy Now" onclick="return handleBuyNow(event)"
                                 onclick="this.href='checkout.html?data=' + (currentTab === 'unlimited-bundles' ? 'unlimited' : 'regular')"
                                 class="text-center transition-all duration-300 hover:shadow-xl hover:scale-102 cursor-pointer w-full before:bg-white rounded-[20px] text-white bg-[var(--is-pink)] px-5 py-3">
                                 <div class="text-base relative z-1 font-bold">
                                     <span>اشترِ الآن</span>
                                 </div>
-                            </a>
+                            </div>
                         </div>
 
                         <div class="flex justify-center gap-3 items-center" data-aos="fade-up">
                             <img src="../assets/icons/secure-payment.svg" alt="secure payment" class="w-3 h-3" />
                             <p class="leading-none font-normal text-xs">الدفع الآمن مضمون</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="login-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+                <div class="absolute inset-0 bg-[#25123CE5]" onclick="closeBundleModal()"></div>
+
+                <div class="relative z-10 bg-white rounded-[20px] container overflow-auto max-h-[700px] !mx-70 p-10">
+                    <div class="flex flex-col items-center gap-5 pb-10 px-5 pt-0">
+                        <div class="w-[60%] flex flex-col gap-10 items-center text-center">
+                            <img src="../assets/icons/pop-up-login.svg" alt="pop-up-login"
+                                class="animate-bounce-scale" />
+                            <h2 class="leading-[1.7] font-medium text-2xl text-[var(--is-gray-26)]">يرجى تسجيل الدخول أو
+                                إنشاء حساب للتمكن من إتمام هذه العملية.
+                            </h2>
+                        </div>
+                        <a title="نسجيل الدخول" href="login.html"
+                            class="before:bg-[var(--is-blue)] rounded-[20px] text-white bg-[var(--is-pink)] px-15 py-3 btn">
+                            <div class="text-base relative z-1 font-bold">
+                                <span>نسجيل الدخول</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>

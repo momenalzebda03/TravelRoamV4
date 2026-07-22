@@ -72,3 +72,21 @@ function closeModal(id) {
 
     document.body.style.overflow = '';
 }
+
+function handleBuyNow(event) {
+    event.preventDefault();
+    const user = getUser();
+    const type = currentTab === 'unlimited-bundles' ? 'unlimited' : 'regular';
+
+    if (user) {
+        openModal('login-modal')
+        // window.location.href = `checkout.html?data=${type}`
+    } else {
+        // openModal('login-modal')
+        window.location.href = `checkout.html?data=${type}`
+    }
+}
+
+function closeBundleModal() {
+    closeModal('login-modal');
+}

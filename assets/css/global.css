@@ -12,6 +12,8 @@
     --is-blue-8: #25123CE5;
     --is-blue-9: #2E0A35;
     --is-blue-10: #DBEAFE;
+    --is-blue-11: #25123c8b;
+    --is-blue-12: #250b44dd;
 
     --is-gold: #FFBB00;
     --is-gold-1: #D2AF261A;
@@ -51,6 +53,8 @@
 
     --is-pink: #F70075;
     --is-pink-9: #F43F5E;
+    --is-pink-10: #36002dd1;
+    --is-pink-11: rgba(79, 32, 137, 0.481);
 
     --is-black: #00000040;
     --is-black-1: #100E23;
