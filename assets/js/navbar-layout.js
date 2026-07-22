@@ -108,7 +108,7 @@ class CoopNavbar extends HTMLElement {
 
         <!-- Logo -->
         <a href="${this.baseLang}/index.html" title="Coop Lounge" class="none-broder">
-          <img src="/assets/icons/logo.svg" alt="logo" width="170" height="41" class="object-cover" />
+          <img src="../assets/icons/logo.svg" alt="logo" width="170" height="41" class="object-cover" />
         </a>
 
           <div class="flex gap-2 lg:hidden">
@@ -171,7 +171,7 @@ class CoopNavbar extends HTMLElement {
             <div class="relative flex justify-center dropdown-wrapper">
               <div class="flex items-center gap-2 cursor-pointer relative" onclick="toggleDropdown(this)">
                 <span class="font-medium text-lg selected-value">${this.lang === 'ar' ? 'العربية' : 'English'}</span>
-                <img src="/assets/icons/arraw.svg" alt="arrow" class="dropdown-arrow w-[12px] h-[6px]" />
+                <img src="../assets/icons/arraw.svg" alt="arrow" class="dropdown-arrow w-[12px] h-[6px]" />
               </div>
               <ul class="dropdown-list">
                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'العربية')"><a class="none-broder" href="/ar${this.currentPage}">العربية</a></li>
@@ -183,7 +183,7 @@ class CoopNavbar extends HTMLElement {
             <div class="relative flex justify-center dropdown-wrapper">
               <div class="flex items-center gap-2 cursor-pointer relative" onclick="toggleDropdown(this)">
                 <span class="font-medium text-lg selected-value">${this.currency}</span>
-                <img src="/assets/icons/arraw.svg" alt="arrow" class="dropdown-arrow w-[12px] h-[6px]" />
+                <img src="../assets/icons/arraw.svg" alt="arrow" class="dropdown-arrow w-[12px] h-[6px]" />
               </div>
               <ul class="dropdown-list">
                 <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'USD $')">USD $</li>
@@ -278,7 +278,7 @@ class CoopNavbar extends HTMLElement {
         <div class="relative flex dropdown-wrapper">
           <div class="flex items-center gap-2 cursor-pointer relative" onclick="toggleDropdown(this)">
             <span class="font-medium text-lg selected-value">${this.lang === 'ar' ? 'العربية' : 'English'}</span>
-            <img src="/assets/icons/arraw.svg" alt="arrow" class="dropdown-arrow w-[12px] h-[6px]" />
+            <img src="../assets/icons/arraw.svg" alt="arrow" class="dropdown-arrow w-[12px] h-[6px]" />
           </div>
           <ul class="dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 px-22 !w-[20%] bg-[var(--is-blue-1)] backdrop-blur-md py-5">
             <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'العربية')"><a class="!border-0" href="/ar${this.currentPage}">العربية</a></li>
@@ -290,7 +290,7 @@ class CoopNavbar extends HTMLElement {
         <div class="relative flex dropdown-wrapper">
           <div class="flex items-center gap-2 cursor-pointer relative" onclick="toggleDropdown(this)">
             <span class="font-medium text-lg selected-value">${this.currency}</span>
-            <img src="/assets/icons/arraw.svg" alt="arrow" class="dropdown-arrow w-[12px] h-[6px]" />
+            <img src="../assets/icons/arraw.svg" alt="arrow" class="dropdown-arrow w-[12px] h-[6px]" />
           </div>
           <ul class="dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 px-22 !w-[20%] bg-[var(--is-blue-1)] backdrop-blur-md py-5">
             <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'USD $')">USD $</li>
