@@ -381,8 +381,8 @@ function renderCurrentStep() {
 
 function renderOrderSummary() {
     return `
-        <div id="stripe" class="flex flex-col gap-[20px]">
-                                    <span class="text-[var(--is-blue-4)] font-bold text-xl">${t("Order Summary:", "ملخص الطلب")}</span>
+        <div id="stripe" class="flex flex-col gap-[10px] md:gap-[20px]">
+                                    <span class="text-[var(--is-blue-4)] font-semibold text-xl">${t("Order Summary:", "ملخص الطلب")}</span>
                                     <div
                                         class="rounded-[20px] bg-[var(--is-gray-11)] shadow-[0_2px_5px_var(--is-black-2)] py-[33px] px-[18px] flex justify-between items-end">
                                         <ul class="flex flex-col gap-2">
@@ -555,9 +555,9 @@ ${t(" You’ll earn 10% cashback, which is", "ستحصل على 10% استرجا
 function createPassengerForm(type, index) {
     return `
     <form id="step-1" class="passenger-form flex flex-col gap-[30px] md:gap-[32px]">
-                                <span class="mt-[32px] text-[var(--is-blue-3)] text-xl font-medium">${type} ${index}
+                                <span class="md:mt-[32px] text-[var(--is-blue-3)] text-xl font-medium">${type} ${index}
                                     ${t("Details", "التفااصيل")}</span>
-                                <div class="flex gap-[30px] md:gap-[32px]">
+                                <div class="flex gap-[10px] sm:gap-[30px] md:gap-[32px]">
                                 ${Title()}
                                     <div class="flex flex-col gap-[10px] md:gap-[20px] w-full">
                                         <span class="text-[var(--is-blue-3)] text-md md:text-xl font-medium">${t("First Name", "الاسم الأول")}</span>
@@ -595,11 +595,11 @@ function goToPaymentStep() {
     lastCircle.classList.add("!bg-[var(--is-blue-3)]");
 
     container.innerHTML = `
-        <div class="mt-10 flex flex-col lg:flex-row gap-[30px] md:gap-[42px]">
-        <div class="w-full">
+        <div class="mt-5 md:mt-10 flex flex-col lg:flex-row gap-[20px] md:gap-[42px]">
+        <div class="w-full order-2">
                         <div
                             class="relative w-full text-xl font-medium shadow-[0_2px_5px_var(--is-black-2)] rounded-[10px]">
-                            <div class="flex flex-col gap-1 px-[15px] pb-[32px] pt-[12px]">
+                            <div class="flex flex-col gap-1 px-[15px] md:pb-[32px] md:pt-[12px] py-[12px]">
                             <div class="flex items-center gap-1">
                                 <Image src="/assets/icons/map-black.svg" alt="map" class="w-[16px] h-[16px]" />
                                 <span class="text-md text-[var(--is-blue)]">${t("Billing Address", "عنوان الفواتير")}</span>
@@ -611,19 +611,19 @@ function goToPaymentStep() {
                                 </div>
                         </div>
                         </div>
-                <div class="flex flex-col gap-[50px] w-full">
+                <div class="flex flex-col gap-[10px] md:gap-[50px] w-full order-1">
                     <div class="flex flex-col gap-[10px] md:gap-[20px] w-full">
-                 <span class="text-[var(--is-blue-3)] text-md md:text-xl font-medium">${t("Select Payment Option:", "اختر خيار الدفع:")}</span>
+                 <span class="text-[var(--is-blue-4)] font-semibold text-xl">${t("Select Payment Option:", "اختر خيار الدفع:")}</span>
                         <div class="flex flex-col md:flex-row gap-[20px]">
                                                         <div class="flex gap-3">
                                            <button id="clickStripe"
-                                                     class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-12 py-[3%] md:py-[5%] btn">
+                                                     class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[10px] md:rounded-[15px] w-full md:w-[unset] px-2 md:px-20 py-[12px] md:py-[15px] btn">
                                                      <div class="relative z-1 text-xs font-semibold">
                                                          <span>${t("Stripe", "ستريب")}</span>
                                                      </div>
                                                  </button>
                                                  <button id="wallet"
-                                                     class="text-center hover:before:bg-[var(--is-pink)] border border-1 hover:text-white text-[var(--is-gray-14)] rounded-[15px] px-12 py-[3%] md:py-[5%] btn">
+                                                     class="text-center hover:before:bg-[var(--is-pink)] border border-1 hover:text-white text-[var(--is-gray-14)] rounded-[10px] md:rounded-[15px] w-full md:w-[unset] px-2 md:px-20 py-[12px] md:py-[15px] btn">
                                                      <div class="relative z-1 text-xs font-semibold">
                                                          <span>${t("Wallet", "المحفظة")}</span>
                                                      </div>
@@ -632,8 +632,13 @@ function goToPaymentStep() {
                         </div>
                     </div>
                     ${payment()}
+                    <div class='hidden md:block'>
                     ${renderOrderSummary()}
-                </div>
+                    </div>
+                    </div>
+                    <div class='md:hidden order-3'>
+                     ${renderOrderSummary()}
+                     </div>
             </div>
     `;
 

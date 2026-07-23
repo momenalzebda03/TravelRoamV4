@@ -39,7 +39,7 @@ class CoopNavbar extends HTMLElement {
   _active(page) {
     const path = window.location.pathname;
     const isActive = path.includes(page) || this.activePage === page;
-    return isActive ? 'text-[var(--is-gold)]' : '';
+    return isActive ? 'text-[var(--is-gold)] font-bold' : '';
   }
 
   get isArabic() {
@@ -102,32 +102,42 @@ class CoopNavbar extends HTMLElement {
   }
 
   get isAdmin() {
-    return window.location.pathname.includes('admin');
+    const adminPaths = [
+      'dashboard',
+      'account',
+      'esim',
+      'esim-details',
+      'notifications',
+      'payment',
+      'support',
+    ];
+
+    return adminPaths.some(path => window.location.pathname.includes(path));
   }
 
   _render() {
     const user = this.getUser();
 
     this.innerHTML = `
-<nav class="z-9 text-white navbar transition duration-300 w-full py-[33px] ${this._navBgClass()} ${this._navPositionClass()}">
+<nav class="z-9 text-white navbar transition duration-300 w-full py-[22px] md:py-[33px] ${this._navBgClass()} ${this._navPositionClass()}">
   <div class="container z-1">
     <div class="flex w-full">
       <div class="w-full flex items-center justify-between">
 
         <!-- Logo -->
-        <a href="${this.baseLang}/index.html" title="Coop Lounge" class="none-broder">
-          <img src="../assets/icons/logo.svg" alt="logo" width="170" height="41" class="object-cover" />
+        <a href="${this.baseLang}/index.html" title="Coop Lounge" class="none-broder w-[109px] h-[30px] md:w-[170px] md:h-[45px]">
+          <img src="../assets/icons/logo.svg" alt="logo" class="object-contain w-full h-full" />
         </a>
 
           <div class="flex gap-2 lg:hidden">
            ${!user ? `
-               <a href="${this.baseLang}/login.html" title=${this.isArabic ? "تسجيل الدخول" : 'Login'} class="md:hidden before:bg-white border-1 border-white rounded-[5px] hover:text-black px-3 py-2 btn">
-              <div class="text-base text-nowrap relative z-1 font-bold"><span>${this.isArabic ? "تسجيل الدخول" : 'Login'}</span></div>
+               <a href="${this.baseLang}/login.html" title=${this.isArabic ? "تسجيل الدخول" : 'Login'} class="before:bg-white border-1 border-white rounded-[5px] hover:text-black px-3 py-2 btn">
+              <div class="text-xs text-nowrap relative z-1 font-bold"><span>${this.isArabic ? "تسجيل الدخول" : 'Login'}</span></div>
             </a>
              ` : ''}
       <!-- Mobile Hamburger -->
       <div class="inset-y-0 left-0 flex items-center">
-        <button type="button" class="coop-hamburger is-style-menu text-white relative inline-flex items-center justify-center rounded-md p-2 hover:bg-white/5 focus:outline-none">
+        <button type="button" class="coop-hamburger is-style-menu text-white relative inline-flex items-center justify-center rounded-md hover:bg-white/5 focus:outline-none">
           <span class="sr-only">Open main menu</span>
           <svg class="coop-icon-open size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
             <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -212,12 +222,12 @@ class CoopNavbar extends HTMLElement {
         <!-- Mobile Menu dropdown -->
         <div class="relative flex dropdown-wrapper">
           <div class="flex items-center gap-2 cursor-pointer relative" onclick="toggleDropdown(this)" title="menu">
-            <span class="font-medium text-lg selected-value">Menu</span>
+            <span class="text-[var(--is-blue-3)] font-medium text-lg selected-value">Menu</span>
             <div class="dropdown-arrow flex items-center gap-2 cursor-pointer relative">
               <div class="flex flex-col gap-[3.5px] mt-[1.5px] menu-icon">
-                <div class="menu-line top-line w-[15px] h-[3px]"></div>
-                <div class="menu-line mid-line w-[15px] h-[3px]"></div>
-                <div class="menu-line bot-line w-[15px] h-[3px]"></div>
+                <div class="menu-line top-line w-[15px] h-[2px]"></div>
+                <div class="menu-line mid-line w-[15px] h-[2px]"></div>
+                <div class="menu-line bot-line w-[15px] h-[2px]"></div>
               </div>
             </div>
           </div>
@@ -231,61 +241,12 @@ class CoopNavbar extends HTMLElement {
            ${!user ? `
             <li class="${this._active('login')} hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'Login')"><a class="!border-0" href="${this.baseLang}/login.html">${this.isArabic ? "تسجيل الدخول" : 'Login'}</a></li>
              ` : ''}
-       ${this.isAdmin ? `
-      <li class="${this._active('home')} flex">
-                        <a class="!border-0" title="${this.isArabic ? "لوحىة التحكم" : 'Dashboard'}" href="dashboard.html">
-                            <span class="text-nowrap">${this.isArabic ? "لوحة التحكم" : 'Dashboard'}</span>
-                        </a>
-                    </li>
-                          <li class="${this._active('account')} flex">
-                        <a class="!border-0" title="${this.isArabic ? "الحساب" : 'Account'}" href="account.html">
-                        <span class="text-nowrap">${this.isArabic ? "الحساب" : 'Account'}</span>
-                        </a>
-                    </li>
-                            <li class="${this._active('esim')} flex">
-                        <a class="!border-0" title="${this.isArabic ? "بطاقات eSIM الخاصة بي" : 'My eSIMs'}" href="esim.html">
-                         <span class="text-nowrap">${this.isArabic ? "بطاقات eSIM الخاصة بي" : 'My eSIMs'}</span>
-                        </a>
-                    </li>
-                          <li class="${this._active('esim')} flex">
-                        <a class="!border-0" title="${this.isArabic ? "متجر eSIM" : 'eSIM Store'}" href="esim.html">
-                           <span class="text-nowrap">${this.isArabic ? "متجر eSIM" : 'eSIM Store'}</span>
-                        </a>
-                    </li>
-                           <li class="${this._active('notifications')} flex">
-                        <a class="!border-0" title="${this.isArabic ? "الإشعارات" : 'Notifications'}" href="notifications.html">
-                        <span class="text-nowrap">${this.isArabic ? "الإشعارات" : 'Notifications'}</span>
-                        </a>
-                    </li>
-                        <li class="${this._active('payment')} flex">
-                        <a class="!border-0" title="${this.isArabic ? "الدفع" : 'Payment'}" href="payment.html">
-                        <span class="text-nowrap">${this.isArabic ? "الدفع" : 'Payment'}</span>
-                        </a>
-                    </li>
-                      <li class="${this._active('support')} flex">
-                        <a class="!border-0" title="${this.isArabic ? "الدعم الفني" : 'Support'}" href="support.html">
-                        <span class="text-nowrap">${this.isArabic ? "الدعم الفني" : 'Support'}</span>
-                        </a>
-                    </li>
-                      <li class="flex">
-                    <a id="logoutBtn"
-                    onclick="logout(event)"
-   title="${this.isArabic ? "تسجيل الخروج" : 'Logout'}"
-   class="
-   text-white">
-    <span class="text-nowrap">
-        ${this.isArabic ? "تسجيل الخروج" : 'Logout'}
-    </span>
-</a>
-                    </li>
-` : ''}
-            </ul>
         </div>
 
         <!-- Mobile Language dropdown -->
-        <div class="relative flex dropdown-wrapper">
+        <div class="mt-[10px] relative flex dropdown-wrapper">
           <div class="flex items-center gap-2 cursor-pointer relative" onclick="toggleDropdown(this)">
-            <span class="font-medium text-lg selected-value">${this.lang === 'ar' ? 'العربية' : 'English'}</span>
+            <span class="text-[var(--is-blue-3)] font-medium text-lg selected-value">${this.lang === 'ar' ? 'العربية' : 'English'}</span>
             <img src="../assets/icons/arraw.svg" alt="arrow" class="dropdown-arrow w-[12px] h-[6px]" />
           </div>
           <ul class="dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 px-22 !w-[20%] bg-[var(--is-blue-1)] backdrop-blur-md py-5">
@@ -295,9 +256,9 @@ class CoopNavbar extends HTMLElement {
         </div>
 
         <!-- Mobile Currency dropdown -->
-        <div class="relative flex dropdown-wrapper">
+        <div class="relative flex dropdown-wrapper mt-[10px]">
           <div class="flex items-center gap-2 cursor-pointer relative" onclick="toggleDropdown(this)">
-            <span class="font-medium text-lg selected-value">${this.currency}</span>
+            <span class="text-[var(--is-blue-3)] font-medium text-lg selected-value">${this.currency}</span>
             <img src="../assets/icons/arraw.svg" alt="arrow" class="dropdown-arrow w-[12px] h-[6px]" />
           </div>
           <ul class="dropdown-list text-md font-semibold rounded-[8px] border border-gray-500 flex flex-col items-center gap-3 absolute top-11 px-22 !w-[20%] bg-[var(--is-blue-1)] backdrop-blur-md py-5">
@@ -305,7 +266,66 @@ class CoopNavbar extends HTMLElement {
             <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'EUR €')">EUR €</li>
             <li class="hover:text-[var(--is-gold)] text-nowrap cursor-pointer" onclick="selectItem(this,'GBP £')">GBP £</li>
           </ul>
-        </div>
+          </div>
+          <ul class="flex flex-col gap-[30px] mt-[10px]">
+        
+                  ${this.isAdmin ? `
+       <li class="${this._active('dashboard')} flex !text-[unset]">
+                         <a class="!border-0 flex items-center gap-[10px] text-[var(--is-blue-3)]" title="${this.isArabic ? "لوحىة التحكم" : 'Dashboard'}" href="dashboard.html">
+                            <img src="../assets/icons/dashboard-blue.svg" alt="dashboard" width="16" height="16" />
+                             <span class="text-nowrap">${this.isArabic ? "لوحة التحكم" : 'Dashboard'}</span>
+                         </a>
+                     </li>
+                           <li class="${this._active('account')} flex !text-[unset]">
+                         <a class="!border-0 flex items-center gap-[10px] text-[var(--is-blue-3)]" title="${this.isArabic ? "الحساب" : 'Account'}" href="account.html">
+                         <img src="../assets/icons/account-blue.svg" alt="dashboard" width="16" height="16" />
+                         <span class="text-nowrap">${this.isArabic ? "الحساب" : 'Account'}</span>
+                         </a>
+                     </li>
+                             <li class="${this._active('esim')} flex !text-[unset]">
+                         <a class="!border-0 flex items-center gap-[10px] text-[var(--is-blue-3)]" title="${this.isArabic ? "بطاقات eSIM الخاصة بي" : 'My eSIMs'}" href="esim.html">
+                         <img src="../assets/icons/sim-blue.svg" alt="dashboard" width="16" height="16" />
+                          <span class="text-nowrap">${this.isArabic ? "بطاقات eSIM الخاصة بي" : 'My eSIMs'}</span>
+                         </a>
+                     </li>
+                           <li class="${this._active('esim')} flex !text-[unset]">
+                         <a class="!border-0 flex items-center gap-[10px] text-[var(--is-blue-3)]" title="${this.isArabic ? "متجر eSIM" : 'eSIM Store'}" href="esim.html">
+                         <img src="../assets/icons/sim-blue.svg" alt="dashboard" width="16" height="16" />
+                            <span class="text-nowrap">${this.isArabic ? "متجر eSIM" : 'eSIM Store'}</span>
+                         </a>
+                     </li>
+                            <li class="${this._active('notifications')} flex !text-[unset]">
+                         <a class="!border-0 flex items-center gap-[10px] text-[var(--is-blue-3)]" title="${this.isArabic ? "الإشعارات" : 'Notifications'}" href="notifications.html">
+                         <img src="../assets/icons/notifications-blue.svg" alt="dashboard" width="16" height="16" />
+                         <span class="text-nowrap">${this.isArabic ? "الإشعارات" : 'Notifications'}</span>
+                         </a>
+                     </li>
+                         <li class="${this._active('payment')} flex !text-[unset]">
+                         <a class="!border-0 flex items-center gap-[10px] text-[var(--is-blue-3)]" title="${this.isArabic ? "الدفع" : 'Payment'}" href="payment.html">
+                         <img src="../assets/icons/payment-blue.svg" alt="dashboard" width="16" height="16" />
+                         <span class="text-nowrap">${this.isArabic ? "الدفع" : 'Payment'}</span>
+                         </a>
+                     </li>
+                       <li class="${this._active('support')} flex !text-[unset]">
+                         <a class="!border-0 flex items-center gap-[10px] text-[var(--is-blue-3)]" title="${this.isArabic ? "الدعم الفني" : 'Support'}" href="support.html">
+                         <img src="../assets/icons/support-blue.svg" alt="dashboard" width="16" height="16" />
+                         <span class="text-nowrap">${this.isArabic ? "الدعم الفني" : 'Support'}</span>
+                         </a>
+                     </li>
+                       <li class="flex">
+                     <a id="logoutBtn"
+                     onclick="logout(event)"
+    title="${this.isArabic ? "تسجيل الخروج" : 'Logout'}"
+    class=" flex items-center gap-[10px]">
+    <img src="../assets/icons/logout-blue.svg" alt="dashboard" width="16" height="16" />
+     <span class="text-nowrap">
+         ${this.isArabic ? "تسجيل الخروج" : 'Logout'}
+     </span>
+ </a>
+                     </li>
+ ` : ''}
+             </ul>
+
 
       </div>
     </div>

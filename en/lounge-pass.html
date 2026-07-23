@@ -22,22 +22,22 @@
         <coop-navbar></coop-navbar>
         <!-- end navbar -->
         <!-- start main -->
-        <main class="mt-35 mx-2 md:mx-10 rounded-[30px] md:h-[100vh] bg-cover bg-center bg-no-repeat"
+        <main class="mt-25 md:mt-35 mx-2 md:mx-10 rounded-[30px] md:h-[100vh] bg-cover bg-center bg-no-repeat"
             style="background-image: url('../assets/images/bg-lounge.png')">
             <div
-                class="rounded-[30px] z-1 w-full h-full bg-[var(--is-black-2)] pt-10 md:pt-0 pb-10 flex flex-col items-center justify-end gap-[30px]">
+                class="rounded-[30px] z-1 w-full h-full bg-[var(--is-black-2)] pt-10 px-6 md:pt-0 pb-10 flex flex-col items-center justify-end gap-[30px]">
                 <div class="md:w-[80%] text-white flex flex-col items-center gap-[22px] text-center font-normal"
                     data-aos="fade-up">
-                    <h1 class="md:leading-15 text-2xl lg:text-5xl">Discover premium airport lounges designed
+                    <h1 class="md:leading-15 text-xl lg:text-5xl">Discover premium airport lounges designed
                         for comfort, calm, and convenience</h1>
                     <div class="md:w-[75%]">
                         <p class="text-md md:text-xl">Enter your journey details and explore premium airport
                             lounges selected to match your travel experience seamlessly</p>
                     </div>
                 </div>
-                <div class="bg-white w-[90%] rounded-[40px] py-[33px] px-[30px] md:px-[40px]">
-                    <div
-                        class="items-end grid min-[576px]:grid-cols-2 xl:grid-cols-[3.5fr_3.5fr_3.5fr_2fr] gap-[10px] xl:gap-[30px]">
+                <div
+                    class="bg-white w-full md:w-[90%] rounded-[20px] md:rounded-[40px] py-[33px] px-[30px] md:px-[40px]">
+                    <div class="items-end grid min-[576px]:grid-cols-2 xl:grid-cols-[3.5fr_3.5fr_3.5fr_2fr] gap-[30px]">
 
                         <div class="relative dropdown-wrapper flex flex-col gap-[10px] md:gap-[20px]">
                             <span class="text-xl font-bold">Destination</span>
@@ -49,7 +49,7 @@
                                     class="destination-wrapper w-full ps-[45px] py-[12px] outline-none focus:outline-none"
                                     placeholder="Destination" id="destination-input-1"
                                     oninput="filterDestinations(this.value, this)" onfocus="openDestinations(this)" />
-                                <div class="absolute md:right-0 px-5">
+                                <div class="absolute right-0 px-5">
                                     <img src="../assets/icons/arraw.svg" alt="search" class="filter brightness-0" />
                                 </div>
                             </div>
@@ -71,7 +71,7 @@
                                     class="destination-wrapper w-full ps-[45px] py-[12px] outline-none focus:outline-none"
                                     placeholder="London Heathrow" oninput="filterAirports(this.value, this)"
                                     onfocus="filterAirports('', this)" />
-                                <div class="absolute md:right-0 px-5">
+                                <div class="absolute right-0 px-5">
                                     <img src="../assets/icons/arraw.svg" alt="search" class="filter brightness-0" />
                                 </div>
                             </div>
@@ -91,7 +91,7 @@
                                     class="destination-wrapper w-full ps-[45px] py-[12px] outline-none focus:outline-none"
                                     placeholder="Terminal" oninput="filterTerminals(this.value, this)"
                                     onfocus="filterTerminals('', this)" />
-                                <div class="absolute md:right-0 px-5">
+                                <div class="absolute right-0 px-5">
                                     <img src="../assets/icons/arraw.svg" alt="search" class="filter brightness-0" />
                                 </div>
                             </div>
@@ -479,8 +479,56 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div id="showTimings" class="hidden flex flex-col gap-[15px]">
-                                    <div class="flex flex-col gap-8">
+                                <div id="showTimings" class="hidden flex flex-col gap-[28px]">
+                                    <ul class="flex gap-1 flex-wrap text-white">
+                                        <li
+                                            class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[7px] px-[12px]">
+                                            <img src="../assets/icons/air-conditioning.svg" alt="image" class="" />
+                                            <span class="font-semibold text-[10px]">Air Conditioning</span>
+                                        </li>
+                                        <li
+                                            class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[7px] px-[12px]">
+                                            <img src="../assets/icons/wifi-1.svg" alt=" image" />
+                                            <span class="font-semibold text-[10px]">Complimentary Wi-Fi</span>
+                                        </li>
+                                        <li
+                                            class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[7px] px-[12px]">
+                                            <img src="../assets/icons/phone.svg" alt=" image" />
+                                            <span class="font-semibold text-[10px]">Telephone</span>
+                                        </li>
+                                        <li
+                                            class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[7px] px-[12px]">
+                                            <img src="../assets/icons/tv.svg" alt=" image" />
+                                            <span class="font-semibold text-[10px]">TV</span>
+                                        </li>
+                                        <li
+                                            class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[7px] px-[12px]">
+                                            <img src="../assets/icons/drinks.svg" alt=" image" />
+                                            <span class="font-semibold text-[10px]">Drinks</span>
+                                        </li>
+                                        <li
+                                            class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[7px] px-[12px]">
+                                            <img src="../assets/icons/alochol.svg" alt=" image" />
+                                            <span class="font-semibold text-[10px]">Alcohol (18+)</span>
+                                        </li>
+                                        <li
+                                            class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[7px] px-[12px]">
+                                            <img src="../assets/icons/disabled.svg" alt=" image" />
+                                            <span class="font-semibold text-[10px]">Disabled Access</span>
+                                        </li>
+                                        <li
+                                            class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[7px] px-[12px]">
+                                            <img src="../assets/icons/newspapers.svg" alt=" image" />
+                                            <span class="font-semibold text-[10px]">Newspapers & Magazines</span>
+                                        </li>
+                                        <li
+                                            class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[7px] px-[12px]">
+                                            <img src="../assets/icons/flight.svg" alt=" image" />
+                                            <span class="font-semibold text-[10px]">Flight Information
+                                                Monitor</span>
+                                        </li>
+                                    </ul>
+                                    <div class="flex flex-col gap-4">
                                         <span class="text-sm font-light text-[var(--is-blue-3)]">Brightened by a
                                             wall of <span class="font-bold">natural light</span>, this sleek, warm
                                             airport lounge offers a cosy environment for passengers to refresh before
@@ -491,47 +539,63 @@
                                                 privacy:</span> a far cry away
                                             from the crowded departure lounge.<span class="font-bold">Wi-Fi is also
                                                 available.</span></span>
-                                        <div class="flex items-center justify-between">
-                                            <div class="flex flex-col gap-5">
-                                                <h2>Open :</h2>
-                                                <ul class="text-[var(--is-blue-3)]">
-                                                    <li class="flex gap-1">
-                                                        <p class="font-normal">05:00 - 21:00 Sunday</p>
-                                                    </li>
-                                                    <li class="flex gap-1">
-                                                        <p class="font-normal">05:00 - 21:00 Monday</p>
-                                                    </li>
-                                                    <li class="flex gap-1">
-                                                        <p class="font-normal">05:00 - 21:00 Tuesday</p>
-                                                    </li>
-                                                    <li class="flex gap-1">
-                                                        <p class="font-normal">05:00 - 21:00 Wednesday</p>
-                                                    </li>
-                                                    <li class="flex gap-1">
-                                                        <p class="font-normal">05:00 - 21:00 Thursday</p>
-                                                    </li>
-                                                    <li class="flex gap-1">
-                                                        <p class="font-normal">05:00 - 21:00 Friday</p>
-                                                    </li>
-                                                    <li class="flex gap-1">
-                                                        <p class="font-normal">05:00 - 21:00 Saturday</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="flex flex-col gap-1">
-                                                <button
-                                                    class="close-btn text-center hover:before:bg-[var(--is-pink)] bg-[var(--is-blue)] text-white rounded-[15px] px-5 py-3 btn">
-                                                    <div class="relative z-1 text-xs font-semibold">
-                                                        <span>Back to Previous</span>
-                                                    </div>
-                                                </button>
-                                                <a href="lounge-pass-history.html"
-                                                    class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-5 py-3 btn">
-                                                    <div class="relative z-1 text-xs font-semibold">
-                                                        <span>Continue</span>
-                                                    </div>
-                                                </a>
-                                            </div>
+                                        <ul class="font-normal text-sm flex flex-col gap-2 text-[var(--is-blue-3)]">
+                                            <li class="flex gap-[8px]">
+                                                <img src="../assets/icons/time.svg" alt="image" width="14"
+                                                    height="14" />
+                                                <p><span class="font-bold">Open:</span> 05:00 -
+                                                    21:00 Sunday</p>
+                                            </li>
+                                            <li class="flex gap-[8px]">
+                                                <img src="../assets/icons/time.svg" alt="image" width="14"
+                                                    height="14" />
+                                                <p><span class="font-bold">Open:</span> 05:00 -
+                                                    21:00 Monday</p>
+                                            </li>
+                                            <li class="flex gap-[8px]">
+                                                <img src="../assets/icons/time.svg" alt="image" width="14"
+                                                    height="14" />
+                                                <p><span class="font-bold">Open:</span> 05:00 -
+                                                    21:00 Tuesday</p>
+                                            </li>
+                                            <li class="flex gap-[8px]">
+                                                <img src="../assets/icons/time.svg" alt="image" width="14"
+                                                    height="14" />
+                                                <p><span class="font-bold">Open:</span> 05:00 -
+                                                    21:00 Wednesday</p>
+                                            </li>
+                                            <li class="flex gap-[8px]">
+                                                <img src="../assets/icons/time.svg" alt="image" width="14"
+                                                    height="14" />
+                                                <p><span class="font-bold">Open:</span> 05:00 -
+                                                    21:00 Thursday</p>
+                                            </li>
+                                            <li class="flex gap-[8px]">
+                                                <img src="../assets/icons/time.svg" alt="image" width="14"
+                                                    height="14" />
+                                                <p><span class="font-bold">Open:</span> 05:00 -
+                                                    21:00 Friday</p>
+                                            </li>
+                                            <li class="flex gap-[8px]">
+                                                <img src="../assets/icons/time.svg" alt="image" width="14"
+                                                    height="14" />
+                                                <p><span class="font-bold">Open:</span> 05:00 -
+                                                    21:00 Saturday</p>
+                                            </li>
+                                        </ul>
+                                        <div class="flex max-[430px]:flex-col gap-3">
+                                            <button
+                                                class="close-btn w-full shadow-2xl text-center hover:before:bg-[var(--is-pink)] bg-[var(--is-blue)] text-white rounded-[15px] px-10 py-4 btn">
+                                                <div class="relative z-1 text-xs font-semibold">
+                                                    <span>Back to Previous</span>
+                                                </div>
+                                            </button>
+                                            <a href="steps.html"
+                                                class="w-full shadow-2xl text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-10 py-4 btn">
+                                                <div class="relative z-1 text-xs font-semibold">
+                                                    <span>Continue</span>
+                                                </div>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>

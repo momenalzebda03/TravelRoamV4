@@ -15,5 +15,15 @@
             "destination": "/ar/index.html",
             "permanent": false
         }
+    ],
+    "rewrites": [
+        {
+            "source": "/en/(.*)",
+            "destination": "/en/not-found.html"
+        },
+        {
+            "source": "/ar/(.*)",
+            "destination": "/ar/not-found.html"
+        }
     ]
 }

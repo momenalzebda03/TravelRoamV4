@@ -32,7 +32,7 @@
                                     <img src="../assets/icons/back.svg" alt="back" width="20" height="17"
                                         class="rotate-180 close-btn cursor-pointer" title="back" />
                                 </a>
-                                <h2 class="font-bold text-2xl">احجز صالونك</h2>
+                                <h2 class="text-[var(--is-blue-3)] font-bold text-xl md:text-2xl">احجز صالونك</h2>
                             </div>
                             <span class="text-[var(--is-gray-5)]">الوصول السهل مع الراحة الفاخرة</span>
                         </div>
@@ -148,86 +148,84 @@
                                         <Image src="../assets/icons/plane.svg" alt="plane" width={15} height={15} />
                                     </div>
                                 </div>
-                                <div class="flex flex-col gap-[10px]">
-                                    <span class="text-[var(--is-blue-3)] text-xl font-bold">المسافرون</span>
-                                    <div class="flex flex-col gap-[32px]">
-                                        <div class="flex flex-col md:flex-row gap-[32px]">
-                                            <div class="flex flex-col gap-[10px] md:gap-[20px] w-full">
-                                                <div class="flex justify-between items-center custom-class">
-                                                    <div class="flex flex-col gap-[4px] relative">
-                                                        <span
-                                                            class="text-md font-medium text-[var(--is-gray-7)]">البالغون
-                                                            (12+)</span>
-                                                        <span class="text-sm font-medium text-[var(--is-blue-3)]"
-                                                            id="adults42"></span>
-                                                    </div>
-                                                    <div
-                                                        class="flex justify-between py-[6px] px-[7px] w-[100px] rounded-full bg-white shadow-[0_1px_5px_var(--is-black-2)]">
-                                                        <button type="button" class="cursor-pointer" id="minusAdults"
-                                                            title="Incomplete">-</button>
-                                                        <span id="adults"></span>
-                                                        <button type="button" class="cursor-pointer" id="plusAdults"
-                                                            title="Plus">+</button>
-                                                    </div>
+                            </div>
+                            <div class="flex flex-col gap-[10px]">
+                                <span class="text-[var(--is-blue-3)] text-xl font-bold">المسافرون</span>
+                                <div class="flex flex-col gap-[32px]">
+                                    <div class="flex flex-col md:flex-row gap-[32px]">
+                                        <div class="flex flex-col gap-[10px] md:gap-[20px] w-full">
+                                            <div class="flex justify-between items-center custom-class">
+                                                <div class="flex flex-col gap-[4px] relative">
+                                                    <span class="text-md font-medium text-[var(--is-gray-7)]">البالغون
+                                                        (12+)</span>
+                                                    <span class="text-sm font-medium text-[var(--is-blue-3)]"
+                                                        id="adults42"></span>
                                                 </div>
-                                            </div>
-                                            <div class="flex flex-col gap-[10px] md:gap-[20px] w-full">
-                                                <div class="flex justify-between items-center custom-class">
-                                                    <div class="flex flex-col gap-[4px]">
-                                                        <span class="text-md font-medium text-[var(--is-gray-7)]">طفل
-                                                            (5-12)</span>
-                                                        <span class="text-sm font-medium text-[var(--is-blue-3)]"
-                                                            id="child22"></span>
-                                                    </div>
-                                                    <div
-                                                        class="flex justify-between py-[6px] px-[7px] w-[100px] rounded-full bg-white shadow-[0_1px_5px_var(--is-black-2)]">
-                                                        <button type="button" class="cursor-pointer" id="minusChild"
-                                                            title="Incomplete">-</button>
-                                                        <span id="child"></span>
-                                                        <button type="button" class="cursor-pointer" id="plusChild"
-                                                            title="Plus">+</button>
-                                                    </div>
+                                                <div
+                                                    class="flex justify-between py-[6px] px-[7px] w-[100px] rounded-full bg-white shadow-[0_1px_5px_var(--is-black-2)]">
+                                                    <button type="button" class="cursor-pointer" id="minusAdults"
+                                                        title="Incomplete">-</button>
+                                                    <span id="adults"></span>
+                                                    <button type="button" class="cursor-pointer" id="plusAdults"
+                                                        title="Plus">+</button>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="flex flex-col md:flex-row gap-[32px]">
-                                            <div class="flex flex-col gap-[10px] md:gap-[20px] w-full">
-                                                <div class="flex justify-between items-center custom-class">
-                                                    <div class="flex flex-col gap-[4px] relative">
-                                                        <span class="text-md font-medium text-[var(--is-gray-7)]">رضيع
-                                                            (under 5)</span>
-                                                        <span id="infants42"
-                                                            class="text-sm font-medium text-[var(--is-blue-3)]">$
-                                                            0</span>
-                                                    </div>
-                                                    <div
-                                                        class="flex justify-between py-[6px] px-[7px] w-[100px] rounded-full bg-white shadow-[0_1px_5px_var(--is-black-2)]">
-                                                        <button type="button" class="cursor-pointer" id="minusInfants"
-                                                            title="Minus">-</button>
-                                                        <span id="infants">0</span>
-                                                        <button type="button" class="cursor-pointer" id="plusInfants"
-                                                            title="Plus">+</button>
-                                                    </div>
+                                        <div class="flex flex-col gap-[10px] md:gap-[20px] w-full">
+                                            <div class="flex justify-between items-center custom-class">
+                                                <div class="flex flex-col gap-[4px]">
+                                                    <span class="text-md font-medium text-[var(--is-gray-7)]">طفل
+                                                        (5-12)</span>
+                                                    <span class="text-sm font-medium text-[var(--is-blue-3)]"
+                                                        id="child22"></span>
+                                                </div>
+                                                <div
+                                                    class="flex justify-between py-[6px] px-[7px] w-[100px] rounded-full bg-white shadow-[0_1px_5px_var(--is-black-2)]">
+                                                    <button type="button" class="cursor-pointer" id="minusChild"
+                                                        title="Incomplete">-</button>
+                                                    <span id="child"></span>
+                                                    <button type="button" class="cursor-pointer" id="plusChild"
+                                                        title="Plus">+</button>
                                                 </div>
                                             </div>
-                                            <div class="flex flex-col gap-[10px] md:gap-[20px] w-full">
-                                                <div class="flex justify-between items-center custom-class">
-                                                    <div class="flex flex-col gap-[4px]">
-                                                        <span
-                                                            class="text-md font-medium text-[var(--is-gray-7)]">المسنين
-                                                            (12)</span>
-                                                        <span id="seniors22"
-                                                            class="text-sm font-medium text-[var(--is-blue-3)]">$
-                                                            0</span>
-                                                    </div>
-                                                    <div
-                                                        class="flex justify-between py-[6px] px-[7px] w-[100px] rounded-full bg-white shadow-[0_1px_5px_var(--is-black-2)]">
-                                                        <button type="button" class="cursor-pointer" id="minusSeniors"
-                                                            title="Minus">-</button>
-                                                        <span id="seniors">0</span>
-                                                        <button type="button" class="cursor-pointer" id="plusSeniors"
-                                                            title="Plus">+</button>
-                                                    </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col md:flex-row gap-[32px]">
+                                        <div class="flex flex-col gap-[10px] md:gap-[20px] w-full">
+                                            <div class="flex justify-between items-center custom-class">
+                                                <div class="flex flex-col gap-[4px] relative">
+                                                    <span class="text-md font-medium text-[var(--is-gray-7)]">رضيع
+                                                        (under 5)</span>
+                                                    <span id="infants42"
+                                                        class="text-sm font-medium text-[var(--is-blue-3)]">$
+                                                        0</span>
+                                                </div>
+                                                <div
+                                                    class="flex justify-between py-[6px] px-[7px] w-[100px] rounded-full bg-white shadow-[0_1px_5px_var(--is-black-2)]">
+                                                    <button type="button" class="cursor-pointer" id="minusInfants"
+                                                        title="Minus">-</button>
+                                                    <span id="infants">0</span>
+                                                    <button type="button" class="cursor-pointer" id="plusInfants"
+                                                        title="Plus">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col gap-[10px] md:gap-[20px] w-full">
+                                            <div class="flex justify-between items-center custom-class">
+                                                <div class="flex flex-col gap-[4px]">
+                                                    <span class="text-md font-medium text-[var(--is-gray-7)]">المسنين
+                                                        (12)</span>
+                                                    <span id="seniors22"
+                                                        class="text-sm font-medium text-[var(--is-blue-3)]">$
+                                                        0</span>
+                                                </div>
+                                                <div
+                                                    class="flex justify-between py-[6px] px-[7px] w-[100px] rounded-full bg-white shadow-[0_1px_5px_var(--is-black-2)]">
+                                                    <button type="button" class="cursor-pointer" id="minusSeniors"
+                                                        title="Minus">-</button>
+                                                    <span id="seniors">0</span>
+                                                    <button type="button" class="cursor-pointer" id="plusSeniors"
+                                                        title="Plus">+</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -245,7 +243,7 @@
                             </div>
                             <div class="flex justify-center">
                                 <div id="continueToPayment"
-                                    class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] !px-30 py-[12px] btn">
+                                    class="w-full md:w-[unset] text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-10 md:px-30 py-[12px] btn">
                                     <div class="relative z-1 text-md font-semibold">
                                         <span>التالي</span>
                                     </div>
@@ -264,32 +262,32 @@
                         <div class="flex items-center gap-3">
                             <img id="prevBtn" src="../assets/icons/back.svg" alt="back" width="20" height="17"
                                 class="rotate-180 close-btn cursor-pointer" title="back" />
-                            <h2 class="font-bold text-2xl">معلومات المسافر</h2>
+                            <h2 class="font-bold text-xl md:text-2xl">معلومات المسافر</h2>
                         </div>
                         <span class="text-[var(--is-gray-5)]">يرجى إدخال
                             التفاصيل
                             لكل مسافر</span>
                     </div>
                     <div class="relative flex flex-col gap-[22px]">
-                        <div id="line" class="before:content-[''] before:absolute before:w-[50%] before:bg-[var(--is-blue-3)] before:h-full -top-[3px] absolute w-full h-[4px]
+                        <div id="line" class="before:content-[''] before:absolute before:w-[50%] before:bg-[var(--is-blue-3)] before:h-full md:-top-[3px] absolute w-full h-[2px] md:h-[4px]
                                         bg-[var(--is-white-3)]"></div>
                         <ul id="steps" class="flex w-full">
                             <li class="step-item items-start text-left relative flex-1 flex flex-col items-center gap-3"
                                 data-index="0">
-                                <div class="bg-[var(--is-white-3)] z-2 flex items-center justify-center w-[22px]
-                                        h-[22px] rounded-full absolute -bottom-2">
+                                <div class="bg-[var(--is-white-3)] z-2 flex items-center justify-center w-[12px] md:w-[22px]
+                                        h-[12px] md:h-[22px] rounded-full absolute -bottom-2">
                                 </div>
                             </li>
                             <li class="step-item text-right text-center relative flex-1 flex flex-col items-center gap-3"
                                 data-index="1">
-                                <div class="!bg-[var(--is-blue-3)] bg-[var(--is-white-3)] z-2 flex items-center justify-center w-[22px]
-                                        h-[22px] rounded-full absolute -bottom-2">
+                                <div class="!bg-[var(--is-blue-3)] bg-[var(--is-white-3)] z-2 flex items-center justify-center w-[12px] md:w-[22px]
+                                        h-[12px] md:h-[22px] rounded-full absolute -bottom-2">
                                 </div>
                             </li>
                             <li class="step-item last items-end text-left relative flex-1 flex flex-col items-center gap-3"
                                 data-index="2">
-                                <div class="bg-[var(--is-white-3)] z-2 flex items-center justify-center w-[22px]
-                                        h-[22px] rounded-full absolute -bottom-2">
+                                <div class="bg-[var(--is-white-3)] z-2 flex items-center justify-center w-[12px] md:w-[22px]
+                                        h-[12px] md:h-[22px] rounded-full absolute -bottom-2">
                                 </div>
                             </li>
                         </ul>
