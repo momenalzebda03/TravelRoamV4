@@ -84,6 +84,7 @@ class CoopNavbar extends HTMLElement {
       'credit-top-up': 'bg-[var(--is-blue)]',
       'payment': 'bg-[var(--is-blue)]',
       'not-found': 'bg-[var(--is-blue)]',
+      'forgot-password': 'bg-[var(--is-blue)]',
     };
 
     const matched = Object.keys(backgrounds).find(key =>
@@ -110,6 +111,7 @@ class CoopNavbar extends HTMLElement {
       'notifications',
       'payment',
       'support',
+      'chare-code',
     ];
 
     return adminPaths.some(path => window.location.pathname.includes(path));

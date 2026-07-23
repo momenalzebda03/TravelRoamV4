@@ -20,7 +20,7 @@
         <!-- start navbar -->
         <coop-navbar></coop-navbar>
         <!-- end navbar -->
-        <div class="shadow-2xl container mt-[140px] bg-[var(--is-white-4)] rounded-[25px] p-[30px]">
+        <div class="shadow-2xl container mt-[100px] md:mt-[140px] bg-[var(--is-white-4)] rounded-[25px] md:p-[30px]">
             <div class="container grid min-[786px]:grid-cols-[2fr_10fr] gap-[16px] lg:gap-[46px]">
                 <coop-sidebar></coop-sidebar>
                 <div class="flex flex-col gap-6 mt-[30px]">
@@ -29,14 +29,14 @@
                                 class="font-semibold">Benny!</span></h2>
                         <p class="font-bold text-md md:text-[42px] text-[var(--is-pink)]">Lounge Pass Details</p>
                     </div>
-                    <div class="relative grid lg:grid-cols-[9fr_3fr]">
+                    <div class="relative grid lg:grid-cols-[9fr_3fr] gap-6 md:gap-0">
                         <div class="flex flex-col bg-[var(--is-blue-3)] rounded-[18px]" data-aos="fade-up">
                             <div class="gap-[15px] flex text-white py-[19px] px-[27px]">
                                 <img src="../assets/icons/airport-pink.svg" alt="airport" width="37" height="31" />
                                 <h2 class="text-xl font-semibold">Your Booking is Confirmed!</h2>
                             </div>
                             <div class="relative mx-5 mb-[44px]">
-                                <div class="mt-[35px] flex flex-col md:flex-row gap-18">
+                                <div class="mt-[35px] flex flex-col md:flex-row gap-5 md:gap-18">
                                     <div class="flex flex-col">
                                         <span class="text-[var(--is-gray-10)] text-sm">Booking Date:</span>
                                         <span class="text-white text-xl font-bold">00/00/0000</span>
@@ -97,7 +97,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="items-center shadow-2xl py-[16px] md:px-[13px] rounded-[18px] flex flex-col gap-[23px]"
+                        <div class="items-center md:shadow-2xl py-[16px] md:px-[13px] rounded-[18px] flex flex-col gap-[23px]"
                             data-aos="fade-up">
                             <div class="border border-2 p-5 bg-white rounded-[20px]">
                                 <div id="qrcode" class="w-full max-w-[250px]">
@@ -117,15 +117,15 @@
                                     <li>4</li>
                                 </ul>
                             </div>
-                            <div class="flex flex-col md:flex-row items-center justify-center gap-3">
+                            <div class="flex gap-3 w-full px-5 md:px-0">
                                 <div
-                                    class="text-center hover:text-white hover:before:bg-[var(--is-blue)] text-[var(--is-pink)] border border-[var(--is-pink)] rounded-[15px] px-5 py-[12px] btn">
+                                    class="w-full text-center hover:text-white hover:before:bg-[var(--is-blue)] text-[var(--is-pink)] border border-[var(--is-pink)] rounded-[10px] md:rounded-[15px] px-5 py-[12px] btn">
                                     <div class="text-nowrap relative z-1 text-xs font-semibold">
                                         <span>Download Pass</span>
                                     </div>
                                 </div>
                                 <div id="cancelBooking"
-                                    class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-red-1)] text-white rounded-[15px] px-5 py-[12px] btn">
+                                    class="w-full text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-red-1)] text-white rounded-[10px] md:rounded-[15px] px-5 py-[12px] btn">
                                     <div class="text-nowrap relative z-1 text-xs font-semibold">
                                         <span>Cancel Booking</span>
                                     </div>
@@ -134,18 +134,18 @@
                         </div>
                         <div id="modelQr"
                             class="hidden flex justify-center items-center z-1 w-full h-full bg-[var(--is-blue-8)] rounded-[20px] absolute top-0 left-0">
-                            <div class="bg-white py-[15px] px-[26px] rounded-[18px]">
+                            <div class="bg-white py-[15px] px-[26px] rounded-[18px] mx-2 md:mx-0">
                                 <div class="flex flex-col gap-[12px]">
                                     <span>Are you sure you want to cancel your booking?</span>
-                                    <div class="flex flex-col md:flex-row items-center justify-center gap-3">
+                                    <div class="flex max-[387px]:flex-col items-center justify-center gap-3">
                                         <div id="noModel"
-                                            class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-red)] text-white rounded-[15px] px-5 py-[12px] btn">
+                                            class="w-full text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-red)] text-white rounded-[10px] md:rounded-[15px] px-5 py-[12px] btn">
                                             <div class="text-nowrap relative z-1 text-xs font-semibold">
                                                 <span>No, don’t cancel</span>
                                             </div>
                                         </div>
-                                        <a href="../index.html"
-                                            class="text-center hover:text-white hover:before:bg-[var(--is-blue)] text-[var(--is-pink)] border border-[var(--is-pink)] rounded-[15px] px-5 py-[12px] btn">
+                                        <a href="./index.html"
+                                            class="w-full text-center hover:text-white hover:before:bg-[var(--is-blue)] text-[var(--is-pink)] border border-[var(--is-pink)] rounded-[10px] md:rounded-[15px] px-5 py-[12px] btn">
                                             <div class="text-nowrap relative z-1 text-xs font-semibold">
                                                 <span>Yes</span>
                                             </div>
@@ -266,7 +266,8 @@
                                         <ul
                                             class="grid max-[430px]:grid-cols-1 grid-cols-2 gap-y-2 gap-x-5 text-[var(--is-blue-3)] text-xs">
                                             <li class="flex gap-2 items-center">
-                                                <img src="../assets/icons/time.svg" alt="image" width="16" height="16" />
+                                                <img src="../assets/icons/time.svg" alt="image" width="16"
+                                                    height="16" />
                                                 <p class="font-normal mt-[2px]"><span class="font-bold">Open
                                                         Daily:</span>
                                                     21:00 – 02:00</p>
@@ -279,12 +280,14 @@
                                                     Yes</p>
                                             </li>
                                             <li class="flex gap-2 items-center">
-                                                <img src="../assets/icons/time.svg" alt="image" width="16" height="16" />
+                                                <img src="../assets/icons/time.svg" alt="image" width="16"
+                                                    height="16" />
                                                 <p class="font-normal mt-[2px]"><span class="font-bold">3 Hours</span>
                                                     per visit</p>
                                             </li>
                                             <li class="flex gap-2 items-center">
-                                                <img src="../assets/icons/users.svg" alt="image" width="16" height="16" />
+                                                <img src="../assets/icons/users.svg" alt="image" width="16"
+                                                    height="16" />
                                                 <p class="font-normal mt-[2px]"><span class="font-bold">Adults:</span>
                                                     £25 GBP</p>
                                             </li>
@@ -295,16 +298,16 @@
                                                     Free</p>
                                             </li>
                                         </ul>
-                                        <div class="flex max-[430px]:flex-col gap-3">
+                                        <div class="flex gap-3">
                                             <button
-                                                class="close-btn w-full shadow-2xl text-center hover:before:bg-[var(--is-pink)] bg-black text-white rounded-[15px] px-10 py-4 btn">
-                                                <div class="relative z-1 text-xs font-bold">
+                                                class="close-btn w-full shadow-2xl text-center hover:before:bg-[var(--is-pink)] bg-[var(--is-blue)] text-white rounded-[15px] px-10 py-4 btn">
+                                                <div class="relative z-1 text-xs font-semibold">
                                                     <span>Back</span>
                                                 </div>
                                             </button>
-                                            <a href="lounge-pass-history.html"
+                                            <a href="steps.html"
                                                 class="w-full shadow-2xl text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-10 py-4 btn">
-                                                <div class="relative z-1 text-xs font-bold">
+                                                <div class="relative z-1 text-xs font-semibold">
                                                     <span>Continue</span>
                                                 </div>
                                             </a>
@@ -312,52 +315,111 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="showTimings" class="hidden flex flex-col gap-[15px]">
-                                <span class="text-sm font-light text-[var(--is-blue-3)]">Brightened by a
-                                    wall of <span class="font-bold">natural light</span>, this sleek, warm
-                                    airport lounge offers a cosy environment for passengers to refresh before
-                                    their flight. Passengers can stave off hunger with <span class="font-bold">light
-                                        bites</span> at seats and tables, <span class="font-bold">partitioned
-                                        for
-                                        privacy:</span> a far cry away
-                                    from the crowded departure lounge.<span class="font-bold">Wi-Fi is also
-                                        available.</span></span>
-                                <div class="flex items-center justify-between">
-                                    <div class="flex flex-col gap-5">
-                                        <h2>Open :</h2>
-                                        <ul class="text-[var(--is-blue-3)]">
-                                            <li class="flex gap-1">
-                                                <p class="font-normal">05:00 - 21:00 Sunday</p>
-                                            </li>
-                                            <li class="flex gap-1">
-                                                <p class="font-normal">05:00 - 21:00 Monday</p>
-                                            </li>
-                                            <li class="flex gap-1">
-                                                <p class="font-normal">05:00 - 21:00 Tuesday</p>
-                                            </li>
-                                            <li class="flex gap-1">
-                                                <p class="font-normal">05:00 - 21:00 Wednesday</p>
-                                            </li>
-                                            <li class="flex gap-1">
-                                                <p class="font-normal">05:00 - 21:00 Thursday</p>
-                                            </li>
-                                            <li class="flex gap-1">
-                                                <p class="font-normal">05:00 - 21:00 Friday</p>
-                                            </li>
-                                            <li class="flex gap-1">
-                                                <p class="font-normal">05:00 - 21:00 Saturday</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="flex flex-col gap-1">
+                            <div id="showTimings" class="hidden flex flex-col gap-[28px]">
+                                <ul class="flex gap-1 flex-wrap text-white">
+                                    <li
+                                        class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[7px] px-[12px]">
+                                        <img src="../assets/icons/air-conditioning.svg" alt="image" class="" />
+                                        <span class="font-semibold text-[10px]">Air Conditioning</span>
+                                    </li>
+                                    <li
+                                        class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[7px] px-[12px]">
+                                        <img src="../assets/icons/wifi-1.svg" alt=" image" />
+                                        <span class="font-semibold text-[10px]">Complimentary Wi-Fi</span>
+                                    </li>
+                                    <li
+                                        class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[7px] px-[12px]">
+                                        <img src="../assets/icons/phone.svg" alt=" image" />
+                                        <span class="font-semibold text-[10px]">Telephone</span>
+                                    </li>
+                                    <li
+                                        class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[7px] px-[12px]">
+                                        <img src="../assets/icons/tv.svg" alt=" image" />
+                                        <span class="font-semibold text-[10px]">TV</span>
+                                    </li>
+                                    <li
+                                        class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[7px] px-[12px]">
+                                        <img src="../assets/icons/drinks.svg" alt=" image" />
+                                        <span class="font-semibold text-[10px]">Drinks</span>
+                                    </li>
+                                    <li
+                                        class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[7px] px-[12px]">
+                                        <img src="../assets/icons/alochol.svg" alt=" image" />
+                                        <span class="font-semibold text-[10px]">Alcohol (18+)</span>
+                                    </li>
+                                    <li
+                                        class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[7px] px-[12px]">
+                                        <img src="../assets/icons/disabled.svg" alt=" image" />
+                                        <span class="font-semibold text-[10px]">Disabled Access</span>
+                                    </li>
+                                    <li
+                                        class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[7px] px-[12px]">
+                                        <img src="../assets/icons/newspapers.svg" alt=" image" />
+                                        <span class="font-semibold text-[10px]">Newspapers & Magazines</span>
+                                    </li>
+                                    <li
+                                        class="flex items-center gap-1 bg-[var(--is-blue-3)] rounded-full py-[7px] px-[12px]">
+                                        <img src="../assets/icons/flight.svg" alt=" image" />
+                                        <span class="font-semibold text-[10px]">Flight Information
+                                            Monitor</span>
+                                    </li>
+                                </ul>
+                                <div class="flex flex-col gap-4">
+                                    <span class="text-sm font-light text-[var(--is-blue-3)]">Brightened by a
+                                        wall of <span class="font-bold">natural light</span>, this sleek, warm
+                                        airport lounge offers a cosy environment for passengers to refresh before
+                                        their flight. Passengers can stave off hunger with <span class="font-bold">light
+                                            bites</span> at seats and tables, <span class="font-bold">partitioned
+                                            for
+                                            privacy:</span> a far cry away
+                                        from the crowded departure lounge.<span class="font-bold">Wi-Fi is also
+                                            available.</span></span>
+                                    <ul class="font-normal text-sm flex flex-col gap-2 text-[var(--is-blue-3)]">
+                                        <li class="flex gap-[8px]">
+                                            <img src="../assets/icons/time.svg" alt="image" width="14" height="14" />
+                                            <p><span class="font-bold">Open:</span> 05:00 -
+                                                21:00 Sunday</p>
+                                        </li>
+                                        <li class="flex gap-[8px]">
+                                            <img src="../assets/icons/time.svg" alt="image" width="14" height="14" />
+                                            <p><span class="font-bold">Open:</span> 05:00 -
+                                                21:00 Monday</p>
+                                        </li>
+                                        <li class="flex gap-[8px]">
+                                            <img src="../assets/icons/time.svg" alt="image" width="14" height="14" />
+                                            <p><span class="font-bold">Open:</span> 05:00 -
+                                                21:00 Tuesday</p>
+                                        </li>
+                                        <li class="flex gap-[8px]">
+                                            <img src="../assets/icons/time.svg" alt="image" width="14" height="14" />
+                                            <p><span class="font-bold">Open:</span> 05:00 -
+                                                21:00 Wednesday</p>
+                                        </li>
+                                        <li class="flex gap-[8px]">
+                                            <img src="../assets/icons/time.svg" alt="image" width="14" height="14" />
+                                            <p><span class="font-bold">Open:</span> 05:00 -
+                                                21:00 Thursday</p>
+                                        </li>
+                                        <li class="flex gap-[8px]">
+                                            <img src="../assets/icons/time.svg" alt="image" width="14" height="14" />
+                                            <p><span class="font-bold">Open:</span> 05:00 -
+                                                21:00 Friday</p>
+                                        </li>
+                                        <li class="flex gap-[8px]">
+                                            <img src="../assets/icons/time.svg" alt="image" width="14" height="14" />
+                                            <p><span class="font-bold">Open:</span> 05:00 -
+                                                21:00 Saturday</p>
+                                        </li>
+                                    </ul>
+                                    <div class="flex max-[430px]:flex-col gap-3">
                                         <button
-                                            class="close-btn text-center hover:before:bg-[var(--is-pink)] bg-[var(--is-blue)] text-white rounded-[15px] px-5 py-3 btn">
+                                            class="close-btn w-full shadow-2xl text-center hover:before:bg-[var(--is-pink)] bg-[var(--is-blue)] text-white rounded-[15px] px-10 py-4 btn">
                                             <div class="relative z-1 text-xs font-semibold">
                                                 <span>Back to Previous</span>
                                             </div>
                                         </button>
-                                        <a href="lounge-pass-history.html"
-                                            class="text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-5 py-3 btn">
+                                        <a href="steps.html"
+                                            class="w-full shadow-2xl text-center hover:before:bg-[var(--is-blue)] bg-[var(--is-pink)] text-white rounded-[15px] px-10 py-4 btn">
                                             <div class="relative z-1 text-xs font-semibold">
                                                 <span>Continue</span>
                                             </div>
